@@ -1,0 +1,57 @@
+{
+  "repositoryId": "exante-app-design-repo",
+  "site": "exante-app",
+  "status": "design-review-pending",
+  "productionApproved": false,
+  "repositoryVersion": "0.1.0",
+  "pageSpecVersion": "0.1.0",
+  "allowlistVersion": "1",
+  "versionFieldNote": "allowlistVersion is machine-checked (verify_all.py fails if it differs from tokens/llm/component-allowlist.json). repositoryVersion and pageSpecVersion are documentation-only markers; pageSpecVersion is additionally pinned as a const in the schema.",
+  "defaultTheme": "light",
+  "schemaValidatedThemes": [
+    "light"
+  ],
+  "theme": {
+    "id": "light",
+    "file": "tokens/themes/light.json"
+  },
+  "sourceProject": {
+    "url": "https://www.exante.app/",
+    "framework": "React+Framer+Lenis",
+    "scrapedAt": "2026-10-05T13:10:06Z"
+  },
+  "generatedBy": "website-builder (heuristic extraction; see README)",
+  "counts": {
+    "sections": 31,
+    "templates": 9,
+    "routes": 18,
+    "primitives": 12,
+    "components": 178,
+    "assets": 239,
+    "tokens": {
+      "foundation": 113,
+      "semantic": 19,
+      "component": 23,
+      "layout": 20
+    },
+    "themes": 1,
+    "rules": 7
+  },
+  "entryPoints": {
+    "tokenCatalog": "tokens/llm/token-catalog.json",
+    "tokenPolicy": "tokens/llm/token-policy.json",
+    "componentAllowlist": "tokens/llm/component-allowlist.json",
+    "compatibilityGraph": "compatibility/graph.json",
+    "assetContract": "assets/asset-roles.json",
+    "motionContract": "motion/motion-contract.json",
+    "templates": "templates/templates.json",
+    "pagespecSchema": "schema/pagespec.schema.json",
+    "examplePageSpec": "schema/example.pagespec.json",
+    "semanticValidate": "schema/semantic_validate.py",
+    "adversarialSuite": "schema/tests/adversarial_test.py",
+    "admission": "extraction/verify_all.py",
+    "driftProof": "extraction/prove_drift.py",
+    "measuredValues": "extraction/measured-values.json",
+    "defaultTheme": "tokens/themes/light.json"
+  }
+}

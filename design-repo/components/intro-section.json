@@ -1,0 +1,13 @@
+{
+  "id": "intro-section",
+  "name": "Intro Section",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/about"
+  }
+}

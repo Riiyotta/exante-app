@@ -1,0 +1,12 @@
+{
+  "id": "company-2-metric-2",
+  "name": "Company #2 Metric #2",
+  "occurrences": 1,
+  "composedOf": [
+    "heading"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/customers"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "proof.clients-section",
+  "category": "PROOF",
+  "label": "Clients Section",
+  "tag": "section",
+  "purpose": "Builds trust with customers, quotes or logos. Example headline: \"Trusted by forward-thinking finance teams\".",
+  "purposeIsInferred": true,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 1,
+    "routes": 1,
+    "measuredFrom": [
+      "src/index.html:1342-1410"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "heading": {
+        "type": "string",
+        "required": true,
+        "maxWords": 5
+      },
+      "body": {
+        "type": "string[]",
+        "required": true,
+        "maxItems": 1,
+        "maxWords": 14
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 472,
+      "columns": 1
+    },
+    "mobile": {
+      "heightPx": 671,
+      "columns": 1,
+      "hiddenShare": 0
+    },
+    "changes": [
+      "grows taller on mobile (content stacks)"
+    ]
+  },
+  "assetRoles": [],
+  "contentPolicy": "Measured copy quotes real customers and companies. Generated pages must write new, clearly fictional quotes and names, and use placeholders for customer logos and avatars.",
+  "implementedBy": "src/pages/HomePage.jsx"
+}

@@ -1,0 +1,65 @@
+{
+  "id": "features.featured-image-wrapper",
+  "category": "FEATURES",
+  "label": "Featured Image Wrapper",
+  "tag": "div",
+  "purpose": "Explains what the product does and why it matters.",
+  "purposeIsInferred": true,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 8,
+    "routes": 8,
+    "measuredFrom": [
+      "src/blog/agents-that-learn-how-you-work/index.html:816-825",
+      "src/blog/from-aging-reports-to-cash-control/index.html:810-819",
+      "src/blog/from-source-of-truth-to-source-of-action/index.html:813-822",
+      "src/blog/how-ai-agents-are-transforming-ar-and-collections/index.html:811-820",
+      "src/blog/how-to-choose-the-right-collections-software/index.html:814-823"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "images": {
+        "type": "image[]",
+        "required": false,
+        "maxItems": 1,
+        "assetRoles": [
+          "content-image"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "appear-on-enter",
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 760,
+      "columns": 1
+    },
+    "mobile": {
+      "heightPx": 196,
+      "columns": 1,
+      "hiddenShare": 0
+    },
+    "changes": []
+  },
+  "assetRoles": [
+    "content-image"
+  ],
+  "implementedBy": "src/pages/BlogWhatWeHear.jsx"
+}

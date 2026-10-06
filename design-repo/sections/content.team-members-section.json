@@ -1,0 +1,88 @@
+{
+  "id": "content.team-members-section",
+  "category": "CONTENT",
+  "label": "Team Members Section",
+  "tag": "section",
+  "purpose": "Carries the substantive content of the page. Example headline: \"Built by a team with deep finance, engineering, and enterprise experience\".",
+  "purposeIsInferred": true,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 3,
+    "routes": 2,
+    "measuredFrom": [
+      "src/about/index.html:891-1092",
+      "src/about/index.html:1093-1195",
+      "src/careers/index.html:980-1094"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "heading": {
+        "type": "string",
+        "required": true,
+        "maxWords": 11
+      },
+      "subheading": {
+        "type": "string",
+        "required": false,
+        "maxWords": 29
+      },
+      "body": {
+        "type": "string[]",
+        "required": false,
+        "maxItems": 8,
+        "maxWords": 32
+      },
+      "ctas": {
+        "type": "cta[]",
+        "required": false,
+        "maxItems": 1,
+        "maxWords": 5
+      },
+      "images": {
+        "type": "image[]",
+        "required": false,
+        "maxItems": 12,
+        "assetRoles": [
+          "content-image",
+          "icon"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "maxPerPage": 2
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 1424,
+      "columns": 8
+    },
+    "mobile": {
+      "heightPx": 1501,
+      "columns": 2,
+      "hiddenShare": 0
+    },
+    "changes": [
+      "columns change from 8 to 2"
+    ]
+  },
+  "assetRoles": [
+    "content-image",
+    "icon"
+  ],
+  "implementedBy": "src/pages/About.jsx"
+}

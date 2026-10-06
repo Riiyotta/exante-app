@@ -1,0 +1,14 @@
+{
+  "id": "benefits-section",
+  "name": "Benefits Section",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "paragraph",
+    "svg"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/careers"
+  }
+}

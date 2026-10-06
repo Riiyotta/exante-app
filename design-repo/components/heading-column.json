@@ -1,0 +1,14 @@
+{
+  "id": "heading-column",
+  "name": "Heading Column",
+  "occurrences": 1,
+  "composedOf": [
+    "image",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "description-wrapper",
+  "name": "Description Wrapper",
+  "occurrences": 3,
+  "composedOf": [
+    "heading",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

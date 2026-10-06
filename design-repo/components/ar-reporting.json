@@ -1,0 +1,15 @@
+{
+  "id": "ar-reporting",
+  "name": "AR Reporting",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "image",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "left",
+  "name": "Left",
+  "occurrences": 21,
+  "composedOf": [
+    "heading",
+    "image",
+    "link"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "linked-in",
+  "name": "Linked In",
+  "occurrences": 18,
+  "composedOf": [
+    "svg"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

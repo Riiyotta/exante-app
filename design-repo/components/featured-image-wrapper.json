@@ -1,0 +1,12 @@
+{
+  "id": "featured-image-wrapper",
+  "name": "Featured Image Wrapper",
+  "occurrences": 8,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/blog/what-we-hear-when-we-talk-to-finance-teams"
+  }
+}

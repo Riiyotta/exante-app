@@ -1,0 +1,14 @@
+{
+  "id": "right",
+  "name": "Right",
+  "occurrences": 21,
+  "composedOf": [
+    "link",
+    "list",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

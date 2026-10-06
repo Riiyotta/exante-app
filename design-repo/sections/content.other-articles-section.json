@@ -1,0 +1,92 @@
+{
+  "id": "content.other-articles-section",
+  "category": "CONTENT",
+  "label": "Other Articles Section",
+  "tag": "section",
+  "purpose": "Carries the substantive content of the page. Example headline: \"Looking for more? Dive into our other articles, updates, and strategies\".",
+  "purposeIsInferred": true,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 8,
+    "routes": 8,
+    "measuredFrom": [
+      "src/blog/agents-that-learn-how-you-work/index.html:930-1164",
+      "src/blog/from-aging-reports-to-cash-control/index.html:898-1132",
+      "src/blog/from-source-of-truth-to-source-of-action/index.html:916-1150",
+      "src/blog/how-ai-agents-are-transforming-ar-and-collections/index.html:913-1147",
+      "src/blog/how-to-choose-the-right-collections-software/index.html:915-1149"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "heading": {
+        "type": "string",
+        "required": true,
+        "maxWords": 11
+      },
+      "body": {
+        "type": "string[]",
+        "required": true,
+        "maxItems": 1,
+        "maxWords": 3
+      },
+      "ctas": {
+        "type": "cta[]",
+        "required": true,
+        "maxItems": 1,
+        "maxWords": 3
+      },
+      "items": {
+        "type": "item[]",
+        "required": true,
+        "maxItems": 3,
+        "titleMaxWords": 12,
+        "bodyMaxWords": 2
+      },
+      "images": {
+        "type": "image[]",
+        "required": false,
+        "maxItems": 6,
+        "assetRoles": [
+          "content-image",
+          "icon"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 1205,
+      "columns": 3
+    },
+    "mobile": {
+      "heightPx": 1911,
+      "columns": 3,
+      "hiddenShare": 0
+    },
+    "changes": [
+      "grows taller on mobile (content stacks)"
+    ]
+  },
+  "assetRoles": [
+    "content-image",
+    "icon"
+  ],
+  "implementedBy": "src/pages/BlogWhatWeHear.jsx"
+}

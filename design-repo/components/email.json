@@ -1,0 +1,13 @@
+{
+  "id": "email",
+  "name": "Email",
+  "occurrences": 2,
+  "composedOf": [
+    "input",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/contact/sales"
+  }
+}

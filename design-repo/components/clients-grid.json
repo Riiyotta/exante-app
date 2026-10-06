@@ -1,0 +1,12 @@
+{
+  "id": "clients-grid",
+  "name": "Clients Grid",
+  "occurrences": 2,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

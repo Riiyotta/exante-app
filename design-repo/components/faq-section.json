@@ -1,0 +1,13 @@
+{
+  "id": "faq-section",
+  "name": "FAQ Section",
+  "occurrences": 2,
+  "composedOf": [
+    "heading",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

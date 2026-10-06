@@ -1,0 +1,12 @@
+{
+  "id": "logo-wrapper",
+  "name": "Logo Wrapper",
+  "occurrences": 19,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "benefits-list",
+  "name": "Benefits List",
+  "occurrences": 3,
+  "composedOf": [
+    "paragraph",
+    "svg"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/careers"
+  }
+}

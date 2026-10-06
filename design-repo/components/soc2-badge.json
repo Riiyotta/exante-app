@@ -1,0 +1,12 @@
+{
+  "id": "soc2-badge",
+  "name": "SOC2 Badge",
+  "occurrences": 18,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

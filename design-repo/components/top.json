@@ -1,0 +1,13 @@
+{
+  "id": "top",
+  "name": "Top",
+  "occurrences": 13,
+  "composedOf": [
+    "heading",
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/about"
+  }
+}

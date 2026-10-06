@@ -1,0 +1,14 @@
+{
+  "id": "media",
+  "name": "Media",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/contact"
+  }
+}

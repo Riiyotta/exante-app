@@ -1,0 +1,10 @@
+{
+  "id": "logos-wrapper",
+  "name": "Logos Wrapper",
+  "occurrences": 3,
+  "composedOf": [],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/customers"
+  }
+}

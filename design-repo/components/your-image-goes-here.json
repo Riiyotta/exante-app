@@ -1,0 +1,12 @@
+{
+  "id": "your-image-goes-here",
+  "name": "Your image goes here",
+  "occurrences": 3,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

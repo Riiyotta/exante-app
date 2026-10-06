@@ -1,0 +1,40 @@
+{
+  "$description": "Foundation motion tokens: the values observed on the site, ordered by usage. Not referenced directly by generators; semantic tokens reference these.",
+  "tokens": {
+    "duration.1300ms": {
+      "$type": "duration",
+      "$value": "1.3s",
+      "usage": 4
+    },
+    "duration.250ms": {
+      "$type": "duration",
+      "$value": "0.25s",
+      "usage": 2
+    },
+    "duration.400ms": {
+      "$type": "duration",
+      "$value": "0.4s",
+      "usage": 2
+    },
+    "duration.1500ms": {
+      "$type": "duration",
+      "$value": "1.5s",
+      "usage": 2
+    },
+    "easing.01": {
+      "$type": "cubicBezier",
+      "$value": "cubic-bezier(0.44, 0, 0.13, 0.96)",
+      "usage": 6
+    },
+    "easing.02": {
+      "$type": "cubicBezier",
+      "$value": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+      "usage": 2
+    },
+    "easing.03": {
+      "$type": "cubicBezier",
+      "$value": "linear",
+      "usage": 2
+    }
+  }
+}

@@ -1,0 +1,415 @@
+{
+  "version": "0.1.0",
+  "templates": [
+    {
+      "id": "template.home",
+      "name": "Home",
+      "routeCount": 1,
+      "chrome": "none",
+      "routes": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "section": "content.framer-huxi9o-container",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.hero-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.roi-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.problem-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.key-features-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.other-features-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.clients-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.cta-section-2",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.integrations-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "support.faq-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.another-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.framer-39uowv-container",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": {
+        "level": "measured",
+        "note": "every route of this template was visited and had an identical section sequence"
+      }
+    },
+    {
+      "id": "template.about",
+      "name": "About",
+      "routeCount": 1,
+      "chrome": "none",
+      "routes": [
+        "/about"
+      ],
+      "nodes": [
+        {
+          "section": "content.framer-guhhla-container",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.hero-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.intro-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.approach-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.team-members-section",
+          "required": true,
+          "repeatable": true,
+          "maxCount": 2
+        },
+        {
+          "section": "cta.another-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.framer-1nc9gyu-container",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": {
+        "level": "measured",
+        "note": "every route of this template was visited and had an identical section sequence"
+      }
+    },
+    {
+      "id": "template.blog",
+      "name": "Blog",
+      "routeCount": 1,
+      "chrome": "none",
+      "routes": [
+        "/blog"
+      ],
+      "nodes": [
+        {
+          "section": "content.framer-guhhla-container",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.hero-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.blog-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.framer-1nc9gyu-container",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": {
+        "level": "measured",
+        "note": "every route of this template was visited and had an identical section sequence"
+      }
+    },
+    {
+      "id": "template.customers",
+      "name": "Customers",
+      "routeCount": 1,
+      "chrome": "none",
+      "routes": [
+        "/customers"
+      ],
+      "nodes": [
+        {
+          "section": "content.framer-1h4pb9v-container",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.hero-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.testimonials-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "cta.another-cta",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.framer-gzkazm-container",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": {
+        "level": "measured",
+        "note": "every route of this template was visited and had an identical section sequence"
+      }
+    },
+    {
+      "id": "template.careers",
+      "name": "Careers",
+      "routeCount": 1,
+      "chrome": "none",
+      "routes": [
+        "/careers"
+      ],
+      "nodes": [
+        {
+          "section": "content.framer-1h4pb9v-container",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.hero-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.benefits-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.team-members-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.open-roles-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.framer-gzkazm-container",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": {
+        "level": "measured",
+        "note": "every route of this template was visited and had an identical section sequence"
+      }
+    },
+    {
+      "id": "template.contact",
+      "name": "Contact",
+      "routeCount": 1,
+      "chrome": "none",
+      "routes": [
+        "/contact"
+      ],
+      "nodes": [
+        {
+          "section": "content.framer-1h4pb9v-container",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.hero-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.content-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "support.faq-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.framer-gzkazm-container",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": {
+        "level": "measured",
+        "note": "every route of this template was visited and had an identical section sequence"
+      }
+    },
+    {
+      "id": "template.contact-2",
+      "name": "Contact pages",
+      "routeCount": 2,
+      "chrome": "partial",
+      "routes": [
+        "/contact/sales",
+        "/contact/support"
+      ],
+      "nodes": [
+        {
+          "section": "shell.desktop-filled",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.main",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.desktop",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.white",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": {
+        "level": "measured",
+        "note": "every route of this template was visited and had an identical section sequence"
+      }
+    },
+    {
+      "id": "template.legal",
+      "name": "Legal pages",
+      "routeCount": 2,
+      "chrome": "none",
+      "routes": [
+        "/legal/terms-of-service",
+        "/legal/privacy"
+      ],
+      "nodes": [
+        {
+          "section": "content.framer-1h4pb9v-container",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "hero.hero-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.content-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.framer-gzkazm-container",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": {
+        "level": "measured",
+        "note": "every route of this template was visited and had an identical section sequence"
+      }
+    },
+    {
+      "id": "template.blog-2",
+      "name": "Blog pages",
+      "routeCount": 8,
+      "chrome": "none",
+      "routes": [
+        "/blog/what-we-hear-when-we-talk-to-finance-teams",
+        "/blog/from-source-of-truth-to-source-of-action",
+        "/blog/agents-that-learn-how-you-work",
+        "/blog/from-aging-reports-to-cash-control",
+        "/blog/when-software-becomes-a-teammate",
+        "/blog/how-to-choose-the-right-collections-software",
+        "/blog/why-collections-software-keeps-failing-finance-teams",
+        "/blog/how-ai-agents-are-transforming-ar-and-collections"
+      ],
+      "nodes": [
+        {
+          "section": "content.framer-1h4pb9v-container",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.container",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "features.featured-image-wrapper",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.content-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.other-articles-section",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "content.framer-gzkazm-container",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "evidence": {
+        "level": "measured",
+        "note": "every route of this template was visited and had an identical section sequence"
+      }
+    }
+  ]
+}

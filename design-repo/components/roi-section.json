@@ -1,0 +1,14 @@
+{
+  "id": "roi-section",
+  "name": "ROI Section",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "image",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "content.framer-1nc9gyu-container",
+  "category": "CONTENT",
+  "label": "framer-1nc9gyu-container",
+  "tag": "div",
+  "purpose": "Carries the substantive content of the page. Example headline: \"Getting you from \"sent\" to \"paid\", your way.\".",
+  "purposeIsInferred": true,
+  "nameSource": "class",
+  "evidence": {
+    "level": "measured",
+    "instances": 2,
+    "routes": 2,
+    "measuredFrom": [
+      "src/about/index.html:1234-1660",
+      "src/blog/index.html:1277-1687"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "heading": {
+        "type": "string",
+        "required": true,
+        "maxWords": 8
+      },
+      "body": {
+        "type": "string[]",
+        "required": true,
+        "maxItems": 21,
+        "maxWords": 8
+      },
+      "images": {
+        "type": "image[]",
+        "required": false,
+        "maxItems": 1,
+        "assetRoles": [
+          "content-image"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 818,
+      "columns": 1
+    },
+    "mobile": {
+      "heightPx": 1260,
+      "columns": 1,
+      "hiddenShare": 0
+    },
+    "changes": [
+      "grows taller on mobile (content stacks)"
+    ]
+  },
+  "assetRoles": [
+    "content-image"
+  ],
+  "implementedBy": "src/pages/About.jsx"
+}

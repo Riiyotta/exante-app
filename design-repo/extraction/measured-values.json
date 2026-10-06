@@ -1,0 +1,1610 @@
+{
+  "version": "0.1.0",
+  "sourceProject": {
+    "url": "https://www.exante.app/",
+    "framework": "React+Framer+Lenis",
+    "scrapedAt": "2026-10-05T13:10:06Z",
+    "snapshotFolder": "recon/mirror/src/"
+  },
+  "note": "Citation ledger. `lines` are line ranges in the rendered-HTML snapshots under recon/mirror/src/; verify_all.py resolves them and degrades to a warning when src/ is absent.",
+  "viewport": {
+    "desktop": "1440x900",
+    "mobile": "390x844"
+  },
+  "histograms": {
+    "colors": [
+      [
+        "rgba(0,0,0,0)",
+        7998
+      ],
+      [
+        "rgb(0,0,0)",
+        4962
+      ],
+      [
+        "rgb(30,33,30)",
+        1251
+      ],
+      [
+        "rgb(255,255,255)",
+        1099
+      ],
+      [
+        "rgb(0,0,238)",
+        1045
+      ],
+      [
+        "rgb(34,34,34)",
+        402
+      ],
+      [
+        "rgb(144,252,149)",
+        63
+      ],
+      [
+        "rgb(251,250,249)",
+        61
+      ],
+      [
+        "rgba(30,33,30,0.6)",
+        58
+      ],
+      [
+        "rgb(242,236,232)",
+        40
+      ],
+      [
+        "rgba(255,255,255,0.15)",
+        33
+      ],
+      [
+        "rgba(51,170,255,0)",
+        30
+      ],
+      [
+        "rgb(118,118,118)",
+        22
+      ],
+      [
+        "rgb(138,138,138)",
+        10
+      ],
+      [
+        "rgb(250,250,250)",
+        10
+      ],
+      [
+        "rgba(255,255,255,0)",
+        8
+      ],
+      [
+        "rgba(255,255,255,0.8)",
+        6
+      ],
+      [
+        "rgba(30,33,30,0.8)",
+        6
+      ],
+      [
+        "rgba(245,243,242,0.3)",
+        4
+      ],
+      [
+        "rgba(0,0,0,0.7)",
+        3
+      ],
+      [
+        "rgba(255,255,255,0.01)",
+        2
+      ],
+      [
+        "rgb(249,250,251)",
+        1
+      ],
+      [
+        "rgb(33,54,34)",
+        1
+      ],
+      [
+        "rgba(0,0,0,0.4)",
+        1
+      ],
+      [
+        "rgba(30,33,30,0.3)",
+        1
+      ]
+    ],
+    "radii": [
+      [
+        "4px",
+        222
+      ],
+      [
+        "2px",
+        207
+      ],
+      [
+        "8px",
+        47
+      ],
+      [
+        "64px",
+        32
+      ],
+      [
+        "16px",
+        20
+      ],
+      [
+        "50px",
+        6
+      ],
+      [
+        "10px",
+        5
+      ],
+      [
+        "1px",
+        1
+      ]
+    ],
+    "spacing": [
+      [
+        "10px",
+        832
+      ],
+      [
+        "40px",
+        449
+      ],
+      [
+        "20px",
+        409
+      ],
+      [
+        "16px",
+        392
+      ],
+      [
+        "12px",
+        386
+      ],
+      [
+        "24px",
+        348
+      ],
+      [
+        "8px",
+        306
+      ],
+      [
+        "32px",
+        302
+      ],
+      [
+        "64px",
+        148
+      ],
+      [
+        "13px",
+        144
+      ],
+      [
+        "2px",
+        136
+      ],
+      [
+        "4px",
+        98
+      ],
+      [
+        "28px",
+        90
+      ],
+      [
+        "11px",
+        78
+      ],
+      [
+        "48px",
+        78
+      ],
+      [
+        "80px",
+        74
+      ],
+      [
+        "3px",
+        68
+      ],
+      [
+        "160px",
+        64
+      ],
+      [
+        "96px",
+        55
+      ],
+      [
+        "1px",
+        51
+      ],
+      [
+        "34px",
+        42
+      ],
+      [
+        "36px",
+        41
+      ],
+      [
+        "24.9723px",
+        34
+      ],
+      [
+        "14px",
+        24
+      ],
+      [
+        "140px",
+        20
+      ],
+      [
+        "200px",
+        15
+      ],
+      [
+        "47px",
+        12
+      ],
+      [
+        "9.5px",
+        12
+      ],
+      [
+        "118px",
+        6
+      ],
+      [
+        "31px",
+        6
+      ],
+      [
+        "120px",
+        5
+      ],
+      [
+        "29px",
+        4
+      ],
+      [
+        "41px",
+        4
+      ],
+      [
+        "43px",
+        4
+      ],
+      [
+        "53px",
+        4
+      ],
+      [
+        "85px",
+        3
+      ],
+      [
+        "106px",
+        2
+      ],
+      [
+        "124px",
+        2
+      ],
+      [
+        "150px",
+        2
+      ],
+      [
+        "18px",
+        2
+      ]
+    ],
+    "breakpoints": [
+      [
+        "760px",
+        402
+      ],
+      [
+        "1439px",
+        384
+      ],
+      [
+        "759px",
+        384
+      ],
+      [
+        "1439.98px",
+        18
+      ],
+      [
+        "759.98px",
+        18
+      ],
+      [
+        "1099.98px",
+        1
+      ],
+      [
+        "1100px",
+        1
+      ]
+    ],
+    "durations": [
+      [
+        "1.3s",
+        4
+      ],
+      [
+        "0.25s",
+        2
+      ],
+      [
+        "0.4s",
+        2
+      ],
+      [
+        "1.5s",
+        2
+      ]
+    ],
+    "easings": [
+      [
+        "cubic-bezier(0.44, 0, 0.13, 0.96)",
+        6
+      ],
+      [
+        "cubic-bezier(0.215, 0.61, 0.355, 1)",
+        2
+      ],
+      [
+        "linear",
+        2
+      ]
+    ],
+    "cssVariables": {
+      "--token-5db4a903-36b3-4f67-b597-d8b9c8af2728": "#1e211e",
+      "--token-f2d0b226-11d7-401c-9054-7d237b6a1775": "#fff",
+      "--token-dcbb78ff-9bab-4047-970b-a809a92fe3a0": "#1e211e",
+      "--token-6f1a9aa1-dc15-4eab-99ad-1c6eabfe4c25": "#fbfaf9",
+      "--token-af75439c-5fb2-489b-9842-49e4e085433f": "#f2ece8",
+      "--token-e9147738-11bf-439e-b830-75695c90df11": "#f9fafb",
+      "--token-4bae144f-bce0-47f9-922c-225954ca6d21": "#1e211e99",
+      "--token-33e41037-3bf3-4597-b59e-f853d1e11037": "#ffffff26",
+      "--token-ec8726fc-1398-4f0d-95bf-21e009339010": "#213622",
+      "--token-29b63245-c8e2-4359-8e78-ae4b40c6acb9": "#1e211e1a",
+      "--token-b5bafd20-20b7-40f6-95ba-ccf988ea17d7": "#f5f3f24d",
+      "--token-af040278-6d46-4a32-97d5-3df5c0ef7d2f": "#ffffff80",
+      "--token-81a208c3-34bd-4542-aefd-1f6139129e6f": "#fafafa",
+      "--token-c85f02ec-ac55-4335-959f-1d6117f0ee79": "#90fc95",
+      "--token-6c329036-5d60-49ca-9ec8-b83028eb83a4": "#ededed",
+      "--token-e6e50855-78f2-44f8-b9b8-df9fd8cc122e": "#715441",
+      "--token-7b2e0288-ef80-426e-bdd3-731aad78effb": "#8a8a8a",
+      "--token-867f71cc-15a1-405d-85e3-8ec03fb5d2b1": "#fffc",
+      "--token-5b3d5c19-88e7-4aa2-aed3-318234619abc": "#1e211e4d",
+      "--token-78d33328-edac-4aaa-a2a4-4a8a4d301009": "#222",
+      "--token-13e4ff33-0012-4cc3-9780-21a8426d59b0": "#000",
+      "--token-92a6fb03-8b1e-43b0-b1f9-ac1d3bac725c": "#222",
+      "--token-f4e12b27-2cdf-427a-9ef2-ee78ad5c8956": "#000",
+      "--framer-will-change-override": "transform",
+      "--framer-will-change-filter-override": "filter",
+      "--overflow-clip-fallback": "hidden",
+      "--one-if-corner-shape-supported": "1",
+      "--framer-aspect-ratio-supported": "auto"
+    }
+  },
+  "routes": [
+    {
+      "route": "/",
+      "title": "Exante: AI Teammate for Collections",
+      "h1": "AI teammate that handles collections",
+      "template": "template.home",
+      "file": "src/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "content.framer-huxi9o-container",
+          "tag": "div",
+          "anchor": "framer-huxi9o-container",
+          "lines": [
+            624,
+            712
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "hero.hero-section",
+          "tag": "section",
+          "anchor": "framer-1c0ttq6",
+          "lines": [
+            713,
+            761
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "content.roi-section",
+          "tag": "section",
+          "anchor": "id=\"intro\"",
+          "lines": [
+            762,
+            882
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "content.problem-section",
+          "tag": "section",
+          "anchor": "id=\"intro-1\"",
+          "lines": [
+            883,
+            1018
+          ]
+        },
+        {
+          "idx": 4,
+          "id": "features.key-features-section",
+          "tag": "section",
+          "anchor": "framer-1krm3fo",
+          "lines": [
+            1019,
+            1182
+          ]
+        },
+        {
+          "idx": 5,
+          "id": "features.other-features-section",
+          "tag": "section",
+          "anchor": "id=\"benefits\"",
+          "lines": [
+            1183,
+            1341
+          ]
+        },
+        {
+          "idx": 6,
+          "id": "proof.clients-section",
+          "tag": "section",
+          "anchor": "framer-1c7ts3p",
+          "lines": [
+            1342,
+            1410
+          ]
+        },
+        {
+          "idx": 7,
+          "id": "cta.cta-section-2",
+          "tag": "section",
+          "anchor": "id=\"intro-2\"",
+          "lines": [
+            1411,
+            1555
+          ]
+        },
+        {
+          "idx": 8,
+          "id": "features.integrations-section",
+          "tag": "section",
+          "anchor": "framer-gtta14",
+          "lines": [
+            1556,
+            1685
+          ]
+        },
+        {
+          "idx": 9,
+          "id": "support.faq-section",
+          "tag": "section",
+          "anchor": "framer-7y5j0d",
+          "lines": [
+            1686,
+            1813
+          ]
+        },
+        {
+          "idx": 10,
+          "id": "cta.another-cta",
+          "tag": "section",
+          "anchor": "id=\"intro-4\"",
+          "lines": [
+            1814,
+            1866
+          ]
+        },
+        {
+          "idx": 11,
+          "id": "content.framer-39uowv-container",
+          "tag": "div",
+          "anchor": "framer-39uowv-container",
+          "lines": [
+            1867,
+            2293
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/about",
+      "title": "Exante: AI Teammate for Collections",
+      "h1": "Finance teams deserve better.",
+      "template": "template.about",
+      "file": "src/about/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "content.framer-guhhla-container",
+          "tag": "div",
+          "anchor": "framer-guhhla-container",
+          "lines": [
+            624,
+            712
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "hero.hero-section",
+          "tag": "section",
+          "anchor": "framer-a1aiyh",
+          "lines": [
+            713,
+            740
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "content.intro-section",
+          "tag": "section",
+          "anchor": "id=\"intro\"",
+          "lines": [
+            741,
+            769
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "content.approach-section",
+          "tag": "section",
+          "anchor": "framer-4mfsn4",
+          "lines": [
+            770,
+            890
+          ]
+        },
+        {
+          "idx": 4,
+          "id": "content.team-members-section",
+          "tag": "section",
+          "anchor": "framer-1y4obuk",
+          "lines": [
+            891,
+            1092
+          ]
+        },
+        {
+          "idx": 5,
+          "id": "content.team-members-section",
+          "tag": "section",
+          "anchor": "framer-1j5gnf2",
+          "lines": [
+            1093,
+            1195
+          ]
+        },
+        {
+          "idx": 6,
+          "id": "cta.another-cta",
+          "tag": "section",
+          "anchor": "id=\"intro-1\"",
+          "lines": [
+            1196,
+            1233
+          ]
+        },
+        {
+          "idx": 7,
+          "id": "content.framer-1nc9gyu-container",
+          "tag": "div",
+          "anchor": "framer-1nc9gyu-container",
+          "lines": [
+            1234,
+            1660
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/blog",
+      "title": "Exante: AI Teammate for Collections",
+      "h1": "Research-led insights for modern finance teams",
+      "template": "template.blog",
+      "file": "src/blog/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "content.framer-guhhla-container",
+          "tag": "div",
+          "anchor": "framer-guhhla-container",
+          "lines": [
+            624,
+            712
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "hero.hero-section",
+          "tag": "section",
+          "anchor": "framer-19yij11",
+          "lines": [
+            713,
+            737
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "content.blog-section",
+          "tag": "section",
+          "anchor": "id=\"blog\"",
+          "lines": [
+            738,
+            1276
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "content.framer-1nc9gyu-container",
+          "tag": "div",
+          "anchor": "framer-1nc9gyu-container",
+          "lines": [
+            1277,
+            1687
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/customers",
+      "title": "Exante: AI Teammate for Collections",
+      "h1": "",
+      "template": "template.customers",
+      "file": "src/customers/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "content.framer-1h4pb9v-container",
+          "tag": "div",
+          "anchor": "framer-1h4pb9v-container",
+          "lines": [
+            623,
+            710
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "hero.hero-section",
+          "tag": "section",
+          "anchor": "framer-1ks13m8",
+          "lines": [
+            711,
+            774
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "proof.testimonials-section",
+          "tag": "section",
+          "anchor": "id=\"testimonials\"",
+          "lines": [
+            775,
+            1052
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "cta.another-cta",
+          "tag": "section",
+          "anchor": "id=\"intro\"",
+          "lines": [
+            1053,
+            1100
+          ]
+        },
+        {
+          "idx": 4,
+          "id": "content.framer-gzkazm-container",
+          "tag": "div",
+          "anchor": "framer-gzkazm-container",
+          "lines": [
+            1101,
+            1522
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/careers",
+      "title": "Exante: AI Teammate for Collections",
+      "h1": "Let’s shape the future of finance, together",
+      "template": "template.careers",
+      "file": "src/careers/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "content.framer-1h4pb9v-container",
+          "tag": "div",
+          "anchor": "framer-1h4pb9v-container",
+          "lines": [
+            623,
+            710
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "hero.hero-section",
+          "tag": "section",
+          "anchor": "framer-1h890rf",
+          "lines": [
+            711,
+            742
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "features.benefits-section",
+          "tag": "section",
+          "anchor": "framer-159xwfn",
+          "lines": [
+            743,
+            979
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "content.team-members-section",
+          "tag": "section",
+          "anchor": "framer-eo8jl",
+          "lines": [
+            980,
+            1094
+          ]
+        },
+        {
+          "idx": 4,
+          "id": "content.open-roles-section",
+          "tag": "section",
+          "anchor": "framer-1mi0m5s",
+          "lines": [
+            1095,
+            1146
+          ]
+        },
+        {
+          "idx": 5,
+          "id": "content.framer-gzkazm-container",
+          "tag": "div",
+          "anchor": "framer-gzkazm-container",
+          "lines": [
+            1147,
+            1571
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/contact",
+      "title": "Exante: AI Teammate for Collections",
+      "h1": "How can we help?",
+      "template": "template.contact",
+      "file": "src/contact/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "content.framer-1h4pb9v-container",
+          "tag": "div",
+          "anchor": "framer-1h4pb9v-container",
+          "lines": [
+            623,
+            710
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "hero.hero-section",
+          "tag": "section",
+          "anchor": "framer-8df8zr",
+          "lines": [
+            711,
+            728
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "content.content-section",
+          "tag": "section",
+          "anchor": "framer-19xq0k7",
+          "lines": [
+            729,
+            799
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "support.faq-section",
+          "tag": "section",
+          "anchor": "framer-9opd2e",
+          "lines": [
+            800,
+            933
+          ]
+        },
+        {
+          "idx": 4,
+          "id": "content.framer-gzkazm-container",
+          "tag": "div",
+          "anchor": "framer-gzkazm-container",
+          "lines": [
+            934,
+            1345
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/contact/sales",
+      "title": "Exante: AI Teammate for Collections",
+      "h1": "Contact sales",
+      "template": "template.contact-2",
+      "file": "src/contact/sales/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "shell.desktop-filled",
+          "tag": "header",
+          "anchor": "framer-BIBup",
+          "lines": [
+            626,
+            709
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "hero.main",
+          "tag": "main",
+          "anchor": "framer-zluchh",
+          "lines": [
+            710,
+            890
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "shell.desktop",
+          "tag": "footer",
+          "anchor": "framer-sPvce",
+          "lines": [
+            891,
+            1090
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "content.white",
+          "tag": "div",
+          "anchor": "framer-QKa7h",
+          "lines": [
+            1091,
+            1310
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/legal/terms-of-service",
+      "title": "Terms of Service - Vectura",
+      "h1": "Terms of Service",
+      "template": "template.legal",
+      "file": "src/legal/terms-of-service/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "content.framer-1h4pb9v-container",
+          "tag": "div",
+          "anchor": "framer-1h4pb9v-container",
+          "lines": [
+            623,
+            710
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "hero.hero-section",
+          "tag": "section",
+          "anchor": "framer-fk2g07",
+          "lines": [
+            711,
+            721
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "content.content-section",
+          "tag": "section",
+          "anchor": "framer-xw4pib",
+          "lines": [
+            722,
+            983
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "content.framer-gzkazm-container",
+          "tag": "div",
+          "anchor": "framer-gzkazm-container",
+          "lines": [
+            984,
+            1391
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/legal/privacy",
+      "title": "Privacy Policy - Vectura",
+      "h1": "Privacy Policy",
+      "template": "template.legal",
+      "file": "src/legal/privacy/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "content.framer-1h4pb9v-container",
+          "tag": "div",
+          "anchor": "framer-1h4pb9v-container",
+          "lines": [
+            623,
+            710
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "hero.hero-section",
+          "tag": "section",
+          "anchor": "framer-fk2g07",
+          "lines": [
+            711,
+            720
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "content.content-section",
+          "tag": "section",
+          "anchor": "framer-xw4pib",
+          "lines": [
+            721,
+            867
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "content.framer-gzkazm-container",
+          "tag": "div",
+          "anchor": "framer-gzkazm-container",
+          "lines": [
+            868,
+            1275
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/blog/what-we-hear-when-we-talk-to-finance-teams",
+      "title": "Exante: AI Teammate for Collections",
+      "h1": "What We Hear When We Talk to Finance Teams",
+      "template": "template.blog-2",
+      "file": "src/blog/what-we-hear-when-we-talk-to-finance-teams/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "content.framer-1h4pb9v-container",
+          "tag": "div",
+          "anchor": "framer-1h4pb9v-container",
+          "lines": [
+            623,
+            711
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "content.container",
+          "tag": "div",
+          "anchor": "framer-npbm1o",
+          "lines": [
+            712,
+            812
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "features.featured-image-wrapper",
+          "tag": "div",
+          "anchor": "framer-2m1hf9",
+          "lines": [
+            813,
+            822
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "content.content-section",
+          "tag": "section",
+          "anchor": "framer-1yzijim",
+          "lines": [
+            823,
+            919
+          ]
+        },
+        {
+          "idx": 4,
+          "id": "content.other-articles-section",
+          "tag": "section",
+          "anchor": "framer-f1v7ax",
+          "lines": [
+            920,
+            1154
+          ]
+        },
+        {
+          "idx": 5,
+          "id": "content.framer-gzkazm-container",
+          "tag": "div",
+          "anchor": "framer-gzkazm-container",
+          "lines": [
+            1155,
+            1569
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/blog/from-source-of-truth-to-source-of-action",
+      "title": "Exante: AI Teammate for Collections",
+      "h1": "From Source of Truth to Source of Action",
+      "template": "template.blog-2",
+      "file": "src/blog/from-source-of-truth-to-source-of-action/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "content.framer-1h4pb9v-container",
+          "tag": "div",
+          "anchor": "framer-1h4pb9v-container",
+          "lines": [
+            623,
+            711
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "content.container",
+          "tag": "div",
+          "anchor": "framer-npbm1o",
+          "lines": [
+            712,
+            812
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "features.featured-image-wrapper",
+          "tag": "div",
+          "anchor": "framer-2m1hf9",
+          "lines": [
+            813,
+            822
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "content.content-section",
+          "tag": "section",
+          "anchor": "framer-1yzijim",
+          "lines": [
+            823,
+            915
+          ]
+        },
+        {
+          "idx": 4,
+          "id": "content.other-articles-section",
+          "tag": "section",
+          "anchor": "framer-f1v7ax",
+          "lines": [
+            916,
+            1150
+          ]
+        },
+        {
+          "idx": 5,
+          "id": "content.framer-gzkazm-container",
+          "tag": "div",
+          "anchor": "framer-gzkazm-container",
+          "lines": [
+            1151,
+            1565
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/blog/agents-that-learn-how-you-work",
+      "title": "Exante: AI Teammate for Collections",
+      "h1": "Agents That Learn How You Work (Not Software You Have to Learn)",
+      "template": "template.blog-2",
+      "file": "src/blog/agents-that-learn-how-you-work/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "content.framer-1h4pb9v-container",
+          "tag": "div",
+          "anchor": "framer-1h4pb9v-container",
+          "lines": [
+            623,
+            711
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "content.container",
+          "tag": "div",
+          "anchor": "framer-npbm1o",
+          "lines": [
+            712,
+            815
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "features.featured-image-wrapper",
+          "tag": "div",
+          "anchor": "framer-2m1hf9",
+          "lines": [
+            816,
+            825
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "content.content-section",
+          "tag": "section",
+          "anchor": "framer-1yzijim",
+          "lines": [
+            826,
+            929
+          ]
+        },
+        {
+          "idx": 4,
+          "id": "content.other-articles-section",
+          "tag": "section",
+          "anchor": "framer-f1v7ax",
+          "lines": [
+            930,
+            1164
+          ]
+        },
+        {
+          "idx": 5,
+          "id": "content.framer-gzkazm-container",
+          "tag": "div",
+          "anchor": "framer-gzkazm-container",
+          "lines": [
+            1165,
+            1579
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/blog/from-aging-reports-to-cash-control",
+      "title": "Exante: AI Teammate for Collections",
+      "h1": "From Aging Reports to Continuous Cash Control",
+      "template": "template.blog-2",
+      "file": "src/blog/from-aging-reports-to-cash-control/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "content.framer-1h4pb9v-container",
+          "tag": "div",
+          "anchor": "framer-1h4pb9v-container",
+          "lines": [
+            623,
+            711
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "content.container",
+          "tag": "div",
+          "anchor": "framer-npbm1o",
+          "lines": [
+            712,
+            809
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "features.featured-image-wrapper",
+          "tag": "div",
+          "anchor": "framer-2m1hf9",
+          "lines": [
+            810,
+            819
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "content.content-section",
+          "tag": "section",
+          "anchor": "framer-1yzijim",
+          "lines": [
+            820,
+            897
+          ]
+        },
+        {
+          "idx": 4,
+          "id": "content.other-articles-section",
+          "tag": "section",
+          "anchor": "framer-f1v7ax",
+          "lines": [
+            898,
+            1132
+          ]
+        },
+        {
+          "idx": 5,
+          "id": "content.framer-gzkazm-container",
+          "tag": "div",
+          "anchor": "framer-gzkazm-container",
+          "lines": [
+            1133,
+            1547
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/blog/when-software-becomes-a-teammate",
+      "title": "Exante: AI Teammate for Collections",
+      "h1": "When Software Becomes a Teammate",
+      "template": "template.blog-2",
+      "file": "src/blog/when-software-becomes-a-teammate/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "content.framer-1h4pb9v-container",
+          "tag": "div",
+          "anchor": "framer-1h4pb9v-container",
+          "lines": [
+            623,
+            711
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "content.container",
+          "tag": "div",
+          "anchor": "framer-npbm1o",
+          "lines": [
+            712,
+            806
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "features.featured-image-wrapper",
+          "tag": "div",
+          "anchor": "framer-2m1hf9",
+          "lines": [
+            807,
+            816
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "content.content-section",
+          "tag": "section",
+          "anchor": "framer-1yzijim",
+          "lines": [
+            817,
+            901
+          ]
+        },
+        {
+          "idx": 4,
+          "id": "content.other-articles-section",
+          "tag": "section",
+          "anchor": "framer-f1v7ax",
+          "lines": [
+            902,
+            1136
+          ]
+        },
+        {
+          "idx": 5,
+          "id": "content.framer-gzkazm-container",
+          "tag": "div",
+          "anchor": "framer-gzkazm-container",
+          "lines": [
+            1137,
+            1551
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/blog/how-to-choose-the-right-collections-software",
+      "title": "Exante: AI Teammate for Collections",
+      "h1": "AR Collections Management Tools: How to Choose the Right One",
+      "template": "template.blog-2",
+      "file": "src/blog/how-to-choose-the-right-collections-software/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "content.framer-1h4pb9v-container",
+          "tag": "div",
+          "anchor": "framer-1h4pb9v-container",
+          "lines": [
+            623,
+            711
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "content.container",
+          "tag": "div",
+          "anchor": "framer-npbm1o",
+          "lines": [
+            712,
+            813
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "features.featured-image-wrapper",
+          "tag": "div",
+          "anchor": "framer-2m1hf9",
+          "lines": [
+            814,
+            823
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "content.content-section",
+          "tag": "section",
+          "anchor": "framer-1yzijim",
+          "lines": [
+            824,
+            914
+          ]
+        },
+        {
+          "idx": 4,
+          "id": "content.other-articles-section",
+          "tag": "section",
+          "anchor": "framer-f1v7ax",
+          "lines": [
+            915,
+            1149
+          ]
+        },
+        {
+          "idx": 5,
+          "id": "content.framer-gzkazm-container",
+          "tag": "div",
+          "anchor": "framer-gzkazm-container",
+          "lines": [
+            1150,
+            1564
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/blog/why-collections-software-keeps-failing-finance-teams",
+      "title": "Exante: AI Teammate for Collections",
+      "h1": "Why Collections Software Keeps Failing Finance Teams",
+      "template": "template.blog-2",
+      "file": "src/blog/why-collections-software-keeps-failing-finance-teams/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "content.framer-1h4pb9v-container",
+          "tag": "div",
+          "anchor": "framer-1h4pb9v-container",
+          "lines": [
+            623,
+            711
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "content.container",
+          "tag": "div",
+          "anchor": "framer-npbm1o",
+          "lines": [
+            712,
+            810
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "features.featured-image-wrapper",
+          "tag": "div",
+          "anchor": "framer-2m1hf9",
+          "lines": [
+            811,
+            820
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "content.content-section",
+          "tag": "section",
+          "anchor": "framer-1yzijim",
+          "lines": [
+            821,
+            936
+          ]
+        },
+        {
+          "idx": 4,
+          "id": "content.other-articles-section",
+          "tag": "section",
+          "anchor": "framer-f1v7ax",
+          "lines": [
+            937,
+            1171
+          ]
+        },
+        {
+          "idx": 5,
+          "id": "content.framer-gzkazm-container",
+          "tag": "div",
+          "anchor": "framer-gzkazm-container",
+          "lines": [
+            1172,
+            1586
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/blog/how-ai-agents-are-transforming-ar-and-collections",
+      "title": "Exante: AI Teammate for Collections",
+      "h1": "How AI Agents Are Transforming AR and Collections",
+      "template": "template.blog-2",
+      "file": "src/blog/how-ai-agents-are-transforming-ar-and-collections/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "content.framer-1h4pb9v-container",
+          "tag": "div",
+          "anchor": "framer-1h4pb9v-container",
+          "lines": [
+            623,
+            711
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "content.container",
+          "tag": "div",
+          "anchor": "framer-npbm1o",
+          "lines": [
+            712,
+            810
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "features.featured-image-wrapper",
+          "tag": "div",
+          "anchor": "framer-2m1hf9",
+          "lines": [
+            811,
+            820
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "content.content-section",
+          "tag": "section",
+          "anchor": "framer-1yzijim",
+          "lines": [
+            821,
+            912
+          ]
+        },
+        {
+          "idx": 4,
+          "id": "content.other-articles-section",
+          "tag": "section",
+          "anchor": "framer-f1v7ax",
+          "lines": [
+            913,
+            1147
+          ]
+        },
+        {
+          "idx": 5,
+          "id": "content.framer-gzkazm-container",
+          "tag": "div",
+          "anchor": "framer-gzkazm-container",
+          "lines": [
+            1148,
+            1562
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/contact/support",
+      "title": "Exante: AI Teammate for Collections",
+      "h1": "Contact support",
+      "template": "template.contact-2",
+      "file": "src/contact/support/index.html",
+      "sections": [
+        {
+          "idx": 0,
+          "id": "shell.desktop-filled",
+          "tag": "header",
+          "anchor": "framer-BIBup",
+          "lines": [
+            632,
+            715
+          ]
+        },
+        {
+          "idx": 1,
+          "id": "hero.main",
+          "tag": "main",
+          "anchor": "framer-1w6izsk",
+          "lines": [
+            716,
+            851
+          ]
+        },
+        {
+          "idx": 2,
+          "id": "shell.desktop",
+          "tag": "footer",
+          "anchor": "framer-sPvce",
+          "lines": [
+            852,
+            1051
+          ]
+        },
+        {
+          "idx": 3,
+          "id": "content.white",
+          "tag": "div",
+          "anchor": "framer-QKa7h",
+          "lines": [
+            1052,
+            1257
+          ]
+        }
+      ]
+    }
+  ]
+}

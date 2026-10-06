@@ -1,0 +1,14 @@
+{
+  "id": "support",
+  "name": "Support",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/contact"
+  }
+}

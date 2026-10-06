@@ -1,0 +1,77 @@
+{
+  "id": "content.framer-gzkazm-container",
+  "category": "CONTENT",
+  "label": "framer-gzkazm-container",
+  "tag": "div",
+  "purpose": "Carries the substantive content of the page. Example headline: \"Getting you from \"sent\" to \"paid\", your way.\".",
+  "purposeIsInferred": true,
+  "nameSource": "class",
+  "evidence": {
+    "level": "measured",
+    "instances": 13,
+    "routes": 13,
+    "measuredFrom": [
+      "src/blog/agents-that-learn-how-you-work/index.html:1165-1579",
+      "src/blog/from-aging-reports-to-cash-control/index.html:1133-1547",
+      "src/blog/from-source-of-truth-to-source-of-action/index.html:1151-1565",
+      "src/blog/how-ai-agents-are-transforming-ar-and-collections/index.html:1148-1562",
+      "src/blog/how-to-choose-the-right-collections-software/index.html:1150-1564"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "heading": {
+        "type": "string",
+        "required": true,
+        "maxWords": 8
+      },
+      "body": {
+        "type": "string[]",
+        "required": true,
+        "maxItems": 21,
+        "maxWords": 8
+      },
+      "images": {
+        "type": "image[]",
+        "required": false,
+        "maxItems": 1,
+        "assetRoles": [
+          "content-image"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 818,
+      "columns": 1
+    },
+    "mobile": {
+      "heightPx": 1260,
+      "columns": 1,
+      "hiddenShare": 0
+    },
+    "changes": [
+      "grows taller on mobile (content stacks)"
+    ]
+  },
+  "assetRoles": [
+    "content-image"
+  ],
+  "implementedBy": "src/pages/Customers.jsx"
+}

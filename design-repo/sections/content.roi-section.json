@@ -1,0 +1,81 @@
+{
+  "id": "content.roi-section",
+  "category": "CONTENT",
+  "label": "ROI Section",
+  "tag": "section",
+  "purpose": "Carries the substantive content of the page. Example headline: \"Go from outstanding invoices to outstanding cash flow in no time.\".",
+  "purposeIsInferred": true,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 1,
+    "routes": 1,
+    "measuredFrom": [
+      "src/index.html:762-882"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "heading": {
+        "type": "string",
+        "required": true,
+        "maxWords": 11
+      },
+      "body": {
+        "type": "string[]",
+        "required": true,
+        "maxItems": 1,
+        "maxWords": 4
+      },
+      "items": {
+        "type": "item[]",
+        "required": true,
+        "maxItems": 4,
+        "titleMaxWords": 6,
+        "bodyMaxWords": 0
+      },
+      "images": {
+        "type": "image[]",
+        "required": false,
+        "maxItems": 1,
+        "assetRoles": [
+          "content-image"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 777,
+      "columns": 2
+    },
+    "mobile": {
+      "heightPx": 1030,
+      "columns": 1,
+      "hiddenShare": 0
+    },
+    "changes": [
+      "2 columns collapse to a single column",
+      "grows taller on mobile (content stacks)"
+    ]
+  },
+  "assetRoles": [
+    "content-image"
+  ],
+  "implementedBy": "src/pages/HomePage.jsx"
+}

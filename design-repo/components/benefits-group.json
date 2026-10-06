@@ -1,0 +1,14 @@
+{
+  "id": "benefits-group",
+  "name": "Benefits Group",
+  "occurrences": 3,
+  "composedOf": [
+    "heading",
+    "paragraph",
+    "svg"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/careers"
+  }
+}

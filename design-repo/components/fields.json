@@ -1,0 +1,15 @@
+{
+  "id": "fields",
+  "name": "Fields",
+  "occurrences": 2,
+  "composedOf": [
+    "input",
+    "paragraph",
+    "select",
+    "textarea"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/contact/sales"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "slide-1",
+  "name": "Slide #1",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "image",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/customers"
+  }
+}

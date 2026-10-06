@@ -1,0 +1,45 @@
+{
+  "version": "0.1.0",
+  "patterns": {
+    "none": {
+      "description": "No animation.",
+      "observedSections": 0
+    },
+    "css-transition": {
+      "description": "A CSS transition on hover/focus/state change.",
+      "observedSections": 2
+    },
+    "css-animation": {
+      "description": "A CSS @keyframes animation.",
+      "observedSections": 0
+    },
+    "appear-on-enter": {
+      "description": "Element appears (fade/slide) when it enters the viewport.",
+      "observedSections": 48
+    },
+    "scroll-linked": {
+      "description": "Sticky or scroll-pinned behaviour tied to scroll position.",
+      "observedSections": 11
+    },
+    "canvas-animation": {
+      "description": "A <canvas>-rendered animation (Rive, Lottie or WebGL).",
+      "observedSections": 0
+    }
+  },
+  "reducedMotionFallbacks": [
+    "disable-animation",
+    "instant-state"
+  ],
+  "closedFields": [
+    "pattern",
+    "reducedMotionFallback"
+  ],
+  "budget": {
+    "maxAnimatedSectionsPerPage": 4,
+    "basis": "most animated measured page"
+  },
+  "tokens": {
+    "durations": "tokens/00-foundation/motion.json",
+    "semantic": "tokens/10-semantic/motion.json"
+  }
+}

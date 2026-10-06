@@ -1,0 +1,13 @@
+{
+  "id": "product",
+  "name": "Product",
+  "occurrences": 18,
+  "composedOf": [
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

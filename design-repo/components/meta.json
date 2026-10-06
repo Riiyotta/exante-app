@@ -1,0 +1,12 @@
+{
+  "id": "meta",
+  "name": "Meta",
+  "occurrences": 8,
+  "composedOf": [
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/blog/what-we-hear-when-we-talk-to-finance-teams"
+  }
+}

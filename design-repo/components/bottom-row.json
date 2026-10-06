@@ -1,0 +1,13 @@
+{
+  "id": "bottom-row",
+  "name": "Bottom Row",
+  "occurrences": 3,
+  "composedOf": [
+    "heading",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/customers"
+  }
+}

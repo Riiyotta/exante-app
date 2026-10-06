@@ -1,0 +1,10 @@
+{
+  "id": "icon-wrapper",
+  "name": "Icon Wrapper",
+  "occurrences": 12,
+  "composedOf": [],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "open-roles-section",
+  "name": "Open Roles Section",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/careers"
+  }
+}

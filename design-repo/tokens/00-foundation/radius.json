@@ -1,0 +1,45 @@
+{
+  "$description": "Foundation radius tokens: the values observed on the site, ordered by usage. Not referenced directly by generators; semantic tokens reference these.",
+  "tokens": {
+    "radius.4": {
+      "$type": "dimension",
+      "$value": "4px",
+      "usage": 222
+    },
+    "radius.2": {
+      "$type": "dimension",
+      "$value": "2px",
+      "usage": 207
+    },
+    "radius.8": {
+      "$type": "dimension",
+      "$value": "8px",
+      "usage": 47
+    },
+    "radius.64": {
+      "$type": "dimension",
+      "$value": "64px",
+      "usage": 32
+    },
+    "radius.16": {
+      "$type": "dimension",
+      "$value": "16px",
+      "usage": 20
+    },
+    "radius.50": {
+      "$type": "dimension",
+      "$value": "50px",
+      "usage": 6
+    },
+    "radius.10": {
+      "$type": "dimension",
+      "$value": "10px",
+      "usage": 5
+    },
+    "radius.1": {
+      "$type": "dimension",
+      "$value": "1px",
+      "usage": 1
+    }
+  }
+}

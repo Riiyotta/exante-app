@@ -1,0 +1,14 @@
+{
+  "id": "content",
+  "name": "Content",
+  "occurrences": 10,
+  "composedOf": [
+    "heading",
+    "list",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/legal/terms-of-service"
+  }
+}

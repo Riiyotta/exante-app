@@ -1,0 +1,187 @@
+{
+  "$description": "Foundation color tokens: the values observed on the site, ordered by usage. Not referenced directly by generators; semantic tokens reference these.",
+  "tokens": {
+    "color.neutral.01": {
+      "$type": "color",
+      "$value": "rgb(0,0,0)",
+      "usage": 4962,
+      "roles": {
+        "text": 4480,
+        "fill": 482
+      }
+    },
+    "color.neutral.02": {
+      "$type": "color",
+      "$value": "rgb(30,33,30)",
+      "usage": 1251,
+      "roles": {
+        "text": 1067,
+        "bg": 168,
+        "fill": 16
+      }
+    },
+    "color.neutral.03": {
+      "$type": "color",
+      "$value": "rgb(255,255,255)",
+      "usage": 1099,
+      "roles": {
+        "bg": 241,
+        "text": 840,
+        "fill": 18
+      }
+    },
+    "color.blue.01": {
+      "$type": "color",
+      "$value": "rgb(0,0,238)",
+      "usage": 1045,
+      "roles": {
+        "text": 1045
+      }
+    },
+    "color.neutral.04": {
+      "$type": "color",
+      "$value": "rgb(34,34,34)",
+      "usage": 402,
+      "roles": {
+        "text": 402
+      }
+    },
+    "color.green.01": {
+      "$type": "color",
+      "$value": "rgb(144,252,149)",
+      "usage": 63,
+      "roles": {
+        "bg": 63
+      }
+    },
+    "color.neutral.05": {
+      "$type": "color",
+      "$value": "rgb(251,250,249)",
+      "usage": 61,
+      "roles": {
+        "bg": 61
+      }
+    },
+    "color.neutral.06": {
+      "$type": "color",
+      "$value": "rgba(30,33,30,0.6)",
+      "usage": 58,
+      "roles": {
+        "text": 56,
+        "bg": 2
+      }
+    },
+    "color.orange.01": {
+      "$type": "color",
+      "$value": "rgb(242,236,232)",
+      "usage": 40,
+      "roles": {
+        "bg": 40
+      }
+    },
+    "color.neutral.07": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,0.15)",
+      "usage": 33,
+      "roles": {
+        "bg": 33
+      }
+    },
+    "color.neutral.08": {
+      "$type": "color",
+      "$value": "rgb(118,118,118)",
+      "usage": 22,
+      "roles": {
+        "border": 22
+      }
+    },
+    "color.neutral.09": {
+      "$type": "color",
+      "$value": "rgb(138,138,138)",
+      "usage": 10,
+      "roles": {
+        "text": 10
+      }
+    },
+    "color.neutral.10": {
+      "$type": "color",
+      "$value": "rgb(250,250,250)",
+      "usage": 10,
+      "roles": {
+        "bg": 10
+      }
+    },
+    "color.neutral.11": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,0.8)",
+      "usage": 6,
+      "roles": {
+        "text": 6
+      }
+    },
+    "color.neutral.12": {
+      "$type": "color",
+      "$value": "rgba(30,33,30,0.8)",
+      "usage": 6,
+      "roles": {
+        "text": 6
+      }
+    },
+    "color.neutral.13": {
+      "$type": "color",
+      "$value": "rgba(245,243,242,0.3)",
+      "usage": 4,
+      "roles": {
+        "bg": 4
+      }
+    },
+    "color.neutral.14": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,0.7)",
+      "usage": 3,
+      "roles": {
+        "text": 3
+      }
+    },
+    "color.neutral.15": {
+      "$type": "color",
+      "$value": "rgba(255,255,255,0.01)",
+      "usage": 2,
+      "roles": {
+        "bg": 2
+      }
+    },
+    "color.neutral.16": {
+      "$type": "color",
+      "$value": "rgb(249,250,251)",
+      "usage": 1,
+      "roles": {
+        "bg": 1
+      }
+    },
+    "color.green.02": {
+      "$type": "color",
+      "$value": "rgb(33,54,34)",
+      "usage": 1,
+      "roles": {
+        "bg": 1
+      }
+    },
+    "color.neutral.17": {
+      "$type": "color",
+      "$value": "rgba(0,0,0,0.4)",
+      "usage": 1,
+      "roles": {
+        "text": 1
+      }
+    },
+    "color.neutral.18": {
+      "$type": "color",
+      "$value": "rgba(30,33,30,0.3)",
+      "usage": 1,
+      "roles": {
+        "border": 1
+      }
+    }
+  }
+}

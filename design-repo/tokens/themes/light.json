@@ -1,0 +1,46 @@
+{
+  "id": "light",
+  "mode": "light",
+  "$description": "The only theme measured (the page as served). Every semantic token resolves to a real foundation value.",
+  "resolves": {
+    "surface.default": "rgb(255,255,255)",
+    "surface.alt": "rgb(30,33,30)",
+    "surface.inverse": "rgb(30,33,30)",
+    "surface.accent": "rgb(144,252,149)",
+    "text.primary": "rgb(0,0,0)",
+    "text.secondary": "rgb(30,33,30)",
+    "text.inverse": "rgb(255,255,255)",
+    "text.accent": "rgb(0,0,238)",
+    "border.default": "rgb(118,118,118)",
+    "accent.primary": "rgb(0,0,238)",
+    "typography.display": {
+      "fontFamily": "Inter",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "lineHeight": "19.2px"
+    },
+    "typography.heading": {
+      "fontFamily": "Geist Mono",
+      "fontSize": "32px",
+      "fontWeight": "400",
+      "lineHeight": "38.4px"
+    },
+    "typography.body": {
+      "fontFamily": "Geist Variable",
+      "fontSize": "19px",
+      "fontWeight": "400",
+      "lineHeight": "26.6px"
+    },
+    "typography.label": {
+      "fontFamily": "Geist Variable",
+      "fontSize": "19px",
+      "fontWeight": "400",
+      "lineHeight": "26.6px"
+    },
+    "radius.control": "2px",
+    "radius.surface": "4px",
+    "elevation.default": "rgba(0, 0, 0, 0) 0px 0px 0px 1px inset",
+    "motion.duration.default": "1.3s",
+    "motion.easing.default": "cubic-bezier(0.44, 0, 0.13, 0.96)"
+  }
+}

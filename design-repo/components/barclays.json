@@ -1,0 +1,12 @@
+{
+  "id": "barclays",
+  "name": "Barclays",
+  "occurrences": 1,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/about"
+  }
+}

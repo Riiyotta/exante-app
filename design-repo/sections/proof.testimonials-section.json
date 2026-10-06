@@ -1,0 +1,70 @@
+{
+  "id": "proof.testimonials-section",
+  "category": "PROOF",
+  "label": "Testimonials Section",
+  "tag": "section",
+  "purpose": "Builds trust with customers, quotes or logos.",
+  "purposeIsInferred": true,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 1,
+    "routes": 1,
+    "measuredFrom": [
+      "src/customers/index.html:775-1052"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "items": {
+        "type": "item[]",
+        "required": true,
+        "maxItems": 3,
+        "titleMaxWords": 31,
+        "bodyMaxWords": 2
+      },
+      "images": {
+        "type": "image[]",
+        "required": false,
+        "maxItems": 3,
+        "assetRoles": [
+          "avatar",
+          "content-image"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 757,
+      "columns": 1
+    },
+    "mobile": {
+      "heightPx": 953,
+      "columns": 1,
+      "hiddenShare": 0
+    },
+    "changes": []
+  },
+  "assetRoles": [
+    "avatar",
+    "content-image"
+  ],
+  "contentPolicy": "Measured copy quotes real customers and companies. Generated pages must write new, clearly fictional quotes and names, and use placeholders for customer logos and avatars.",
+  "implementedBy": "src/pages/Customers.jsx"
+}

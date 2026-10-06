@@ -1,0 +1,14 @@
+{
+  "id": "integrations-section",
+  "name": "Integrations Section",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "image",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

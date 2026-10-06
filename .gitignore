@@ -1,0 +1,7 @@
+node_modules/
+dist/
+__pycache__/
+.DS_Store
+design-repo.zip
+qa/parity/*.png
+recon/

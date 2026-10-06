@@ -1,0 +1,12 @@
+{
+  "id": "quote-wrapper",
+  "name": "Quote Wrapper",
+  "occurrences": 2,
+  "composedOf": [
+    "heading"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

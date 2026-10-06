@@ -1,0 +1,10 @@
+{
+  "id": "name-wrapper",
+  "name": "Name Wrapper",
+  "occurrences": 40,
+  "composedOf": [],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/about"
+  }
+}

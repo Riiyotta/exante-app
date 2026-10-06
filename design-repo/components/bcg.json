@@ -1,0 +1,12 @@
+{
+  "id": "bcg",
+  "name": "BCG",
+  "occurrences": 2,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/about"
+  }
+}

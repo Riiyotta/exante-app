@@ -1,0 +1,13 @@
+{
+  "id": "ctas",
+  "name": "CTAs",
+  "occurrences": 2,
+  "composedOf": [
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

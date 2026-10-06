@@ -1,0 +1,12 @@
+{
+  "id": "read-more",
+  "name": "Read More",
+  "occurrences": 32,
+  "composedOf": [
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/blog"
+  }
+}

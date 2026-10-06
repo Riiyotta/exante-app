@@ -1,0 +1,13 @@
+{
+  "id": "problem-section",
+  "name": "Problem Section",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

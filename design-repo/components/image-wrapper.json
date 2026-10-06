@@ -1,0 +1,12 @@
+{
+  "id": "image-wrapper",
+  "name": "Image Wrapper",
+  "occurrences": 36,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "features.other-features-section",
+  "category": "FEATURES",
+  "label": "Other Features Section",
+  "tag": "section",
+  "purpose": "Explains what the product does and why it matters. Example headline: \"Your imagination is the only limit\".",
+  "purposeIsInferred": true,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 1,
+    "routes": 1,
+    "measuredFrom": [
+      "src/index.html:1183-1341"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "heading": {
+        "type": "string",
+        "required": true,
+        "maxWords": 6
+      },
+      "body": {
+        "type": "string[]",
+        "required": true,
+        "maxItems": 3,
+        "maxWords": 20
+      },
+      "ctas": {
+        "type": "cta[]",
+        "required": true,
+        "maxItems": 1,
+        "maxWords": 4
+      },
+      "items": {
+        "type": "item[]",
+        "required": true,
+        "maxItems": 6,
+        "titleMaxWords": 3,
+        "bodyMaxWords": 15
+      },
+      "images": {
+        "type": "image[]",
+        "required": false,
+        "maxItems": 1,
+        "assetRoles": [
+          "content-image"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 1139,
+      "columns": 1
+    },
+    "mobile": {
+      "heightPx": 2186,
+      "columns": 1,
+      "hiddenShare": 0
+    },
+    "changes": [
+      "grows taller on mobile (content stacks)"
+    ]
+  },
+  "assetRoles": [
+    "content-image"
+  ],
+  "implementedBy": "src/pages/HomePage.jsx"
+}

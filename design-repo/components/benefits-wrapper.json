@@ -1,0 +1,14 @@
+{
+  "id": "benefits-wrapper",
+  "name": "Benefits Wrapper",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "paragraph",
+    "svg"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/careers"
+  }
+}

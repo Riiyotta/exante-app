@@ -1,0 +1,10 @@
+{
+  "id": "filters",
+  "name": "Filters",
+  "occurrences": 1,
+  "composedOf": [],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/blog"
+  }
+}

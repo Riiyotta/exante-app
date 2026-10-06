@@ -1,0 +1,13 @@
+{
+  "id": "job-offers-list",
+  "name": "Job Offers List",
+  "occurrences": 1,
+  "composedOf": [
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/careers"
+  }
+}

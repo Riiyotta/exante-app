@@ -1,0 +1,10 @@
+{
+  "id": "paragraph",
+  "purpose": "Body text block.",
+  "observedCount": 1223,
+  "tokens": null,
+  "evidence": {
+    "level": "measured",
+    "source": "element census over all crawled pages"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "cta.another-cta",
+  "category": "CTA",
+  "label": "Another CTA",
+  "tag": "section",
+  "purpose": "Converts: prompts a single clear next action. Example headline: \"Get started right now with one of our pre-built AI agents!\".",
+  "purposeIsInferred": true,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 3,
+    "routes": 3,
+    "measuredFrom": [
+      "src/index.html:1814-1866",
+      "src/about/index.html:1196-1233",
+      "src/customers/index.html:1053-1100"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "heading": {
+        "type": "string",
+        "required": true,
+        "maxWords": 11
+      },
+      "body": {
+        "type": "string[]",
+        "required": true,
+        "maxItems": 1,
+        "maxWords": 3
+      },
+      "ctas": {
+        "type": "cta[]",
+        "required": true,
+        "maxItems": 1,
+        "maxWords": 3
+      },
+      "images": {
+        "type": "image[]",
+        "required": false,
+        "maxItems": 1,
+        "assetRoles": [
+          "content-image"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "appear-on-enter",
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 315,
+      "columns": 2
+    },
+    "mobile": {
+      "heightPx": 338,
+      "columns": 2,
+      "hiddenShare": 0
+    },
+    "changes": []
+  },
+  "assetRoles": [
+    "content-image"
+  ],
+  "implementedBy": "src/pages/HomePage.jsx"
+}

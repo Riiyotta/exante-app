@@ -1,0 +1,12 @@
+{
+  "id": "variant-1",
+  "name": "Variant 1",
+  "occurrences": 53,
+  "composedOf": [
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

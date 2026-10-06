@@ -1,0 +1,70 @@
+{
+  "id": "content.problem-section",
+  "category": "CONTENT",
+  "label": "Problem Section",
+  "tag": "section",
+  "purpose": "Carries the substantive content of the page. Example headline: \"Your collections process can't scale, and it's costing you\".",
+  "purposeIsInferred": true,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 1,
+    "routes": 1,
+    "measuredFrom": [
+      "src/index.html:883-1018"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "heading": {
+        "type": "string",
+        "required": true,
+        "maxWords": 9
+      },
+      "body": {
+        "type": "string[]",
+        "required": true,
+        "maxItems": 1,
+        "maxWords": 2
+      },
+      "items": {
+        "type": "item[]",
+        "required": true,
+        "maxItems": 3,
+        "titleMaxWords": 2,
+        "bodyMaxWords": 16
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 779,
+      "columns": 3
+    },
+    "mobile": {
+      "heightPx": 897,
+      "columns": 1,
+      "hiddenShare": 0
+    },
+    "changes": [
+      "3 columns collapse to a single column"
+    ]
+  },
+  "assetRoles": [],
+  "implementedBy": "src/pages/HomePage.jsx"
+}

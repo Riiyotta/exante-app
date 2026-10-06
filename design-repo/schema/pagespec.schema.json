@@ -1,0 +1,2314 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PageSpec",
+  "description": "A page composition. Styling is owned by section/component contracts; a PageSpec carries no style or token-override field.",
+  "type": "object",
+  "required": [
+    "pageSpecVersion",
+    "template",
+    "route",
+    "nodes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "pageSpecVersion": {
+      "type": "string",
+      "const": "0.1.0"
+    },
+    "template": {
+      "type": "string",
+      "enum": [
+        "template.home",
+        "template.about",
+        "template.blog",
+        "template.customers",
+        "template.careers",
+        "template.contact",
+        "template.contact-2",
+        "template.legal",
+        "template.blog-2"
+      ]
+    },
+    "route": {
+      "type": "string"
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/node"
+      }
+    }
+  },
+  "definitions": {
+    "assetRole": {
+      "type": "string",
+      "enum": [
+        "logo",
+        "customer-logo",
+        "avatar",
+        "icon",
+        "illustration",
+        "background",
+        "hero-image",
+        "content-image",
+        "animation",
+        "video",
+        "font",
+        "live-embed",
+        "founder-contact-email"
+      ]
+    },
+    "motion": {
+      "type": "object",
+      "required": [
+        "pattern",
+        "reducedMotionFallback"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "pattern": {
+          "type": "string",
+          "enum": [
+            "none",
+            "css-transition",
+            "css-animation",
+            "appear-on-enter",
+            "scroll-linked",
+            "canvas-animation"
+          ]
+        },
+        "reducedMotionFallback": {
+          "type": "string",
+          "enum": [
+            "disable-animation",
+            "instant-state"
+          ]
+        }
+      }
+    },
+    "content.content.approach-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "items": {
+          "type": "array",
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "required": [
+              "title"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 5
+              },
+              "body": {
+                "type": "string",
+                "maxWords": 25
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "content.content.blog-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "body": {
+          "type": "array",
+          "maxItems": 5,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3
+          }
+        },
+        "items": {
+          "type": "array",
+          "maxItems": 7,
+          "items": {
+            "type": "object",
+            "required": [
+              "title"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 12
+              },
+              "body": {
+                "type": "string",
+                "maxWords": 2
+              }
+            }
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 16,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "body",
+        "items"
+      ]
+    },
+    "content.content.container": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 12
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 8,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 27
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body"
+      ]
+    },
+    "content.content.content-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 4
+        },
+        "subheading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 7
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 30,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 92
+          }
+        },
+        "ctas": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 3
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/|#)",
+                "description": "Relative path or #anchor only: generated pages must not link to the original site's live URLs."
+              }
+            }
+          }
+        },
+        "items": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "object",
+            "required": [
+              "title"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 12
+              },
+              "body": {
+                "type": "string",
+                "maxWords": 12
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "content.content.framer-1h4pb9v-container": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "body": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3
+          }
+        },
+        "ctas": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 3
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/|#)",
+                "description": "Relative path or #anchor only: generated pages must not link to the original site's live URLs."
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "body",
+        "ctas"
+      ]
+    },
+    "content.content.framer-1nc9gyu-container": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 8
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 21,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 8
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body"
+      ]
+    },
+    "content.content.framer-39uowv-container": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 8
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 21,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 8
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body"
+      ]
+    },
+    "content.content.framer-guhhla-container": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "body": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3
+          }
+        },
+        "ctas": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 3
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/|#)",
+                "description": "Relative path or #anchor only: generated pages must not link to the original site's live URLs."
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "body",
+        "ctas"
+      ]
+    },
+    "content.content.framer-gzkazm-container": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 8
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 21,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 8
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body"
+      ]
+    },
+    "content.content.framer-huxi9o-container": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "body": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3
+          }
+        },
+        "ctas": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 3
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/|#)",
+                "description": "Relative path or #anchor only: generated pages must not link to the original site's live URLs."
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "body",
+        "ctas"
+      ]
+    },
+    "content.content.intro-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 11
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 35
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body"
+      ]
+    },
+    "content.content.open-roles-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 2
+        },
+        "subheading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 4
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 7
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "subheading",
+        "body"
+      ]
+    },
+    "content.content.other-articles-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 11
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3
+          }
+        },
+        "ctas": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 3
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/|#)",
+                "description": "Relative path or #anchor only: generated pages must not link to the original site's live URLs."
+              }
+            }
+          }
+        },
+        "items": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "title"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 12
+              },
+              "body": {
+                "type": "string",
+                "maxWords": 2
+              }
+            }
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body",
+        "ctas",
+        "items"
+      ]
+    },
+    "content.content.problem-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 9
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 2
+          }
+        },
+        "items": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "title"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 2
+              },
+              "body": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body",
+        "items"
+      ]
+    },
+    "content.content.roi-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 11
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 4
+          }
+        },
+        "items": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "required": [
+              "title"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 6
+              }
+            }
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body",
+        "items"
+      ]
+    },
+    "content.content.team-members-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 11
+        },
+        "subheading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 29
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 8,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 32
+          }
+        },
+        "ctas": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 5
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/|#)",
+                "description": "Relative path or #anchor only: generated pages must not link to the original site's live URLs."
+              }
+            }
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading"
+      ]
+    },
+    "content.content.white": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {}
+    },
+    "content.cta.another-cta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 11
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3
+          }
+        },
+        "ctas": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 3
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/|#)",
+                "description": "Relative path or #anchor only: generated pages must not link to the original site's live URLs."
+              }
+            }
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body",
+        "ctas"
+      ]
+    },
+    "content.cta.cta-section-2": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 10
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 4
+          }
+        },
+        "ctas": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 3
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/|#)",
+                "description": "Relative path or #anchor only: generated pages must not link to the original site's live URLs."
+              }
+            }
+          }
+        },
+        "items": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "required": [
+              "title"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 1
+              },
+              "body": {
+                "type": "string",
+                "maxWords": 13
+              }
+            }
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body",
+        "ctas",
+        "items"
+      ]
+    },
+    "content.features.benefits-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 5
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 26
+          }
+        },
+        "items": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "title"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 3
+              },
+              "body": {
+                "type": "string",
+                "maxWords": 10
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body",
+        "items"
+      ]
+    },
+    "content.features.featured-image-wrapper": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "images": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      }
+    },
+    "content.features.integrations-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 3
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 16
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body"
+      ]
+    },
+    "content.features.key-features-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 9
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 25
+          }
+        },
+        "ctas": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 2
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/|#)",
+                "description": "Relative path or #anchor only: generated pages must not link to the original site's live URLs."
+              }
+            }
+          }
+        },
+        "items": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "title"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 4
+              },
+              "body": {
+                "type": "string",
+                "maxWords": 30
+              }
+            }
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body",
+        "ctas",
+        "items"
+      ]
+    },
+    "content.features.other-features-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 6
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 20
+          }
+        },
+        "ctas": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 4
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/|#)",
+                "description": "Relative path or #anchor only: generated pages must not link to the original site's live URLs."
+              }
+            }
+          }
+        },
+        "items": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "required": [
+              "title"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 3
+              },
+              "body": {
+                "type": "string",
+                "maxWords": 15
+              }
+            }
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body",
+        "ctas",
+        "items"
+      ]
+    },
+    "content.hero.hero-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 7
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 38
+          }
+        },
+        "ctas": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 3
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/|#)",
+                "description": "Relative path or #anchor only: generated pages must not link to the original site's live URLs."
+              }
+            }
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading"
+      ]
+    },
+    "content.hero.main": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 2
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 11,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 16
+          }
+        },
+        "ctas": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 2
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/|#)",
+                "description": "Relative path or #anchor only: generated pages must not link to the original site's live URLs."
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body",
+        "ctas"
+      ]
+    },
+    "content.proof.clients-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 5
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 14
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body"
+      ]
+    },
+    "content.proof.testimonials-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "items": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "title"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 31
+              },
+              "body": {
+                "type": "string",
+                "maxWords": 2
+              }
+            }
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "content.shell.desktop": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 8
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 21,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 8
+          }
+        },
+        "ctas": {
+          "type": "array",
+          "maxItems": 17,
+          "items": {
+            "type": "object",
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 3
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/|#)",
+                "description": "Relative path or #anchor only: generated pages must not link to the original site's live URLs."
+              }
+            }
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body",
+        "ctas"
+      ]
+    },
+    "content.shell.desktop-filled": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "body": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 3
+          }
+        },
+        "ctas": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxWords": 3
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/|#)",
+                "description": "Relative path or #anchor only: generated pages must not link to the original site's live URLs."
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "body",
+        "ctas"
+      ]
+    },
+    "content.support.faq-section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxWords": 3
+        },
+        "body": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxWords": 75
+          }
+        }
+      },
+      "required": [
+        "heading",
+        "body"
+      ]
+    },
+    "node": {
+      "type": "object",
+      "required": [
+        "type",
+        "content",
+        "motion"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "content.approach-section",
+            "content.blog-section",
+            "content.container",
+            "content.content-section",
+            "content.framer-1h4pb9v-container",
+            "content.framer-1nc9gyu-container",
+            "content.framer-39uowv-container",
+            "content.framer-guhhla-container",
+            "content.framer-gzkazm-container",
+            "content.framer-huxi9o-container",
+            "content.intro-section",
+            "content.open-roles-section",
+            "content.other-articles-section",
+            "content.problem-section",
+            "content.roi-section",
+            "content.team-members-section",
+            "content.white",
+            "cta.another-cta",
+            "cta.cta-section-2",
+            "features.benefits-section",
+            "features.featured-image-wrapper",
+            "features.integrations-section",
+            "features.key-features-section",
+            "features.other-features-section",
+            "hero.hero-section",
+            "hero.main",
+            "proof.clients-section",
+            "proof.testimonials-section",
+            "shell.desktop",
+            "shell.desktop-filled",
+            "support.faq-section"
+          ]
+        },
+        "content": {
+          "type": "object"
+        },
+        "motion": {
+          "$ref": "#/definitions/motion"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.approach-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.approach-section"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.blog-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.blog-section"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.container"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.container"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.content-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.content-section"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.framer-1h4pb9v-container"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.framer-1h4pb9v-container"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.framer-1nc9gyu-container"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.framer-1nc9gyu-container"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.framer-39uowv-container"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.framer-39uowv-container"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.framer-guhhla-container"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.framer-guhhla-container"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.framer-gzkazm-container"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.framer-gzkazm-container"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.framer-huxi9o-container"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.framer-huxi9o-container"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.intro-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.intro-section"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.open-roles-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.open-roles-section"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.other-articles-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.other-articles-section"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.problem-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.problem-section"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.roi-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.roi-section"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.team-members-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.team-members-section"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content.white"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.content.white"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "cta.another-cta"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.cta.another-cta"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "cta.cta-section-2"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.cta.cta-section-2"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "features.benefits-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.features.benefits-section"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "features.featured-image-wrapper"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.features.featured-image-wrapper"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "features.integrations-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.features.integrations-section"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "features.key-features-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.features.key-features-section"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "features.other-features-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.features.other-features-section"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "hero.hero-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.hero.hero-section"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "hero.main"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.hero.main"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "proof.clients-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.proof.clients-section"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "proof.testimonials-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.proof.testimonials-section"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "shell.desktop"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.shell.desktop"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "shell.desktop-filled"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.shell.desktop-filled"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "support.faq-section"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content.support.faq-section"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

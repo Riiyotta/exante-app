@@ -1,0 +1,12 @@
+{
+  "id": "disabled",
+  "name": "Disabled",
+  "occurrences": 2,
+  "composedOf": [
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/contact/sales"
+  }
+}

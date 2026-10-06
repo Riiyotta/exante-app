@@ -1,0 +1,1019 @@
+{
+  "generatedBy": "website-builder lib/clone.mjs",
+  "source": "https://www.exante.app/",
+  "routes": [
+    {
+      "route": "/",
+      "page": "src/pages/HomePage.jsx",
+      "sections": 12
+    },
+    {
+      "route": "/about",
+      "page": "src/pages/About.jsx",
+      "sections": 8
+    },
+    {
+      "route": "/blog",
+      "page": "src/pages/Blog.jsx",
+      "sections": 4
+    },
+    {
+      "route": "/customers",
+      "page": "src/pages/Customers.jsx",
+      "sections": 5
+    },
+    {
+      "route": "/careers",
+      "page": "src/pages/Careers.jsx",
+      "sections": 6
+    },
+    {
+      "route": "/contact",
+      "page": "src/pages/Contact.jsx",
+      "sections": 5
+    },
+    {
+      "route": "/contact/sales",
+      "page": "src/pages/ContactSales.jsx",
+      "sections": 4
+    },
+    {
+      "route": "/legal/terms-of-service",
+      "page": "src/pages/LegalTermsOfService.jsx",
+      "sections": 4
+    },
+    {
+      "route": "/legal/privacy",
+      "page": "src/pages/LegalPrivacy.jsx",
+      "sections": 4
+    },
+    {
+      "route": "/blog/what-we-hear-when-we-talk-to-finance-teams",
+      "page": "src/pages/BlogWhatWeHear.jsx",
+      "sections": 6
+    },
+    {
+      "route": "/blog/from-source-of-truth-to-source-of-action",
+      "page": "src/pages/BlogFromSourceOf.jsx",
+      "sections": 6
+    },
+    {
+      "route": "/blog/agents-that-learn-how-you-work",
+      "page": "src/pages/BlogAgentsThatLearn.jsx",
+      "sections": 6
+    },
+    {
+      "route": "/blog/from-aging-reports-to-cash-control",
+      "page": "src/pages/BlogFromAgingReports.jsx",
+      "sections": 6
+    },
+    {
+      "route": "/blog/when-software-becomes-a-teammate",
+      "page": "src/pages/BlogWhenSoftwareBecomes.jsx",
+      "sections": 6
+    },
+    {
+      "route": "/blog/how-to-choose-the-right-collections-software",
+      "page": "src/pages/BlogHowToChoose.jsx",
+      "sections": 6
+    },
+    {
+      "route": "/blog/why-collections-software-keeps-failing-finance-teams",
+      "page": "src/pages/BlogWhyCollectionsSoftware.jsx",
+      "sections": 6
+    },
+    {
+      "route": "/blog/how-ai-agents-are-transforming-ar-and-collections",
+      "page": "src/pages/BlogHowAiAgents.jsx",
+      "sections": 6
+    },
+    {
+      "route": "/contact/support",
+      "page": "src/pages/ContactSupport.jsx",
+      "sections": 4
+    }
+  ],
+  "components": [
+    {
+      "component": "FramerHuxi9oContainer",
+      "file": "src/sections/FramerHuxi9oContainer.jsx",
+      "usedBy": [
+        {
+          "route": "/",
+          "idx": 0
+        }
+      ]
+    },
+    {
+      "component": "HeroSection",
+      "file": "src/sections/HeroSection.jsx",
+      "usedBy": [
+        {
+          "route": "/",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "ROISection",
+      "file": "src/sections/ROISection.jsx",
+      "usedBy": [
+        {
+          "route": "/",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "ProblemSection",
+      "file": "src/sections/ProblemSection.jsx",
+      "usedBy": [
+        {
+          "route": "/",
+          "idx": 3
+        }
+      ]
+    },
+    {
+      "component": "KeyFeaturesSection",
+      "file": "src/sections/KeyFeaturesSection.jsx",
+      "usedBy": [
+        {
+          "route": "/",
+          "idx": 4
+        }
+      ]
+    },
+    {
+      "component": "OtherFeaturesSection",
+      "file": "src/sections/OtherFeaturesSection.jsx",
+      "usedBy": [
+        {
+          "route": "/",
+          "idx": 5
+        }
+      ]
+    },
+    {
+      "component": "ClientsSection",
+      "file": "src/sections/ClientsSection.jsx",
+      "usedBy": [
+        {
+          "route": "/",
+          "idx": 6
+        }
+      ]
+    },
+    {
+      "component": "CTASection2",
+      "file": "src/sections/CTASection2.jsx",
+      "usedBy": [
+        {
+          "route": "/",
+          "idx": 7
+        }
+      ]
+    },
+    {
+      "component": "IntegrationsSection",
+      "file": "src/sections/IntegrationsSection.jsx",
+      "usedBy": [
+        {
+          "route": "/",
+          "idx": 8
+        }
+      ]
+    },
+    {
+      "component": "FAQSection",
+      "file": "src/sections/FAQSection.jsx",
+      "usedBy": [
+        {
+          "route": "/",
+          "idx": 9
+        }
+      ]
+    },
+    {
+      "component": "AnotherCTA",
+      "file": "src/sections/AnotherCTA.jsx",
+      "usedBy": [
+        {
+          "route": "/",
+          "idx": 10
+        }
+      ]
+    },
+    {
+      "component": "Framer39uowvContainer",
+      "file": "src/sections/Framer39uowvContainer.jsx",
+      "usedBy": [
+        {
+          "route": "/",
+          "idx": 11
+        }
+      ]
+    },
+    {
+      "component": "FramerGuhhlaContainer",
+      "file": "src/sections/FramerGuhhlaContainer.jsx",
+      "usedBy": [
+        {
+          "route": "/about",
+          "idx": 0
+        }
+      ]
+    },
+    {
+      "component": "HeroSection2",
+      "file": "src/sections/HeroSection2.jsx",
+      "usedBy": [
+        {
+          "route": "/about",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "IntroSection",
+      "file": "src/sections/IntroSection.jsx",
+      "usedBy": [
+        {
+          "route": "/about",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "ApproachSection",
+      "file": "src/sections/ApproachSection.jsx",
+      "usedBy": [
+        {
+          "route": "/about",
+          "idx": 3
+        }
+      ]
+    },
+    {
+      "component": "TeamMembersSection",
+      "file": "src/sections/TeamMembersSection.jsx",
+      "usedBy": [
+        {
+          "route": "/about",
+          "idx": 4
+        }
+      ]
+    },
+    {
+      "component": "TeamMembersSection2",
+      "file": "src/sections/TeamMembersSection2.jsx",
+      "usedBy": [
+        {
+          "route": "/about",
+          "idx": 5
+        }
+      ]
+    },
+    {
+      "component": "AnotherCTA2",
+      "file": "src/sections/AnotherCTA2.jsx",
+      "usedBy": [
+        {
+          "route": "/about",
+          "idx": 6
+        }
+      ]
+    },
+    {
+      "component": "Framer1nc9gyuContainer",
+      "file": "src/sections/Framer1nc9gyuContainer.jsx",
+      "usedBy": [
+        {
+          "route": "/about",
+          "idx": 7
+        }
+      ]
+    },
+    {
+      "component": "FramerGuhhlaContainer2",
+      "file": "src/sections/FramerGuhhlaContainer2.jsx",
+      "usedBy": [
+        {
+          "route": "/blog",
+          "idx": 0
+        }
+      ]
+    },
+    {
+      "component": "HeroSection3",
+      "file": "src/sections/HeroSection3.jsx",
+      "usedBy": [
+        {
+          "route": "/blog",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "BlogSection",
+      "file": "src/sections/BlogSection.jsx",
+      "usedBy": [
+        {
+          "route": "/blog",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "Framer1nc9gyuContainer2",
+      "file": "src/sections/Framer1nc9gyuContainer2.jsx",
+      "usedBy": [
+        {
+          "route": "/blog",
+          "idx": 3
+        }
+      ]
+    },
+    {
+      "component": "Framer1h4pb9vContainer",
+      "file": "src/sections/Framer1h4pb9vContainer.jsx",
+      "usedBy": [
+        {
+          "route": "/customers",
+          "idx": 0
+        }
+      ]
+    },
+    {
+      "component": "HeroSection4",
+      "file": "src/sections/HeroSection4.jsx",
+      "usedBy": [
+        {
+          "route": "/customers",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "TestimonialsSection",
+      "file": "src/sections/TestimonialsSection.jsx",
+      "usedBy": [
+        {
+          "route": "/customers",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "AnotherCTA3",
+      "file": "src/sections/AnotherCTA3.jsx",
+      "usedBy": [
+        {
+          "route": "/customers",
+          "idx": 3
+        }
+      ]
+    },
+    {
+      "component": "FramerGzkazmContainer",
+      "file": "src/sections/FramerGzkazmContainer.jsx",
+      "usedBy": [
+        {
+          "route": "/customers",
+          "idx": 4
+        }
+      ]
+    },
+    {
+      "component": "Framer1h4pb9vContainer2",
+      "file": "src/sections/Framer1h4pb9vContainer2.jsx",
+      "usedBy": [
+        {
+          "route": "/careers",
+          "idx": 0
+        }
+      ]
+    },
+    {
+      "component": "HeroSection5",
+      "file": "src/sections/HeroSection5.jsx",
+      "usedBy": [
+        {
+          "route": "/careers",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "BenefitsSection",
+      "file": "src/sections/BenefitsSection.jsx",
+      "usedBy": [
+        {
+          "route": "/careers",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "TeamMembersSection3",
+      "file": "src/sections/TeamMembersSection3.jsx",
+      "usedBy": [
+        {
+          "route": "/careers",
+          "idx": 3
+        }
+      ]
+    },
+    {
+      "component": "OpenRolesSection",
+      "file": "src/sections/OpenRolesSection.jsx",
+      "usedBy": [
+        {
+          "route": "/careers",
+          "idx": 4
+        }
+      ]
+    },
+    {
+      "component": "FramerGzkazmContainer2",
+      "file": "src/sections/FramerGzkazmContainer2.jsx",
+      "usedBy": [
+        {
+          "route": "/careers",
+          "idx": 5
+        }
+      ]
+    },
+    {
+      "component": "Framer1h4pb9vContainer3",
+      "file": "src/sections/Framer1h4pb9vContainer3.jsx",
+      "usedBy": [
+        {
+          "route": "/contact",
+          "idx": 0
+        }
+      ]
+    },
+    {
+      "component": "HeroSection6",
+      "file": "src/sections/HeroSection6.jsx",
+      "usedBy": [
+        {
+          "route": "/contact",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "ContentSection",
+      "file": "src/sections/ContentSection.jsx",
+      "usedBy": [
+        {
+          "route": "/contact",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "FAQSection2",
+      "file": "src/sections/FAQSection2.jsx",
+      "usedBy": [
+        {
+          "route": "/contact",
+          "idx": 3
+        }
+      ]
+    },
+    {
+      "component": "FramerGzkazmContainer3",
+      "file": "src/sections/FramerGzkazmContainer3.jsx",
+      "usedBy": [
+        {
+          "route": "/contact",
+          "idx": 4
+        }
+      ]
+    },
+    {
+      "component": "DesktopFilled",
+      "file": "src/sections/DesktopFilled.jsx",
+      "usedBy": [
+        {
+          "route": "/contact/sales",
+          "idx": 0
+        }
+      ]
+    },
+    {
+      "component": "Main",
+      "file": "src/sections/Main.jsx",
+      "usedBy": [
+        {
+          "route": "/contact/sales",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "Desktop",
+      "file": "src/sections/Desktop.jsx",
+      "usedBy": [
+        {
+          "route": "/contact/sales",
+          "idx": 2
+        },
+        {
+          "route": "/contact/support",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "White",
+      "file": "src/sections/White.jsx",
+      "usedBy": [
+        {
+          "route": "/contact/sales",
+          "idx": 3
+        },
+        {
+          "route": "/contact/support",
+          "idx": 3
+        }
+      ]
+    },
+    {
+      "component": "Framer1h4pb9vContainer4",
+      "file": "src/sections/Framer1h4pb9vContainer4.jsx",
+      "usedBy": [
+        {
+          "route": "/legal/terms-of-service",
+          "idx": 0
+        },
+        {
+          "route": "/legal/privacy",
+          "idx": 0
+        },
+        {
+          "route": "/blog/what-we-hear-when-we-talk-to-finance-teams",
+          "idx": 0
+        },
+        {
+          "route": "/blog/agents-that-learn-how-you-work",
+          "idx": 0
+        },
+        {
+          "route": "/blog/when-software-becomes-a-teammate",
+          "idx": 0
+        },
+        {
+          "route": "/blog/how-to-choose-the-right-collections-software",
+          "idx": 0
+        },
+        {
+          "route": "/blog/why-collections-software-keeps-failing-finance-teams",
+          "idx": 0
+        },
+        {
+          "route": "/blog/how-ai-agents-are-transforming-ar-and-collections",
+          "idx": 0
+        }
+      ]
+    },
+    {
+      "component": "HeroSection7",
+      "file": "src/sections/HeroSection7.jsx",
+      "usedBy": [
+        {
+          "route": "/legal/terms-of-service",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "ContentSection2",
+      "file": "src/sections/ContentSection2.jsx",
+      "usedBy": [
+        {
+          "route": "/legal/terms-of-service",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "FramerGzkazmContainer4",
+      "file": "src/sections/FramerGzkazmContainer4.jsx",
+      "usedBy": [
+        {
+          "route": "/legal/terms-of-service",
+          "idx": 3
+        }
+      ]
+    },
+    {
+      "component": "HeroSection8",
+      "file": "src/sections/HeroSection8.jsx",
+      "usedBy": [
+        {
+          "route": "/legal/privacy",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "ContentSection3",
+      "file": "src/sections/ContentSection3.jsx",
+      "usedBy": [
+        {
+          "route": "/legal/privacy",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "FramerGzkazmContainer5",
+      "file": "src/sections/FramerGzkazmContainer5.jsx",
+      "usedBy": [
+        {
+          "route": "/legal/privacy",
+          "idx": 3
+        },
+        {
+          "route": "/blog/what-we-hear-when-we-talk-to-finance-teams",
+          "idx": 5
+        },
+        {
+          "route": "/blog/from-source-of-truth-to-source-of-action",
+          "idx": 5
+        },
+        {
+          "route": "/blog/agents-that-learn-how-you-work",
+          "idx": 5
+        },
+        {
+          "route": "/blog/from-aging-reports-to-cash-control",
+          "idx": 5
+        },
+        {
+          "route": "/blog/when-software-becomes-a-teammate",
+          "idx": 5
+        },
+        {
+          "route": "/blog/how-to-choose-the-right-collections-software",
+          "idx": 5
+        },
+        {
+          "route": "/blog/why-collections-software-keeps-failing-finance-teams",
+          "idx": 5
+        },
+        {
+          "route": "/blog/how-ai-agents-are-transforming-ar-and-collections",
+          "idx": 5
+        }
+      ]
+    },
+    {
+      "component": "Container",
+      "file": "src/sections/Container.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/what-we-hear-when-we-talk-to-finance-teams",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "FeaturedImageWrapper",
+      "file": "src/sections/FeaturedImageWrapper.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/what-we-hear-when-we-talk-to-finance-teams",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "ContentSection4",
+      "file": "src/sections/ContentSection4.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/what-we-hear-when-we-talk-to-finance-teams",
+          "idx": 3
+        }
+      ]
+    },
+    {
+      "component": "OtherArticlesSection",
+      "file": "src/sections/OtherArticlesSection.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/what-we-hear-when-we-talk-to-finance-teams",
+          "idx": 4
+        }
+      ]
+    },
+    {
+      "component": "Framer1h4pb9vContainer5",
+      "file": "src/sections/Framer1h4pb9vContainer5.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/from-source-of-truth-to-source-of-action",
+          "idx": 0
+        },
+        {
+          "route": "/blog/from-aging-reports-to-cash-control",
+          "idx": 0
+        }
+      ]
+    },
+    {
+      "component": "Container2",
+      "file": "src/sections/Container2.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/from-source-of-truth-to-source-of-action",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "FeaturedImageWrapper2",
+      "file": "src/sections/FeaturedImageWrapper2.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/from-source-of-truth-to-source-of-action",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "ContentSection5",
+      "file": "src/sections/ContentSection5.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/from-source-of-truth-to-source-of-action",
+          "idx": 3
+        }
+      ]
+    },
+    {
+      "component": "OtherArticlesSection2",
+      "file": "src/sections/OtherArticlesSection2.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/from-source-of-truth-to-source-of-action",
+          "idx": 4
+        }
+      ]
+    },
+    {
+      "component": "Container3",
+      "file": "src/sections/Container3.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/agents-that-learn-how-you-work",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "FeaturedImageWrapper3",
+      "file": "src/sections/FeaturedImageWrapper3.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/agents-that-learn-how-you-work",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "ContentSection6",
+      "file": "src/sections/ContentSection6.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/agents-that-learn-how-you-work",
+          "idx": 3
+        }
+      ]
+    },
+    {
+      "component": "OtherArticlesSection3",
+      "file": "src/sections/OtherArticlesSection3.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/agents-that-learn-how-you-work",
+          "idx": 4
+        }
+      ]
+    },
+    {
+      "component": "Container4",
+      "file": "src/sections/Container4.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/from-aging-reports-to-cash-control",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "FeaturedImageWrapper4",
+      "file": "src/sections/FeaturedImageWrapper4.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/from-aging-reports-to-cash-control",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "ContentSection7",
+      "file": "src/sections/ContentSection7.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/from-aging-reports-to-cash-control",
+          "idx": 3
+        }
+      ]
+    },
+    {
+      "component": "OtherArticlesSection4",
+      "file": "src/sections/OtherArticlesSection4.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/from-aging-reports-to-cash-control",
+          "idx": 4
+        }
+      ]
+    },
+    {
+      "component": "Container5",
+      "file": "src/sections/Container5.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/when-software-becomes-a-teammate",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "FeaturedImageWrapper5",
+      "file": "src/sections/FeaturedImageWrapper5.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/when-software-becomes-a-teammate",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "ContentSection8",
+      "file": "src/sections/ContentSection8.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/when-software-becomes-a-teammate",
+          "idx": 3
+        }
+      ]
+    },
+    {
+      "component": "OtherArticlesSection5",
+      "file": "src/sections/OtherArticlesSection5.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/when-software-becomes-a-teammate",
+          "idx": 4
+        },
+        {
+          "route": "/blog/how-to-choose-the-right-collections-software",
+          "idx": 4
+        },
+        {
+          "route": "/blog/why-collections-software-keeps-failing-finance-teams",
+          "idx": 4
+        },
+        {
+          "route": "/blog/how-ai-agents-are-transforming-ar-and-collections",
+          "idx": 4
+        }
+      ]
+    },
+    {
+      "component": "Container6",
+      "file": "src/sections/Container6.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/how-to-choose-the-right-collections-software",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "FeaturedImageWrapper6",
+      "file": "src/sections/FeaturedImageWrapper6.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/how-to-choose-the-right-collections-software",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "ContentSection9",
+      "file": "src/sections/ContentSection9.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/how-to-choose-the-right-collections-software",
+          "idx": 3
+        }
+      ]
+    },
+    {
+      "component": "Container7",
+      "file": "src/sections/Container7.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/why-collections-software-keeps-failing-finance-teams",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "FeaturedImageWrapper7",
+      "file": "src/sections/FeaturedImageWrapper7.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/why-collections-software-keeps-failing-finance-teams",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "ContentSection10",
+      "file": "src/sections/ContentSection10.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/why-collections-software-keeps-failing-finance-teams",
+          "idx": 3
+        }
+      ]
+    },
+    {
+      "component": "Container8",
+      "file": "src/sections/Container8.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/how-ai-agents-are-transforming-ar-and-collections",
+          "idx": 1
+        }
+      ]
+    },
+    {
+      "component": "FeaturedImageWrapper8",
+      "file": "src/sections/FeaturedImageWrapper8.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/how-ai-agents-are-transforming-ar-and-collections",
+          "idx": 2
+        }
+      ]
+    },
+    {
+      "component": "ContentSection11",
+      "file": "src/sections/ContentSection11.jsx",
+      "usedBy": [
+        {
+          "route": "/blog/how-ai-agents-are-transforming-ar-and-collections",
+          "idx": 3
+        }
+      ]
+    },
+    {
+      "component": "DesktopFilled2",
+      "file": "src/sections/DesktopFilled2.jsx",
+      "usedBy": [
+        {
+          "route": "/contact/support",
+          "idx": 0
+        }
+      ]
+    },
+    {
+      "component": "Main2",
+      "file": "src/sections/Main2.jsx",
+      "usedBy": [
+        {
+          "route": "/contact/support",
+          "idx": 1
+        }
+      ]
+    }
+  ],
+  "stills": [],
+  "rive": [],
+  "dropped": [],
+  "motionNotReproduced": {
+    "pinnedSections": [],
+    "libraries": []
+  }
+}

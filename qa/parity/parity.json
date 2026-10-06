@@ -1,0 +1,410 @@
+{
+  "gate": 0.8,
+  "average": 0.949,
+  "rows": [
+    {
+      "route": "/",
+      "reference": "original crawl screenshot",
+      "sections": 12,
+      "compared": 12,
+      "sectionsInClone": 12,
+      "mirrorPageHeight": 8584,
+      "clonePageHeight": 8584,
+      "score": 0.998,
+      "below": [],
+      "secRows": [
+        {
+          "idx": 0,
+          "component": "FramerHuxi9oContainer",
+          "mirrorHeight": 72,
+          "cloneHeight": 72,
+          "pixelMatch": 1,
+          "score": 1
+        },
+        {
+          "idx": 1,
+          "component": "HeroSection",
+          "mirrorHeight": 900,
+          "cloneHeight": 900,
+          "pixelMatch": 1,
+          "score": 1
+        },
+        {
+          "idx": 2,
+          "component": "ROISection",
+          "mirrorHeight": 777,
+          "cloneHeight": 777,
+          "pixelMatch": 0.998,
+          "score": 0.998
+        },
+        {
+          "idx": 3,
+          "component": "ProblemSection",
+          "mirrorHeight": 779,
+          "cloneHeight": 779,
+          "pixelMatch": 1,
+          "score": 1
+        },
+        {
+          "idx": 4,
+          "component": "KeyFeaturesSection",
+          "mirrorHeight": 1227,
+          "cloneHeight": 1227,
+          "pixelMatch": 1,
+          "score": 1
+        },
+        {
+          "idx": 5,
+          "component": "OtherFeaturesSection",
+          "mirrorHeight": 1139,
+          "cloneHeight": 1139,
+          "pixelMatch": 0.99,
+          "score": 0.99
+        },
+        {
+          "idx": 6,
+          "component": "ClientsSection",
+          "mirrorHeight": 472,
+          "cloneHeight": 472,
+          "pixelMatch": 0.997,
+          "score": 0.997
+        },
+        {
+          "idx": 7,
+          "component": "CTASection2",
+          "mirrorHeight": 565,
+          "cloneHeight": 565,
+          "pixelMatch": 1,
+          "score": 1
+        },
+        {
+          "idx": 8,
+          "component": "IntegrationsSection",
+          "mirrorHeight": 578,
+          "cloneHeight": 578,
+          "pixelMatch": 1,
+          "score": 1
+        },
+        {
+          "idx": 9,
+          "component": "FAQSection",
+          "mirrorHeight": 963,
+          "cloneHeight": 963,
+          "pixelMatch": 1,
+          "score": 1
+        },
+        {
+          "idx": 10,
+          "component": "AnotherCTA",
+          "mirrorHeight": 367,
+          "cloneHeight": 367,
+          "pixelMatch": 0.993,
+          "score": 0.993
+        },
+        {
+          "idx": 11,
+          "component": "Framer39uowvContainer",
+          "mirrorHeight": 818,
+          "cloneHeight": 818,
+          "pixelMatch": 1,
+          "score": 1
+        }
+      ],
+      "pass": true
+    },
+    {
+      "route": "/customers",
+      "reference": "original crawl screenshot",
+      "sections": 5,
+      "compared": 5,
+      "sectionsInClone": 5,
+      "mirrorPageHeight": 2531,
+      "clonePageHeight": 2531,
+      "score": 0.999,
+      "below": [],
+      "secRows": [
+        {
+          "idx": 0,
+          "component": "Framer1h4pb9vContainer",
+          "mirrorHeight": 72,
+          "cloneHeight": 72,
+          "pixelMatch": 1,
+          "score": 1
+        },
+        {
+          "idx": 1,
+          "component": "HeroSection4",
+          "mirrorHeight": 641,
+          "cloneHeight": 641,
+          "pixelMatch": 1,
+          "score": 1
+        },
+        {
+          "idx": 2,
+          "component": "TestimonialsSection",
+          "mirrorHeight": 757,
+          "cloneHeight": 757,
+          "pixelMatch": 0.998,
+          "score": 0.998
+        },
+        {
+          "idx": 3,
+          "component": "AnotherCTA3",
+          "mirrorHeight": 315,
+          "cloneHeight": 315,
+          "pixelMatch": 0.998,
+          "score": 0.998
+        },
+        {
+          "idx": 4,
+          "component": "FramerGzkazmContainer",
+          "mirrorHeight": 818,
+          "cloneHeight": 818,
+          "pixelMatch": 1,
+          "score": 1
+        }
+      ],
+      "pass": true
+    },
+    {
+      "route": "/contact/sales",
+      "reference": "original crawl screenshot",
+      "sections": 4,
+      "compared": 4,
+      "sectionsInClone": 4,
+      "mirrorPageHeight": 1983,
+      "clonePageHeight": 1983,
+      "score": 1,
+      "below": [],
+      "secRows": [
+        {
+          "idx": 0,
+          "component": "DesktopFilled",
+          "mirrorHeight": 72,
+          "cloneHeight": 72,
+          "pixelMatch": 1,
+          "score": 1
+        },
+        {
+          "idx": 1,
+          "component": "Main",
+          "mirrorHeight": 1165,
+          "cloneHeight": 1165,
+          "pixelMatch": 1,
+          "score": 1
+        },
+        {
+          "idx": 2,
+          "component": "Desktop",
+          "mirrorHeight": 818,
+          "cloneHeight": 818,
+          "pixelMatch": 1,
+          "score": 1
+        },
+        {
+          "idx": 3,
+          "component": "White",
+          "mirrorHeight": 1983,
+          "cloneHeight": 1983,
+          "pixelMatch": 1,
+          "score": 1
+        }
+      ],
+      "pass": true
+    },
+    {
+      "route": "/blog/what-we-hear-when-we-talk-to-finance-teams",
+      "reference": "original crawl screenshot",
+      "sections": 6,
+      "compared": 6,
+      "sectionsInClone": 6,
+      "mirrorPageHeight": 7720,
+      "clonePageHeight": 7720,
+      "score": 0.873,
+      "below": [
+        "2:FeaturedImageWrapper 27%",
+        "4:OtherArticlesSection 72%"
+      ],
+      "secRows": [
+        {
+          "idx": 0,
+          "component": "Framer1h4pb9vContainer4",
+          "mirrorHeight": 72,
+          "cloneHeight": 72,
+          "pixelMatch": 0.857,
+          "score": 0.857
+        },
+        {
+          "idx": 1,
+          "component": "Container",
+          "mirrorHeight": 388,
+          "cloneHeight": 388,
+          "pixelMatch": 0.912,
+          "score": 0.912
+        },
+        {
+          "idx": 2,
+          "component": "FeaturedImageWrapper",
+          "mirrorHeight": 760,
+          "cloneHeight": 760,
+          "pixelMatch": 0.274,
+          "score": 0.274
+        },
+        {
+          "idx": 3,
+          "component": "ContentSection4",
+          "mirrorHeight": 4189,
+          "cloneHeight": 4189,
+          "pixelMatch": 0.997,
+          "score": 0.997
+        },
+        {
+          "idx": 4,
+          "component": "OtherArticlesSection",
+          "mirrorHeight": 1205,
+          "cloneHeight": 1205,
+          "pixelMatch": 0.724,
+          "score": 0.724
+        },
+        {
+          "idx": 5,
+          "component": "FramerGzkazmContainer5",
+          "mirrorHeight": 818,
+          "cloneHeight": 818,
+          "pixelMatch": 1,
+          "score": 1
+        }
+      ],
+      "pass": true
+    },
+    {
+      "route": "/blog/from-aging-reports-to-cash-control",
+      "reference": "original crawl screenshot",
+      "sections": 6,
+      "compared": 5,
+      "sectionsInClone": 6,
+      "mirrorPageHeight": 5927,
+      "clonePageHeight": 5927,
+      "score": 0.998,
+      "below": [],
+      "secRows": [
+        {
+          "idx": 0,
+          "component": "Framer1h4pb9vContainer5",
+          "mirrorHeight": 72,
+          "cloneHeight": 72,
+          "pixelMatch": 1,
+          "score": 1
+        },
+        {
+          "idx": 1,
+          "component": "Container4",
+          "mirrorHeight": 417,
+          "cloneHeight": 417,
+          "pixelMatch": 1,
+          "score": 1
+        },
+        {
+          "idx": 2,
+          "component": "FeaturedImageWrapper4",
+          "mirrorHeight": 760,
+          "cloneHeight": 760,
+          "pixelMatch": 1,
+          "score": 1
+        },
+        {
+          "idx": 3,
+          "component": "ContentSection7",
+          "mirrorHeight": 2367,
+          "cloneHeight": 2367,
+          "pixelMatch": 0.997,
+          "score": 0.997
+        },
+        {
+          "idx": 4,
+          "component": "OtherArticlesSection4",
+          "mirrorHeight": 1205,
+          "cloneHeight": 1205,
+          "pixelMatch": 0.998,
+          "score": 0.998
+        },
+        {
+          "idx": 5,
+          "component": "FramerGzkazmContainer5",
+          "mirrorHeight": 818,
+          "cloneHeight": 818,
+          "pixelMatch": 0,
+          "score": 0,
+          "skipped": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "route": "/blog/why-collections-software-keeps-failing-finance-teams",
+      "reference": "original crawl screenshot",
+      "sections": 6,
+      "compared": 6,
+      "sectionsInClone": 6,
+      "mirrorPageHeight": 6575,
+      "clonePageHeight": 6575,
+      "score": 0.828,
+      "below": [
+        "2:FeaturedImageWrapper7 6%",
+        "4:OtherArticlesSection5 74%"
+      ],
+      "secRows": [
+        {
+          "idx": 0,
+          "component": "Framer1h4pb9vContainer4",
+          "mirrorHeight": 72,
+          "cloneHeight": 72,
+          "pixelMatch": 0.857,
+          "score": 0.857
+        },
+        {
+          "idx": 1,
+          "component": "Container7",
+          "mirrorHeight": 388,
+          "cloneHeight": 388,
+          "pixelMatch": 0.901,
+          "score": 0.901
+        },
+        {
+          "idx": 2,
+          "component": "FeaturedImageWrapper7",
+          "mirrorHeight": 760,
+          "cloneHeight": 760,
+          "pixelMatch": 0.064,
+          "score": 0.064
+        },
+        {
+          "idx": 3,
+          "component": "ContentSection10",
+          "mirrorHeight": 3044,
+          "cloneHeight": 3044,
+          "pixelMatch": 0.998,
+          "score": 0.998
+        },
+        {
+          "idx": 4,
+          "component": "OtherArticlesSection5",
+          "mirrorHeight": 1205,
+          "cloneHeight": 1205,
+          "pixelMatch": 0.739,
+          "score": 0.739
+        },
+        {
+          "idx": 5,
+          "component": "FramerGzkazmContainer5",
+          "mirrorHeight": 818,
+          "cloneHeight": 818,
+          "pixelMatch": 1,
+          "score": 1
+        }
+      ],
+      "pass": true
+    }
+  ],
+  "pass": true
+}

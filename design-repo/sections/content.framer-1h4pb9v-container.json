@@ -1,0 +1,69 @@
+{
+  "id": "content.framer-1h4pb9v-container",
+  "category": "CONTENT",
+  "label": "framer-1h4pb9v-container",
+  "tag": "div",
+  "purpose": "Carries the substantive content of the page.",
+  "purposeIsInferred": true,
+  "nameSource": "class",
+  "evidence": {
+    "level": "measured",
+    "instances": 13,
+    "routes": 13,
+    "measuredFrom": [
+      "src/blog/agents-that-learn-how-you-work/index.html:623-711",
+      "src/blog/from-aging-reports-to-cash-control/index.html:623-711",
+      "src/blog/from-source-of-truth-to-source-of-action/index.html:623-711",
+      "src/blog/how-ai-agents-are-transforming-ar-and-collections/index.html:623-711",
+      "src/blog/how-to-choose-the-right-collections-software/index.html:623-711"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "body": {
+        "type": "string[]",
+        "required": true,
+        "maxItems": 4,
+        "maxWords": 3
+      },
+      "ctas": {
+        "type": "cta[]",
+        "required": true,
+        "maxItems": 2,
+        "maxWords": 3
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "appear-on-enter",
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 72,
+      "columns": 2
+    },
+    "mobile": {
+      "heightPx": 64,
+      "columns": 1,
+      "hiddenShare": 0
+    },
+    "changes": [
+      "2 columns collapse to a single column"
+    ]
+  },
+  "assetRoles": [],
+  "implementedBy": "src/pages/Customers.jsx"
+}

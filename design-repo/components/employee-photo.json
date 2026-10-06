@@ -1,0 +1,12 @@
+{
+  "id": "employee-photo",
+  "name": "Employee Photo",
+  "occurrences": 2,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/careers"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "id": "white",
+  "name": "White",
+  "occurrences": 36,
+  "composedOf": [],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

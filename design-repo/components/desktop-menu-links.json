@@ -1,0 +1,14 @@
+{
+  "id": "desktop-menu-links",
+  "name": "Desktop Menu Links",
+  "occurrences": 18,
+  "composedOf": [
+    "link",
+    "list",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

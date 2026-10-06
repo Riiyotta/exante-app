@@ -1,0 +1,13 @@
+{
+  "id": "source",
+  "name": "Source",
+  "occurrences": 1,
+  "composedOf": [
+    "paragraph",
+    "select"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/contact/sales"
+  }
+}

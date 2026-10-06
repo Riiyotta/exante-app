@@ -1,0 +1,15 @@
+{
+  "id": "content-wrapper",
+  "name": "Content Wrapper",
+  "occurrences": 35,
+  "composedOf": [
+    "heading",
+    "image",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

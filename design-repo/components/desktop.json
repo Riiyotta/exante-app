@@ -1,0 +1,14 @@
+{
+  "id": "desktop",
+  "name": "Desktop",
+  "occurrences": 99,
+  "composedOf": [
+    "link",
+    "list",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "desktop-transparent",
+  "name": "Desktop/Transparent",
+  "occurrences": 2,
+  "composedOf": [
+    "image",
+    "link",
+    "list",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/about"
+  }
+}

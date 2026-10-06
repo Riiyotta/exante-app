@@ -1,0 +1,12 @@
+{
+  "id": "author-name-wrapper",
+  "name": "Author Name Wrapper",
+  "occurrences": 14,
+  "composedOf": [
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

@@ -1,0 +1,18 @@
+/* The clone's own rules (everything else in src/styles/ is the site's stylesheet, copied as it was). */
+#root { display: contents; }
+
+/* Scroll-reveal: elements that were hidden or offset when the original page loaded and animated in on scroll. One observer
+   (src/lib/usePageChrome.js) adds .is-in; `translate` composes with the element's own transform. */
+@media (prefers-reduced-motion: no-preference) {
+  html.reveal-ready [data-reveal]:not(.is-in) { opacity: 0; translate: 0 24px; }
+  html.reveal-ready [data-reveal] { transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), translate 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
+}
+
+/* Dropdown / mega-menu panels: revealNavPanels() (lib/clone.mjs) cloned each one INSIDE its own nav trigger,
+   marked data-hover-panel — so it is naturally scoped to that one trigger even when several share a parent list.
+   Shown on hover or keyboard focus of the trigger (which contains the panel, so hovering the panel itself also
+   counts); the site's own captured styles give it its real position and look, this only controls when it is in
+   the accessibility tree / visible — never cuts it out of the layout entirely. */
+[data-hover-panel] { opacity: 0; pointer-events: none; }
+:hover > [data-hover-panel],
+:focus-within > [data-hover-panel] { opacity: 1; pointer-events: auto; }

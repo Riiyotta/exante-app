@@ -1,0 +1,13 @@
+{
+  "id": "company",
+  "name": "Company",
+  "occurrences": 21,
+  "composedOf": [
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

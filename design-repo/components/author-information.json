@@ -1,0 +1,13 @@
+{
+  "id": "author-information",
+  "name": "Author Information",
+  "occurrences": 32,
+  "composedOf": [
+    "image",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/blog"
+  }
+}

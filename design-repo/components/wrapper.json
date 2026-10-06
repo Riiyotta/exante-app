@@ -1,0 +1,14 @@
+{
+  "id": "wrapper",
+  "name": "Wrapper",
+  "occurrences": 6,
+  "composedOf": [
+    "heading",
+    "image",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "metric-1",
+  "name": "Metric #1",
+  "occurrences": 3,
+  "composedOf": [
+    "heading",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/customers"
+  }
+}

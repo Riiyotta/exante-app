@@ -1,0 +1,14 @@
+{
+  "id": "column",
+  "name": "Column",
+  "occurrences": 75,
+  "composedOf": [
+    "link",
+    "list",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

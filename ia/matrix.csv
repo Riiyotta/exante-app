@@ -1,0 +1,33 @@
+section,category,templates,routes,Home,About,Blog,Customers,Careers,Contact,Contact pages,Legal pages,Blog pages
+content.framer-1h4pb9v-container,CONTENT,5,13,,,,x,x,x,,x,x
+content.framer-gzkazm-container,CONTENT,5,13,,,,x,x,x,,x,x
+content.content-section,CONTENT,3,11,,,,,,x,,x,x
+hero.hero-section,HERO,7,8,x,x,x,x,x,x,,x,
+content.container,CONTENT,1,8,,,,,,,,,x
+content.other-articles-section,CONTENT,1,8,,,,,,,,,x
+features.featured-image-wrapper,FEATURES,1,8,,,,,,,,,x
+cta.another-cta,CTA,3,3,x,x,,x,,,,,
+content.framer-1nc9gyu-container,CONTENT,2,2,,x,x,,,,,,
+content.framer-guhhla-container,CONTENT,2,2,,x,x,,,,,,
+content.team-members-section,CONTENT,2,2,,x,,,x,,,,
+support.faq-section,SUPPORT,2,2,x,,,,,x,,,
+content.white,CONTENT,1,2,,,,,,,x,,
+hero.main,HERO,1,2,,,,,,,x,,
+shell.desktop,SHELL,1,2,,,,,,,x,,
+shell.desktop-filled,SHELL,1,2,,,,,,,x,,
+content.approach-section,CONTENT,1,1,,x,,,,,,,
+content.blog-section,CONTENT,1,1,,,x,,,,,,
+content.framer-39uowv-container,CONTENT,1,1,x,,,,,,,,
+content.framer-huxi9o-container,CONTENT,1,1,x,,,,,,,,
+content.intro-section,CONTENT,1,1,,x,,,,,,,
+content.open-roles-section,CONTENT,1,1,,,,,x,,,,
+content.problem-section,CONTENT,1,1,x,,,,,,,,
+content.roi-section,CONTENT,1,1,x,,,,,,,,
+cta.cta-section-2,CTA,1,1,x,,,,,,,,
+features.benefits-section,FEATURES,1,1,,,,,x,,,,
+features.integrations-section,FEATURES,1,1,x,,,,,,,,
+features.key-features-section,FEATURES,1,1,x,,,,,,,,
+features.other-features-section,FEATURES,1,1,x,,,,,,,,
+proof.clients-section,PROOF,1,1,x,,,,,,,,
+proof.testimonials-section,PROOF,1,1,,,,x,,,,,
+ROUTE COUNT,,,18,1,1,1,1,1,1,2,2,8

@@ -1,0 +1,12 @@
+{
+  "id": "hbs",
+  "name": "HBS",
+  "occurrences": 1,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/about"
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "$description": "Foundation typography tokens: the values observed on the site, ordered by usage. Not referenced directly by generators; semantic tokens reference these.",
+  "tokens": {
+    "fontFamily.01": {
+      "$type": "fontFamily",
+      "$value": "Geist Variable",
+      "usage": 1075
+    },
+    "fontFamily.02": {
+      "$type": "fontFamily",
+      "$value": "Alliance No.2 Regular",
+      "usage": 299
+    },
+    "fontFamily.03": {
+      "$type": "fontFamily",
+      "$value": "Geist Mono",
+      "usage": 252
+    },
+    "fontFamily.04": {
+      "$type": "fontFamily",
+      "$value": "Geist",
+      "usage": 88
+    },
+    "fontFamily.05": {
+      "$type": "fontFamily",
+      "$value": "Alliance No.2 Light",
+      "usage": 86
+    },
+    "fontFamily.06": {
+      "$type": "fontFamily",
+      "$value": "Chivo Mono",
+      "usage": 29
+    },
+    "fontFamily.07": {
+      "$type": "fontFamily",
+      "$value": "Inter",
+      "usage": 9
+    },
+    "fontSize.12": {
+      "$type": "dimension",
+      "$value": "12px",
+      "usage": 140
+    },
+    "fontSize.14": {
+      "$type": "dimension",
+      "$value": "14px",
+      "usage": 72
+    },
+    "fontSize.16": {
+      "$type": "dimension",
+      "$value": "16px",
+      "usage": 231
+    },
+    "fontSize.17": {
+      "$type": "dimension",
+      "$value": "17px",
+      "usage": 75
+    },
+    "fontSize.19": {
+      "$type": "dimension",
+      "$value": "19px",
+      "usage": 789
+    },
+    "fontSize.21": {
+      "$type": "dimension",
+      "$value": "21px",
+      "usage": 58
+    },
+    "fontSize.24": {
+      "$type": "dimension",
+      "$value": "24px",
+      "usage": 37
+    },
+    "fontSize.28": {
+      "$type": "dimension",
+      "$value": "28px",
+      "usage": 46
+    },
+    "fontSize.32": {
+      "$type": "dimension",
+      "$value": "32px",
+      "usage": 90
+    },
+    "fontSize.40": {
+      "$type": "dimension",
+      "$value": "40px",
+      "usage": 3
+    },
+    "fontSize.52": {
+      "$type": "dimension",
+      "$value": "52px",
+      "usage": 20
+    },
+    "fontSize.58": {
+      "$type": "dimension",
+      "$value": "58px",
+      "usage": 183
+    },
+    "fontSize.72": {
+      "$type": "dimension",
+      "$value": "72px",
+      "usage": 4
+    },
+    "fontSize.80": {
+      "$type": "dimension",
+      "$value": "80px",
+      "usage": 90
+    },
+    "fontWeight.300": {
+      "$type": "fontWeight",
+      "$value": "300",
+      "usage": 127
+    },
+    "fontWeight.400": {
+      "$type": "fontWeight",
+      "$value": "400",
+      "usage": 1708
+    },
+    "fontWeight.700": {
+      "$type": "fontWeight",
+      "$value": "700",
+      "usage": 3
+    },
+    "lineHeight.12": {
+      "$type": "dimension",
+      "$value": "12px",
+      "usage": 29
+    },
+    "lineHeight.14_4": {
+      "$type": "dimension",
+      "$value": "14.4px",
+      "usage": 111
+    },
+    "lineHeight.19_2": {
+      "$type": "dimension",
+      "$value": "19.2px",
+      "usage": 9
+    },
+    "lineHeight.19_6": {
+      "$type": "dimension",
+      "$value": "19.6px",
+      "usage": 72
+    },
+    "lineHeight.22_4": {
+      "$type": "dimension",
+      "$value": "22.4px",
+      "usage": 222
+    },
+    "lineHeight.22_8": {
+      "$type": "dimension",
+      "$value": "22.8px",
+      "usage": 55
+    },
+    "lineHeight.23_8": {
+      "$type": "dimension",
+      "$value": "23.8px",
+      "usage": 75
+    },
+    "lineHeight.26_6": {
+      "$type": "dimension",
+      "$value": "26.6px",
+      "usage": 734
+    },
+    "lineHeight.28_8": {
+      "$type": "dimension",
+      "$value": "28.8px",
+      "usage": 35
+    },
+    "lineHeight.29_4": {
+      "$type": "dimension",
+      "$value": "29.4px",
+      "usage": 46
+    },
+    "lineHeight.31_5": {
+      "$type": "dimension",
+      "$value": "31.5px",
+      "usage": 12
+    },
+    "lineHeight.33_6": {
+      "$type": "dimension",
+      "$value": "33.6px",
+      "usage": 48
+    },
+    "lineHeight.38_4": {
+      "$type": "dimension",
+      "$value": "38.4px",
+      "usage": 90
+    },
+    "lineHeight.62_4": {
+      "$type": "dimension",
+      "$value": "62.4px",
+      "usage": 20
+    },
+    "lineHeight.69_6": {
+      "$type": "dimension",
+      "$value": "69.6px",
+      "usage": 183
+    },
+    "lineHeight.88": {
+      "$type": "dimension",
+      "$value": "88px",
+      "usage": 86
+    }
+  }
+}

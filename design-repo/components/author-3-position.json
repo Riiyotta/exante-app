@@ -1,0 +1,12 @@
+{
+  "id": "author-3-position",
+  "name": "Author #3 Position",
+  "occurrences": 1,
+  "composedOf": [
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/customers"
+  }
+}

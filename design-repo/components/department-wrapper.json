@@ -1,0 +1,14 @@
+{
+  "id": "department-wrapper",
+  "name": "Department Wrapper",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/careers"
+  }
+}

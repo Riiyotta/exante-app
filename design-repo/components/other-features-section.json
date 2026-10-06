@@ -1,0 +1,15 @@
+{
+  "id": "other-features-section",
+  "name": "Other Features Section",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "image",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

@@ -1,0 +1,44 @@
+html.lenis { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-scrolling iframe { pointer-events: none; }
+@supports (aspect-ratio: 1) {
+  body { --framer-aspect-ratio-supported: auto; }
+}
+.framer-akqAh.framer-kbnstg, .framer-akqAh .framer-kbnstg { display: block; }
+.framer-akqAh.framer-1w53591 { place-content: flex-start; align-items: flex-start; cursor: pointer; display: flex; flex-flow: row; gap: 16px; height: min-content; overflow: visible; padding: 0px; position: relative; text-decoration: none; width: 360px; }
+.framer-akqAh .framer-ezok6d { place-content: center; align-items: center; display: flex; flex: 0 0 auto; flex-flow: row; gap: 10px; height: min-content; overflow: visible; padding: 16px; position: relative; width: min-content; }
+.framer-akqAh .framer-1bds7yb { flex: 0 0 auto; height: var(--framer-aspect-ratio-supported, 20px); position: relative; width: 20px; }
+.framer-akqAh .framer-qwt3kk { place-content: flex-start; align-items: flex-start; display: flex; flex: 1 0 0px; flex-flow: column; gap: 2px; height: min-content; overflow: visible; padding: 0px; position: relative; width: 1px; }
+.framer-akqAh .framer-ytkgqc { flex: 0 0 auto; height: auto; position: relative; white-space: pre-wrap; width: 100%; word-break: break-word; overflow-wrap: break-word; }
+.framer-akqAh .framer-1l0qdhf { flex: 0 0 auto; height: auto; max-width: 90%; position: relative; white-space: pre-wrap; width: 100%; word-break: break-word; overflow-wrap: break-word; }
+.framer-akqAh.framer-v-75g2ux.framer-1w53591 { width: 300px; }
+.framer-udxyR.framer-xnwi6b, .framer-udxyR .framer-xnwi6b { display: block; }
+.framer-udxyR.framer-1qmk736 { place-content: flex-start; align-items: flex-start; display: flex; flex-flow: row; gap: 16px; height: min-content; overflow: visible; padding: 0px; position: relative; width: min-content; }
+.framer-udxyR .framer-19y6gzr { place-content: flex-start; align-items: flex-start; display: flex; flex: 0 0 auto; flex-flow: column; gap: 20px; height: min-content; overflow: visible; padding: 0px; position: relative; width: 330px; }
+.framer-udxyR .framer-sajukp { place-content: flex-start; align-items: flex-start; display: flex; flex: 0 0 auto; flex-flow: column; gap: 10px; height: min-content; overflow: visible; padding: 0px; position: relative; width: 100%; }
+.framer-udxyR .framer-1vjb2bh { flex: 0 0 auto; height: auto; position: relative; white-space: pre-wrap; width: 100%; word-break: break-word; overflow-wrap: break-word; }
+.framer-udxyR .framer-zjgl85 { place-content: center flex-start; align-items: center; display: flex; flex: 0 0 auto; flex-flow: column; gap: 36px; height: min-content; overflow: visible; padding: 0px; position: relative; width: 100%; }
+.framer-udxyR .framer-1fnrq4k-container, .framer-udxyR .framer-f3wufl-container, .framer-udxyR .framer-ujjpb2-container, .framer-udxyR .framer-160cvn6-container { flex: 0 0 auto; height: auto; position: relative; width: 100%; }
+.framer-udxyR.framer-v-smbotq.framer-1qmk736 { flex-direction: column; gap: 32px; width: 300px; }
+.framer-udxyR.framer-v-smbotq .framer-19y6gzr { width: 100%; }
+[data-framer-portal-id="eDkfbTpZ2-55qyn"] * ::selection { color: var(--text-selection-color); background-color: var(--text-selection-background-color); }
+.framer-VExLp.framer-19ds916, .framer-VExLp .framer-19ds916 { display: block; }
+.framer-VExLp.framer-1wfvc7q { place-content: flex-start; align-items: flex-start; cursor: pointer; display: flex; flex-flow: row; gap: 16px; height: min-content; overflow: visible; padding: 0px; position: relative; text-decoration: none; width: 360px; }
+.framer-VExLp .framer-1ns7ouy { place-content: center; align-items: center; display: flex; flex: 0 0 auto; flex-flow: row; gap: 10px; height: min-content; overflow: visible; padding: 16px; position: relative; width: min-content; }
+.framer-VExLp .framer-1ec74t0 { flex: 0 0 auto; height: var(--framer-aspect-ratio-supported, 20px); position: relative; width: 20px; }
+.framer-VExLp .framer-197ja8u { place-content: flex-start; align-items: flex-start; display: flex; flex: 1 0 0px; flex-flow: column; gap: 2px; height: min-content; overflow: visible; padding: 0px; position: relative; width: 1px; }
+.framer-VExLp .framer-eazlfv { flex: 0 0 auto; height: auto; position: relative; white-space: pre-wrap; width: 100%; word-break: break-word; overflow-wrap: break-word; }
+.framer-VExLp .framer-137g28g { flex: 0 0 auto; height: auto; max-width: 90%; position: relative; white-space: pre-wrap; width: 100%; word-break: break-word; overflow-wrap: break-word; }
+.framer-VExLp.framer-v-1g9wb3h.framer-1wfvc7q { width: 300px; }
+.framer-Lbyfm.framer-1z08zz1, .framer-Lbyfm .framer-1z08zz1 { display: block; }
+.framer-Lbyfm.framer-1yb2owq { place-content: flex-start; align-items: flex-start; display: flex; flex-flow: column; gap: 20px; height: min-content; overflow: visible; padding: 0px; position: relative; width: min-content; }
+.framer-Lbyfm .framer-4ipw4t { place-content: flex-start; align-items: flex-start; align-self: stretch; display: flex; flex: 0 0 auto; flex-flow: column; gap: 10px; height: min-content; overflow: visible; padding: 0px; position: relative; width: auto; }
+.framer-Lbyfm .framer-1l9w7og { flex: 0 0 auto; height: auto; position: relative; white-space: pre-wrap; width: 100%; word-break: break-word; overflow-wrap: break-word; }
+.framer-Lbyfm .framer-qme54a { place-content: center flex-start; align-items: center; display: flex; flex: 0 0 auto; flex-flow: column; gap: 36px; height: min-content; overflow: visible; padding: 0px; position: relative; width: 330px; }
+.framer-Lbyfm .framer-1gr0jmq-container, .framer-Lbyfm .framer-1ou4key-container, .framer-Lbyfm .framer-13qmfat-container, .framer-Lbyfm .framer-198hac0-container, .framer-Lbyfm .framer-1wmix8d-container { flex: 0 0 auto; height: auto; position: relative; width: 100%; }
+.framer-Lbyfm.framer-v-1ytjz18.framer-1yb2owq { width: 300px; }
+.framer-Lbyfm.framer-v-1ytjz18 .framer-4ipw4t { align-self: unset; width: 100%; }
+.framer-Lbyfm.framer-v-1ytjz18 .framer-qme54a { width: 100%; }
+[data-framer-portal-id="eDkfbTpZ2-1ra5ust"] * ::selection { color: var(--text-selection-color); background-color: var(--text-selection-background-color); }

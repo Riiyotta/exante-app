@@ -1,0 +1,12 @@
+{
+  "id": "text-wrapper",
+  "name": "Text Wrapper",
+  "occurrences": 53,
+  "composedOf": [
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "content.white",
+  "category": "CONTENT",
+  "label": "White",
+  "tag": "div",
+  "purpose": "Carries the substantive content of the page.",
+  "purposeIsInferred": true,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 2,
+    "routes": 2,
+    "measuredFrom": [
+      "src/contact/sales/index.html:1091-1310",
+      "src/contact/support/index.html:1052-1257"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {}
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 1991,
+      "columns": 1
+    },
+    "mobile": {
+      "heightPx": null,
+      "columns": null,
+      "hiddenShare": 0
+    },
+    "changes": []
+  },
+  "assetRoles": [],
+  "implementedBy": "src/pages/ContactSales.jsx"
+}

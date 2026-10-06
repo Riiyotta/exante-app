@@ -1,0 +1,14 @@
+{
+  "id": "team-member-3",
+  "name": "Team Member #3",
+  "occurrences": 2,
+  "composedOf": [
+    "image",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/about"
+  }
+}

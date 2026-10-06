@@ -1,0 +1,13 @@
+{
+  "id": "benefits-grid",
+  "name": "Benefits Grid",
+  "occurrences": 2,
+  "composedOf": [
+    "heading",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

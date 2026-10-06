@@ -1,0 +1,13 @@
+{
+  "id": "top-row",
+  "name": "Top Row",
+  "occurrences": 3,
+  "composedOf": [
+    "image",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/customers"
+  }
+}

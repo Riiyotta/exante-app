@@ -1,0 +1,12 @@
+{
+  "id": "image-bg",
+  "name": "Image BG",
+  "occurrences": 1,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "stripe",
+  "name": "Stripe",
+  "occurrences": 1,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

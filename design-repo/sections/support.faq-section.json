@@ -1,0 +1,62 @@
+{
+  "id": "support.faq-section",
+  "category": "SUPPORT",
+  "label": "FAQ Section",
+  "tag": "section",
+  "purpose": "Answers questions or collects a message. Example headline: \"Frequently asked questions\".",
+  "purposeIsInferred": true,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 2,
+    "routes": 2,
+    "measuredFrom": [
+      "src/index.html:1686-1813",
+      "src/contact/index.html:800-933"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "heading": {
+        "type": "string",
+        "required": true,
+        "maxWords": 3
+      },
+      "body": {
+        "type": "string[]",
+        "required": true,
+        "maxItems": 6,
+        "maxWords": 75
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 963,
+      "columns": 1
+    },
+    "mobile": {
+      "heightPx": 792,
+      "columns": 1,
+      "hiddenShare": 0
+    },
+    "changes": []
+  },
+  "assetRoles": [],
+  "implementedBy": "src/pages/HomePage.jsx"
+}

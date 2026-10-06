@@ -1,0 +1,3924 @@
+{
+  "irVersion": "0.1.0",
+  "kind": "design-repo-remix",
+  "designRepo": {
+    "repositoryId": "exante-app-design-repo",
+    "repositoryVersion": "0.1.0",
+    "pageSpecVersion": "0.1.0",
+    "theme": "light",
+    "themeMode": "light",
+    "productionApprovalGate": false,
+    "contracts": {
+      "manifest": "registry.manifest.json",
+      "pageSpecSchema": "schema/pagespec.schema.json",
+      "templates": "templates/templates.json",
+      "tokenCatalog": "tokens/llm/token-catalog.json",
+      "tokenPolicy": "tokens/llm/token-policy.json",
+      "componentAllowlist": "tokens/llm/component-allowlist.json",
+      "compatibilityGraph": "compatibility/graph.json",
+      "assetContract": "assets/asset-roles.json",
+      "motionSpec": "motion/motion-contract.json",
+      "semanticValidator": "schema/semantic_validate.py"
+    }
+  },
+  "intent": {
+    "category": "uncategorized",
+    "sitePurpose": "Marketing site for Exante: AI Teammate for Collections (https://www.exante.app/). Inferred from the page title: \"Exante: AI Teammate for Collections\".",
+    "primaryConversion": "inferred from a conversion-keyword match: \"Request a Demo\"",
+    "motionIntent": "inherit-design-repo",
+    "themeDirective": {
+      "source": "measured",
+      "theme": "light",
+      "evidence": [
+        "the only theme measured on https://www.exante.app/"
+      ]
+    }
+  },
+  "runtime": {
+    "target": "n0-tenant-web",
+    "framework": "react-router-v6",
+    "renderMode": "csr",
+    "strictDesignRepo": true,
+    "allowCrossFamilyMixing": false
+  },
+  "pages": [
+    {
+      "pageId": "home",
+      "route": "/",
+      "templateId": "template.home",
+      "routeKind": "concrete",
+      "pageRole": "conversion",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.home",
+        "route": "/",
+        "nodes": [
+          {
+            "type": "content.framer-huxi9o-container",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "hero.hero-section",
+            "content": {
+              "heading": "AI teammate that handles collections",
+              "body": [
+                "From proactive outreach to rapid issue resolution, Exante is the extra set of hands that gets you sent → paid on time, every time.",
+                "Request a Demo",
+                "Sign Up"
+              ],
+              "ctas": [
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                },
+                {
+                  "label": "Sign Up"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "hero-image"
+                },
+                {
+                  "assetRole": "hero-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.roi-section",
+            "content": {
+              "heading": "Go from outstanding invoices to outstanding cash flow in no time.",
+              "body": [
+                "AUTOMATE COLLECTIONS, YOUR WAY"
+              ],
+              "items": [
+                {
+                  "title": "Reduction in DSO"
+                },
+                {
+                  "title": "Increase in on-time payments"
+                },
+                {
+                  "title": "Less time spent on AR management"
+                },
+                {
+                  "title": "Revenue slipping through the cracks"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.problem-section",
+            "content": {
+              "heading": "Your collections process can't scale, and it's costing you",
+              "body": [
+                "WHY NOW?"
+              ],
+              "items": [
+                {
+                  "title": "Weak Systems",
+                  "body": "ERP and payment tools send generic reminders, but they don’t help teams actively manage overdue accounts."
+                },
+                {
+                  "title": "Human Bottlenecks",
+                  "body": "Collections depend on spreadsheets, inboxes, and constant checking — work that grows linearly with revenue."
+                },
+                {
+                  "title": "Customer Friction",
+                  "body": "Automated collections messages lack context, making it harder to communicate with customers thoughtfully."
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "features.key-features-section",
+            "content": {
+              "heading": "No matter what's outstanding, Exante leaves no dollar behind",
+              "body": [
+                "NO MORE CASH SLIPPING THROUGH THE CRACKS",
+                "No more chasing invoices, juggling reminders, or drowning in your inbox. Exante works in the background to follow up, handle back-and-forth, and keep cash flowing."
+              ],
+              "ctas": [
+                {
+                  "label": "Get Started",
+                  "href": "/contact/sales"
+                },
+                {
+                  "label": "Get Started",
+                  "href": "/contact/sales"
+                },
+                {
+                  "label": "Get Started",
+                  "href": "/contact/sales"
+                }
+              ],
+              "items": [
+                {
+                  "title": "Outreach Agent",
+                  "body": "Exante learns exactly how you do collections. Our agents will follow your playbook, personalize outreach and escalate based on your invoice & contract data. Get paid on time without conflict."
+                },
+                {
+                  "title": "Inbound Agent",
+                  "body": "Exante agents handle your inbox. They understand customer questions, gather necessary context, and execute on the best next step to keep cash flowing. You step in only when needed."
+                },
+                {
+                  "title": "Live 360° AR View",
+                  "body": "Act with confidence and show results. Sync your systems for a powerful real-time view into your customer relationships, accounts receivable data, and communications history."
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "features.other-features-section",
+            "content": {
+              "heading": "Your imagination is the only limit",
+              "body": [
+                "IT DOESN'T STOP THERE",
+                "Once you've seen what our AI agents can do, you'll want them covering everything from contract review to cash application.",
+                "Get started with Exante"
+              ],
+              "ctas": [
+                {
+                  "label": "Get started with Exante",
+                  "href": "/contact/sales"
+                }
+              ],
+              "items": [
+                {
+                  "title": "Cash Application",
+                  "body": "Automatically match incoming payments to open invoices and resolve short-pays or remittance gaps."
+                },
+                {
+                  "title": "Dispute Management",
+                  "body": "Identify, categorize, and drive resolution of invoice disputes before they delay cash."
+                },
+                {
+                  "title": "Credit Assessment",
+                  "body": "Analyze customer risk using financial, payment, and behavioral data to recommend smart credit limits."
+                },
+                {
+                  "title": "AP Portal Navigation",
+                  "body": "Log into customer AP portals, upload invoices, check statuses, and follow up without human effort."
+                },
+                {
+                  "title": "Contract Review",
+                  "body": "Extract billing terms, payment clauses, and escalation triggers directly from customer contracts."
+                },
+                {
+                  "title": "Custom Agents",
+                  "body": "Design AI agents for any repetitive AR workflow tailored to your team’s exact process."
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "proof.clients-section",
+            "content": {
+              "heading": "Trusted by forward-thinking finance teams",
+              "body": [
+                "Our customers include scaling startups and established enterprises moving beyond spreadsheets and email threads."
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "cta.cta-section-2",
+            "content": {
+              "heading": "Go live in days and get paid in a week",
+              "body": [
+                "EASIER DONE THAN SAID",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ],
+              "items": [
+                {
+                  "title": "Connect",
+                  "body": "Integrate with your existing tools in one click, no rip-and-replace needed."
+                },
+                {
+                  "title": "Instruct",
+                  "body": "Describe your workflow in plain language or start from pre-built agents."
+                },
+                {
+                  "title": "Activate",
+                  "body": "Agents automate your work while you maintain visibility and approval control."
+                },
+                {
+                  "title": "Scale",
+                  "body": "Accelerate cash flow and free up time as your operations continue to grow."
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "features.integrations-section",
+            "content": {
+              "heading": "No rip-and-replace required",
+              "body": [
+                "Exante integrates seamlessly with your existing tech stack, including all main ERPs, CRMs and payment providers"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "support.faq-section",
+            "content": {
+              "heading": "Frequently asked questions",
+              "body": [
+                "No. Exante integrates directly with your existing tools — including your ERP, accounting system, CRM, and payment provider. We sit on top of your current stack, so there’s no rip-and-replace or complex migration. You can get started quickly while keeping your existing workflows intact.",
+                "Our AI agents handle the repetitive, time-consuming parts of collections — monitoring aging reports, prioritizing accounts, drafting follow-ups, sending reminders, and tracking & drafting responses to keep the cash flowing. They work continuously in the background so your team can focus on strategic conversations and exception cases instead of chasing routine payments.",
+                "Control and accuracy are critical in collections. That’s why our agents operate within the specific AR & collections domain to ensure every action is rooted in the relevant context and data, which dramatically improves the accuracy across all use cases. We use structured financial data and apply guardrails that limit what agents can say and do. Sensitive actions — such as escalations, payment plan changes, or account holds — can require human approval before execution.",
+                "Yes. While the bulk of routine outreach and tracking is automated, your team remains in control. You can set approval thresholds, review communications, and define escalation rules. The AI handles the repetitive work — humans step in only when judgment or discretion is required.",
+                "Pricing is based on your invoicing volume and overall platform activity. We tailor plans to match your workflow and scale with you as you grow. Our goal is simple: ensure clear, measurable ROI from day one by eliminating manual billing work, reducing errors, and preventing revenue leakage.",
+                "Most teams are up and running within 24 hours. Because Exante integrates directly with your existing systems, there’s no complex implementation. Once connected, our AI agents can immediately begin analyzing receivables and preparing outreach."
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "cta.another-cta",
+            "content": {
+              "heading": "Get started right now with one of our pre-built AI agents!",
+              "body": [
+                "Get Started"
+              ],
+              "ctas": [
+                {
+                  "label": "Get Started",
+                  "href": "/contact/sales"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.framer-39uowv-container",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "about",
+      "route": "/about",
+      "templateId": "template.about",
+      "routeKind": "concrete",
+      "pageRole": "standard",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.about",
+        "route": "/about",
+        "nodes": [
+          {
+            "type": "content.framer-guhhla-container",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "hero.hero-section",
+            "content": {
+              "heading": "Finance teams deserve better.",
+              "body": [
+                "For decades, finance teams have been stuck chasing payments, reconciling systems, and holding together workflows that should just work.",
+                "We’re here to change that."
+              ],
+              "images": [
+                {
+                  "assetRole": "hero-image"
+                },
+                {
+                  "assetRole": "hero-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.intro-section",
+            "content": {
+              "heading": "Built for autonomous finance. Run by people who’ve done the work.",
+              "body": [
+                "Before Exante, we lived the messy reality of collections — scattered reports, manual follow-ups, and revenue slipping through the cracks. We built the platform we wished we had: autonomous by default, human when it matters."
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.approach-section",
+            "content": {
+              "items": [
+                {
+                  "title": "How we approach finance differently",
+                  "body": "We don’t just fix broken workflows. We completely rethink how finance should feel when it’s truly working: smoother, clearer, and empowering for every team involved."
+                },
+                {
+                  "title": "Outcome over tooling",
+                  "body": "If the work still needs to be done manually, the problem isn’t solved."
+                },
+                {
+                  "title": "Edge cases are the job",
+                  "body": "Finance isn’t linear. Systems need to handle reality, not just ideal flows."
+                },
+                {
+                  "title": "Context matters",
+                  "body": "Collections isn’t a series of tasks — it’s an ongoing process. Systems need to understand that."
+                },
+                {
+                  "title": "Built AI-native",
+                  "body": "Not automation layered on top, but systems designed to operate end-to-end from the start."
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.team-members-section",
+            "content": {
+              "heading": "Built by a team with deep finance, engineering, and enterprise experience",
+              "subheading": "\"Finance teams have been underserved for years—not because the problems weren’t known, but because the technology couldn’t solve them. That’s changed. We’re building what finance teams should have had",
+              "body": [
+                "Giedrius DAUBARIS",
+                "Co-Founder & CEO",
+                "“What stands out here is the mix of ambition and collaboration. Everyone is driven, but there’s no ego — just a team working hard to solve problems and celebrating the wins together.”",
+                "Sebastian VARGAS",
+                "Co-Founder & CTO"
+              ],
+              "ctas": [
+                {
+                  "label": "Giedrius DAUBARIS Co-Founder & CEO"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "cta.another-cta",
+            "content": {
+              "heading": "Join us in modernizing finance!",
+              "body": [
+                "View open roles"
+              ],
+              "ctas": [
+                {
+                  "label": "View open roles",
+                  "href": "/careers"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.framer-1nc9gyu-container",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "blog",
+      "route": "/blog",
+      "templateId": "template.blog",
+      "routeKind": "concrete",
+      "pageRole": "content",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.blog",
+        "route": "/blog",
+        "nodes": [
+          {
+            "type": "content.framer-guhhla-container",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "hero.hero-section",
+            "content": {
+              "heading": "Research-led insights for modern finance teams",
+              "body": [
+                "Practical tactics, stories, and benchmarks from the field—so finance leaders can move faster with clarity, control, and trust."
+              ],
+              "images": [
+                {
+                  "assetRole": "hero-image"
+                },
+                {
+                  "assetRole": "hero-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.blog-section",
+            "content": {
+              "body": [
+                "All",
+                "Ops & Strategy",
+                "Insights & Analysis",
+                "Product & Updates",
+                "Guides & Resources"
+              ],
+              "items": [
+                {
+                  "title": "What We Hear When We Talk to Finance Teams",
+                  "body": "Read more"
+                },
+                {
+                  "title": "Agents That Learn How You Work (Not Software You Have to Learn)",
+                  "body": "Read more"
+                },
+                {
+                  "title": "From Aging Reports to Continuous Cash Control",
+                  "body": "Read more"
+                },
+                {
+                  "title": "When Software Becomes a Teammate",
+                  "body": "Read more"
+                },
+                {
+                  "title": "AR Collections Management Tools: How to Choose the Right One",
+                  "body": "Read more"
+                },
+                {
+                  "title": "Why Collections Software Keeps Failing Finance Teams",
+                  "body": "Read more"
+                },
+                {
+                  "title": "How AI Agents Are Transforming AR and Collections",
+                  "body": "Read more"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon",
+                  "alt": "woman staring directly at camera near pink wall"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon",
+                  "alt": "Mario Santanilla"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon",
+                  "alt": "Sebastian Vargas"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image",
+                  "alt": "Santiago Rodriguez"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.framer-1nc9gyu-container",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "customers",
+      "route": "/customers",
+      "templateId": "template.customers",
+      "routeKind": "concrete",
+      "pageRole": "content",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.customers",
+        "route": "/customers",
+        "nodes": [
+          {
+            "type": "content.framer-1h4pb9v-container",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "hero.hero-section",
+            "content": {
+              "heading": "Meet companies collecting smarter with Exante",
+              "body": [
+                "Our clients include forward-thinking startups and global leaders — all redefining how modern finance teams work."
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "proof.testimonials-section",
+            "content": {
+              "items": [
+                {
+                  "title": "“Our collections went from reactive chasing to automated, proactive and consistent flow. In just three months, we improved DSO by 30%+, eliminated invoices overdue by 90+ days, and strengthened our CE",
+                  "body": "JUSTINA RAMOSKAITE"
+                },
+                {
+                  "title": "\"Exante enables us to tailor outreach based on each customer’s context and lifecycle stage, while operating at a scale we simply couldn’t manage manually. We’re now reaching thousands of customers in ",
+                  "body": "NATALIE MILLER"
+                },
+                {
+                  "title": "\"Before Exante, accounts receivable was a monthly fire drill. Finance, customer success, sales, and data would all scramble to reconcile accounts and chase payments. Exante eliminated that sprint by a",
+                  "body": "BLAKE SCHNEIDER"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "avatar"
+                },
+                {
+                  "assetRole": "avatar"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "cta.another-cta",
+            "content": {
+              "heading": "Get started now with one of our pre-built AI agents!",
+              "body": [
+                "Get Started"
+              ],
+              "ctas": [
+                {
+                  "label": "Get Started"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.framer-gzkazm-container",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "careers",
+      "route": "/careers",
+      "templateId": "template.careers",
+      "routeKind": "concrete",
+      "pageRole": "standard",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.careers",
+        "route": "/careers",
+        "nodes": [
+          {
+            "type": "content.framer-1h4pb9v-container",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "hero.hero-section",
+            "content": {
+              "heading": "Let’s shape the future of finance, together",
+              "body": [
+                "JOIN OUR TEAM",
+                "Finance is changing fast — and so are the expectations of the teams behind it. At Exante, we build tools that give leaders clarity and confidence. To do it, we need curious people ready to make an impact."
+              ],
+              "images": [
+                {
+                  "assetRole": "hero-image",
+                  "alt": "A work team around the desk"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "features.benefits-section",
+            "content": {
+              "heading": "We invest in our people",
+              "body": [
+                "At Exante, we’re committed to creating the best place to work — with benefits that support your wellbeing, your growth, and your life outside of work."
+              ],
+              "items": [
+                {
+                  "title": "Reward & Recognition",
+                  "body": "Competitive salary"
+                },
+                {
+                  "title": "Flexibility at Work",
+                  "body": "Work from San Francisco, CA or anywhere in the world"
+                },
+                {
+                  "title": "Wellbeing & Growth",
+                  "body": "Comprehensive healthcare coverage"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.team-members-section",
+            "content": {
+              "heading": "What our team loves about working at Exante",
+              "body": [
+                "From ownership and collaboration to the freedom to create, hear directly from the people building the future of finance with us.",
+                "Mario Santanilla",
+                "Design Engineer",
+                "Felipe Zapata",
+                "Senior Software Engineer",
+                "“What stands out here is the mix of ambition and collaboration. Everyone is driven, but there’s no ego — just a team working hard to solve problems and celebrating the wins together.”",
+                "Storm Llamas",
+                "Software Engineer"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "content-image",
+                  "alt": "woman in gray jacket"
+                },
+                {
+                  "assetRole": "content-image",
+                  "alt": "man in gray polo shirt smiling"
+                },
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.open-roles-section",
+            "content": {
+              "heading": "Open roles",
+              "subheading": "Don't See a Role?",
+              "body": [
+                "Pitch Yourself & Come Build With Us",
+                "San Francisco, CA",
+                "Apply"
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.framer-gzkazm-container",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "contact",
+      "route": "/contact",
+      "templateId": "template.contact",
+      "routeKind": "concrete",
+      "pageRole": "conversion",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.contact",
+        "route": "/contact",
+        "nodes": [
+          {
+            "type": "content.framer-1h4pb9v-container",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "hero.hero-section",
+            "content": {
+              "heading": "How can we help?",
+              "body": [
+                "CONTACT",
+                "Whether you’re ready to see Exante in action or just need a hand with a question, our sales and support teams are here to help."
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.content-section",
+            "content": {
+              "ctas": [
+                {
+                  "label": "Submit an inquiry",
+                  "href": "/contact/support"
+                },
+                {
+                  "label": "Book a demo",
+                  "href": "/contact/sales"
+                },
+                {
+                  "label": "Email us"
+                }
+              ],
+              "items": [
+                {
+                  "title": "Support",
+                  "body": "Fill out our form or email us at team@exante.app with your question."
+                },
+                {
+                  "title": "Sales",
+                  "body": "Connect with our sales team to request a demo or discuss pricing."
+                },
+                {
+                  "title": "Media inquiry",
+                  "body": "Reach out to our team for press requests or media opportunities."
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "support.faq-section",
+            "content": {
+              "heading": "Frequently asked questions",
+              "body": [
+                "No. Exante integrates directly with your existing tools — including your ERP, accounting system, CRM, and payment provider. We sit on top of your current stack, so there’s no rip-and-replace or complex migration. You can get started quickly while keeping your existing workflows intact.",
+                "Our AI agents handle the repetitive, time-consuming parts of collections — monitoring aging reports, prioritizing accounts, drafting follow-ups, sending reminders, and tracking & drafting responses to keep the cash flowing. They work continuously in the background so your team can focus on strategic conversations and exception cases instead of chasing routine payments.",
+                "Control and accuracy are critical in collections. That’s why our agents operate within the specific AR & collections domain to ensure every action is rooted in the relevant context and data, which dramatically improves the accuracy across all use cases. We use structured financial data and apply guardrails that limit what agents can say and do. Sensitive actions — such as escalations, payment plan changes, or account holds — can require human approval before execution.",
+                "Yes. While the bulk of routine outreach and tracking is automated, your team remains in control. You can set approval thresholds, review communications, and define escalation rules. The AI handles the repetitive work — humans step in only when judgment or discretion is required.",
+                "Pricing is based on your invoicing volume and overall platform activity. We tailor plans to match your workflow and scale with you as you grow. Our goal is simple: ensure clear, measurable ROI from day one by eliminating manual billing work, reducing errors, and preventing revenue leakage.",
+                "Most teams are up and running within 24 hours. Because Exante integrates directly with your existing systems, there’s no complex implementation. Once connected, our AI agents can immediately begin analyzing receivables and preparing outreach."
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.framer-gzkazm-container",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "contact-sales",
+      "route": "/contact/sales",
+      "templateId": "template.contact-2",
+      "routeKind": "concrete",
+      "pageRole": "conversion",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.contact-2",
+        "route": "/contact/sales",
+        "nodes": [
+          {
+            "type": "shell.desktop-filled",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Product"
+                },
+                {
+                  "label": "Company"
+                },
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "hero.main",
+            "content": {
+              "heading": "Contact sales",
+              "body": [
+                "Request a tailored demo",
+                "Learn more about our integrations",
+                "Talk to one of our experts",
+                "Need help with onboarding, product questions, or technical issues?",
+                "Contact support",
+                "Full name*",
+                "Email*",
+                "Company name*",
+                "How did you hear about us?",
+                "How can we help?",
+                "Send inquiry"
+              ],
+              "ctas": [
+                {
+                  "label": "Send inquiry"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "css-transition",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "shell.desktop",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "ctas": [
+                {
+                  "label": "Outreach Agent",
+                  "href": "/#outreach-agent"
+                },
+                {
+                  "label": "Inbound Agent",
+                  "href": "/#inbound-agent"
+                },
+                {
+                  "label": "360° AR View",
+                  "href": "/#360-ar-view"
+                },
+                {
+                  "label": "Cash Application",
+                  "href": "/#benefits"
+                },
+                {
+                  "label": "Dispute Management",
+                  "href": "/#benefits"
+                },
+                {
+                  "label": "Credit Assessment",
+                  "href": "/#benefits"
+                },
+                {
+                  "label": "AP Portal Navigation",
+                  "href": "/#benefits"
+                },
+                {
+                  "label": "Contract Review",
+                  "href": "/#benefits"
+                },
+                {
+                  "label": "Custom AI Agents",
+                  "href": "/#benefits"
+                },
+                {
+                  "label": "About us",
+                  "href": "/about"
+                },
+                {
+                  "label": "Blog",
+                  "href": "/blog"
+                },
+                {
+                  "label": "Case studies",
+                  "href": "/customers"
+                },
+                {
+                  "label": "Careers",
+                  "href": "/careers"
+                },
+                {
+                  "label": "Contact",
+                  "href": "/contact"
+                },
+                {
+                  "label": "Trust Center"
+                },
+                {
+                  "label": "Terms of Service",
+                  "href": "/legal/terms-of-service"
+                },
+                {
+                  "label": "Privacy Policy",
+                  "href": "/legal/privacy"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.white",
+            "content": {},
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "legal-terms-of-service",
+      "route": "/legal/terms-of-service",
+      "templateId": "template.legal",
+      "routeKind": "concrete",
+      "pageRole": "legal",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.legal",
+        "route": "/legal/terms-of-service",
+        "nodes": [
+          {
+            "type": "content.framer-1h4pb9v-container",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "hero.hero-section",
+            "content": {
+              "heading": "Terms of Service"
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.content-section",
+            "content": {
+              "body": [
+                "LAST UPDATED",
+                "Feb 24, 2026",
+                "These Exante Terms of Service (the “Terms of Service” or “Terms”) govern access to and use of the Exante Solutions Inc. (“Exante,” “we,” or “us”) website, applications, and other services provided by us (collectively, the “Service”).",
+                "Website visitors are referred to in these terms as “Site Visitors” and individuals or entities who use the Service or create an account (“Account”) and their Authorized Users are collectively referred to as “Customers”. Customers and Site Visitors may be referred to in these Terms as “you” and “your” as applicable.",
+                "These Terms are in addition to, and do not nullify, any other agreement between you and us or any other applicable terms and conditions found on the Service.",
+                "By using the Service, you as a Site Visitor or Customer accept and agree to follow and be bound by these Terms (whether on behalf of yourself or a legal entity you represent). You also agree to comply with all applicable laws and regulations, as well as all rules or restrictions that are posted on the Service. If you do not agree to these Terms, you are not authorized and must cease using the service immediately.",
+                "Exante provides AI-powered accounts receivable automation software that enables customers to automate billing workflows, generate invoices, monitor receivables, communicate with customers, and collect payments through integrations with third-party financial systems and payment processors (the “Service”).",
+                "The Service may include AI agents and automated tools that analyze Customer Data and generate billing schedules, invoices, payment reminders, reports, or other financial outputs based on information provided by you.",
+                "You acknowledge that Exante is not a bank, financial institution, accounting firm, or collection agency. The Service does not constitute financial, accounting, tax, legal, or investment advice. You remain solely responsible for reviewing and approving all invoices, communications, payment actions, and financial outputs generated by the Service before relying on them.",
+                "Any automated outputs generated by AI features may contain errors and should be independently verified. Certain features of the Service utilize machine learning and artificial intelligence technologies to generate outputs based on Customer Data. You acknowledge that AI-generated outputs may be incomplete, inaccurate, or inappropriate and require human review. Exante does not guarantee the accuracy or reliability of AI outputs.",
+                "You agree that by using the Service you are at least 18 years of age and you are legally able to enter into a contract. If you are agreeing to these Terms on behalf of an organization or entity, you represent and warrant that you are authorized to agree to these Terms on that organization or entity’s behalf and bind them to these Terms (in which case, the references to \"you\" and \"your\" in these Terms, except for in this sentence, refer to that organization or entity). If Exante has previously pr",
+                "When you create an Account to use or access certain portions of the Service, you must provide complete and accurate information as requested on the registration form, and you must maintain and update such information to keep it complete and accurate. You will also be asked to provide a username and password. You are entirely responsible for maintaining the confidentiality of your password, and are responsible for all activities (whether by you or by others) that occur under your password or Acco",
+                "The Service is owned and operated by Exante Solutions Inc., and contains materials that are proprietary and are protected by copyright laws, international treaty provisions, trademarks, service marks, and other intellectual property laws and treaties. Except as otherwise expressly provided by Exante, none of the Service may be copied, reproduced, republished, downloaded, uploaded, posted, displayed, transmitted or distributed in any way and nothing on the Service shall be construed to confer any",
+                "If, at our request, you send certain specific submissions or without a request from us you send creative ideas, suggestions, proposals, plans, or other materials, whether online, by email, by postal mail, or otherwise (collectively, “Comments”), you agree that we may, at any time, without restriction, edit, copy, publish, distribute, translate, and otherwise use in any medium any Comments that you forward to us. We are and shall be under no obligation (1) to maintain any Comments in confidence; ",
+                "By using the Service, you specifically agree not to engage in any activity or transmit any information that, in our sole discretion:",
+                "Is illegal, or violates any federal, state, or local law or regulation;",
+                "Advocates illegal activity or discusses illegal activities with the intent to commit them;",
+                "Violates any third-party right, including, but not limited to, right of privacy, right of publicity, copyright, trademark, patent, trade secret, or any other intellectual property or proprietary rights;",
+                "Is harmful, threatening, abusive, harassing, tortious, indecent, defamatory, sexually explicit or pornographic, discriminatory, vulgar, profane, obscene, libelous, hate speech, violent or inciting violence, inflammatory, or otherwise objectionable;",
+                "Interferes with any other party’s use and enjoyment of the Service;",
+                "Attempts to impersonate another person or entity;",
+                "Is commercial in a way that violates these Terms, including but not limited to, using the Service for spam, surveys, contests, pyramid schemes, or other advertising materials;",
+                "Falsely states, misrepresents, or conceals your affiliation with another person or entity;",
+                "Accesses or uses the Account of another Customer or Paid Customer without permission;",
+                "Distributes computer viruses or other code, files, or programs that interrupt, destroy, or limit the functionality of any computer software or hardware or electronic communications equipment;",
+                "Interferes with, disrupts, disables, overburdens, or destroys the functionality or use of any features of the Service, or the servers or networks connected to the Service, or any of the Service;",
+                "“Hacks” or accesses without permission our proprietary or confidential records, those of another Customer, Paid Customer, or Site Visitor, or those of anyone else;",
+                "Improperly solicits personal or sensitive information from other Customers, Paid Customers or Site Visitors including without limitation address, credit card or financial account information, or passwords;",
+                "Decompiles, reverse engineers, disassembles, or otherwise attempts to derive source code from the Service, except as expressly permitted in these Terms or by law, unless and then only to the extent permitted by applicable law without consent;",
+                "Removes, circumvents, disables, damages, or otherwise interferes with security-related features, or features that enforce limitations on use of the Service;"
+              ],
+              "items": [
+                {
+                  "title": "1. Acceptance of Terms"
+                },
+                {
+                  "title": "2. Aboute Exante"
+                },
+                {
+                  "title": "3. Eligibility"
+                },
+                {
+                  "title": "4. Exante Account"
+                },
+                {
+                  "title": "5. Intellectual Property Rights"
+                },
+                {
+                  "title": "7. User Comments, Feedback and Other Submissions"
+                },
+                {
+                  "title": "8. Use Restrictions"
+                },
+                {
+                  "title": "9. Privacy"
+                },
+                {
+                  "title": "10. Customer Data"
+                },
+                {
+                  "title": "11. Customer Warranties"
+                },
+                {
+                  "title": "12. Fees"
+                },
+                {
+                  "title": "13. Modification of the Service"
+                },
+                {
+                  "title": "14. Term and Termination"
+                },
+                {
+                  "title": "15. Third Party Content"
+                },
+                {
+                  "title": "16. Warranties and Disclamers"
+                },
+                {
+                  "title": "17. Indemnification"
+                },
+                {
+                  "title": "18. Limitations and Liability"
+                },
+                {
+                  "title": "19. General"
+                },
+                {
+                  "title": "20. Changes to Terms of Service"
+                },
+                {
+                  "title": "21. How to Contact Us"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.framer-gzkazm-container",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "legal-privacy",
+      "route": "/legal/privacy",
+      "templateId": "template.legal",
+      "routeKind": "concrete",
+      "pageRole": "legal",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.legal",
+        "route": "/legal/privacy",
+        "nodes": [
+          {
+            "type": "content.framer-1h4pb9v-container",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "hero.hero-section",
+            "content": {
+              "heading": "Privacy Policy"
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.content-section",
+            "content": {
+              "heading": "Information You Provide Directly",
+              "subheading": "Customer Data Processed on Behalf of Customers",
+              "body": [
+                "LAST UPDATED",
+                "Feb 24, 2026",
+                "Exante Solutions, Inc. (“Exante,” “we,” “us,” or “our”) respects your concerns about privacy and is committed to protecting personal information. This Privacy Policy describes how we collect, use, disclose, and safeguard personal information in connection with our website located at www.exante.app, our applications, integrations, and related services (collectively, the “Online Services”).",
+                "By accessing or using the Online Services, you acknowledge that you have read and understood this Privacy Policy.",
+                "If you have questions regarding this Privacy Policy, please contact us at team@exante.app.",
+                "This Privacy Policy applies to personal information collected through the Online Services. It does not apply to third-party websites, platforms, or services that are not owned or controlled by Exante, even if accessible through links or integrations within the Online Services.",
+                "Depending on the context, Exante may act either as a “data controller” (or “business,” under the California Consumer Privacy Act (“CCPA”)) or as a “data processor” (or “service provider”). When we process personal information on behalf of our customers as part of providing the Service, we act as a data processor and process such information solely in accordance with our agreements with those customers.",
+                "We may collect personal information that you voluntarily provide when you register for an account, communicate with us, request information about our services, engage with customer support, or otherwise interact with the Online Services. Such information may include your name, email address, company name, job title, mailing address, telephone number, account credentials, and billing contact information.",
+                "In providing AI-powered accounts receivable automation services, customers may upload or transmit information through the Service (“Customer Data”). Customer Data may include personal information relating to customers’ employees, clients, counterparties, or other third parties, such as contact information, invoice details, payment status, transaction history, billing communications, and other financial or business information necessary to administer accounts receivable workflows.",
+                "Exante processes Customer Data solely for the purpose of providing and improving the Service and in accordance with applicable agreements with the relevant customer.",
+                "When you access or use the Online Services, we and our service providers may automatically collect certain information, including IP address, browser type, device identifiers, operating system, referring and exit pages, date and time stamps, usage data, and approximate location derived from IP address.",
+                "We may use cookies and similar tracking technologies to enhance functionality, maintain session information, analyze usage, improve the Online Services, and support security. You may adjust your browser settings to refuse cookies; however, certain features of the Online Services may not function properly if cookies are disabled.",
+                "We may receive information about you from third parties, including service providers, integration partners, and customers who provide your information in connection with their use of the Service. We may combine such information with information collected directly through the Online Services.",
+                "The categories of personal information described in this Section reflect the categories of personal information we have collected within the preceding twelve (12) months.",
+                "We may use personal information to provide, operate, maintain, and improve the Online Services; to generate invoices, payment reminders, reports, and other service outputs; to facilitate integrations with third-party systems and payment processors; to communicate with you regarding your account or service updates; to provide customer support; to authenticate users and maintain security; to detect and prevent fraud or misuse; to comply with legal obligations; and to enforce our agreements.",
+                "We may aggregate or de-identify personal information and use such information for lawful business purposes, including analytics, research, product development, and service improvement.",
+                "The Service utilizes machine learning and artificial intelligence technologies to analyze Customer Data and generate service outputs, including invoices, payment reminders, workflow recommendations, and related communications. Such processing may involve automated analysis of personal information.",
+                "Unless explicitly agreed in writing with a customer, Exante does not use Customer Data to train generalized artificial intelligence models or foundation models for the benefit of other customers.",
+                "Payment transactions in connection with the Service are processed by third-party payment processors. Exante does not process payments directly and is not a bank, money transmitter, or payment processor.",
+                "Payment information is subject to the privacy policies and terms of the applicable payment processor. Except as necessary to facilitate payment processing through authorized providers, we do not store full credit card numbers or banking credentials on our systems.",
+                "We do not sell personal information and have not sold personal information in the preceding twelve (12) months.",
+                "We may disclose personal information in the following circumstances:",
+                "We may disclose personal information to third-party service providers and subprocessors who perform services on our behalf, including hosting providers, infrastructure providers, analytics providers, customer support vendors, security providers, and payment processors. These providers are contractually obligated to safeguard personal information and to use it only for authorized purposes consistent with this Privacy Policy.",
+                "A current list of subprocessors is available upon request.",
+                "Where we process Customer Data on behalf of customers, such information may be disclosed to or accessed by the relevant customer and its authorized users.",
+                "We may disclose personal information where required to do so by law, regulation, subpoena, court order, or other legal process, or where we believe in good faith that disclosure is necessary to protect our rights, enforce our agreements, investigate fraud, or protect the safety of individuals or the public.",
+                "In the event of a merger, acquisition, restructuring, reorganization, bankruptcy, or sale of assets, personal information may be transferred as part of the associated transaction, subject to applicable legal requirements.",
+                "We may disclose personal information where you have provided consent or directed us to do so.",
+                "We retain personal information for as long as necessary to fulfill the purposes described in this Privacy Policy, including to provide the Service, comply with legal obligations, resolve disputes, and enforce agreements.",
+                "Retention of Customer Data is governed by our agreements with customers and by customer instructions. We may retain aggregated or de-identified information for a longer period consistent with applicable law."
+              ],
+              "items": [
+                {
+                  "title": "1. Scope and Applicability"
+                },
+                {
+                  "title": "2. Information We Collect"
+                },
+                {
+                  "title": "3. Use of Personal Information"
+                },
+                {
+                  "title": "4. Artificial Intelligence and Automated Processing"
+                },
+                {
+                  "title": "5. Payment Processing"
+                },
+                {
+                  "title": "6. Disclosure of Information"
+                },
+                {
+                  "title": "7. Data Retention"
+                },
+                {
+                  "title": "8. Data Security"
+                },
+                {
+                  "title": "9. Your Rights and Choices"
+                },
+                {
+                  "title": "10. California Privacy Rights"
+                },
+                {
+                  "title": "11. International Data Transfers"
+                },
+                {
+                  "title": "12. Children’s Privacy"
+                },
+                {
+                  "title": "13. Changes to This Privacy Policy"
+                },
+                {
+                  "title": "14. Contact Information"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.framer-gzkazm-container",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "blog-what-we-hear-when-we-talk-to-finance-teams",
+      "route": "/blog/what-we-hear-when-we-talk-to-finance-teams",
+      "templateId": "template.blog-2",
+      "routeKind": "concrete",
+      "pageRole": "content",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.blog-2",
+        "route": "/blog/what-we-hear-when-we-talk-to-finance-teams",
+        "nodes": [
+          {
+            "type": "content.framer-1h4pb9v-container",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.container",
+            "content": {
+              "heading": "What We Hear When We Talk to Finance Teams",
+              "body": [
+                "OPS & STRATEGY",
+                "•",
+                "JAN 17, 2026",
+                "6 MIN",
+                "READ",
+                "The real work behind getting paid.",
+                "Giedrius Daubaris",
+                "Co-Founder & CEO"
+              ],
+              "images": [
+                {
+                  "assetRole": "icon"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "features.featured-image-wrapper",
+            "content": {
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.content-section",
+            "content": {
+              "body": [
+                "TABLE OF CONTENTS",
+                "Share",
+                "We spend a lot of time on calls with finance teams. Not selling — listening. Trying to understand what the day actually looks like for the people managing collections at mid-market companies.",
+                "What we've learned doesn't match the narrative that most AR software vendors tell. The industry talks about \"automating collections\" as if the problem is a lack of automation. It isn't. The problem is that the work itself is fundamentally human — and nobody's built tools that respect that.",
+                "Here are some of the things we keep hearing.",
+                "One of the finance leaders we talk to regularly manages collections for a growing company. She handles AR alongside invoicing, vendor payments, and everything else that falls under \"finance team of one.\"",
+                "She told us that the reason her collections work well is that she takes the time to actually see the person on the other side. She doesn't send template blasts. She reads the last conversation. She considers the relationship. She crafts a message that sounds like it came from a human — because it did.",
+                "The problem is that this takes time. Time she doesn't have during the day, between meetings, between the other 47 things on her plate. So she does it at night.",
+                "When we showed her what an AI agent could do — draft a contextually appropriate response that she could review and approve in 30 seconds instead of writing from scratch in 10 minutes — her reaction wasn't \"that's cool technology.\" It was: \"I could get my evenings back.\"",
+                "That's the right way to think about what agents do. They don't replace the person who cares about doing the job right. They give that person capacity.",
+                "A fractional CFO we work with serves multiple mid-market clients. He described the cash application process at some of his smaller clients — the ones without sophisticated billing systems.",
+                "A payment comes in. It doesn't match any single open invoice. Maybe the customer combined three invoices into one payment. Maybe the amount is off by a few dollars because of a currency conversion or a line item they decided not to pay. Maybe the bank description is so cryptic you can't even tell who sent it.",
+                "The solution, more often than he'd like to admit: email the customer and ask what they paid.",
+                "He described clerks who handle cash application as people who do well with clear instructions — A, then B, then C. But when a payment doesn't match cleanly, it requires investigation, judgment, maybe a phone call. And that's where things stall. He's seen payments sit unapplied for two weeks. Two weeks where the CFO can't run accurate cash projections, where the aging report is wrong, where the customer thinks they've paid but your books say they haven't.",
+                "Two weeks — not because anyone is incompetent, but because the work required to resolve the mismatch takes time that nobody has.",
+                "A Director of Billing at a company that's grown through acquisitions told us something that reframed how we think about collections entirely.",
+                "She said that 80% of the inbound work her team handles is routine: send a W-9, answer a FAQ, explain why an invoice is higher than last quarter, walk someone through the sales tax breakdown, resend an invoice copy.",
+                "Not disputes. Not escalations. Not complex negotiations. Just... answering the same questions, sending the same documents, over and over, to different people at different companies, all day long.",
+                "Her team of six — only one of whom is a dedicated collections specialist — spends most of their time on work that requires zero judgment but 100% of their attention. Because you can't batch it. The requests come in throughout the day, from different channels, and each one needs a specific response with the right attachment and the right context.",
+                "She knows exactly what she needs: something that can handle the routine requests automatically (send the W-9, answer the FAQ, explain the sales tax) and only surface the exceptions that require a human decision. But the tools she has — her ERP, her collections platform, her outsourced cash application team — don't work that way. They're either fully manual or fully automated with no intelligence in between.",
+                "This one came secondhand. A finance leader mentioned that his CEO had said something to the effect of: \"Is all my money gonna go to AI machines moving forward?\"",
+                "It was said in passing, not directly to him — and the CEO who said it wasn't opposed to AI, just wary of cost without proof. It captures a real tension that exists in every mid-market company right now. Leadership sees AI as both the future and a cost center. They know the team is stretched thin. They know they're not going to hire. But they're also not sure what AI actually does versus what it promises.",
+                "This is the reality we're building for. Not the innovation-hungry early adopter who wants to try every new tool. The pragmatic finance leader who needs to make a case — to their CEO, their CFO, their board — that this specific tool will pay for itself. Not in theoretical productivity gains, but in actual cash collected, actual hours recovered, actual invoices that would have fallen through the cracks.",
+                "That's why we offer a 90-day performance guarantee. We measure the baseline when you start. We track DSO, CEI, collection rates, and aging trends. If the numbers don't move, you walk away. No questions asked.",
+                "The last customer who took that deal saw 30x their investment returned in recovered receivables within 90 days. Not because our agents did anything magical. They just followed up — consistently, contextually, at scale — on invoices that the team knew were overdue but didn't have time to chase.",
+                "A controller at a growing company told us that management had decided not to hire another person for his team. Instead, they moved someone from another department — someone who'd done the job before, which made it less awkward, but also didn't really solve the capacity problem.",
+                "There was no discussion of new tools. No budget for software. Just a quiet expectation that the same team would handle more volume.",
+                "This is the most common scenario we encounter. It's not that companies don't recognize the problem. It's that the solutions they know about — hiring, outsourcing, enterprise software — are all expensive, slow, or both. So they do nothing and absorb the pain.",
+                "The result is a finance team that works longer hours, responds to customers slower, lets invoices age longer than they should, and occasionally drops something important. Not because they're bad at their jobs — because they're doing the work of three people with the resources of one.",
+                "One of the things that struck us most was hearing a finance professional say he was more interested in trying Exante precisely because he has no technical background. He saw the instruction editor — where you describe what you want the agent to do in plain language — and said: \"You're literally working with a fresh slate. I don't know how to do any of this.\""
+              ],
+              "items": [
+                {
+                  "title": "The real work behind getting paid."
+                },
+                {
+                  "title": "\"I'm crafting emails at 10 PM\""
+                },
+                {
+                  "title": "\"We just email the customer: what did you pay?\""
+                },
+                {
+                  "title": "\"80% of the work is just send a W-9\""
+                },
+                {
+                  "title": "\"Is all my money gonna go to AI machines?\""
+                },
+                {
+                  "title": "\"They're not gonna hire someone new\""
+                },
+                {
+                  "title": "\"I don't know anything about programming or coding\""
+                },
+                {
+                  "title": "What we're building from what we've heard"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "scroll-linked",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.other-articles-section",
+            "content": {
+              "heading": "Looking for more? Dive into our other articles, updates, and strategies",
+              "body": [
+                "Browse all articles"
+              ],
+              "ctas": [
+                {
+                  "label": "Browse all articles",
+                  "href": "/blog"
+                }
+              ],
+              "items": [
+                {
+                  "title": "From Source of Truth to Source of Action",
+                  "body": "Read more"
+                },
+                {
+                  "title": "Agents That Learn How You Work (Not Software You Have to Learn)",
+                  "body": "Read more"
+                },
+                {
+                  "title": "From Aging Reports to Continuous Cash Control",
+                  "body": "Read more"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon",
+                  "alt": "woman staring directly at camera near pink wall"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.framer-gzkazm-container",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "blog-from-source-of-truth-to-source-of-action",
+      "route": "/blog/from-source-of-truth-to-source-of-action",
+      "templateId": "template.blog-2",
+      "routeKind": "concrete",
+      "pageRole": "content",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.blog-2",
+        "route": "/blog/from-source-of-truth-to-source-of-action",
+        "nodes": [
+          {
+            "type": "content.framer-1h4pb9v-container",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.container",
+            "content": {
+              "heading": "From Source of Truth to Source of Action",
+              "body": [
+                "INSIGHTS & ANALYSIS",
+                "•",
+                "JAN 7, 2026",
+                "8 MIN",
+                "READ",
+                "Why knowing everything about your AR doesn't mean you're managing it.",
+                "Sebastian Vargas",
+                "Co-Founder & CTO"
+              ],
+              "images": [
+                {
+                  "assetRole": "icon"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "features.featured-image-wrapper",
+            "content": {
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.content-section",
+            "content": {
+              "body": [
+                "TABLE OF CONTENTS",
+                "Share",
+                "If you've evaluated any AR or billing tool in the last five years, you've heard the pitch: \"We're your single source of truth.\"",
+                "It's the holy grail of finance software. One system that holds all your data — invoices, payments, customers, contracts, communications — so you never have to reconcile across three spreadsheets and two inboxes to figure out what's actually going on.",
+                "And it's genuinely important. Finance teams that don't have a reliable source of truth spend a staggering amount of time just establishing the facts. How much is outstanding? Who owes us? When did we last contact them? Did they respond? What did they say?",
+                "But here's what we've come to understand after working with finance teams across industries: having a source of truth is necessary but not sufficient. The source of truth tells you the state of your AR. It doesn't do anything about it.",
+                "You log in Monday morning. Your AR dashboard shows $2.1M outstanding. $840K is past due. $320K is over 90 days. The aging report is current. The data is accurate. The dashboard is beautiful.",
+                "Now what?",
+                "You still have to decide which accounts to contact first. You still have to draft the emails. You still have to check whether that $320K includes the customer who told you last week they're paying on the 15th (it does — but the dashboard doesn't know that). You still have to pull up each customer's history to understand the context before you pick up the phone or hit send.",
+                "The source of truth gave you visibility. But visibility without action is just awareness of how much work you have to do.",
+                "This is the state of most mid-market AR today: teams that know exactly how behind they are, displayed in a well-designed interface, with no automated path from knowing to doing.",
+                "The concept made sense for a specific era of finance software. When the problem was fragmented data — invoices in one system, payments in another, customer information in a third — consolidation was genuinely transformative. Getting everything into one place eliminated reconciliation errors, reduced reporting time, and gave leadership confidence in the numbers.",
+                "Enterprise companies solved this with massive ERP implementations. Mid-market companies tried to solve it with a mix of tools, integrations, and spreadsheets. The promise of modern AR platforms was to bring that consolidation to smaller teams without the enterprise price tag or implementation timeline.",
+                "And many of them delivered on that promise. You can absolutely get a clear, consolidated view of your AR from tools like Tesorio, or from your ERP's built-in reporting.",
+                "But consolidation was always the means, not the end. The end was supposed to be: get paid faster, with less effort. And somewhere along the way, the industry stopped short. They gave you the information. They left you to do the work.",
+                "Here's what the gap looks like in practice:",
+                "Your system knows a customer has three invoices overdue by 45 days totaling $87,000. You still have to decide whether to send a gentle reminder, an escalation email, or loop in their account manager — and then actually do it.",
+                "Your system knows a payment came in for $12,340 that doesn't match any single open invoice. You still have to figure out which invoices it covers, apply it correctly, and follow up if there's a remaining balance.",
+                "Your system knows a customer emailed asking for a W-9 and a copy of their latest invoice. You still have to find the W-9 (is it in Google Drive? The shared folder? The last email you sent to someone else who asked?), pull the invoice, and respond.",
+                "Your system knows your DSO increased 4 days this month. You still have to figure out why, identify which accounts are driving it, and take corrective action.",
+                "In each case, the source of truth is functioning perfectly. The data is there. The visibility is there. What's missing is someone — or something — to act on it.",
+                "There's a deeper issue with the \"source of truth\" framing that goes beyond the action gap.",
+                "When you define your system as a repository of facts — invoices, amounts, dates, statuses — you're modeling your AR as a ledger. Which it is, technically. But the people managing it don't think in ledger terms. They think in relationship terms.",
+                "They know that Customer A always pays 10 days late but always pays. They know that Customer B's AP team requires a PO number on every invoice or they won't process it. They know that Customer C is going through a rough quarter and a heavy-handed escalation could damage a relationship worth 10x the overdue amount.",
+                "None of that lives in the source of truth. It lives in people's heads, in email threads, in Slack conversations, in meeting notes. And when someone on the team leaves, or when volume grows beyond what the team can track mentally, that relationship context disappears — and collections becomes mechanical.",
+                "What finance teams actually need is a system that doesn't just record the state of every account, but understands the relationship context and acts accordingly. A system that knows Customer A's pattern and doesn't escalate unnecessarily. That recognizes Customer B's PO requirement and flags invoices that are missing it before they're sent. That pauses outreach to Customer C because someone promised to pay next Friday, and creates a follow-up task for Monday if the payment doesn't land.",
+                "That's not a source of truth. That's a source of action — a system that reads the context, reasons about it, and does something about it.",
+                "At Exante, we've been building toward this shift from the beginning. Our agents don't just store your AR data — they operate on it.",
+                "When an email comes in, the agent doesn't just log it. It reads it, classifies it (is this a payment promise? a dispute? a document request?), links it to the right customer and invoice, and takes the appropriate next step — whether that's drafting a response, creating a task, or pausing a collections campaign.",
+                "When a payment arrives, the agent doesn't just record it. It matches it to open invoices, flags ambiguities for your review, and updates the customer's status across the system — so the next time the agent contacts that customer, it knows the current state of the relationship."
+              ],
+              "items": [
+                {
+                  "title": "The dashboard problem"
+                },
+                {
+                  "title": "Why \"source of truth\" became the goal"
+                },
+                {
+                  "title": "The gap between knowing and doing"
+                },
+                {
+                  "title": "From record to relationship"
+                },
+                {
+                  "title": "What this looks like in practice"
+                },
+                {
+                  "title": "The shift we're making"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "scroll-linked",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.other-articles-section",
+            "content": {
+              "heading": "Looking for more? Dive into our other articles, updates, and strategies",
+              "body": [
+                "Browse all articles"
+              ],
+              "ctas": [
+                {
+                  "label": "Browse all articles",
+                  "href": "/blog"
+                }
+              ],
+              "items": [
+                {
+                  "title": "What We Hear When We Talk to Finance Teams",
+                  "body": "Read more"
+                },
+                {
+                  "title": "Agents That Learn How You Work (Not Software You Have to Learn)",
+                  "body": "Read more"
+                },
+                {
+                  "title": "From Aging Reports to Continuous Cash Control",
+                  "body": "Read more"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon",
+                  "alt": "woman staring directly at camera near pink wall"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.framer-gzkazm-container",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "blog-agents-that-learn-how-you-work",
+      "route": "/blog/agents-that-learn-how-you-work",
+      "templateId": "template.blog-2",
+      "routeKind": "concrete",
+      "pageRole": "content",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.blog-2",
+        "route": "/blog/agents-that-learn-how-you-work",
+        "nodes": [
+          {
+            "type": "content.framer-1h4pb9v-container",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.container",
+            "content": {
+              "heading": "Agents That Learn How You Work (Not Software You Have to Learn)",
+              "body": [
+                "PRODUCT & UPDATES",
+                "•",
+                "DEC 29, 2025",
+                "8 MIN",
+                "READ",
+                "The relationship between finance teams and their tools is about to change.",
+                "Sebastian Vargas",
+                "Co-Founder & CTO"
+              ],
+              "images": [
+                {
+                  "assetRole": "icon"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "features.featured-image-wrapper",
+            "content": {
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.content-section",
+            "content": {
+              "body": [
+                "TABLE OF CONTENTS",
+                "Share",
+                "Here's how most collections software works today:",
+                "You sign up. You attend onboarding. You learn the interface — where to configure workflows, how to set up templates, which dropdown controls the escalation logic. You figure out the dynamic variables (what goes in the curly brackets). You map your billing system's fields to the platform's fields. You build segments. You test sequences. Somewhere around week three, you start getting value.",
+                "This is the standard model. Software gives you power, but you have to learn how to use it. The complexity is yours to manage.",
+                "We think that model is ending.",
+                "Era 1: Traditional SaaS. The tool gives you a workflow. You learn it. You click through it. The software is the system of record, and you're the operator. Think: logging into your ERP every morning, navigating to the AR module, running the aging report, exporting it, then manually deciding who to contact and how.",
+                "Era 2: Traditional + AI. Same workflow, but now there's an AI layer on top. It might suggest which accounts to prioritize. It might auto-generate a reminder template. It might flag anomalies in your aging report. You're still the operator — AI just makes you a faster one. Most \"AI-powered AR\" tools today live here.",
+                "Era 3: Agent-first. You describe what you want done. The agent does it. You review and approve. You're not the operator — you're the delegator. The software learns how you work, not the other way around.",
+                "That third era is what we're building at Exante.",
+                "It's not a buzzword. It's a specific product philosophy that changes how you interact with your collections tool.",
+                "Instead of configuring a workflow, you describe your process in plain language:",
+                "\"When an invoice is 15 days past due, send a friendly reminder. If they don't respond within a week, send a follow-up. If a customer promises to pay on a specific date, pause all outreach and create a task for me to check on that date.\"",
+                "That's it. No workflow builder. No decision trees. No drag-and-drop sequence editor. You tell the agent how you want collections handled, and it executes.",
+                "Instead of learning dynamic variables, you write naturally:",
+                "The agent already knows your invoices, your customers, your payment history, and your communication threads. When it drafts an email, it pulls the right context automatically — the customer's name, the invoice number, the amount, the due date, what was discussed in previous emails.",
+                "Instead of checking a dashboard, you get a daily action list:",
+                "The agent reviews your AR overnight, identifies what needs attention, and surfaces a prioritized task list when you start your day. Three draft emails waiting for your approval. Two payments that need matching. One customer who promised to pay yesterday and didn't. You review, approve, edit, or reject — and move on.",
+                "Instead of handling every email, the agent triages your inbox:",
+                "A customer emails asking for a W-9. The agent recognizes them, confirms they're a customer in your system, attaches the W-9 from your document repository, drafts a reply in-thread, and either sends it automatically (if you've configured that) or queues it for your approval.",
+                "A customer emails disputing a charge. The agent classifies it as a dispute, pulls the relevant invoice and contract details, drafts an initial response, and routes it for your review — with all the context you need to make a decision without opening three other systems.",
+                "Every AR tool is adding AI right now. AI summaries. AI recommendations. AI-generated email drafts. That's useful, but it's still Era 2 — you're the operator, AI just assists.",
+                "The difference with agents is who's doing the work.",
+                "In an AI-assisted tool, you decide which accounts to contact, you trigger the outreach, you handle the replies, you apply the payments, and you escalate the disputes. AI helps you go faster at each step.",
+                "In an agent-first tool, the agent decides which accounts need attention (based on your instructions), initiates the outreach, handles routine replies, matches incoming payments, and routes exceptions to you. You step in when your judgment is needed — not for every transaction.",
+                "That's not a productivity improvement. It's a capacity multiplier. A two-person finance team operating with agents has the throughput of a team three or four times their size — without the headcount, the management overhead, or the training.",
+                "This is the most common concern we hear, and it's the right one. Your collections process touches customers directly. Tone matters. Timing matters. A wrong email to a key account can damage a relationship.",
+                "That's why every action an agent takes in Exante can require your approval. When you first set up an agent, you'll probably want to review every draft, every response, every escalation. You'll see exactly what the agent wrote, who it's going to, and why the agent chose that action.",
+                "After a few weeks, you'll notice a pattern: you're approving 95% of what the agent produces without changes. At that point, you can selectively turn off approval for the routine stuff — W-9 responses, initial reminders, payment confirmations — and keep it on for the sensitive actions: disputes, escalations to your manager, outreach to key accounts.",
+                "The control isn't binary. It's a dial you adjust as trust builds."
+              ],
+              "items": [
+                {
+                  "title": "The relationship between finance teams and their tools is about to change."
+                },
+                {
+                  "title": "The three eras of finance software"
+                },
+                {
+                  "title": "What \"agent-first\" actually means"
+                },
+                {
+                  "title": "Why this matters more than \"AI features\""
+                },
+                {
+                  "title": "\"But I need to stay in control\""
+                },
+                {
+                  "title": "What it looks like in practice"
+                },
+                {
+                  "title": "The capacity problem is real"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "scroll-linked",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.other-articles-section",
+            "content": {
+              "heading": "Looking for more? Dive into our other articles, updates, and strategies",
+              "body": [
+                "Browse all articles"
+              ],
+              "ctas": [
+                {
+                  "label": "Browse all articles",
+                  "href": "/blog"
+                }
+              ],
+              "items": [
+                {
+                  "title": "What We Hear When We Talk to Finance Teams",
+                  "body": "Read more"
+                },
+                {
+                  "title": "From Source of Truth to Source of Action",
+                  "body": "Read more"
+                },
+                {
+                  "title": "From Aging Reports to Continuous Cash Control",
+                  "body": "Read more"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon",
+                  "alt": "woman staring directly at camera near pink wall"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.framer-gzkazm-container",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "blog-from-aging-reports-to-cash-control",
+      "route": "/blog/from-aging-reports-to-cash-control",
+      "templateId": "template.blog-2",
+      "routeKind": "concrete",
+      "pageRole": "content",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.blog-2",
+        "route": "/blog/from-aging-reports-to-cash-control",
+        "nodes": [
+          {
+            "type": "content.framer-1h4pb9v-container",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.container",
+            "content": {
+              "heading": "From Aging Reports to Continuous Cash Control",
+              "body": [
+                "OPS & STRATEGY",
+                "•",
+                "DEC 5, 2025",
+                "5 MIN",
+                "READ",
+                "Aging reports show where receivables stand, but continuous oversight and disciplined processes are what create predictable cash flow.",
+                "Giedrius Daubaris",
+                "Co-Founder & CEO"
+              ],
+              "images": [
+                {
+                  "assetRole": "icon",
+                  "alt": "woman staring directly at camera near pink wall"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "features.featured-image-wrapper",
+            "content": {
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.content-section",
+            "content": {
+              "body": [
+                "TABLE OF CONTENTS",
+                "Share",
+                "Revenue growth matters. But growth without reliable cash conversion creates its own set of risks.",
+                "A company can be hitting targets, signing new customers, and recognizing revenue—while still feeling pressure on liquidity. Cash arrives later than expected. Forecasts tighten. Planning becomes reactive.",
+                "When that tension builds, the aging report usually becomes the focal point. Finance reviews the past-due buckets and starts pushing for collections.",
+                "But by the time invoices show up in 31–60 or 61–90 days past due, the real issue has already developed.",
+                "Receivables performance is not determined at month-end. It is shaped by the systems that run every day.",
+                "A standard aging report organizes invoices by days past due. It tells you where balances stand. What it doesn’t show is trajectory.",
+                "Invoices rarely become problematic overnight. They drift. A large invoice approaches its due date without a reminder. The customer pays a week late. Follow-up lags. By the time the invoice crosses 30 days past due, recovery likelihood has already weakened.",
+                "The report records the outcome. It does not prevent it.",
+                "Even the “current” bucket can create false confidence. Current simply means within terms. It may include invoices due tomorrow, due next week, or due at the end of the month. If a significant portion of receivables is clustered around near-term due dates—especially among customers who historically pay late—liquidity exposure is building quietly.",
+                "Predictable finance teams monitor what is about to come due, not just what has already turned red.",
+                "When invoices age, the explanation is often attributed to customer behavior. In practice, internal friction is just as common.",
+                "Was the invoice issued immediately once billing criteria were met? Were pricing and terms pulled cleanly from the contract? Did the invoice include required documentation? Even minor discrepancies can pause payment entirely. A correction can add weeks. A dispute without clear ownership can stall indefinitely.",
+                "Receivables health mirrors process quality. Companies that structure contract data and automate billing workflows tend to experience fewer disputes and tighter cycles—not because their customers are different, but because their execution is.",
+                "Many organizations begin structured follow-up only after invoices become meaningfully past due. By that stage, leverage has already diminished.",
+                "Payment probability erodes gradually. Each week of silence lowers urgency. Inconsistent outreach signals flexibility. The longer an invoice lingers, the harder the conversation becomes.",
+                "Disciplined teams standardize communication before and immediately after due dates. They define escalation thresholds in advance and assign clear ownership. Consistency—not aggressiveness—shapes payment behavior.",
+                "Prioritization also matters. Aging buckets group invoices by time, but they do not reflect financial impact. A large balance approaching 30 days past due may present more working capital risk than a small invoice at 75 days. Allocating effort based solely on age can misdirect attention away from material exposure.",
+                "The real shift in receivables management is moving from retrospective reporting to operational infrastructure.",
+                "That shift includes structuring billing directly from contract data, monitoring upcoming due volumes continuously, tracking payment patterns, and automating reminder and escalation workflows. When those elements are embedded, the aging report becomes confirmation of control rather than a signal of drift.",
+                "Growth can conceal receivables inefficiencies for a time. Eventually, delayed cash surfaces as tighter runway or increased reliance on financing. Organizations that convert revenue into cash predictably operate with greater resilience because their systems prevent slippage before it compounds.",
+                "Revenue recognition measures performance. Cash conversion measures control.",
+                "The companies that design for control gain something more durable than faster collections. They gain predictability—and predictability is a structural advantage."
+              ],
+              "items": [
+                {
+                  "title": "Revenue Is Only Half the Story"
+                },
+                {
+                  "title": "Aging Reports Show Position, Not Momentum"
+                },
+                {
+                  "title": "Receivables Reflect Operational Discipline"
+                },
+                {
+                  "title": "Reactive Collections Reduce Leverage"
+                },
+                {
+                  "title": "From Reporting to Infrastructure"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "scroll-linked",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.other-articles-section",
+            "content": {
+              "heading": "Looking for more? Dive into our other articles, updates, and strategies",
+              "body": [
+                "Browse all articles"
+              ],
+              "ctas": [
+                {
+                  "label": "Browse all articles",
+                  "href": "/blog"
+                }
+              ],
+              "items": [
+                {
+                  "title": "What We Hear When We Talk to Finance Teams",
+                  "body": "Read more"
+                },
+                {
+                  "title": "From Source of Truth to Source of Action",
+                  "body": "Read more"
+                },
+                {
+                  "title": "Agents That Learn How You Work (Not Software You Have to Learn)",
+                  "body": "Read more"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.framer-gzkazm-container",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "blog-when-software-becomes-a-teammate",
+      "route": "/blog/when-software-becomes-a-teammate",
+      "templateId": "template.blog-2",
+      "routeKind": "concrete",
+      "pageRole": "content",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.blog-2",
+        "route": "/blog/when-software-becomes-a-teammate",
+        "nodes": [
+          {
+            "type": "content.framer-1h4pb9v-container",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.container",
+            "content": {
+              "heading": "When Software Becomes a Teammate",
+              "body": [
+                "INSIGHTS & ANALYSIS",
+                "•",
+                "NOV 24, 2025",
+                "4 MIN",
+                "READ",
+                "AI agents are shifting finance software from passive tools to active teammates, unlocking new efficiencies in complex areas like AR and collections.",
+                "Mario Santanilla",
+                "Design Engineer"
+              ],
+              "images": [
+                {
+                  "assetRole": "icon",
+                  "alt": "Mario Santanilla"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "features.featured-image-wrapper",
+            "content": {
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.content-section",
+            "content": {
+              "body": [
+                "TABLE OF CONTENTS",
+                "Share",
+                "As a design engineer, I’ve spent most of my career improving workflows inside traditional software. The work was familiar: reduce clicks, clarify dashboards, simplify navigation, eliminate friction. Software was a tool. The user was the operator.",
+                "AI agents fundamentally change that relationship.",
+                "They don’t just make workflows faster — they participate in them. And that shift forces us to rethink how we design systems, especially in structured, high-stakes domains like finance and operations.",
+                "Traditional SaaS products are built around explicit actions. A user logs in, runs a report, sends a reminder, reconciles a payment. Every step is initiated and completed by a human.",
+                "AI agents introduce a collaborative layer. Instead of driving every task, users define intent and boundaries. The agent evaluates context, makes decisions within guardrails, and executes across systems.",
+                "From a design perspective, this is a different category of problem. We’re no longer just designing screens. We’re designing working relationships between humans and autonomous systems.",
+                "That raises new challenges. How does the system communicate what it’s doing? How does a user intervene? When should the agent act independently, and when should it ask for confirmation?",
+                "Designing for agents is less about layout and more about trust.",
+                "The hardest part isn’t technical — it’s behavioral.",
+                "Finance teams, especially in areas like accounts receivable and collections, are used to deterministic systems. If an invoice is 30 days late, it triggers a specific action. Rules are explicit and predictable.",
+                "AI agents operate differently. They weigh signals, detect patterns, and act with probabilities rather than fixed conditions.",
+                "That means users must shift from managing every step to supervising outcomes. Instead of configuring dozens of rigid rules, they set policies and thresholds. Instead of executing each task, they review exceptions and edge cases.",
+                "As designers, we have to make that mental model intuitive. If an agent escalates a collections account early, the reasoning should be visible in plain language — payment history, contract terms, dispute frequency. Transparency isn’t a feature; it’s the foundation for adoption.",
+                "What excites me most is where this model unlocks efficiency that wasn’t previously possible.",
+                "Accounts receivable and collections are filled with repetitive but context-heavy work. Matching payments that lack invoice references. Interpreting contract terms before sending reminders. Deciding which overdue accounts to prioritize. Routing disputes across teams.",
+                "Historically, these tasks resisted full automation because they required interpretation. Static rules weren’t enough.",
+                "AI agents make that interpretation layer viable. They can analyze payment behavior, invoice anomalies, and contractual context to decide what to do next — whether that’s drafting a tailored follow-up, reconciling a transaction, or flagging an account as high risk.",
+                "For the first time, automation in finance doesn’t have to mean rigid workflows. It can mean adaptive decision-making at scale.",
+                "Of course, efficiency is only half the equation. In finance, errors have real consequences.",
+                "So the role of design becomes balancing autonomy with control. Agents need room to act, but users need clear visibility into what happened, why it happened, and how to override it if necessary.",
+                "That means strong audit trails. Clear summaries of agent actions. Simple controls for setting boundaries. Thoughtful escalation paths.",
+                "When done well, AI agents don’t replace finance professionals. They remove mechanical work — sending reminders, reconciling edge cases, triaging disputes — and allow teams to focus on higher-leverage decisions.",
+                "The software becomes a teammate: handling execution, surfacing insights, and asking for input when judgment is required.",
+                "AI agents aren’t just another module in a product roadmap. They represent a shift in how we think about interaction design.",
+                "We’re moving from systems that wait for instructions to systems that operate alongside us. From dashboards that display data to agents that act on it.",
+                "In operational domains like AR and collections — where complexity grows faster than headcount — this shift is especially powerful. It offers a way to scale intelligence, not just process.",
+                "For design engineers, that’s both a challenge and an opportunity.",
+                "We’re no longer just designing tools."
+              ],
+              "items": [
+                {
+                  "title": "From Interfaces to Collaboration"
+                },
+                {
+                  "title": "Learning a New Interaction Model"
+                },
+                {
+                  "title": "Unlocking Efficiency in AR and Collections"
+                },
+                {
+                  "title": "Designing for Control and Confidence"
+                },
+                {
+                  "title": "A Shift Bigger Than a Feature"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "scroll-linked",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.other-articles-section",
+            "content": {
+              "heading": "Looking for more? Dive into our other articles, updates, and strategies",
+              "body": [
+                "Browse all articles"
+              ],
+              "ctas": [
+                {
+                  "label": "Browse all articles",
+                  "href": "/blog"
+                }
+              ],
+              "items": [
+                {
+                  "title": "What We Hear When We Talk to Finance Teams",
+                  "body": "Read more"
+                },
+                {
+                  "title": "From Source of Truth to Source of Action",
+                  "body": "Read more"
+                },
+                {
+                  "title": "Agents That Learn How You Work (Not Software You Have to Learn)",
+                  "body": "Read more"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.framer-gzkazm-container",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "blog-how-to-choose-the-right-collections-software",
+      "route": "/blog/how-to-choose-the-right-collections-software",
+      "templateId": "template.blog-2",
+      "routeKind": "concrete",
+      "pageRole": "content",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.blog-2",
+        "route": "/blog/how-to-choose-the-right-collections-software",
+        "nodes": [
+          {
+            "type": "content.framer-1h4pb9v-container",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.container",
+            "content": {
+              "heading": "AR Collections Management Tools: How to Choose the Right One",
+              "body": [
+                "GUIDES & RESOURCES",
+                "•",
+                "NOV 9, 2025",
+                "4 MIN",
+                "READ",
+                "Turn accounts receivable from a manual chasing process into a predictable cash engine with the right collections management platform.",
+                "Sebastian Vargas",
+                "Co-Founder & CTO"
+              ],
+              "images": [
+                {
+                  "assetRole": "icon",
+                  "alt": "Sebastian Vargas"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "features.featured-image-wrapper",
+            "content": {
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.content-section",
+            "content": {
+              "body": [
+                "TABLE OF CONTENTS",
+                "Share",
+                "For B2B finance teams, the right accounts receivable (AR) collections platform can turn unpredictable cash flow into a structured, scalable process. Instead of relying on spreadsheets and manual follow-ups, modern tools automate collections, improve visibility, and help reduce Days Sales Outstanding (DSO) — without increasing headcount.",
+                "This guide outlines what these tools do, the features that matter most, and how to evaluate the right solution for your business.",
+                "AR collections tools automate the tracking and recovery of unpaid invoices. They replace ad hoc reminders and disconnected systems with structured workflows that help teams prioritize outreach and accelerate payments.",
+                "Unlike basic accounting software, modern platforms integrate with ERPs and CRMs to centralize invoice, payment, and customer data. More advanced systems use historical payment behavior, contract terms, and dispute patterns to determine how and when to follow up — adding intelligence to what used to be a manual process.",
+                "The biggest shift in newer tools is context. Rather than treating every overdue invoice the same, sophisticated platforms factor in contract terms (e.g., net-30 vs. net-60), customer segments, and billing models to tailor communication and escalation strategies.",
+                "Not all collections tools deliver meaningful DSO improvements. The strongest platforms automate across the full AR lifecycle — not just reminder emails.",
+                "1. Automated Dunning Workflows. Pre-configured email sequences triggered by invoice aging reduce manual effort and ensure consistent follow-up. Customization by customer type or risk level is essential to protect relationships while improving cash flow.",
+                "2. Intelligent Cash Application. Matching payments to invoices becomes complex when customers send partial payments or unclear remittance details. AI-powered matching reduces unapplied cash and keeps aging reports accurate.",
+                "3. Self-Service Payment Options. Customer portals and embedded payment links remove friction from the payment process. For recurring revenue businesses, automated charging capabilities are especially valuable.",
+                "4. ERP and CRM Integration. Strong, bidirectional integrations prevent data silos. Payment updates, credit holds, and customer notes should sync automatically across systems to avoid manual reconciliation.",
+                "5. Real-Time AR Visibility. Dashboards should go beyond static reports. Look for actionable insights into aging trends, collector performance, and cash forecasts so you can intervene early when issues emerge.",
+                "6. Dispute Tracking. Invoice disputes can stall collections for months if unmanaged. Tools should capture dispute reasons, route them internally, and track resolution progress.",
+                "7. Audit Trails and Controls. Comprehensive activity logs, role-based permissions, and security certifications are critical for compliance and scalability.",
+                "Choosing a platform requires clarity on your current challenges and measurable goals.",
+                "Define Your Baseline. Document where collections slow down today. Identify bottlenecks and quantify metrics like DSO, aged receivables, and time spent on manual tasks.",
+                "Review Data Readiness. Automation depends on clean, connected data. Audit your ERP, billing, and CRM systems to ensure customer records, invoice terms, and payment histories are reliable.",
+                "Assess Integration Depth. Shallow integrations create extra work. Look for tools that synchronize key financial and customer data across platforms in real time.",
+                "Evaluate End-to-End Automation. Some tools only automate reminders while leaving reconciliation and reporting manual. True efficiency comes from covering invoicing, follow-ups, payment matching, disputes, and reporting in one connected workflow.",
+                "Confirm Security and Compliance. Security reviews should happen early. Verify certifications, audit capabilities, and data controls before committing.",
+                "Model Financial Impact. Even modest DSO reductions can unlock significant working capital. Build a simple ROI model that includes both improved cash flow and team time savings.",
+                "Pilot Before Full Rollout. Test the system with overdue or high-risk accounts first. A phased approach reduces risk and allows workflow adjustments before company-wide deployment.",
+                "AR collections software should do more than send reminders — it should create a predictable, data-driven collections engine. The right platform integrates seamlessly with your finance stack, automates across the lifecycle, and gives you real-time visibility into cash performance.",
+                "When implemented correctly, collections becomes a strategic lever for working capital — not just an administrative function."
+              ],
+              "items": [
+                {
+                  "title": "What Are AR Collections Management Tools?"
+                },
+                {
+                  "title": "Core Features to Look For"
+                },
+                {
+                  "title": "How to Evaluate and Implement a Tool"
+                },
+                {
+                  "title": "Final Thoughts"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "scroll-linked",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.other-articles-section",
+            "content": {
+              "heading": "Looking for more? Dive into our other articles, updates, and strategies",
+              "body": [
+                "Browse all articles"
+              ],
+              "ctas": [
+                {
+                  "label": "Browse all articles",
+                  "href": "/blog"
+                }
+              ],
+              "items": [
+                {
+                  "title": "What We Hear When We Talk to Finance Teams",
+                  "body": "Read more"
+                },
+                {
+                  "title": "From Source of Truth to Source of Action",
+                  "body": "Read more"
+                },
+                {
+                  "title": "Agents That Learn How You Work (Not Software You Have to Learn)",
+                  "body": "Read more"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.framer-gzkazm-container",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "blog-why-collections-software-keeps-failing-finance-teams",
+      "route": "/blog/why-collections-software-keeps-failing-finance-teams",
+      "templateId": "template.blog-2",
+      "routeKind": "concrete",
+      "pageRole": "content",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.blog-2",
+        "route": "/blog/why-collections-software-keeps-failing-finance-teams",
+        "nodes": [
+          {
+            "type": "content.framer-1h4pb9v-container",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.container",
+            "content": {
+              "heading": "Why Collections Software Keeps Failing Finance Teams",
+              "body": [
+                "INSIGHTS & ANALYSIS",
+                "•",
+                "OCT 15, 2025",
+                "6 MIN",
+                "READ",
+                "The 80/20 problem nobody talks about.",
+                "Giedrius Daubaris",
+                "Co-Founder & CEO"
+              ],
+              "images": [
+                {
+                  "assetRole": "icon"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "features.featured-image-wrapper",
+            "content": {
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.content-section",
+            "content": {
+              "body": [
+                "TABLE OF CONTENTS",
+                "Share",
+                "They automate dunning emails. They generate aging reports. They send payment reminders on a schedule. And that's genuinely useful, if your only challenge is remembering to follow up.",
+                "But for most mid-market finance teams, that's about 20% of the actual work.",
+                "The other 80% looks like this:",
+                "A customer replies asking for your W-9 before they can process payment. You have to find it, attach it, and respond — from your phone, between meetings.",
+                "A payment comes in that doesn't match any open invoice. You email the customer: \"What did you pay?\" Then you wait.",
+                "Someone promises to pay by the 15th. You need to pause the automated sequence, make a note somewhere you'll actually see it, and remember to follow up on the 16th if the money doesn't land.",
+                "A new contact at an existing customer replies to a collections email with questions about their invoice — why is it higher than last quarter? What's the sales tax breakdown? You pull up three systems to find the answer.",
+                "Your CEO asks for a quick read on AR health before a board meeting. You spend two hours assembling data from your ERP, a shared Google Sheet, and your inbox.",
+                "None of that is \"collections\" in the way software vendors define it. But it's where finance teams actually spend their days.",
+                "First-generation collections tools were built around a simple premise: if you send more reminders, you collect faster. So they built sequences. Email 1 at 15 days overdue. Email 2 at 30. Escalation at 45. Maybe a phone task at 60.",
+                "That works — for the invoices where the only barrier to payment is awareness. The customer forgot, the email went to spam, the AP clerk is new and didn't know the invoice existed.",
+                "But most overdue invoices aren't overdue because the customer forgot. They're overdue because:",
+                "The customer is waiting on a document from you",
+                "They're disputing a line item but haven't formally raised it",
+                "Their AP process requires internal approval that's stuck",
+                "They batch payments monthly and your terms don't align with their cycle",
+                "The billing contact left the company and nobody updated the record",
+                "A dunning sequence treats all of these the same way: send another reminder. Which means the customer who's waiting on your W-9 gets the same escalating tone as the customer who's been ghosting you for 90 days.",
+                "That's not a collections strategy. That's a mail merge with a timer.",
+                "The unglamorous majority of collections work is relationship management. It's knowing who you're talking to, what they need, and what the right next step is — not just when the next email should fire.",
+                "It requires:",
+                "Context. Not just \"this invoice is 32 days overdue\" but \"this customer has three open invoices, responded to our last email promising payment by April 1st, and historically pays within 5 days of their promise date.\"",
+                "Judgment. When a customer replies with a question, someone needs to read it, understand it, pull the relevant information, and respond appropriately. That's not a workflow — it's work.",
+                "Coordination. When a dispute surfaces, it often involves sales, customer success, and finance. Someone has to route the information, track the resolution, and make sure collections pauses until it's settled.",
+                "Responsiveness. Document requests, payment confirmations, account balance inquiries — these arrive throughout the day, not in neat batches. Every hour they sit unanswered is an hour your payment is delayed.",
+                "No rules engine handles this. No dunning sequence accounts for it. And no amount of \"AI-powered insights\" helps if the system can only observe and suggest but never act.",
+                "Collections software vendors built their products during the SaaS billing era, where the problem was relatively contained: subscription invoices, predictable amounts, standardized payment flows. In that world, automated reminders and aging dashboards covered most of what you needed.",
+                "But mid-market companies don't live in that world. They have custom terms, variable pricing, customers who pay by check, contacts who change without notice, and billing complexity that doesn't fit neatly into a template."
+              ],
+              "items": [
+                {
+                  "title": "Most collections tools solve the wrong problem."
+                },
+                {
+                  "title": "The dunning trap"
+                },
+                {
+                  "title": "What the 80% actually requires"
+                },
+                {
+                  "title": "Why this gap persists"
+                },
+                {
+                  "title": "A different approach"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "scroll-linked",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.other-articles-section",
+            "content": {
+              "heading": "Looking for more? Dive into our other articles, updates, and strategies",
+              "body": [
+                "Browse all articles"
+              ],
+              "ctas": [
+                {
+                  "label": "Browse all articles",
+                  "href": "/blog"
+                }
+              ],
+              "items": [
+                {
+                  "title": "What We Hear When We Talk to Finance Teams",
+                  "body": "Read more"
+                },
+                {
+                  "title": "From Source of Truth to Source of Action",
+                  "body": "Read more"
+                },
+                {
+                  "title": "Agents That Learn How You Work (Not Software You Have to Learn)",
+                  "body": "Read more"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.framer-gzkazm-container",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "blog-how-ai-agents-are-transforming-ar-and-collections",
+      "route": "/blog/how-ai-agents-are-transforming-ar-and-collections",
+      "templateId": "template.blog-2",
+      "routeKind": "concrete",
+      "pageRole": "content",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.blog-2",
+        "route": "/blog/how-ai-agents-are-transforming-ar-and-collections",
+        "nodes": [
+          {
+            "type": "content.framer-1h4pb9v-container",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/contact/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.container",
+            "content": {
+              "heading": "How AI Agents Are Transforming AR and Collections",
+              "body": [
+                "PRODUCT & UPDATES",
+                "•",
+                "OCT 2, 2025",
+                "6 MIN",
+                "READ",
+                "AI agents are turning accounts receivable from a manual, reactive function into a predictive, intelligent engine that reduces DSO and frees finance teams to focus on strategy.",
+                "Santiago Rodriguez",
+                "Lead Software Engineer"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image",
+                  "alt": "Santiago Rodriguez"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "features.featured-image-wrapper",
+            "content": {
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "appear-on-enter",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.content-section",
+            "content": {
+              "body": [
+                "TABLE OF CONTENTS",
+                "Share",
+                "Accounts receivable is one of the most operationally intensive functions in finance. As companies grow, invoice volume increases, billing models become more complex, and customer edge cases multiply. Yet AR teams are often expected to manage this complexity without proportional headcount growth.",
+                "The result is predictable: rising Days Sales Outstanding (DSO), inconsistent follow-ups, and finance professionals spending their time on repetitive administrative work instead of strategic decision-making.",
+                "AI agents are changing that dynamic. Not by replacing finance teams, but by absorbing the repetitive work that slows them down and introducing intelligence into every step of the collections lifecycle.",
+                "Traditional automation in AR has largely been rule-based. If an invoice is seven days overdue, send a reminder. If it’s 30 days late, escalate. If a payment comes in, attempt to match it based on an invoice number.",
+                "AI agents operate differently. They don’t just execute predefined rules; they interpret context and make decisions within guardrails.",
+                "Instead of asking, “How many days past due is this invoice?” an AI agent can evaluate a broader set of signals. Is this customer consistently late but reliable? Is there an open dispute that explains the delay? Has the invoice amount changed significantly compared to prior months? Are there contract terms that allow for flexibility?",
+                "By incorporating these variables, the system can determine the next best action rather than blindly following a static schedule. This shift—from workflow execution to contextual decision-making—is what makes AI agents transformative.",
+                "One of the most visible areas of impact is dunning. In many organizations, follow-ups are standardized across the customer base. The same tone, timing, and escalation path apply whether the account is a strategic enterprise customer or a small account with a history of delayed payments.",
+                "AI agents personalize collections dynamically. They adjust messaging and cadence based on payment behavior, account value, and risk signals. A high-value customer with predictable payment patterns might receive a softer, relationship-focused reminder. A chronically late account may be escalated earlier.",
+                "This nuance reduces DSO without damaging customer relationships. Collections becomes less about chasing and more about calibrated engagement.",
+                "Cash application is another area where repetitive work dominates. Payments arrive with incomplete remittance information, cover multiple invoices, or include partial amounts. Finance teams spend hours reconciling transactions and cleaning up unapplied cash.",
+                "AI agents analyze remittance emails, attachments, and historical patterns to match payments probabilistically. When confidence is high, they automatically reconcile entries. When ambiguity exists, they surface exceptions with context attached.",
+                "Over time, the system learns customer-specific patterns, improving accuracy and reducing manual intervention. What once required hours of spreadsheet work becomes largely autonomous.",
+                "Disputes are often a hidden driver of extended DSO. An invoice sits unpaid not because the customer refuses to pay, but because of a pricing disagreement, service issue, or contract misunderstanding. Without structured tracking, these disputes linger in inboxes and aging reports.",
+                "AI agents can monitor incoming communication, detect dispute language, classify the issue, and route it to the appropriate internal team. Crucially, they can attach contract context and invoice details automatically, reducing back-and-forth and shortening resolution cycles.",
+                "Instead of discovering disputes weeks later during reporting, teams address them in near real time.",
+                "Most collections systems treat invoices as isolated transactions. In reality, every invoice sits downstream of a contract.",
+                "AI agents can interpret payment terms, milestone schedules, usage thresholds, and renewal clauses. This context matters. Aggressive escalation may be inappropriate if the contract allows flexible payment windows. Conversely, strict terms may warrant earlier intervention.",
+                "By grounding collections decisions in contractual reality, AI agents align finance operations with commercial agreements. That reduces friction between finance, sales, and customers while maintaining discipline around cash flow.",
+                "Perhaps the most powerful shift is predictive capability. Rather than waiting for invoices to become overdue, AI agents can analyze historical payment behavior, changes in invoice size, dispute frequency, and engagement signals to forecast which accounts are likely to pay late.",
+                "This gives finance teams time to act proactively. They can initiate conversations before issues escalate, adjust payment plans, or flag risk internally. Collections moves upstream, from reactive follow-up to preventative strategy.",
+                "Even modest improvements in DSO can unlock meaningful working capital. When prediction replaces reaction, the impact compounds.",
+                "The rise of AI agents does not diminish the role of finance professionals. Instead, it elevates it.",
+                "When repetitive tasks are automated, teams can focus on high-value activities: strengthening key customer relationships, designing better payment strategies, improving forecasting accuracy, and collaborating cross-functionally to reduce revenue leakage.",
+                "In this model, AI handles the mechanical execution. Humans focus on judgment, negotiation, and strategy.",
+                "Accounts receivable has historically been process-driven. Follow the checklist. Send the reminder. Update the ledger.",
+                "AI agents introduce an intelligence layer on top of those processes. They understand context, evaluate risk, determine next actions, and execute across systems. Over time, they learn and refine their decisions.",
+                "This transforms AR from an administrative function into a strategic lever for working capital management."
+              ],
+              "items": [
+                {
+                  "title": "From Automation to Intelligence"
+                },
+                {
+                  "title": "Smarter, Relationship-Aware Collections"
+                },
+                {
+                  "title": "Eliminating the Friction in Cash Application"
+                },
+                {
+                  "title": "Surfacing and Resolving Disputes Faster"
+                },
+                {
+                  "title": "Contract-Aware Decision Making"
+                },
+                {
+                  "title": "From Reactive to Predictive AR"
+                },
+                {
+                  "title": "What This Means for Finance Teams"
+                },
+                {
+                  "title": "The Bigger Transformation"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "scroll-linked",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.other-articles-section",
+            "content": {
+              "heading": "Looking for more? Dive into our other articles, updates, and strategies",
+              "body": [
+                "Browse all articles"
+              ],
+              "ctas": [
+                {
+                  "label": "Browse all articles",
+                  "href": "/blog"
+                }
+              ],
+              "items": [
+                {
+                  "title": "What We Hear When We Talk to Finance Teams",
+                  "body": "Read more"
+                },
+                {
+                  "title": "From Source of Truth to Source of Action",
+                  "body": "Read more"
+                },
+                {
+                  "title": "Agents That Learn How You Work (Not Software You Have to Learn)",
+                  "body": "Read more"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                },
+                {
+                  "assetRole": "content-image"
+                },
+                {
+                  "assetRole": "icon"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.framer-gzkazm-container",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pageId": "contact-support",
+      "route": "/contact/support",
+      "templateId": "template.contact-2",
+      "routeKind": "concrete",
+      "pageRole": "conversion",
+      "pageSpec": {
+        "pageSpecVersion": "0.1.0",
+        "template": "template.contact-2",
+        "route": "/contact/support",
+        "nodes": [
+          {
+            "type": "shell.desktop-filled",
+            "content": {
+              "body": [
+                "Product",
+                "Company",
+                "Sign In",
+                "Request a Demo"
+              ],
+              "ctas": [
+                {
+                  "label": "Product"
+                },
+                {
+                  "label": "Company"
+                },
+                {
+                  "label": "Sign In"
+                },
+                {
+                  "label": "Request a Demo",
+                  "href": "/sales"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "hero.main",
+            "content": {
+              "heading": "Contact support",
+              "body": [
+                "Reach out to our support team for quick help with product questions, onboarding, or technical issues.",
+                "Looking for details on plans, pricing, or booking a demo?",
+                "Talk to sales",
+                "Full name*",
+                "Email*",
+                "Company name",
+                "Phone number",
+                "How can we help?",
+                "Send inquiry"
+              ],
+              "ctas": [
+                {
+                  "label": "Send inquiry"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "css-transition",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "shell.desktop",
+            "content": {
+              "heading": "Getting you from \"sent\" to \"paid\", your way.",
+              "body": [
+                "Features",
+                "Outreach Agent",
+                "Inbound Agent",
+                "360° AR View",
+                "Cash Application",
+                "Dispute Management",
+                "Credit Assessment",
+                "AP Portal Navigation",
+                "Contract Review",
+                "Custom AI Agents",
+                "Company",
+                "About us",
+                "Blog",
+                "Case studies",
+                "Careers",
+                "Contact",
+                "Trust Center",
+                "San Francisco, CA",
+                "@ 2026 Exante Solutions Inc. All rights reverved.",
+                "Terms of Service",
+                "Privacy Policy"
+              ],
+              "ctas": [
+                {
+                  "label": "Outreach Agent",
+                  "href": "/#outreach-agent"
+                },
+                {
+                  "label": "Inbound Agent",
+                  "href": "/#inbound-agent"
+                },
+                {
+                  "label": "360° AR View",
+                  "href": "/#360-ar-view"
+                },
+                {
+                  "label": "Cash Application",
+                  "href": "/#benefits"
+                },
+                {
+                  "label": "Dispute Management",
+                  "href": "/#benefits"
+                },
+                {
+                  "label": "Credit Assessment",
+                  "href": "/#benefits"
+                },
+                {
+                  "label": "AP Portal Navigation",
+                  "href": "/#benefits"
+                },
+                {
+                  "label": "Contract Review",
+                  "href": "/#benefits"
+                },
+                {
+                  "label": "Custom AI Agents",
+                  "href": "/#benefits"
+                },
+                {
+                  "label": "About us",
+                  "href": "/about"
+                },
+                {
+                  "label": "Blog",
+                  "href": "/blog"
+                },
+                {
+                  "label": "Case studies",
+                  "href": "/customers"
+                },
+                {
+                  "label": "Careers",
+                  "href": "/careers"
+                },
+                {
+                  "label": "Contact",
+                  "href": "/contact"
+                },
+                {
+                  "label": "Trust Center"
+                },
+                {
+                  "label": "Terms of Service",
+                  "href": "/legal/terms-of-service"
+                },
+                {
+                  "label": "Privacy Policy",
+                  "href": "/legal/privacy"
+                }
+              ],
+              "images": [
+                {
+                  "assetRole": "content-image"
+                }
+              ]
+            },
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          },
+          {
+            "type": "content.white",
+            "content": {},
+            "motion": {
+              "pattern": "none",
+              "reducedMotionFallback": "disable-animation"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "notes": {
+    "generatedBy": "website-builder (heuristic; intent fields are inferred, not authored)",
+    "sourceStack": "React+Framer+Lenis",
+    "scrapedAt": "2026-10-05T13:10:06Z",
+    "composedRoutes": 18
+  }
+}

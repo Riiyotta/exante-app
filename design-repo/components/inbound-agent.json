@@ -1,0 +1,15 @@
+{
+  "id": "inbound-agent",
+  "name": "Inbound Agent",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "image",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

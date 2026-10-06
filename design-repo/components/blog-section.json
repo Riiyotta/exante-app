@@ -1,0 +1,15 @@
+{
+  "id": "blog-section",
+  "name": "Blog Section",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "image",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/blog"
+  }
+}

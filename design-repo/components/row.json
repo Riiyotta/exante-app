@@ -1,0 +1,15 @@
+{
+  "id": "row",
+  "name": "Row",
+  "occurrences": 36,
+  "composedOf": [
+    "link",
+    "list",
+    "paragraph",
+    "svg"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

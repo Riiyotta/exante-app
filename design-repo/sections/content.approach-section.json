@@ -1,0 +1,59 @@
+{
+  "id": "content.approach-section",
+  "category": "CONTENT",
+  "label": "Approach Section",
+  "tag": "section",
+  "purpose": "Carries the substantive content of the page.",
+  "purposeIsInferred": true,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 1,
+    "routes": 1,
+    "measuredFrom": [
+      "src/about/index.html:770-890"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "items": {
+        "type": "item[]",
+        "required": true,
+        "maxItems": 5,
+        "titleMaxWords": 5,
+        "bodyMaxWords": 25
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 940,
+      "columns": 1
+    },
+    "mobile": {
+      "heightPx": 1720,
+      "columns": 1,
+      "hiddenShare": 0
+    },
+    "changes": [
+      "grows taller on mobile (content stacks)"
+    ]
+  },
+  "assetRoles": [],
+  "implementedBy": "src/pages/About.jsx"
+}

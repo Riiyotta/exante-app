@@ -1,0 +1,15 @@
+{
+  "id": "approach-section",
+  "name": "Approach Section",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "image",
+    "paragraph",
+    "svg"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/about"
+  }
+}

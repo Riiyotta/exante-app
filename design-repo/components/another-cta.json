@@ -1,0 +1,15 @@
+{
+  "id": "another-cta",
+  "name": "Another CTA",
+  "occurrences": 3,
+  "composedOf": [
+    "heading",
+    "image",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

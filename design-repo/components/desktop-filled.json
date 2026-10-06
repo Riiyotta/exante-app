@@ -1,0 +1,15 @@
+{
+  "id": "desktop-filled",
+  "name": "Desktop/Filled",
+  "occurrences": 16,
+  "composedOf": [
+    "image",
+    "link",
+    "list",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

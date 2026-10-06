@@ -1,0 +1,12 @@
+{
+  "id": "p-g",
+  "name": "P&G",
+  "occurrences": 1,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/about"
+  }
+}

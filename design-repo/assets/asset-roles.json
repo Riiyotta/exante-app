@@ -1,0 +1,2254 @@
+{
+  "version": "0.1.0",
+  "sourceIsLiveSite": true,
+  "defaultPolicy": "Assets are evidence from a real, live site. Do not reuse without licence review; never reproduce real logos, real people's photos or proprietary content.",
+  "roles": {
+    "logo": {
+      "generationPolicy": "must-reuse-exact",
+      "pinned": true,
+      "description": "The site's own brand mark.",
+      "licensing": "Use the exact supplied file. Never redraw, recolour, or invent a variant.",
+      "observed": 0
+    },
+    "customer-logo": {
+      "generationPolicy": "must-not-fabricate",
+      "pinned": true,
+      "description": "Third-party company logos shown as social proof.",
+      "licensing": "Real trademarks. A generator must never create or reproduce a real company's logo; use an explicit placeholder.",
+      "observed": 0
+    },
+    "avatar": {
+      "generationPolicy": "must-not-fabricate",
+      "pinned": true,
+      "description": "Photos of real people (customers, team, authors).",
+      "licensing": "Real people's likeness. Never generate or reuse a real person's photo; use a neutral placeholder.",
+      "observed": 2
+    },
+    "icon": {
+      "generationPolicy": "may-generate-new",
+      "pinned": false,
+      "description": "Small glyphs (<=48px) used as UI or feature markers.",
+      "licensing": "Generic glyphs may be generated; do not copy a proprietary icon set verbatim.",
+      "observed": 5
+    },
+    "illustration": {
+      "generationPolicy": "may-generate-new",
+      "pinned": false,
+      "description": "Large vector artwork.",
+      "licensing": "May be regenerated in the same style; do not reproduce the original artwork.",
+      "observed": 0
+    },
+    "background": {
+      "generationPolicy": "may-generate-new",
+      "pinned": false,
+      "description": "Full-bleed or decorative backgrounds.",
+      "licensing": "May be regenerated; do not reuse the original file.",
+      "observed": 0
+    },
+    "hero-image": {
+      "generationPolicy": "may-generate-new",
+      "pinned": false,
+      "description": "Large image in the page-opening block.",
+      "licensing": "May be regenerated; do not reproduce real product or customer content.",
+      "observed": 6
+    },
+    "content-image": {
+      "generationPolicy": "may-generate-new",
+      "pinned": false,
+      "description": "Other in-page imagery (screenshots, photos, cards).",
+      "licensing": "May be regenerated; never include real customer data, names or proprietary UI.",
+      "observed": 155
+    },
+    "animation": {
+      "generationPolicy": "must-reuse-exact",
+      "pinned": false,
+      "description": "Rive / Lottie animation files that drive canvas animations.",
+      "licensing": "The site's own animation assets. Reuse only the supplied file; never recreate or imitate it for a different brand.",
+      "observed": 0
+    },
+    "video": {
+      "generationPolicy": "must-reuse-exact",
+      "pinned": false,
+      "description": "Video files or embeds.",
+      "licensing": "Reuse only the supplied file; never fabricate footage of real products or people.",
+      "observed": 0
+    },
+    "font": {
+      "generationPolicy": "must-reuse-exact",
+      "pinned": true,
+      "description": "Web font files.",
+      "licensing": "Fonts carry their own licence; reuse only as shipped and review the licence before redistribution.",
+      "observed": 69
+    },
+    "live-embed": {
+      "generationPolicy": "must-not-reuse-live-endpoint",
+      "pinned": true,
+      "description": "Live third-party iframes and form endpoints.",
+      "licensing": "Never point generated pages at the original site's live endpoints (forms, widgets).",
+      "observed": 18
+    },
+    "founder-contact-email": {
+      "generationPolicy": "must-not-reuse-live-endpoint",
+      "pinned": true,
+      "description": "A real mailto contact address (e.g. a founder or support email) exposed in page copy.",
+      "licensing": "A real, live inbox. Generated pages must not reuse the original address; use a placeholder.",
+      "observed": 2
+    }
+  },
+  "generationPolicies": [
+    "may-generate-new",
+    "must-reuse-exact",
+    "must-not-fabricate",
+    "must-not-reuse-live-endpoint"
+  ],
+  "assets": [
+    {
+      "path": "_ext/framerusercontent.com/images/ONkjvQAz3gacwCm0BbwyHGXM9Y__7eef4b5a.jpg",
+      "bytes": 3920670,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/J5oaxLYkTvBToBazwYATV0nVo__2e5ca117.jpg",
+      "bytes": 2464620,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/J5oaxLYkTvBToBazwYATV0nVo__86c4068c.jpg",
+      "bytes": 2206998,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/ONkjvQAz3gacwCm0BbwyHGXM9Y__9bd10eb8.jpg",
+      "bytes": 1384370,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/tBiK7VQJhdCCyTNG9bUIi2VQLs__65e1a3ea.jpg",
+      "bytes": 1095360,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/ijn0V7zrxHcn4hO9sPOgqFnxf8__21ea4288.png",
+      "bytes": 1082127,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/plcKPCYLZhAfjWW0kptAgom89A__ae15a16d.jpg",
+      "bytes": 1064602,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/plcKPCYLZhAfjWW0kptAgom89A__63425ed5.jpg",
+      "bytes": 1064602,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/tEnNyVcymZUunyg2Ug85pKhSDkk__bf820d03.jpg",
+      "bytes": 1008927,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/tEnNyVcymZUunyg2Ug85pKhSDkk__75c8d0fc.jpg",
+      "bytes": 1008927,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/tBiK7VQJhdCCyTNG9bUIi2VQLs__9eeaec80.jpg",
+      "bytes": 896301,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/ijn0V7zrxHcn4hO9sPOgqFnxf8__70965fd3.png",
+      "bytes": 781343,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/ecgwLxQMKk2bXTSZ21R1kisJ0__03d6a8d8.jpg",
+      "bytes": 588562,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/ecgwLxQMKk2bXTSZ21R1kisJ0__57a634cb.jpg",
+      "bytes": 530428,
+      "role": "hero-image",
+      "evidence": {
+        "route": "/",
+        "section": "hero.hero-section",
+        "rendered": "1440x900"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/2FXuVKoU6DmBQKRJ78iY7OCQLI__03d6a8d8.jpg",
+      "bytes": 458445,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/2FXuVKoU6DmBQKRJ78iY7OCQLI__57a634cb.jpg",
+      "bytes": 453945,
+      "role": "content-image",
+      "evidence": {
+        "route": "/blog/when-software-becomes-a-teammate",
+        "section": "features.featured-image-wrapper",
+        "rendered": "1360x760"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/47EhulLHQfIIdnFoVbQoGGJVI__4c04c7a8.jpg",
+      "bytes": 434241,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/47EhulLHQfIIdnFoVbQoGGJVI__776c096f.jpg",
+      "bytes": 425767,
+      "role": "hero-image",
+      "evidence": {
+        "route": "/blog",
+        "section": "hero.hero-section",
+        "rendered": "1440x900"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/J5oaxLYkTvBToBazwYATV0nVo__2450e723.jpg",
+      "bytes": 414121,
+      "role": "content-image",
+      "evidence": {
+        "route": "/blog/why-collections-software-keeps-failing-finance-teams",
+        "section": "features.featured-image-wrapper",
+        "rendered": "1360x760"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/ONkjvQAz3gacwCm0BbwyHGXM9Y__9cb698b3.jpg",
+      "bytes": 345747,
+      "role": "content-image",
+      "evidence": {
+        "route": "/blog/how-ai-agents-are-transforming-ar-and-collections",
+        "section": "features.featured-image-wrapper",
+        "rendered": "1360x760"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/gkxRgIsMfWHOCidcvWP0czWHIE__a8c38e78.jpg",
+      "bytes": 312527,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/tBiK7VQJhdCCyTNG9bUIi2VQLs__cc8c67ca.jpg",
+      "bytes": 286197,
+      "role": "content-image",
+      "evidence": {
+        "route": "/blog/what-we-hear-when-we-talk-to-finance-teams",
+        "section": "features.featured-image-wrapper",
+        "rendered": "1360x760"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/plcKPCYLZhAfjWW0kptAgom89A__b79146f5.jpg",
+      "bytes": 278723,
+      "role": "content-image",
+      "evidence": {
+        "route": "/blog/agents-that-learn-how-you-work",
+        "section": "features.featured-image-wrapper",
+        "rendered": "1360x760"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/gkxRgIsMfWHOCidcvWP0czWHIE__469983c3.jpg",
+      "bytes": 233344,
+      "role": "hero-image",
+      "evidence": {
+        "route": "/careers",
+        "section": "hero.hero-section",
+        "rendered": "648x480"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/ijn0V7zrxHcn4hO9sPOgqFnxf8__bd50103c.png",
+      "bytes": 218040,
+      "role": "content-image",
+      "evidence": {
+        "route": "/careers",
+        "section": "content.team-members-section",
+        "rendered": "808x490"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/tEnNyVcymZUunyg2Ug85pKhSDkk__b6ef3a28.jpg",
+      "bytes": 208654,
+      "role": "content-image",
+      "evidence": {
+        "route": "/blog/from-source-of-truth-to-source-of-action",
+        "section": "features.featured-image-wrapper",
+        "rendered": "1360x760"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/HGWW5lET1AnJ6JQflP7tfnI__a2421794.png",
+      "bytes": 196011,
+      "role": "hero-image",
+      "evidence": {
+        "route": "/",
+        "section": "hero.hero-section",
+        "rendered": "1440x900"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/F4kOOrsfgTaLWg5pWtnvDDEHI__229d89cf.jpg",
+      "bytes": 183963,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/MCZyMtveqhI2BEty3vdRwE2h1I__c9a50c4d.jpeg",
+      "bytes": 174185,
+      "role": "icon",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "532x490"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/PnNX3GjT26pU2QblCRcgBSynes__a7f31841.jpeg",
+      "bytes": 159098,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/2FXuVKoU6DmBQKRJ78iY7OCQLI__c29cba68.jpg",
+      "bytes": 142182,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/ecgwLxQMKk2bXTSZ21R1kisJ0__c29cba68.jpg",
+      "bytes": 141508,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/vzV4ud1UQ7xLnwDx99ukoOvBW4__86cfefc7.jpg",
+      "bytes": 132105,
+      "role": "content-image",
+      "evidence": {
+        "route": "/blog/how-to-choose-the-right-collections-software",
+        "section": "features.featured-image-wrapper",
+        "rendered": "1360x760"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/xQHTLAJm5NoiLEu2lyjmJCm1Lk__86cfefc7.jpg",
+      "bytes": 126618,
+      "role": "content-image",
+      "evidence": {
+        "route": "/blog/from-aging-reports-to-cash-control",
+        "section": "features.featured-image-wrapper",
+        "rendered": "1360x760"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/F4kOOrsfgTaLWg5pWtnvDDEHI__5c108d19.jpg",
+      "bytes": 123553,
+      "role": "content-image",
+      "evidence": {
+        "route": "/careers",
+        "section": "content.team-members-section",
+        "rendered": "808x490"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/47EhulLHQfIIdnFoVbQoGGJVI__17b954ed.jpg",
+      "bytes": 114120,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/ONkjvQAz3gacwCm0BbwyHGXM9Y__b84b9e48.jpg",
+      "bytes": 113305,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/iiZqQhigGN6VvDYd3QL2WznwKso__79b6045b.png",
+      "bytes": 103790,
+      "role": "icon",
+      "evidence": {
+        "route": "/blog",
+        "section": "content.blog-section",
+        "rendered": "48x48"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/SK6EahIAUi9kaimMuwAkQv7Bk5s__3f5acd4d.png",
+      "bytes": 101551,
+      "role": "content-image",
+      "evidence": {
+        "route": "/careers",
+        "section": "content.team-members-section",
+        "rendered": "72x72"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/J5oaxLYkTvBToBazwYATV0nVo__1e07ec63.jpg",
+      "bytes": 101032,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/vzV4ud1UQ7xLnwDx99ukoOvBW4__1f03d800.jpg",
+      "bytes": 99978,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/tBiK7VQJhdCCyTNG9bUIi2VQLs__dea7d95a.jpg",
+      "bytes": 98272,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/xQHTLAJm5NoiLEu2lyjmJCm1Lk__1f03d800.jpg",
+      "bytes": 95102,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/L6uF4YgyovIH88drB5h7Nv3Sl4__7c6b2e4d.png",
+      "bytes": 94320,
+      "role": "content-image",
+      "evidence": {
+        "route": "/careers",
+        "section": "content.team-members-section",
+        "rendered": "72x72"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/pV8NQU9x9cdVOspWwm9XdQgKBI__a7f31841.jpeg",
+      "bytes": 86832,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/MmgmyATnR5fBDYtviS98T3qCsc__346045b9.png",
+      "bytes": 80631,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "features.other-features-section",
+        "rendered": "462x715"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/TcnesVEWOiRYyTySXcuv5HeTxrQ__018fc9aa.png",
+      "bytes": 75628,
+      "role": "hero-image",
+      "evidence": {
+        "route": "/blog",
+        "section": "hero.hero-section",
+        "rendered": "1440x900"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/6vPp3oOq4qydtO9Cd20iJf5Gs__a7f31841.jpeg",
+      "bytes": 72610,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/PnNX3GjT26pU2QblCRcgBSynes__350a3ce9.jpeg",
+      "bytes": 71932,
+      "role": "avatar",
+      "evidence": {
+        "route": "/customers",
+        "section": "proof.testimonials-section",
+        "rendered": "100x100"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/gkxRgIsMfWHOCidcvWP0czWHIE__2597c5d0.jpg",
+      "bytes": 67353,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/ijn0V7zrxHcn4hO9sPOgqFnxf8__d4d6e018.png",
+      "bytes": 63686,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/geist/v4/gyByhwUxId8gMHweElSvO5Tc.woff2",
+      "bytes": 63448,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/plcKPCYLZhAfjWW0kptAgom89A__c9ed292f.jpg",
+      "bytes": 57843,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/arimo/v36/P5sfzZCDf9_T_3cV7NCUECyoxNk338xcDhrBZQI.woff2",
+      "bytes": 55160,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/tEnNyVcymZUunyg2Ug85pKhSDkk__8168f56e.jpg",
+      "bytes": 54123,
+      "role": "content-image",
+      "evidence": {
+        "route": "/blog",
+        "section": "content.blog-section",
+        "rendered": "440x320"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/ecgwLxQMKk2bXTSZ21R1kisJ0__e11bb3be.jpg",
+      "bytes": 45279,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/pV8NQU9x9cdVOspWwm9XdQgKBI__350a3ce9.jpeg",
+      "bytes": 43323,
+      "role": "content-image",
+      "evidence": {
+        "route": "/customers",
+        "section": "proof.testimonials-section",
+        "rendered": "100x100"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/2FXuVKoU6DmBQKRJ78iY7OCQLI__e11bb3be.jpg",
+      "bytes": 42328,
+      "role": "content-image",
+      "evidence": {
+        "route": "/blog",
+        "section": "content.blog-section",
+        "rendered": "440x320"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/MCZyMtveqhI2BEty3vdRwE2h1I__409d600e.jpeg",
+      "bytes": 42291,
+      "role": "icon",
+      "evidence": {
+        "route": "/blog/what-we-hear-when-we-talk-to-finance-teams",
+        "section": "content.container",
+        "rendered": "48x48"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/F4kOOrsfgTaLWg5pWtnvDDEHI__1b9ce5c5.jpg",
+      "bytes": 41467,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/ONkjvQAz3gacwCm0BbwyHGXM9Y__1e772558.jpg",
+      "bytes": 41458,
+      "role": "content-image",
+      "evidence": {
+        "route": "/blog",
+        "section": "content.blog-section",
+        "rendered": "440x320"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/llW1pUbU67WEPJCS6wQopTs9A__ae2d619d.png",
+      "bytes": 39145,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/47EhulLHQfIIdnFoVbQoGGJVI__c52e9064.jpg",
+      "bytes": 39051,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/tBiK7VQJhdCCyTNG9bUIi2VQLs__2f93e2e3.jpg",
+      "bytes": 37301,
+      "role": "content-image",
+      "evidence": {
+        "route": "/blog",
+        "section": "content.blog-section",
+        "rendered": "440x320"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/6vPp3oOq4qydtO9Cd20iJf5Gs__350a3ce9.jpeg",
+      "bytes": 36820,
+      "role": "icon",
+      "evidence": {
+        "route": "/blog",
+        "section": "content.blog-section",
+        "rendered": "48x48"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/YLPrdfXVuCXxeGpLn0E7GFylE__c9a50c4d.jpeg",
+      "bytes": 35599,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "532x490"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/vzV4ud1UQ7xLnwDx99ukoOvBW4__2aa310e0.jpg",
+      "bytes": 35006,
+      "role": "content-image",
+      "evidence": {
+        "route": "/blog",
+        "section": "content.blog-section",
+        "rendered": "440x320"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/J5oaxLYkTvBToBazwYATV0nVo__1598045d.jpg",
+      "bytes": 33971,
+      "role": "content-image",
+      "evidence": {
+        "route": "/blog",
+        "section": "content.blog-section",
+        "rendered": "440x320"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/Cb7WYIi9BJL30a8jRB1TlsrWVF4__f3733394.png",
+      "bytes": 33266,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/LWYZSZVWmqisoj5PXj44gLmqyQ__e198d8fb.png",
+      "bytes": 32541,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/JxHBaIa9mS8Z7tg0M898X7BEMs__f0db1441.png",
+      "bytes": 32296,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/TcnesVEWOiRYyTySXcuv5HeTxrQ__9656fb9e.png",
+      "bytes": 32026,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/bVsju7wTnaAZJ7l5iSGdeXz0EGU.woff2",
+      "bytes": 31708,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/xQHTLAJm5NoiLEu2lyjmJCm1Lk__2aa310e0.jpg",
+      "bytes": 31676,
+      "role": "content-image",
+      "evidence": {
+        "route": "/blog",
+        "section": "content.blog-section",
+        "rendered": "440x320"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/lnuMZFxj40y5v6yYRpukk94RUQ.woff2",
+      "bytes": 31632,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/ia3uin3hQWqDrVloC1zEtYHWw.woff2",
+      "bytes": 30368,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/geistmono/v5/or3nQ6H-1_WfwkMZI_qYFrcdmg.woff2",
+      "bytes": 29896,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/IhZhd5mlkKrn34GDSxzVT1x0Kg__a2421794.png",
+      "bytes": 29814,
+      "role": "hero-image",
+      "evidence": {
+        "route": "/about",
+        "section": "hero.hero-section",
+        "rendered": "1440x900"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/gcnfba68tfm7qAyrWRCf9r34jg.woff2",
+      "bytes": 29692,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwcGFU.woff2",
+      "bytes": 29400,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/YLPrdfXVuCXxeGpLn0E7GFylE__409d600e.jpeg",
+      "bytes": 28937,
+      "role": "icon",
+      "evidence": {
+        "route": "/blog/what-we-hear-when-we-talk-to-finance-teams",
+        "section": "content.other-articles-section",
+        "rendered": "48x48"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/syRNPWzAMIrcJ3wIlPIP43KjQs.woff2",
+      "bytes": 27900,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/QRt5tDQE3ozkkpbl8ytxRogWA__715975fe.png",
+      "bytes": 27870,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/WZ367JPwf9bRW6LdTHN8rXgSjw.woff2",
+      "bytes": 27736,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/rZ5DdENNqIdFTIyQQiP5isO7M.woff2",
+      "bytes": 27436,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/GrgcKwrN6d3Uz8EwcLHZxwEfC4.woff2",
+      "bytes": 27380,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/llW1pUbU67WEPJCS6wQopTs9A__a4b2939a.png",
+      "bytes": 27228,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/FNfhX3dt4ChuLJq2PwdlxHO7PU.woff2",
+      "bytes": 27036,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/HGWW5lET1AnJ6JQflP7tfnI__6f8094f0.png",
+      "bytes": 26852,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/mAlMYeQE28l9hpNamWZLkFto.woff2",
+      "bytes": 26836,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/dwKBPzT1IrfpQQUdh3Tkns7FhFg.woff2",
+      "bytes": 26628,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/NaxjZXcne4Fsdfuto0rOZgzSz7s.woff2",
+      "bytes": 26344,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/chivomono/v11/mFT0WbgRxKvF_Z5eQMO9gx8D1Q.woff2",
+      "bytes": 26336,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/VgYFWiwsAC5OYxAycRXXvhze58.woff2",
+      "bytes": 26076,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/xVQUZrmgFfXDzv72jDWIcRzN7s__c632fe7c.png",
+      "bytes": 25587,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/Cb7WYIi9BJL30a8jRB1TlsrWVF4__972ea911.png",
+      "bytes": 25582,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/JeYwfuaPfZHQhEG8U5gtPDZ7WQ.woff2",
+      "bytes": 25348,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/5HcVoGak8k5agFJSaKa4floXVu0.woff2",
+      "bytes": 25276,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/fragmentmono/v6/4iCr6K5wfMRRjxp0DA6-2CLnB4NHhg.woff2",
+      "bytes": 25224,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/awj00Ao32PQ0eTAfZbOqPjfLspk__3078942d.png",
+      "bytes": 25002,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/9iQ9bWHpgAh1SJmLH4R4dEhr44__3df17a6c.png",
+      "bytes": 24966,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/awj00Ao32PQ0eTAfZbOqPjfLspk__bebf2e82.png",
+      "bytes": 24067,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/OVVSJJjHiwXoGDPfiX9TlezUdC4__0af19281.png",
+      "bytes": 23084,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/chivomono/v11/mFT0WbgRxKvF_Z5eQMO9gxED1XJ7.woff2",
+      "bytes": 22948,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/DCEbIPsLJjGkcR1QlLbqVIOzIQ__e198d8fb.png",
+      "bytes": 22906,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/sna7yclqHMYOwA932FoDDp6ZY3Q__7a0c1bd5.png",
+      "bytes": 22702,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/LWYZSZVWmqisoj5PXj44gLmqyQ__311b714e.png",
+      "bytes": 21369,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "features.key-features-section",
+        "rendered": "428x383"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/arimo/v36/P5sfzZCDf9_T_3cV7NCUECyoxNk338xcDRrBZQI.woff2",
+      "bytes": 21112,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/grRKb0931t9k13u90jrYb7Do__24d4fae7.png",
+      "bytes": 20657,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/KIW2ONdsY3eQ6UdorSh6mAUJo__5bd5a59b.png",
+      "bytes": 20494,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/EF1g2TBiA17X9HRfiz3mKs3lE__2851ecae.png",
+      "bytes": 20364,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/sna7yclqHMYOwA932FoDDp6ZY3Q__47316e52.png",
+      "bytes": 20360,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/QRt5tDQE3ozkkpbl8ytxRogWA__03a143a6.png",
+      "bytes": 20063,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/5EnLlhxlTaI3adXsOm0zvEVNoE__fc216f56.png",
+      "bytes": 19666,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "content.framer-39uowv-container",
+        "rendered": "162x162"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/KIW2ONdsY3eQ6UdorSh6mAUJo__96cfbf90.png",
+      "bytes": 19330,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/plcKPCYLZhAfjWW0kptAgom89A__aa023fb0.jpg",
+      "bytes": 19289,
+      "role": "content-image",
+      "evidence": {
+        "route": "/blog",
+        "section": "content.blog-section",
+        "rendered": "440x320"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/J41J7KpjY8XCNt0HIeXHLZhdMw__e3f11785.png",
+      "bytes": 18539,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/EF1g2TBiA17X9HRfiz3mKs3lE__0352b67f.png",
+      "bytes": 18462,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/WuVdV39vtJZ8uwEQxQw6S8__e198d8fb.png",
+      "bytes": 17750,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/jXwaMJgER6yybkAl5qz0lg4__f4461c10.png",
+      "bytes": 17742,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/vNFeVjUhd9Hr1i7YQDrQBc8__39276a39.png",
+      "bytes": 17180,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/llW1pUbU67WEPJCS6wQopTs9A__f675eba7.png",
+      "bytes": 16871,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "content.roi-section",
+        "rendered": "1392x565"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwSGFWfOw.woff2",
+      "bytes": 16512,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/6QX8fAHnNx1fUfDdD0uxyjNEK34__af0a2a1f.png",
+      "bytes": 15934,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/zRycQ1l6vtKGIHGiHmDxxeJ0tU__c9cd912d.png",
+      "bytes": 15929,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/9iQ9bWHpgAh1SJmLH4R4dEhr44__43af3be2.png",
+      "bytes": 15593,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/qrB0UY0YWMfT7s82ZA6NPzpxE__337673bc.jpeg",
+      "bytes": 15497,
+      "role": "avatar",
+      "evidence": {
+        "route": "/customers",
+        "section": "proof.testimonials-section",
+        "rendered": "100x100"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/OVVSJJjHiwXoGDPfiX9TlezUdC4__18364065.png",
+      "bytes": 15185,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwYGFWfOw.woff2",
+      "bytes": 15084,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/geistmono/v5/or3nQ6H-1_WfwkMZI_qYFrkdmgPn.woff2",
+      "bytes": 14784,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/NSBaYpZbRFJuYYhPDW0zCwlpCM__d047393c.png",
+      "bytes": 14629,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/WuVdV39vtJZ8uwEQxQw6S8__311b714e.png",
+      "bytes": 14572,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "features.key-features-section",
+        "rendered": "428x383"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/xVQUZrmgFfXDzv72jDWIcRzN7s__1b5de7e6.png",
+      "bytes": 14287,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/9tFRnEb9nl8GrbDkLHWPcPbspxk__181bab86.png",
+      "bytes": 14285,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/jXwaMJgER6yybkAl5qz0lg4__a78690dc.png",
+      "bytes": 14193,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/5EnLlhxlTaI3adXsOm0zvEVNoE__da4c5044.png",
+      "bytes": 14141,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/st0tARmYXa0PUArIzVoEpICWREc__23480bff.png",
+      "bytes": 14120,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/fragmentmono/v6/4iCr6K5wfMRRjxp0DA6-2CLnB41HhrUI.woff2",
+      "bytes": 14112,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/56kk3ZH6KJxlm8bemGC47yPHQ__7b142200.png",
+      "bytes": 13950,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/IhZhd5mlkKrn34GDSxzVT1x0Kg__6f8094f0.png",
+      "bytes": 13718,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/ybIt4jGTTW9GTo2L6fnIiPxm4__44127fc5.png",
+      "bytes": 13708,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/vNFeVjUhd9Hr1i7YQDrQBc8__a8c4b926.png",
+      "bytes": 13535,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "102x45"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/TcnesVEWOiRYyTySXcuv5HeTxrQ__239d4e57.png",
+      "bytes": 13350,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/st0tARmYXa0PUArIzVoEpICWREc__af04945e.png",
+      "bytes": 13278,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/56kk3ZH6KJxlm8bemGC47yPHQ__b524cbf1.png",
+      "bytes": 13238,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/6QX8fAHnNx1fUfDdD0uxyjNEK34__985c7bbc.png",
+      "bytes": 13024,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/DCEbIPsLJjGkcR1QlLbqVIOzIQ__311b714e.png",
+      "bytes": 12944,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "features.key-features-section",
+        "rendered": "428x383"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/geistmono/v5/or3nQ6H-1_WfwkMZI_qYFrMdmgPn.woff2",
+      "bytes": 12876,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/grRKb0931t9k13u90jrYb7Do__ec48d309.png",
+      "bytes": 12605,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "108x32"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/lUw9A8YxbB9UWa2QghArR6RnQ__a32eca68.png",
+      "bytes": 12458,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/sna7yclqHMYOwA932FoDDp6ZY3Q__0e8982c0.png",
+      "bytes": 12418,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "119x43"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/zpIa8ymUF1bED7LCKhmeddEt14__c4d1cca0.png",
+      "bytes": 12294,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/chivomono/v11/mFThWbgRxKvF_Z5eQMO9qRMrJJrnKNtC3D6_r5fSIJk.woff2",
+      "bytes": 12168,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/eWoAN9GAyRf9qibH4SoViiiajc__5d666b5d.png",
+      "bytes": 12047,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/2UwbZq4bSCumv5vWr5LyLReO6M8__c43e0e02.png",
+      "bytes": 12020,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "96x54"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/arimo/v36/P5sfzZCDf9_T_3cV7NCUECyoxNk338xcABrB.woff2",
+      "bytes": 11796,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/Cb7WYIi9BJL30a8jRB1TlsrWVF4__40807ac9.png",
+      "bytes": 11699,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "102x38"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/chivomono/v11/mFThWbgRxKvF_Z5eQMO9qRMrJJrnKNtC3D6_r5fcIJl70w.woff2",
+      "bytes": 11424,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/NSBaYpZbRFJuYYhPDW0zCwlpCM__a39d17d5.png",
+      "bytes": 10996,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/J41J7KpjY8XCNt0HIeXHLZhdMw__be3cff65.png",
+      "bytes": 10886,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "96x48"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/ltVnmHFNFZ3rySPWRQUS4qpwgow__de95323d.png",
+      "bytes": 10883,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/eWoAN9GAyRf9qibH4SoViiiajc__15a76d6a.png",
+      "bytes": 10753,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/awj00Ao32PQ0eTAfZbOqPjfLspk__8ca7ba66.png",
+      "bytes": 10063,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "features.integrations-section",
+        "rendered": "126x54"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/chivomono/v11/mFT0WbgRxKvF_Z5eQMO9gxAD1XJ7.woff2",
+      "bytes": 9864,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/zRycQ1l6vtKGIHGiHmDxxeJ0tU__7b4217e2.png",
+      "bytes": 9718,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "105x33"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/H89BbHkbHDzlxZzxi8uPzTsp90.woff2",
+      "bytes": 9564,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/9tFRnEb9nl8GrbDkLHWPcPbspxk__8a675a26.png",
+      "bytes": 9518,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "features.integrations-section",
+        "rendered": "126x74"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/05KsVHGDmqXSBXM4yRZ65P8i0s.woff2",
+      "bytes": 9444,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/OVVSJJjHiwXoGDPfiX9TlezUdC4__581703c9.png",
+      "bytes": 9368,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "features.integrations-section",
+        "rendered": "126x56"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/arimo/v36/P5sfzZCDf9_T_3cV7NCUECyoxNk338xcAxrBZQI.woff2",
+      "bytes": 9300,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/ybIt4jGTTW9GTo2L6fnIiPxm4__93d5e784.png",
+      "bytes": 9297,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "features.integrations-section",
+        "rendered": "126x38"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/Gw78Z7v2zgJsA2qKsTvshvwxaEc__b6eb555a.png",
+      "bytes": 9228,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/EF1g2TBiA17X9HRfiz3mKs3lE__eafbc166.png",
+      "bytes": 8986,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "102x23"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2",
+      "bytes": 8896,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/DpPBYI0sL4fYLgAkX8KXOPVt7c.woff2",
+      "bytes": 8892,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/mkY5Sgyq51ik0AMrSBwhm9DJg.woff2",
+      "bytes": 8716,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/xVQUZrmgFfXDzv72jDWIcRzN7s__a435ae25.png",
+      "bytes": 8650,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "108x19"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/6QX8fAHnNx1fUfDdD0uxyjNEK34__c210166c.png",
+      "bytes": 8427,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "102x42"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/jXwaMJgER6yybkAl5qz0lg4__0e787358.png",
+      "bytes": 8284,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "90x39"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/Gw78Z7v2zgJsA2qKsTvshvwxaEc__6670de2a.png",
+      "bytes": 8226,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "119x30"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/KIW2ONdsY3eQ6UdorSh6mAUJo__ec11b240.png",
+      "bytes": 8051,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "126x28"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/9iQ9bWHpgAh1SJmLH4R4dEhr44__4dc8aa5c.png",
+      "bytes": 8041,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "features.integrations-section",
+        "rendered": "126x36"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/arimo/v36/P5sfzZCDf9_T_3cV7NCUECyoxNk338xcAhrBZQI.woff2",
+      "bytes": 8020,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwTGFWfOw.woff2",
+      "bytes": 8004,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/56kk3ZH6KJxlm8bemGC47yPHQ__3ff96df6.png",
+      "bytes": 7856,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "features.integrations-section",
+        "rendered": "126x53"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/lwnLO9kRcavNG4k5D42Fm8TjGHU__f03cca7a.png",
+      "bytes": 7737,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/geistmono/v5/or3nQ6H-1_WfwkMZI_qYFrgdmgPn.woff2",
+      "bytes": 7716,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/llW1pUbU67WEPJCS6wQopTs9A__74f17907.png",
+      "bytes": 7647,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/arimo/v36/P5sfzZCDf9_T_3cV7NCUECyoxNk338xcBBrBZQI.woff2",
+      "bytes": 7644,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/u6gJwDuwB143kpNK1T1MDKDWkMc.woff2",
+      "bytes": 7556,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/lwnLO9kRcavNG4k5D42Fm8TjGHU__96394d7b.png",
+      "bytes": 7513,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "features.integrations-section",
+        "rendered": "144x40"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/zpIa8ymUF1bED7LCKhmeddEt14__ad25dd47.png",
+      "bytes": 7471,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "features.integrations-section",
+        "rendered": "126x57"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/st0tARmYXa0PUArIzVoEpICWREc__d5bff886.png",
+      "bytes": 7436,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "108x36"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/geist/v5/gyByhwUxId8gMEwRGFWfOw.woff2",
+      "bytes": 7420,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/ky8ovPukK4dJ1Pxq74qGhOqCYI.woff2",
+      "bytes": 7376,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/wccHG0r4gBDAIRhfHiOlq6oEkqw.woff2",
+      "bytes": 7360,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/lUw9A8YxbB9UWa2QghArR6RnQ__3af7de30.png",
+      "bytes": 7359,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "features.integrations-section",
+        "rendered": "126x43"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/mP8FPiGyzZiUbf4YhVnVROvWU.png",
+      "bytes": 7303,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/3ZmXbBKToJifDV9gwcifVd1tEY.woff2",
+      "bytes": 7208,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/ltVnmHFNFZ3rySPWRQUS4qpwgow__03762712.png",
+      "bytes": 7133,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "126x28"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/EOr0mi4hNtlgWNn9if640EZzXCo.woff2",
+      "bytes": 7116,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/4RAEQdEOrcnDkhHiiCbJOw92Lk.woff2",
+      "bytes": 7080,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/X5hj6qzcHUYv7h1390c8Rhm6550.woff2",
+      "bytes": 6984,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/DPCFZTIBWTZt6tmv1D2X1IEBviw__f03cca7a.png",
+      "bytes": 6961,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/NSBaYpZbRFJuYYhPDW0zCwlpCM__51ea2004.png",
+      "bytes": 6888,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "features.integrations-section",
+        "rendered": "126x35"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/tUSCtfYVM1I1IchuyCwz9gDdQ.woff2",
+      "bytes": 6672,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/OYrD2tBIBPvoJXiIHnLoOXnY9M.woff2",
+      "bytes": 6652,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/hc1B8cIoQKmyxFeWlONLfb0jk__e00b7c57.png",
+      "bytes": 6597,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/cugnVhSraaRyANCaUtI5FV17wk.woff2",
+      "bytes": 6572,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/DPCFZTIBWTZt6tmv1D2X1IEBviw__96394d7b.png",
+      "bytes": 6378,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "features.integrations-section",
+        "rendered": "144x40"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/WMrDwsDv7tmmTMw6X35uPbWPOIE__c62f93cc.png",
+      "bytes": 6207,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/geistmono/v5/or3nQ6H-1_WfwkMZI_qYFrodmgPn.woff2",
+      "bytes": 6180,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/eWoAN9GAyRf9qibH4SoViiiajc__1f4be997.png",
+      "bytes": 6109,
+      "role": "content-image",
+      "evidence": {
+        "route": "/",
+        "section": "features.integrations-section",
+        "rendered": "126x39"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/geistmono/v5/or3nQ6H-1_WfwkMZI_qYFg08vz7ehw.woff2",
+      "bytes": 5804,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/hc1B8cIoQKmyxFeWlONLfb0jk__7c3048a6.png",
+      "bytes": 5593,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "119x20"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/WMrDwsDv7tmmTMw6X35uPbWPOIE__931e7260.png",
+      "bytes": 5573,
+      "role": "content-image",
+      "evidence": {
+        "route": "/about",
+        "section": "content.team-members-section",
+        "rendered": "119x28"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/arimo/v36/P5sfzZCDf9_T_3cV7NCUECyoxNk338xcDxrBZQI.woff2",
+      "bytes": 5204,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/HGWW5lET1AnJ6JQflP7tfnI__17a84978.png",
+      "bytes": 5147,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/chivomono/v11/mFThWbgRxKvF_Z5eQMO9qRMrJJrnKNtC3D6_r5fdIJl70w.woff2",
+      "bytes": 5064,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/43sJ6MfOPh1LCJt46OvyDuSbA6o.woff2",
+      "bytes": 4960,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/IhZhd5mlkKrn34GDSxzVT1x0Kg__17a84978.png",
+      "bytes": 4953,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/vvNSqIj42qeQ2bvCRBIWKHscrc.woff2",
+      "bytes": 4828,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/arimo/v36/P5sfzZCDf9_T_3cV7NCUECyoxNk338xcDBrBZQI.woff2",
+      "bytes": 4772,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/1K3W8DizY3v4emK8Mb08YHxTbs.woff2",
+      "bytes": 4628,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/gQhNpS3tN86g8RcVKYUUaKt2oMQ.woff2",
+      "bytes": 4528,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/Y9k9QrlZAqio88Klkmbd8VoMQc.woff2",
+      "bytes": 4504,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/GIryZETIX4IFypco5pYZONKhJIo.woff2",
+      "bytes": 4268,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/PVmgQ3DblhTrniH2esAL0k471s.png",
+      "bytes": 4238,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/2A4Xx7CngadFGlVV4xrO06OBHY.woff2",
+      "bytes": 4236,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/efTfQcBJ53kM2pB1hezSZ3RDUFs.woff2",
+      "bytes": 4172,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/b6Y37FthZeALduNqHicBT6FutY.woff2",
+      "bytes": 4168,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/assets/P2Bw01CtL0b9wqygO0sSVogWbo.woff2",
+      "bytes": 4168,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/fonts.gstatic.com/s/fragmentmono/v6/4iCr6K5wfMRRjxp0DA6-2CLnB45HhrUI.woff2",
+      "bytes": 3020,
+      "role": "font",
+      "evidence": {
+        "note": "loaded by the page's CSS"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/llW1pUbU67WEPJCS6wQopTs9A__810ba8b3.png",
+      "bytes": 2923,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/sites/icons/writing-hand-favicon.png",
+      "bytes": 2058,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/TgdCv8V2B6XWsWxdm2dqMLwRxDs.png",
+      "bytes": 1475,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "_ext/framerusercontent.com/images/WNf0yTE0Dt0TNR4Wrip4BF7f60.png",
+      "bytes": 1457,
+      "role": "content-image",
+      "evidence": {
+        "note": "not referenced by the rendered DOM (CSS or lazy reference)"
+      }
+    },
+    {
+      "path": "mailto:giedrius@exante.app",
+      "bytes": 0,
+      "role": "founder-contact-email",
+      "evidence": {
+        "route": "/careers",
+        "section": "content.open-roles-section",
+        "note": "mailto: link found in page content"
+      }
+    },
+    {
+      "path": "mailto:team@exante.app",
+      "bytes": 0,
+      "role": "founder-contact-email",
+      "evidence": {
+        "route": "/contact",
+        "section": "content.content-section",
+        "note": "mailto: link found in page content"
+      }
+    }
+  ],
+  "embeds": [
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205419620",
+      "route": "/"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205472841",
+      "route": "/about"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205490990",
+      "route": "/blog"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205528395",
+      "route": "/customers"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205537966",
+      "route": "/careers"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205549958",
+      "route": "/contact"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205562081",
+      "route": "/contact/sales"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205576740",
+      "route": "/legal/terms-of-service"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205594660",
+      "route": "/legal/privacy"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205605269",
+      "route": "/blog/what-we-hear-when-we-talk-to-finance-teams"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205615573",
+      "route": "/blog/from-source-of-truth-to-source-of-action"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205627034",
+      "route": "/blog/agents-that-learn-how-you-work"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205635849",
+      "route": "/blog/from-aging-reports-to-cash-control"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205643511",
+      "route": "/blog/when-software-becomes-a-teammate"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205653212",
+      "route": "/blog/how-to-choose-the-right-collections-software"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205663497",
+      "route": "/blog/why-collections-software-keeps-failing-finance-teams"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205671440",
+      "route": "/blog/how-ai-agents-are-transforming-ar-and-collections"
+    },
+    {
+      "type": "iframe",
+      "url": "https://framer.com/edit?framerSiteId=712ba20b31b5ff365193211854ccc6a5c2889f89523dbb8ec6696cb016bd774e&source=www.exante.app&features=%7B%22editorBarDisableFrameAncestorsSecurity%22%3Afalse%2C%22onPageLocalizationSupport%22%3Atrue%2C%22onPageMoveTool%22%3Atrue%7D&loadStart=1791205680136",
+      "route": "/contact/support"
+    }
+  ]
+}

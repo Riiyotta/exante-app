@@ -1,0 +1,13 @@
+{
+  "id": "menu-links",
+  "name": "Menu Links",
+  "occurrences": 54,
+  "composedOf": [
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

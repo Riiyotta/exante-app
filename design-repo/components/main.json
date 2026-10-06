@@ -1,0 +1,15 @@
+{
+  "id": "main",
+  "name": "Main",
+  "occurrences": 18,
+  "composedOf": [
+    "heading",
+    "image",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

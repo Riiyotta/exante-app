@@ -1,0 +1,12 @@
+{
+  "id": "employee-name",
+  "name": "Employee Name",
+  "occurrences": 6,
+  "composedOf": [
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/about"
+  }
+}

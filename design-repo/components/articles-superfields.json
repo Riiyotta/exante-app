@@ -1,0 +1,15 @@
+{
+  "id": "articles-superfields",
+  "name": "Articles - Superfields",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "image",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/blog"
+  }
+}

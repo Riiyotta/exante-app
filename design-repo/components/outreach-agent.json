@@ -1,0 +1,15 @@
+{
+  "id": "outreach-agent",
+  "name": "Outreach Agent",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "image",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

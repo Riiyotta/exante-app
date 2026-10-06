@@ -1,0 +1,78 @@
+{
+  "id": "content.container",
+  "category": "CONTENT",
+  "label": "Container",
+  "tag": "div",
+  "purpose": "Carries the substantive content of the page. Example headline: \"Agents That Learn How You Work (Not Software You Have to Learn)\".",
+  "purposeIsInferred": true,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 8,
+    "routes": 8,
+    "measuredFrom": [
+      "src/blog/agents-that-learn-how-you-work/index.html:712-815",
+      "src/blog/from-aging-reports-to-cash-control/index.html:712-809",
+      "src/blog/from-source-of-truth-to-source-of-action/index.html:712-812",
+      "src/blog/how-ai-agents-are-transforming-ar-and-collections/index.html:712-810",
+      "src/blog/how-to-choose-the-right-collections-software/index.html:712-813"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "heading": {
+        "type": "string",
+        "required": true,
+        "maxWords": 12
+      },
+      "body": {
+        "type": "string[]",
+        "required": true,
+        "maxItems": 8,
+        "maxWords": 27
+      },
+      "images": {
+        "type": "image[]",
+        "required": false,
+        "maxItems": 1,
+        "assetRoles": [
+          "content-image",
+          "icon"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "appear-on-enter",
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 417,
+      "columns": 3
+    },
+    "mobile": {
+      "heightPx": 514,
+      "columns": 3,
+      "hiddenShare": 0
+    },
+    "changes": []
+  },
+  "assetRoles": [
+    "content-image",
+    "icon"
+  ],
+  "implementedBy": "src/pages/BlogWhatWeHear.jsx"
+}

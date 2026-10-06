@@ -1,0 +1,12 @@
+{
+  "id": "campfire",
+  "name": "Campfire",
+  "occurrences": 1,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

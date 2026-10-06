@@ -1,0 +1,30 @@
+{
+  "name": "exante-app-clone",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "ia:validate": "node ia/validate.mjs",
+    "ia:build": "node ia/build.mjs",
+    "verify": "python3 design-repo/extraction/verify_all.py",
+    "drift": "python3 design-repo/extraction/prove_drift.py",
+    "ir:validate": "python3 ir/validate_ir.py",
+    "mirror": "python3 recon/mirror/_serve.py",
+    "browse": "vite --open"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.26.2"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10",
+    "@vitejs/plugin-react": "^4.3.3",
+    "tailwindcss": "^3.4.14",
+    "postcss": "^8.4.47",
+    "autoprefixer": "^10.4.20"
+  }
+}

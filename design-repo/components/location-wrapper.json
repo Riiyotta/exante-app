@@ -1,0 +1,12 @@
+{
+  "id": "location-wrapper",
+  "name": "Location Wrapper",
+  "occurrences": 18,
+  "composedOf": [
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "content.open-roles-section",
+  "category": "CONTENT",
+  "label": "Open Roles Section",
+  "tag": "section",
+  "purpose": "Carries the substantive content of the page. Example headline: \"Open roles\".",
+  "purposeIsInferred": true,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 1,
+    "routes": 1,
+    "measuredFrom": [
+      "src/careers/index.html:1095-1146"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "heading": {
+        "type": "string",
+        "required": true,
+        "maxWords": 2
+      },
+      "subheading": {
+        "type": "string",
+        "required": true,
+        "maxWords": 4
+      },
+      "body": {
+        "type": "string[]",
+        "required": true,
+        "maxItems": 3,
+        "maxWords": 7
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "appear-on-enter",
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 525,
+      "columns": 3
+    },
+    "mobile": {
+      "heightPx": 341,
+      "columns": 2,
+      "hiddenShare": 0
+    },
+    "changes": [
+      "columns change from 3 to 2"
+    ]
+  },
+  "assetRoles": [],
+  "implementedBy": "src/pages/Careers.jsx"
+}

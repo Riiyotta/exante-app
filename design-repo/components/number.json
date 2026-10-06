@@ -1,0 +1,12 @@
+{
+  "id": "number",
+  "name": "Number",
+  "occurrences": 6,
+  "composedOf": [
+    "heading"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/customers"
+  }
+}

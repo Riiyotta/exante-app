@@ -1,0 +1,12 @@
+{
+  "id": "gcm-grosvenor",
+  "name": "GCM Grosvenor",
+  "occurrences": 1,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/about"
+  }
+}

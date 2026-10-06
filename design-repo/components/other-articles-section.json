@@ -1,0 +1,15 @@
+{
+  "id": "other-articles-section",
+  "name": "Other Articles Section",
+  "occurrences": 8,
+  "composedOf": [
+    "heading",
+    "image",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/blog/what-we-hear-when-we-talk-to-finance-teams"
+  }
+}

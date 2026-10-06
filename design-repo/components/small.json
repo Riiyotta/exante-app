@@ -1,0 +1,12 @@
+{
+  "id": "small",
+  "name": "Small",
+  "occurrences": 6,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/customers"
+  }
+}

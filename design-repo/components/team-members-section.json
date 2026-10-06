@@ -1,0 +1,15 @@
+{
+  "id": "team-members-section",
+  "name": "Team Members Section",
+  "occurrences": 3,
+  "composedOf": [
+    "heading",
+    "image",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/about"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "message",
+  "name": "Message",
+  "occurrences": 1,
+  "composedOf": [
+    "paragraph",
+    "textarea"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/contact/support"
+  }
+}

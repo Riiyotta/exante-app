@@ -1,0 +1,12 @@
+{
+  "id": "xero",
+  "name": "Xero",
+  "occurrences": 1,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

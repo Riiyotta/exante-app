@@ -1,0 +1,15 @@
+{
+  "id": "key-features-section",
+  "name": "Key Features Section",
+  "occurrences": 1,
+  "composedOf": [
+    "heading",
+    "image",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "social-icons-wrapper",
+  "name": "Social Icons Wrapper",
+  "occurrences": 18,
+  "composedOf": [
+    "link",
+    "svg"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

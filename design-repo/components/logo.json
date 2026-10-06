@@ -1,0 +1,13 @@
+{
+  "id": "logo",
+  "name": "Logo",
+  "occurrences": 18,
+  "composedOf": [
+    "image",
+    "link"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

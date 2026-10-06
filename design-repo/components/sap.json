@@ -1,0 +1,12 @@
+{
+  "id": "sap",
+  "name": "SAP",
+  "occurrences": 1,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

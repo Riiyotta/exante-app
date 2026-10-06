@@ -1,0 +1,12 @@
+{
+  "id": "heading-wrapper",
+  "name": "Heading Wrapper",
+  "occurrences": 33,
+  "composedOf": [
+    "heading"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

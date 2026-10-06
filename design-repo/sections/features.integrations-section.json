@@ -1,0 +1,74 @@
+{
+  "id": "features.integrations-section",
+  "category": "FEATURES",
+  "label": "Integrations Section",
+  "tag": "section",
+  "purpose": "Explains what the product does and why it matters. Example headline: \"No rip-and-replace required\".",
+  "purposeIsInferred": true,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 1,
+    "routes": 1,
+    "measuredFrom": [
+      "src/index.html:1556-1685"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "heading": {
+        "type": "string",
+        "required": true,
+        "maxWords": 3
+      },
+      "body": {
+        "type": "string[]",
+        "required": true,
+        "maxItems": 1,
+        "maxWords": 16
+      },
+      "images": {
+        "type": "image[]",
+        "required": false,
+        "maxItems": 12,
+        "assetRoles": [
+          "content-image"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 578,
+      "columns": 6
+    },
+    "mobile": {
+      "heightPx": 789,
+      "columns": 2,
+      "hiddenShare": 0
+    },
+    "changes": [
+      "columns change from 6 to 2",
+      "grows taller on mobile (content stacks)"
+    ]
+  },
+  "assetRoles": [
+    "content-image"
+  ],
+  "implementedBy": "src/pages/HomePage.jsx"
+}

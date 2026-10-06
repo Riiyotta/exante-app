@@ -1,0 +1,12 @@
+{
+  "id": "quote-card",
+  "name": "Quote Card",
+  "occurrences": 3,
+  "composedOf": [
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

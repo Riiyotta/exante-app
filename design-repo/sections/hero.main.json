@@ -1,0 +1,70 @@
+{
+  "id": "hero.main",
+  "category": "HERO",
+  "label": "Main",
+  "tag": "main",
+  "purpose": "Opens the page: states the offer in an h1 and gives the first call to action. Example headline: \"Contact sales\".",
+  "purposeIsInferred": true,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 2,
+    "routes": 2,
+    "measuredFrom": [
+      "src/contact/sales/index.html:710-890",
+      "src/contact/support/index.html:716-851"
+    ]
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "heading": {
+        "type": "string",
+        "required": true,
+        "maxWords": 2
+      },
+      "body": {
+        "type": "string[]",
+        "required": true,
+        "maxItems": 11,
+        "maxWords": 16
+      },
+      "ctas": {
+        "type": "cta[]",
+        "required": true,
+        "maxItems": 1,
+        "maxWords": 2
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "appear-on-enter",
+      "css-transition",
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 1173,
+      "columns": 1
+    },
+    "mobile": {
+      "heightPx": 1229,
+      "columns": 1,
+      "hiddenShare": 0
+    },
+    "changes": []
+  },
+  "assetRoles": [],
+  "implementedBy": "src/pages/ContactSales.jsx"
+}

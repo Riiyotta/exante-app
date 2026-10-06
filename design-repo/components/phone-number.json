@@ -1,0 +1,14 @@
+{
+  "id": "phone-number",
+  "name": "Phone number",
+  "occurrences": 1,
+  "composedOf": [
+    "input",
+    "paragraph",
+    "svg"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/contact/support"
+  }
+}

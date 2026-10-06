@@ -1,0 +1,14 @@
+{
+  "id": "content-section",
+  "name": "Content Section",
+  "occurrences": 11,
+  "composedOf": [
+    "heading",
+    "link",
+    "paragraph"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/contact"
+  }
+}

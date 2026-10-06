@@ -1,0 +1,12 @@
+{
+  "id": "illustration-wrapper",
+  "name": "Illustration Wrapper",
+  "occurrences": 3,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/"
+  }
+}

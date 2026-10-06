@@ -1,0 +1,7 @@
+
+      .framer-form-input::placeholder {
+        color: var(--token-7b2e0288-ef80-426e-bdd3-731aad78effb, rgb(138, 138, 138));
+        lineHeight: 120%;
+        opacity: 1;
+      }
+    

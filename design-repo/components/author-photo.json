@@ -1,0 +1,12 @@
+{
+  "id": "author-photo",
+  "name": "Author Photo",
+  "occurrences": 43,
+  "composedOf": [
+    "image"
+  ],
+  "evidence": {
+    "level": "measured",
+    "sampleRoute": "/blog"
+  }
+}
