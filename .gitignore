@@ -5,3 +5,4 @@ __pycache__/
 design-repo.zip
 qa/parity/*.png
 recon/
+.playwright-mcp/

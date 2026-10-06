@@ -9,7 +9,15 @@ import json, os, re, shutil, subprocess, sys, tempfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 PKG = os.path.dirname(REPO)
-MIRROR = os.path.join(PKG, "recon", "mirror") if os.path.isdir(os.path.join(PKG, "recon", "mirror")) else PKG
+# The evidence tree is where the ledger says it is (same rule as verify_all.py), never guessed from a root src/, which in the final layout is the
+# runnable clone's own source: guessing it made citation injections run against React files in a published copy and "fail to be caught".
+def _evidence_root():
+    try:
+        with open(os.path.join(REPO, "extraction", "measured-values.json"), encoding="utf-8") as f: snap = json.load(f).get("sourceProject", {}).get("snapshotFolder")
+    except Exception: snap = None
+    if snap: return os.path.normpath(os.path.join(PKG, snap, ".."))
+    return os.path.join(PKG, "recon", "mirror") if os.path.isdir(os.path.join(PKG, "recon", "mirror")) else PKG
+MIRROR = _evidence_root()
 
 
 def jload(p): return json.load(open(p, encoding="utf-8"))
@@ -71,6 +79,15 @@ def inj_schema_enum(r):
     p = os.path.join(r, "schema/pagespec.schema.json"); d = jload(p); d["definitions"]["node"]["properties"]["type"]["enum"].append("hero.not-a-contract"); jsave(p, d)
 def inj_rule_kind(r):
     p = os.path.join(r, "compatibility/graph.json"); d = jload(p); d["rules"].append({"id": "UNIMPLEMENTED", "severity": "error", "kind": "notARealKind"}); jsave(p, d)
+def inj_snapshot_folder(r):   # the ledger declares an evidence folder that does not exist — must fail outright, not fall back silently
+    p, d = _ledger(r)
+    if "snapshotFolder" not in d.get("sourceProject", {}): return False
+    d["sourceProject"]["snapshotFolder"] = "recon/does-not-exist/src/"; jsave(p, d)
+def inj_hero_exception(r):   # the graph claims a template has >1 HERO section that it does not
+    p = os.path.join(r, "compatibility/graph.json"); d = jload(p)
+    rule = next((x for x in d["rules"] if x["id"] == "ONE_HERO_PER_PAGE"), None)
+    if rule is None: return False
+    rule["exceptions"] = list(rule.get("exceptions", [])) + ["template.phantom-multi-hero"]; jsave(p, d)
 
 
 INJECTIONS = [
@@ -90,6 +107,8 @@ INJECTIONS = [
     ("theme resolution drift", inj_theme, "theme light"),
     ("schema enum drifted from contracts", inj_schema_enum, "schema node type enum"),
     ("graph rule the validator does not implement", inj_rule_kind, "not implemented"),
+    ("snapshotFolder points at a missing evidence folder", inj_snapshot_folder, "declares sourceProject.snapshotFolder"),
+    ("ONE_HERO_PER_PAGE exception for a template that is not one", inj_hero_exception, "ONE_HERO_PER_PAGE exceptions"),
 ]
 
 
@@ -106,6 +125,8 @@ def main():
         def fresh():
             pkg = tempfile.mkdtemp(dir=tmp)
             shutil.copytree(REPO, os.path.join(pkg, "design-repo"), ignore=shutil.ignore_patterns("__pycache__"))
+            if os.path.isfile(os.path.join(PKG, ".gitignore")):  # same evidence policy as the real package (a published copy leaves recon/ out)
+                shutil.copy(os.path.join(PKG, ".gitignore"), os.path.join(pkg, ".gitignore"))
             if os.path.isdir(os.path.join(MIRROR, "src")):
                 dst = os.path.join(pkg, os.path.relpath(MIRROR, PKG), "src")
                 os.makedirs(os.path.dirname(dst), exist_ok=True); os.symlink(os.path.join(MIRROR, "src"), dst)

@@ -9,8 +9,11 @@
   6  schema parity: template/section/assetRole enums and content definitions match the contracts
   7  templates: every node has a contract; routes assigned exactly once; coverage matches the ledger
   8  constraints + graph recomputed from templates (a rule in prose and in code must agree)
-  9  citations: every path:line-line resolves, is in range, and the cited line holds the cited tag
-     (degrades to a warning when the sibling src/ snapshot tree is absent)
+  9  citations: every path:line-line resolves, is in range, and the cited line holds the cited tag.
+     The evidence tree is resolved from measured-values.json's sourceProject.snapshotFolder, never
+     guessed from a generic root src/ (which could be the runnable clone's own source) — a ledger
+     that declares one and finds it missing fails outright; one with none at all (an older ledger)
+     degrades to a warning instead, same as a design-repo shipped without its evidence tree.
  10  tokens: every {reference} resolves; theme resolves every semantic token to the recomputed value;
      catalog ids exist; policy categories match catalog keys
  11  assets: closed role vocabulary; PINNED roles hold their exact policy; files exist (warn if no public/)
@@ -26,9 +29,18 @@ import importlib.util, json, os, re, subprocess, sys, zipfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 PKG = os.path.dirname(REPO)
-# the offline mirror (src/ snapshots + public/) lives in recon/mirror/ in the current layout; older packages keep it at the root
-MIRROR = os.path.join(PKG, "recon", "mirror") if os.path.isdir(os.path.join(PKG, "recon", "mirror")) else PKG
+MIRROR = PKG  # resolved for real at the top of main(), from measured-values.json's sourceProject.snapshotFolder
 errs, warns = [], []
+NOT_SHIPPED = False  # set when the evidence tree is absent because the package's .gitignore leaves it out (a published copy)
+
+
+def gitignored(rel):
+    """True when the package's own .gitignore excludes rel or one of its parent folders (plain folder patterns only)."""
+    gi = os.path.join(PKG, ".gitignore")
+    if not os.path.isfile(gi): return False
+    pats = {l.strip().strip("/") for l in open(gi, encoding="utf-8") if l.strip() and not l.lstrip().startswith("#")}
+    parts = rel.strip("/").split("/")
+    return any("/".join(parts[:i]) in pats for i in range(1, len(parts) + 1))
 # Pinned generation policies. Kept HERE, independent of assets/asset-roles.json, so that changing a
 # role in the registry to a different-but-still-valid policy is caught (membership alone is not enough).
 PINNED = {"logo": "must-reuse-exact", "customer-logo": "must-not-fabricate", "avatar": "must-not-fabricate",
@@ -79,6 +91,30 @@ def main():
     graph = J("compatibility/graph.json")
     assets = J("assets/asset-roles.json")
     ledger = J("extraction/measured-values.json")
+
+    # the evidence tree (rendered HTML snapshots + their asset mirror) is wherever the ledger itself says it is —
+    # never guessed from a generic root src/ or public/, which could just as easily be the runnable clone's own
+    # source. snapshotFolder is relative to the package root (PKG), e.g. "recon/mirror/src/" or "src/" for an
+    # older package that still keeps its evidence at the root. A ledger with no snapshotFolder at all (written by
+    # a builder version that predates this field) falls back to the old recon/mirror-or-root heuristic so it is
+    # not treated as a hard failure; a ledger that DOES declare one and the folder is missing is a real defect.
+    snap = ledger.get("sourceProject", {}).get("snapshotFolder")
+    if snap:
+        mirror = os.path.normpath(os.path.join(PKG, snap, ".."))
+        if not os.path.isdir(mirror):
+            # A published copy of a package (a git clone of it) deliberately leaves the evidence out: recon/ is gigabytes and the
+            # package's own .gitignore excludes it. That is not a misplaced evidence tree, so it is reported, not failed, but ONLY for
+            # the standard location: any other declared folder that is missing (a typo, a moved tree) still fails outright.
+            global NOT_SHIPPED
+            if os.path.normpath(snap) == os.path.normpath("recon/mirror/src") and gitignored("recon/mirror/src"):
+                NOT_SHIPPED = True
+                warns.append("evidence not shipped with this copy (recon/ is in .gitignore): citations and asset files are not checked here; run verify_all.py where recon/mirror/ exists to admit fully")
+            else:
+                errs.append(f"measured-values.json declares sourceProject.snapshotFolder '{snap}' but {os.path.relpath(mirror, PKG)}/ does not exist")
+    else:
+        mirror = os.path.join(PKG, "recon", "mirror") if os.path.isdir(os.path.join(PKG, "recon", "mirror")) else PKG
+    global MIRROR
+    MIRROR = mirror
     secs = {}
     for f in files_in("sections"):
         c = J(f"sections/{f}")
@@ -192,7 +228,10 @@ def main():
     for rid, key in (("SHELL_MUST_BE_FIRST", "mustBeFirst"), ("SHELL_MUST_BE_LAST", "mustBeLast"), ("NO_CONSECUTIVE_SAME_SECTION", "noConsecutive")):
         if sorted(rules.get(rid, {}).get("sections", [])) != sorted(s for s, c in secs.items() if c["constraints"].get(key)):
             errs.append(f"graph {rid} disagrees with the section contracts' {key}")
-    hero_ex = sorted(t["id"] for t in templates if sum(1 for n in t["nodes"] if secs.get(n["section"], {}).get("category") == "HERO") > 1)
+    # a repeatable node (consecutive duplicates collapsed by the model into one {repeatable, maxCount}) represents
+    # maxCount instances of that section, not one — a template with hero.main, hero.main collapses to a single
+    # node but still puts two HERO sections on the page, so it must count as 2 here too, not 1.
+    hero_ex = sorted(t["id"] for t in templates if sum((n.get("maxCount") or 1) if n.get("repeatable") else 1 for n in t["nodes"] if secs.get(n["section"], {}).get("category") == "HERO") > 1)
     if sorted(rules.get("ONE_HERO_PER_PAGE", {}).get("exceptions", [])) != hero_ex:
         errs.append(f"graph ONE_HERO_PER_PAGE exceptions {rules.get('ONE_HERO_PER_PAGE', {}).get('exceptions')} but templates give {hero_ex}")
 
@@ -209,7 +248,7 @@ def main():
             if not e: errs.append(f"citation {cite} in sections/{sid}.json is not a measured section range")
             elif e["id"] != sid: errs.append(f"citation {cite} in sections/{sid}.json points at '{e['id']}', not '{sid}'")
     if not os.path.isdir(src):
-        warns.append(f"no sibling recon/mirror/src snapshot tree — {len(ledger_at)} citations not resolved against files (expected when design-repo/ is shipped alone)")
+        warns.append(f"no evidence src/ tree at {os.path.relpath(src, PKG)} — {len(ledger_at)} citations not resolved against files (expected when design-repo/ is shipped alone)")
     else:
         cache = {}
         for cite, e in ledger_at.items():
@@ -271,7 +310,7 @@ def main():
             p = os.path.join(pub, a["path"])
             if not os.path.isfile(p): errs.append(f"asset missing on disk: public/{a['path']}")
     else:
-        warns.append("no sibling recon/mirror/public mirror — asset files not checked")
+        warns.append(f"no evidence public/ mirror at {os.path.relpath(pub, PKG)} — asset files not checked")
     for sid, c in secs.items():
         for r in c.get("assetRoles", []):
             if r not in roles: errs.append(f"sections/{sid}.json uses unknown asset role '{r}'")
@@ -343,7 +382,10 @@ def finish():
     for w in warns: print("WARN:", w)
     if errs:
         print("REPO NOT ADMITTED:"); [print("  -", e) for e in errs]; sys.exit(1)
-    print("REPO OK — structure, entryPoints, versions, counts, parity, templates, graph, citations, tokens, pinned assets, motion, paths, schema and adversarial suite all pass.")
+    if NOT_SHIPPED:
+        print("REPO OK (evidence not shipped with this copy: citations and asset files not checked) — structure, entryPoints, versions, counts, parity, templates, graph, tokens, pinned assets, motion, paths, schema and adversarial suite all pass.")
+    else:
+        print("REPO OK — structure, entryPoints, versions, counts, parity, templates, graph, citations, tokens, pinned assets, motion, paths, schema and adversarial suite all pass.")
     sys.exit(0)
 
 
