@@ -43,22 +43,59 @@ li > [data-hover-panel]:hover {
   pointer-events: auto;
 }
 
+/* The original opens this panel with a spring, not an eased transition. Measured off the live site
+ * (frame-by-frame, two runs): the panel starts ~12.5px BELOW its resting place and travels up,
+ * crosses zero at ~40% and overshoots to -0.30px at ~58%, then decays back to 0 — about 360ms end
+ * to end. The fade is much faster than the travel: opacity is fully 1 at ~39% of the duration,
+ * while the transform is still settling.
+ *
+ * A CSS transition cannot overshoot, so this is a keyframe animation; the stops below are the
+ * measured samples. Framer drives the real thing from JS (computed style reads `transition: all`
+ * with no keyframes), so this approximates the spring rather than reproducing its solver. */
+@keyframes clone-dropdown-in {
+  0%   { opacity: 0;     transform: translateY(12.5px); }
+  16%  { opacity: 0.754; transform: translateY(4.91px); }
+  23%  { opacity: 0.843; transform: translateY(3.14px); }
+  30%  { opacity: 0.951; transform: translateY(0.98px); }
+  39%  { opacity: 1;     transform: translateY(0.02px); }
+  44%  { opacity: 1;     transform: translateY(-0.18px); }
+  58%  { opacity: 1;     transform: translateY(-0.30px); }
+  72%  { opacity: 1;     transform: translateY(-0.15px); }
+  86%  { opacity: 1;     transform: translateY(-0.05px); }
+  100% { opacity: 1;     transform: translateY(0); }
+}
+
+/* No !important on opacity/transform here: a rule marked !important outranks a running animation,
+ * which would pin the end values and flatten the spring to an instant jump. The animation supplies
+ * both properties itself, and the closed rule above is overridden by `animation-fill-mode: forwards`
+ * holding the final frame. */
 li:hover > [data-hover-panel] > div > [data-framer-name^="Dropdown:"],
 li:focus-within > [data-hover-panel] > div > [data-framer-name^="Dropdown:"],
 li > [data-hover-panel]:hover > div > [data-framer-name^="Dropdown:"] {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
+  animation: clone-dropdown-in 0.36s linear forwards;
 }
 
-/* Closed: settle back to the frozen-free resting position rather than the scraped mid-spring one. */
+/* Closed: hidden at the spring's starting offset, so the next open begins where the original does.
+ * Must stay ABOVE the open-state rules — both carry !important at equal specificity, so the later
+ * one wins on source order. The short fade out is the panel dismissing, which the original does
+ * without the spring. */
+/* Neither this rule nor the open one may use !important on opacity/transform: an !important
+ * declaration outranks a running animation, which pins the spring to a single frame. Specificity
+ * alone is enough — both rules beat the panel's scraped inline opacity only because that inline
+ * value is neutralised below. */
 li > [data-hover-panel] > div > [data-framer-name^="Dropdown:"] {
-  opacity: 0 !important;
-  transform: translateY(-4px) !important;
-  transition: opacity 0.18s ease, transform 0.18s ease;
+  opacity: 0;
+  transform: translateY(12.5px);
+  transition: opacity 0.12s ease, transform 0.12s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
   li > [data-hover-panel] > div > [data-framer-name^="Dropdown:"] {
     transition: none;
+  }
+  li:hover > [data-hover-panel] > div > [data-framer-name^="Dropdown:"],
+  li:focus-within > [data-hover-panel] > div > [data-framer-name^="Dropdown:"],
+  li > [data-hover-panel]:hover > div > [data-framer-name^="Dropdown:"] {
+    animation: none;
   }
 }
