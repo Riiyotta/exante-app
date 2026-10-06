@@ -1,0 +1,64 @@
+/* Header dropdown panels (Product / Company).
+ *
+ * In the original, Framer's runtime mounts each panel into a fixed-position portal while its menu
+ * item is hovered and unmounts it on leave. The captured markup has no runtime, so every panel is
+ * left in the DOM permanently — one frozen mid-transition (opacity: 1.01443, translateY(-0.288651px),
+ * caught by the scrape while the spring was still settling).
+ *
+ * The captured CSS already holds the panels closed at rest ([data-hover-panel] { opacity: 0;
+ * pointer-events: none }), so what is missing is only the open state. This adds it, with no runtime:
+ *
+ *   closed -> unchanged (the site's own rule)
+ *   open   -> on hover or keyboard focus anywhere within the owning <li>
+ *
+ * Two details the markup forces:
+ *
+ * 1. The panel carries an inline `visibility: visible`, so any visibility rule here would need
+ *    !important to win. It does not need to: the site's own opacity/pointer-events pair already
+ *    makes the closed panel non-interactive, so visibility is left alone entirely.
+ *
+ * 2. The panel is position:fixed at top:83px while its <li> ends at y:59 — a 24px dead gap. A plain
+ *    li:hover rule would close the menu as the pointer crossed it. The captured markup includes a
+ *    [data-safearea] element in each portal for this; it is given a box that bridges the gap so the
+ *    pointer stays within the panel's own hover region on the way down.
+ *
+ * Inline styles set opacity/transform on the inner [data-framer-name^="Dropdown:"], so those two
+ * properties need !important to override the frozen mid-animation values.
+ */
+
+/* Bridge the 24px gap between the trigger and the detached panel, so travelling to the panel
+ * does not pass through dead space. Only active while the panel is open. */
+li > [data-hover-panel] > [data-safearea] {
+  top: -32px;
+  left: 0;
+  right: 0;
+  height: 32px;
+}
+
+/* Open on hover, and on keyboard focus so the menu is reachable without a pointer. */
+li:hover > [data-hover-panel],
+li:focus-within > [data-hover-panel],
+li > [data-hover-panel]:hover {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+li:hover > [data-hover-panel] > div > [data-framer-name^="Dropdown:"],
+li:focus-within > [data-hover-panel] > div > [data-framer-name^="Dropdown:"],
+li > [data-hover-panel]:hover > div > [data-framer-name^="Dropdown:"] {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Closed: settle back to the frozen-free resting position rather than the scraped mid-spring one. */
+li > [data-hover-panel] > div > [data-framer-name^="Dropdown:"] {
+  opacity: 0 !important;
+  transform: translateY(-4px) !important;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  li > [data-hover-panel] > div > [data-framer-name^="Dropdown:"] {
+    transition: none;
+  }
+}

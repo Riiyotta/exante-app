@@ -21,7 +21,7 @@ export default function Framer1h4pb9vContainer() {
                 <nav name="Desktop Menu Links" className="framer-dSwzt framer-1puqy8p framer-v-1puqy8p" data-framer-name="Desktop" style={{ "width": "100%", "opacity": "1" }}>
                   <ul className="framer-1p6ewu1" data-framer-name="Menu" style={{ "opacity": "1" }}>
                     <li className="framer-55qyn-container" data-framer-name="Product" id="eDkfbTpZ2-55qyn" name="Product" style={{ "opacity": "1" }}>
-                      <a name="Product" className="framer-1khEu framer-k11PC framer-1s8l5ug framer-v-1s8l5ug framer-necfpa" data-highlight="true" style={{ "opacity": "1" }} data-framer-name="Variant 1">
+                      <a name="Product" className="framer-1khEu framer-k11PC framer-1s8l5ug framer-v-1s8l5ug framer-necfpa" data-highlight="true" tabIndex={0} style={{ "opacity": "1" }} data-framer-name="Variant 1">
                         <div className="framer-1dkhxxh" data-framer-name="Text Wrapper" style={{ "opacity": "1" }}>
                           <div className="framer-1xgaz93" data-framer-name="Title" data-framer-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "var(--variable-reference-DACGxuA7P-t0geWjkjI)", "--framer-link-text-color": "rgb(0, 153, 255)", "--framer-link-text-decoration": "underline", "--variable-reference-DACGxuA7P-t0geWjkjI": "var(--token-dcbb78ff-9bab-4047-970b-a809a92fe3a0, rgb(34, 34, 34))", "--variable-reference-tgnfyuJOC-t0geWjkjI": "var(--token-7b2e0288-ef80-426e-bdd3-731aad78effb, rgb(138, 138, 138))", "transform": "none", "opacity": "1", "willChange": "auto" }}>
                             <p className="framer-text framer-styles-preset-1qntvuu" data-styles-preset="PagcVNRTg" style={{ "--framer-text-color": "var(--extracted-r6o4lv, var(--variable-reference-DACGxuA7P-t0geWjkjI))" }}>Product</p>
@@ -127,7 +127,7 @@ export default function Framer1h4pb9vContainer() {
                       </div>
                     </li>
                     <li className="framer-1ra5ust-container" data-framer-name="Company" id="eDkfbTpZ2-1ra5ust" name="Company" style={{ "opacity": "1" }}>
-                      <a name="Company" className="framer-1khEu framer-k11PC framer-1s8l5ug framer-v-1s8l5ug framer-necfpa" data-highlight="true" style={{ "opacity": "1" }} data-framer-name="Variant 1">
+                      <a name="Company" className="framer-1khEu framer-k11PC framer-1s8l5ug framer-v-1s8l5ug framer-necfpa" data-highlight="true" tabIndex={0} style={{ "opacity": "1" }} data-framer-name="Variant 1">
                         <div className="framer-1dkhxxh" data-framer-name="Text Wrapper" style={{ "opacity": "1" }}>
                           <div className="framer-1xgaz93" data-framer-name="Title" data-framer-component-type="RichTextContainer" style={{ "--extracted-r6o4lv": "rgba(44, 45, 44, 1)", "--framer-link-text-color": "rgb(0, 153, 255)", "--framer-link-text-decoration": "underline", "--variable-reference-DACGxuA7P-t0geWjkjI": "var(--token-dcbb78ff-9bab-4047-970b-a809a92fe3a0, rgb(34, 34, 34))", "--variable-reference-tgnfyuJOC-t0geWjkjI": "var(--token-7b2e0288-ef80-426e-bdd3-731aad78effb, rgb(138, 138, 138))", "transform": "none", "opacity": "1", "willChange": "auto" }}>
                             <p className="framer-text framer-styles-preset-1qntvuu" data-styles-preset="PagcVNRTg" style={{ "--framer-text-color": "var(--extracted-r6o4lv, var(--variable-reference-DACGxuA7P-t0geWjkjI))" }}>Company</p>
