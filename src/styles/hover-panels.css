@@ -53,16 +53,47 @@ li > [data-hover-panel]:hover {
  * measured samples. Framer drives the real thing from JS (computed style reads `transition: all`
  * with no keyframes), so this approximates the spring rather than reproducing its solver. */
 @keyframes clone-dropdown-in {
-  0%   { opacity: 0;     transform: translateY(12.5px); }
-  16%  { opacity: 0.754; transform: translateY(4.91px); }
-  23%  { opacity: 0.843; transform: translateY(3.14px); }
-  30%  { opacity: 0.951; transform: translateY(0.98px); }
-  39%  { opacity: 1;     transform: translateY(0.02px); }
-  44%  { opacity: 1;     transform: translateY(-0.18px); }
-  58%  { opacity: 1;     transform: translateY(-0.30px); }
-  72%  { opacity: 1;     transform: translateY(-0.15px); }
-  86%  { opacity: 1;     transform: translateY(-0.05px); }
-  100% { opacity: 1;     transform: translateY(0); }
+  0% { opacity: 0.000; transform: translateY(12.500px); }
+  2.5% { opacity: 0.231; transform: translateY(11.840px); }
+  5% { opacity: 0.443; transform: translateY(11.134px); }
+  7.5% { opacity: 0.524; transform: translateY(9.513px); }
+  10% { opacity: 0.593; transform: translateY(8.136px); }
+  12.5% { opacity: 0.661; transform: translateY(6.789px); }
+  15% { opacity: 0.725; transform: translateY(5.506px); }
+  17.5% { opacity: 0.780; transform: translateY(4.410px); }
+  20% { opacity: 0.826; transform: translateY(3.474px); }
+  22.5% { opacity: 0.864; transform: translateY(2.721px); }
+  25% { opacity: 0.897; transform: translateY(2.069px); }
+  27.5% { opacity: 0.923; transform: translateY(1.539px); }
+  30% { opacity: 0.947; transform: translateY(1.051px); }
+  32.5% { opacity: 0.965; transform: translateY(0.702px); }
+  35% { opacity: 0.981; transform: translateY(0.385px); }
+  37.5% { opacity: 0.991; transform: translateY(0.171px); }
+  40% { opacity: 0.999; transform: translateY(-0.012px); }
+  42.5% { opacity: 1.000; transform: translateY(-0.118px); }
+  45% { opacity: 1.000; transform: translateY(-0.202px); }
+  47.5% { opacity: 1.000; transform: translateY(-0.254px); }
+  50% { opacity: 1.000; transform: translateY(-0.286px); }
+  52.5% { opacity: 1.000; transform: translateY(-0.298px); }
+  55% { opacity: 1.000; transform: translateY(-0.296px); }
+  57.5% { opacity: 1.000; transform: translateY(-0.285px); }
+  60% { opacity: 1.000; transform: translateY(-0.266px); }
+  62.5% { opacity: 1.000; transform: translateY(-0.246px); }
+  65% { opacity: 1.000; transform: translateY(-0.219px); }
+  67.5% { opacity: 1.000; transform: translateY(-0.192px); }
+  70% { opacity: 1.000; transform: translateY(-0.167px); }
+  72.5% { opacity: 1.000; transform: translateY(-0.143px); }
+  75% { opacity: 1.000; transform: translateY(-0.121px); }
+  77.5% { opacity: 1.000; transform: translateY(-0.100px); }
+  80% { opacity: 1.000; transform: translateY(-0.082px); }
+  82.5% { opacity: 1.000; transform: translateY(-0.066px); }
+  85% { opacity: 1.000; transform: translateY(-0.052px); }
+  87.5% { opacity: 1.000; transform: translateY(-0.040px); }
+  90% { opacity: 1.000; transform: translateY(-0.030px); }
+  92.5% { opacity: 1.000; transform: translateY(-0.022px); }
+  95% { opacity: 1.000; transform: translateY(-0.016px); }
+  97.5% { opacity: 1.000; transform: translateY(-0.008px); }
+  100% { opacity: 1.000; transform: translateY(0.000px); }
 }
 
 /* No !important on opacity/transform here: a rule marked !important outranks a running animation,
