@@ -24,8 +24,8 @@ Offline mirror, information architecture and design repo for **Exante: AI Teamma
 | Step | Result | Output |
 |---|---|---|
 | 1. Draft-07 schema validation of example.pagespec.json | PASS | 0 errors |
-| 2. Adversarial suite | PASS | adversarial: 32 passed, 0 failed (10 controls, 22 mutations, 4 skipped as not applicable) |
-| 3. Self-containment (design-repo alone in an empty temp dir) | PASS | REPO OK — structure, entryPoints, versions, counts, parity, templates, graph, citations, tokens, pinned assets, motion, paths, schema and adversarial suite all pass. / adversarial: 32 passed, 0 failed (10 controls, 22 mutations, 4 skipped as not applicable) |
+| 2. Adversarial suite | PASS | adversarial: 35 passed, 0 failed (10 controls, 25 mutations, 4 skipped as not applicable) |
+| 3. Self-containment (design-repo alone in an empty temp dir) | PASS | REPO OK — structure, entryPoints, versions, counts, parity, templates, graph, citations, tokens, pinned assets, motion, paths, schema and adversarial suite all pass. / adversarial: 35 passed, 0 failed (10 controls, 25 mutations, 4 skipped as not applicable) |
 | Drift proof (every check fails on injected drift) | PASS | drift-proof: 19 passed, 0 failed, 0 skipped |
 | Admission: verify_all.py in place (with recon/mirror/) | PASS | REPO OK — structure, entryPoints, versions, counts, parity, templates, graph, citations, tokens, pinned assets, motion, paths, schema and adversarial suite all pass. |
 | IA: ia-builder validate.mjs | PASS | All hard invariants reconcile. |

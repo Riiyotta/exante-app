@@ -46,6 +46,8 @@
         "required": false,
         "maxItems": 12,
         "assetRoles": [
+          "avatar",
+          "credential-logo",
           "content-image",
           "icon"
         ]
@@ -81,8 +83,11 @@
     ]
   },
   "assetRoles": [
+    "avatar",
+    "credential-logo",
     "content-image",
     "icon"
   ],
+  "contentPolicy": "Measured photos include real team members' headshots and real companies'/institutions' logos used as team credentials, alongside decorative imagery. Generated pages must never generate or reuse a real person's likeness for the avatar slots, or a real company's or institution's mark for the credential-logo slots; use neutral placeholders for both.",
   "implementedBy": "src/pages/About.jsx"
 }

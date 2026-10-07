@@ -33,7 +33,7 @@
         "required": false,
         "maxItems": 12,
         "assetRoles": [
-          "content-image"
+          "integration-logo"
         ]
       }
     }
@@ -68,7 +68,8 @@
     ]
   },
   "assetRoles": [
-    "content-image"
+    "integration-logo"
   ],
+  "contentPolicy": "Measured logos name real third-party integration partners (accounting, payments and ERP platforms the product connects to). Generated pages must never reproduce or fabricate a real company's mark; use explicit integration-logo placeholders.",
   "implementedBy": "src/pages/HomePage.jsx"
 }

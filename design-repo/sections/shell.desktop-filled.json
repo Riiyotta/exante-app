@@ -29,6 +29,14 @@
         "required": true,
         "maxItems": 4,
         "maxWords": 3
+      },
+      "images": {
+        "type": "image[]",
+        "required": false,
+        "maxItems": 1,
+        "assetRoles": [
+          "logo"
+        ]
       }
     }
   },
@@ -59,6 +67,9 @@
     },
     "changes": []
   },
-  "assetRoles": [],
+  "assetRoles": [
+    "logo"
+  ],
+  "contentPolicy": "Carries the site's own brand mark (the Exante wordmark). Generated pages must swap in the generated business's own logo; never reuse the measured mark.",
   "implementedBy": "src/pages/ContactSales.jsx"
 }

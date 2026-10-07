@@ -8,28 +8,49 @@
       "pinned": true,
       "description": "The site's own brand mark.",
       "licensing": "Use the exact supplied file. Never redraw, recolour, or invent a variant.",
-      "observed": 0
+      "observed": 2
     },
     "customer-logo": {
       "generationPolicy": "must-not-fabricate",
       "pinned": true,
-      "description": "Third-party company logos shown as social proof.",
+      "description": "Third-party company logos shown as social proof (e.g. in a testimonial or client-logo wall).",
       "licensing": "Real trademarks. A generator must never create or reproduce a real company's logo; use an explicit placeholder.",
+      "observed": 3
+    },
+    "integration-logo": {
+      "generationPolicy": "must-not-fabricate",
+      "pinned": true,
+      "description": "Third-party product/platform marks shown as integration partners (e.g. accounting, payments or ERP software the product connects to). Distinct from customer-logo: these name a partner product, not a customer the company serves.",
+      "licensing": "Real trademarks. A generator must never create or reproduce a real company's logo; use an explicit placeholder.",
+      "observed": 12
+    },
+    "compliance-badge": {
+      "generationPolicy": "must-not-fabricate",
+      "pinned": true,
+      "description": "Certification or compliance graphics (e.g. SOC 2, ISO 27001, GDPR) asserting an audited claim about the business.",
+      "licensing": "An audited claim, not decoration. A generator must never invent, reuse, or imply a certification the generated business does not hold; use an explicit placeholder or omit the badge.",
       "observed": 0
+    },
+    "credential-logo": {
+      "generationPolicy": "must-not-fabricate",
+      "pinned": true,
+      "description": "Third-party company or institution marks shown as team credentials (e.g. \"our team previously worked at / studied at\"). Distinct from customer-logo (not a client) and integration-logo (not a product integration): these name a prior employer or school of a real person on the team.",
+      "licensing": "Real trademarks. A generator must never create or reproduce a real company's or institution's logo; use an explicit placeholder.",
+      "observed": 17
     },
     "avatar": {
       "generationPolicy": "must-not-fabricate",
       "pinned": true,
       "description": "Photos of real people (customers, team, authors).",
       "licensing": "Real people's likeness. Never generate or reuse a real person's photo; use a neutral placeholder.",
-      "observed": 2
+      "observed": 9
     },
     "icon": {
       "generationPolicy": "may-generate-new",
       "pinned": false,
       "description": "Small glyphs (<=48px) used as UI or feature markers.",
       "licensing": "Generic glyphs may be generated; do not copy a proprietary icon set verbatim.",
-      "observed": 5
+      "observed": 4
     },
     "illustration": {
       "generationPolicy": "may-generate-new",
@@ -57,7 +78,7 @@
       "pinned": false,
       "description": "Other in-page imagery (screenshots, photos, cards).",
       "licensing": "May be regenerated; never include real customer data, names or proprietary UI.",
-      "observed": 155
+      "observed": 120
     },
     "animation": {
       "generationPolicy": "must-reuse-exact",
@@ -102,6 +123,56 @@
     "must-not-reuse-live-endpoint"
   ],
   "assets": [
+    {
+      "path": "_extracted/brand/exante-wordmark-black.svg",
+      "bytes": 5009,
+      "role": "logo",
+      "evidence": {
+        "note": "Extracted from an inline data:image/svg+xml URI baked into <img src> across 9 of the site's 7 header/footer implementation variants (black fill, for light backgrounds). Not a separate file on the live site \u2014 Framer serializes the vector path data directly; this file is the design-repo's own extraction so the mark is a trackable, pinned asset instead of invisible to the role system. Path data verified byte-identical to the white-fill variant; only the fill colour differs.",
+        "route": "all pages (header)",
+        "section": "shell.desktop-filled"
+      }
+    },
+    {
+      "path": "_extracted/brand/exante-wordmark-white.svg",
+      "bytes": 5099,
+      "role": "logo",
+      "evidence": {
+        "note": "Extracted from an inline data:image/svg+xml URI baked into <img src> across 11 of the site's 7 header/footer implementation variants (white fill, for dark backgrounds, e.g. the footer). Not a separate file on the live site; see exante-wordmark-black.svg for the extraction method.",
+        "route": "all pages (footer, and the header where it renders on a dark surface)",
+        "section": "shell.desktop"
+      }
+    },
+    {
+      "path": "_extracted/clients/client-logo-1.svg",
+      "bytes": 18643,
+      "role": "customer-logo",
+      "evidence": {
+        "note": "Extracted from an inline data:image/svg+xml URI in the home page's client-logo row (ClientsSection.jsx), measured twice. The real company this mark belongs to was NOT conclusively identified: component records elsewhere in this repo (bain-co.json, barclays.json, bcg.json, bmw.json) name real companies measured on a different page/section (a team-credentials strip, see credential-logo entries), and could not be reliably paired to this specific file without risking a wrong attribution. Treat as a real, unidentified third-party trademark \u2014 must-not-fabricate still applies regardless of which company it is.",
+        "route": "/",
+        "section": "proof.clients-section"
+      }
+    },
+    {
+      "path": "_extracted/clients/client-logo-2.svg",
+      "bytes": 18356,
+      "role": "customer-logo",
+      "evidence": {
+        "note": "Extracted from an inline data:image/svg+xml URI in the home page's client-logo row (ClientsSection.jsx), measured twice. Company identity not conclusively resolved; see client-logo-1.svg for why.",
+        "route": "/",
+        "section": "proof.clients-section"
+      }
+    },
+    {
+      "path": "_extracted/clients/client-logo-3.svg",
+      "bytes": 13126,
+      "role": "customer-logo",
+      "evidence": {
+        "note": "Extracted from an inline data:image/svg+xml URI in the home page's client-logo row (ClientsSection.jsx), measured twice. Company identity not conclusively resolved; see client-logo-1.svg for why.",
+        "route": "/",
+        "section": "proof.clients-section"
+      }
+    },
     {
       "path": "_ext/framerusercontent.com/images/ONkjvQAz3gacwCm0BbwyHGXM9Y__7eef4b5a.jpg",
       "bytes": 3920670,
@@ -313,7 +384,7 @@
     {
       "path": "_ext/framerusercontent.com/images/ijn0V7zrxHcn4hO9sPOgqFnxf8__bd50103c.png",
       "bytes": 218040,
-      "role": "content-image",
+      "role": "avatar",
       "evidence": {
         "route": "/careers",
         "section": "content.team-members-section",
@@ -351,7 +422,7 @@
     {
       "path": "_ext/framerusercontent.com/images/MCZyMtveqhI2BEty3vdRwE2h1I__c9a50c4d.jpeg",
       "bytes": 174185,
-      "role": "icon",
+      "role": "avatar",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -405,7 +476,7 @@
     {
       "path": "_ext/framerusercontent.com/images/F4kOOrsfgTaLWg5pWtnvDDEHI__5c108d19.jpg",
       "bytes": 123553,
-      "role": "content-image",
+      "role": "avatar",
       "evidence": {
         "route": "/careers",
         "section": "content.team-members-section",
@@ -441,7 +512,7 @@
     {
       "path": "_ext/framerusercontent.com/images/SK6EahIAUi9kaimMuwAkQv7Bk5s__3f5acd4d.png",
       "bytes": 101551,
-      "role": "content-image",
+      "role": "avatar",
       "evidence": {
         "route": "/careers",
         "section": "content.team-members-section",
@@ -483,7 +554,7 @@
     {
       "path": "_ext/framerusercontent.com/images/L6uF4YgyovIH88drB5h7Nv3Sl4__7c6b2e4d.png",
       "bytes": 94320,
-      "role": "content-image",
+      "role": "avatar",
       "evidence": {
         "route": "/careers",
         "section": "content.team-members-section",
@@ -597,7 +668,7 @@
     {
       "path": "_ext/framerusercontent.com/images/pV8NQU9x9cdVOspWwm9XdQgKBI__350a3ce9.jpeg",
       "bytes": 43323,
-      "role": "content-image",
+      "role": "avatar",
       "evidence": {
         "route": "/customers",
         "section": "proof.testimonials-section",
@@ -681,7 +752,7 @@
     {
       "path": "_ext/framerusercontent.com/images/YLPrdfXVuCXxeGpLn0E7GFylE__c9a50c4d.jpeg",
       "bytes": 35599,
-      "role": "content-image",
+      "role": "avatar",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1313,7 +1384,7 @@
     {
       "path": "_ext/framerusercontent.com/images/vNFeVjUhd9Hr1i7YQDrQBc8__a8c4b926.png",
       "bytes": 13535,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1373,7 +1444,7 @@
     {
       "path": "_ext/framerusercontent.com/images/grRKb0931t9k13u90jrYb7Do__ec48d309.png",
       "bytes": 12605,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1391,7 +1462,7 @@
     {
       "path": "_ext/framerusercontent.com/images/sna7yclqHMYOwA932FoDDp6ZY3Q__0e8982c0.png",
       "bytes": 12418,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1425,7 +1496,7 @@
     {
       "path": "_ext/framerusercontent.com/images/2UwbZq4bSCumv5vWr5LyLReO6M8__c43e0e02.png",
       "bytes": 12020,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1443,7 +1514,7 @@
     {
       "path": "_ext/framerusercontent.com/images/Cb7WYIi9BJL30a8jRB1TlsrWVF4__40807ac9.png",
       "bytes": 11699,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1469,7 +1540,7 @@
     {
       "path": "_ext/framerusercontent.com/images/J41J7KpjY8XCNt0HIeXHLZhdMw__be3cff65.png",
       "bytes": 10886,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1495,7 +1566,7 @@
     {
       "path": "_ext/framerusercontent.com/images/awj00Ao32PQ0eTAfZbOqPjfLspk__8ca7ba66.png",
       "bytes": 10063,
-      "role": "content-image",
+      "role": "integration-logo",
       "evidence": {
         "route": "/",
         "section": "features.integrations-section",
@@ -1513,7 +1584,7 @@
     {
       "path": "_ext/framerusercontent.com/images/zRycQ1l6vtKGIHGiHmDxxeJ0tU__7b4217e2.png",
       "bytes": 9718,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1531,7 +1602,7 @@
     {
       "path": "_ext/framerusercontent.com/images/9tFRnEb9nl8GrbDkLHWPcPbspxk__8a675a26.png",
       "bytes": 9518,
-      "role": "content-image",
+      "role": "integration-logo",
       "evidence": {
         "route": "/",
         "section": "features.integrations-section",
@@ -1549,7 +1620,7 @@
     {
       "path": "_ext/framerusercontent.com/images/OVVSJJjHiwXoGDPfiX9TlezUdC4__581703c9.png",
       "bytes": 9368,
-      "role": "content-image",
+      "role": "integration-logo",
       "evidence": {
         "route": "/",
         "section": "features.integrations-section",
@@ -1567,7 +1638,7 @@
     {
       "path": "_ext/framerusercontent.com/images/ybIt4jGTTW9GTo2L6fnIiPxm4__93d5e784.png",
       "bytes": 9297,
-      "role": "content-image",
+      "role": "integration-logo",
       "evidence": {
         "route": "/",
         "section": "features.integrations-section",
@@ -1585,7 +1656,7 @@
     {
       "path": "_ext/framerusercontent.com/images/EF1g2TBiA17X9HRfiz3mKs3lE__eafbc166.png",
       "bytes": 8986,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1619,7 +1690,7 @@
     {
       "path": "_ext/framerusercontent.com/images/xVQUZrmgFfXDzv72jDWIcRzN7s__a435ae25.png",
       "bytes": 8650,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1629,7 +1700,7 @@
     {
       "path": "_ext/framerusercontent.com/images/6QX8fAHnNx1fUfDdD0uxyjNEK34__c210166c.png",
       "bytes": 8427,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1639,7 +1710,7 @@
     {
       "path": "_ext/framerusercontent.com/images/jXwaMJgER6yybkAl5qz0lg4__0e787358.png",
       "bytes": 8284,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1649,7 +1720,7 @@
     {
       "path": "_ext/framerusercontent.com/images/Gw78Z7v2zgJsA2qKsTvshvwxaEc__6670de2a.png",
       "bytes": 8226,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1659,7 +1730,7 @@
     {
       "path": "_ext/framerusercontent.com/images/KIW2ONdsY3eQ6UdorSh6mAUJo__ec11b240.png",
       "bytes": 8051,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1669,7 +1740,7 @@
     {
       "path": "_ext/framerusercontent.com/images/9iQ9bWHpgAh1SJmLH4R4dEhr44__4dc8aa5c.png",
       "bytes": 8041,
-      "role": "content-image",
+      "role": "integration-logo",
       "evidence": {
         "route": "/",
         "section": "features.integrations-section",
@@ -1695,7 +1766,7 @@
     {
       "path": "_ext/framerusercontent.com/images/56kk3ZH6KJxlm8bemGC47yPHQ__3ff96df6.png",
       "bytes": 7856,
-      "role": "content-image",
+      "role": "integration-logo",
       "evidence": {
         "route": "/",
         "section": "features.integrations-section",
@@ -1745,7 +1816,7 @@
     {
       "path": "_ext/framerusercontent.com/images/lwnLO9kRcavNG4k5D42Fm8TjGHU__96394d7b.png",
       "bytes": 7513,
-      "role": "content-image",
+      "role": "integration-logo",
       "evidence": {
         "route": "/",
         "section": "features.integrations-section",
@@ -1755,7 +1826,7 @@
     {
       "path": "_ext/framerusercontent.com/images/zpIa8ymUF1bED7LCKhmeddEt14__ad25dd47.png",
       "bytes": 7471,
-      "role": "content-image",
+      "role": "integration-logo",
       "evidence": {
         "route": "/",
         "section": "features.integrations-section",
@@ -1765,7 +1836,7 @@
     {
       "path": "_ext/framerusercontent.com/images/st0tARmYXa0PUArIzVoEpICWREc__d5bff886.png",
       "bytes": 7436,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1799,7 +1870,7 @@
     {
       "path": "_ext/framerusercontent.com/images/lUw9A8YxbB9UWa2QghArR6RnQ__3af7de30.png",
       "bytes": 7359,
-      "role": "content-image",
+      "role": "integration-logo",
       "evidence": {
         "route": "/",
         "section": "features.integrations-section",
@@ -1825,7 +1896,7 @@
     {
       "path": "_ext/framerusercontent.com/images/ltVnmHFNFZ3rySPWRQUS4qpwgow__03762712.png",
       "bytes": 7133,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1867,7 +1938,7 @@
     {
       "path": "_ext/framerusercontent.com/images/NSBaYpZbRFJuYYhPDW0zCwlpCM__51ea2004.png",
       "bytes": 6888,
-      "role": "content-image",
+      "role": "integration-logo",
       "evidence": {
         "route": "/",
         "section": "features.integrations-section",
@@ -1909,7 +1980,7 @@
     {
       "path": "_ext/framerusercontent.com/images/DPCFZTIBWTZt6tmv1D2X1IEBviw__96394d7b.png",
       "bytes": 6378,
-      "role": "content-image",
+      "role": "integration-logo",
       "evidence": {
         "route": "/",
         "section": "features.integrations-section",
@@ -1935,7 +2006,7 @@
     {
       "path": "_ext/framerusercontent.com/images/eWoAN9GAyRf9qibH4SoViiiajc__1f4be997.png",
       "bytes": 6109,
-      "role": "content-image",
+      "role": "integration-logo",
       "evidence": {
         "route": "/",
         "section": "features.integrations-section",
@@ -1953,7 +2024,7 @@
     {
       "path": "_ext/framerusercontent.com/images/hc1B8cIoQKmyxFeWlONLfb0jk__7c3048a6.png",
       "bytes": 5593,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",
@@ -1963,7 +2034,7 @@
     {
       "path": "_ext/framerusercontent.com/images/WMrDwsDv7tmmTMw6X35uPbWPOIE__931e7260.png",
       "bytes": 5573,
-      "role": "content-image",
+      "role": "credential-logo",
       "evidence": {
         "route": "/about",
         "section": "content.team-members-section",

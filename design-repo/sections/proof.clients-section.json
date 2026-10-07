@@ -27,6 +27,14 @@
         "required": true,
         "maxItems": 1,
         "maxWords": 14
+      },
+      "images": {
+        "type": "image[]",
+        "required": false,
+        "maxItems": 3,
+        "assetRoles": [
+          "customer-logo"
+        ]
       }
     }
   },
@@ -58,7 +66,9 @@
       "grows taller on mobile (content stacks)"
     ]
   },
-  "assetRoles": [],
-  "contentPolicy": "Measured copy quotes real customers and companies. Generated pages must write new, clearly fictional quotes and names, and use placeholders for customer logos and avatars.",
+  "assetRoles": [
+    "customer-logo"
+  ],
+  "contentPolicy": "Measured copy quotes real customers and companies, and the logo row shows real customers' marks (3 distinct companies, each measured twice). Generated pages must write new, clearly fictional quotes and names, and use explicit placeholders for the customer-logo slots; never reproduce or fabricate a real company's logo.",
   "implementedBy": "src/pages/HomePage.jsx"
 }

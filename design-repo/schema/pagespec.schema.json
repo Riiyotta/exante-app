@@ -46,6 +46,9 @@
       "enum": [
         "logo",
         "customer-logo",
+        "integration-logo",
+        "compliance-badge",
+        "credential-logo",
         "avatar",
         "icon",
         "illustration",
@@ -1474,6 +1477,26 @@
             "minLength": 1,
             "maxWords": 14
           }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
+              }
+            }
+          }
         }
       },
       "required": [
@@ -1632,6 +1655,26 @@
                 "type": "string",
                 "pattern": "^(/|#)",
                 "description": "Relative path or #anchor only: generated pages must not link to the original site's live URLs."
+              }
+            }
+          }
+        },
+        "images": {
+          "type": "array",
+          "maxItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "assetRole"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "assetRole": {
+                "$ref": "#/definitions/assetRole"
+              },
+              "alt": {
+                "type": "string",
+                "maxWords": 16
               }
             }
           }

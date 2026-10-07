@@ -38,8 +38,9 @@
       "images": {
         "type": "image[]",
         "required": false,
-        "maxItems": 1,
+        "maxItems": 2,
         "assetRoles": [
+          "logo",
           "content-image"
         ]
       }
@@ -72,7 +73,9 @@
     "changes": []
   },
   "assetRoles": [
+    "logo",
     "content-image"
   ],
+  "contentPolicy": "Carries the site's own brand mark (the Exante wordmark) alongside other footer imagery. Generated pages must swap in the generated business's own logo for the logo slot; never reuse the measured mark.",
   "implementedBy": "src/pages/ContactSales.jsx"
 }

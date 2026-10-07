@@ -368,7 +368,8 @@
     ],
     "proof.clients-section": [
       "heading",
-      "body"
+      "body",
+      "images"
     ],
     "proof.testimonials-section": [
       "items",
@@ -382,7 +383,8 @@
     ],
     "shell.desktop-filled": [
       "body",
-      "ctas"
+      "ctas",
+      "images"
     ],
     "support.faq-section": [
       "heading",

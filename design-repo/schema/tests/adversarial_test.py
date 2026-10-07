@@ -74,6 +74,55 @@ def main():
         role = (SECS[example["nodes"][img]["type"]]["content"]["fields"]["images"].get("assetRoles") or ["content-image"])[0]
         mut("alt text over its word budget", lambda s: s["nodes"][img]["content"].__setitem__("images", [{"assetRole": role, "alt": " ".join(["w"] * 17)}]), "alt has 17 words")
 
+    # ---- asset-role closed-set proofs: a must-not-fabricate role cannot be swapped out for
+    # content-image (or vice versa) just because both are "an image role" in the abstract. The
+    # check in semantic_validate.py is a plain per-section allowlist (role in/out of the list for
+    # that section's images field), not role-aware, so each proof targets the specific section
+    # whose allowlist is meant to exclude content-image -- not the schema's generic enum.
+    def mut_role_swap(label, tmpl_id, section_id, forbidden_role):
+        tmpl = {t["id"]: t for t in TEMPLATES}.get(tmpl_id)
+        if tmpl is None:
+            skipped.append(f"{label}: no template '{tmpl_id}' in this repo"); return
+        if section_id not in [n["section"] for n in tmpl["nodes"]]:
+            skipped.append(f"{label}: '{section_id}' is not part of {tmpl_id}"); return
+        allowed = SECS[section_id]["content"]["fields"].get("images", {}).get("assetRoles") or []
+        if forbidden_role in allowed:
+            skipped.append(f"{label}: '{forbidden_role}' is itself allowed on {section_id} (nothing to prove)"); return
+        spec = control_for(tmpl)
+        ni = next(i for i, n in enumerate(spec["nodes"]) if n["type"] == section_id)
+        spec["nodes"][ni]["content"]["images"] = [{"assetRole": forbidden_role}]
+        cases.append((label, spec, "error", f"role '{forbidden_role}' not used by this section"))
+
+    # (a) a content-image cannot stand in for integration-logo on the integrations grid
+    mut_role_swap("content-image cannot substitute for integration-logo", "template.home",
+                  "features.integrations-section", "content-image")
+    # (b) a role that is not avatar/content-image cannot be smuggled into the testimonials
+    # section's image slot. (content-image itself is legitimately allowed there alongside avatar
+    # -- this section mixes real headshots with decorative imagery -- so the proof that matters is
+    # the closed allowlist, not content-image specifically; integration-logo is a real excluded role.)
+    mut_role_swap("a role outside its allowlist cannot substitute for avatar", "template.customers",
+                  "proof.testimonials-section", "integration-logo")
+    # (c) compliance-badge is pinned must-not-fabricate but no measured section on this site uses
+    # a certification graphic, so there is no section whose allowlist is "supposed to" include it.
+    # The protection that matters is the converse of (a)/(b): compliance-badge must not be
+    # insertable into ANY section's images field just because it exists in the role catalog -- the
+    # allowlist is closed per section, not "any pinned role is fine anywhere". Proven against every
+    # section in this repo that has an images field.
+    img_secs = [sid for sid, c in SECS.items() if "images" in c["content"]["fields"]]
+    bad = next((sid for sid in sorted(img_secs) if "compliance-badge" not in (SECS[sid]["content"]["fields"]["images"].get("assetRoles") or [])), None)
+    if bad is None:
+        skipped.append("compliance-badge cannot substitute for a section's own role: every section with images already allows it")
+    else:
+        owner = next((t for t in TEMPLATES if bad in [n["section"] for n in t["nodes"]]), None)
+        if owner is None:
+            skipped.append(f"compliance-badge cannot substitute for a section's own role: no template contains {bad}")
+        else:
+            spec = control_for(owner)
+            ni = next(i for i, n in enumerate(spec["nodes"]) if n["type"] == bad)
+            spec["nodes"][ni]["content"]["images"] = [{"assetRole": "compliance-badge"}]
+            cases.append((f"compliance-badge cannot substitute for {bad}'s own role", spec, "error",
+                          "role 'compliance-badge' not used by this section"))
+
     # ---- structural layer (template cross-reference)
     once = [i for i, tn in enumerate(tmpl["nodes"]) if tn["required"] and tseq.count(tn["section"]) == 1]
     mut("removed mandatory section", lambda s: s["nodes"].pop(types.index(tseq[once[0]])), "missing",

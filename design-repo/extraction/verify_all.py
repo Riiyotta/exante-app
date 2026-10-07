@@ -43,7 +43,8 @@ def gitignored(rel):
     return any("/".join(parts[:i]) in pats for i in range(1, len(parts) + 1))
 # Pinned generation policies. Kept HERE, independent of assets/asset-roles.json, so that changing a
 # role in the registry to a different-but-still-valid policy is caught (membership alone is not enough).
-PINNED = {"logo": "must-reuse-exact", "customer-logo": "must-not-fabricate", "avatar": "must-not-fabricate",
+PINNED = {"logo": "must-reuse-exact", "customer-logo": "must-not-fabricate", "integration-logo": "must-not-fabricate",
+          "compliance-badge": "must-not-fabricate", "credential-logo": "must-not-fabricate", "avatar": "must-not-fabricate",
           "font": "must-reuse-exact", "live-embed": "must-not-reuse-live-endpoint",
           "founder-contact-email": "must-not-reuse-live-endpoint"}
 REQUIRED = ["registry.manifest.json", "README.md", "CHANGELOG.md", "tokens/themes/light.json",
