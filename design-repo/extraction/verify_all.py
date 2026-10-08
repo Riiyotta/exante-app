@@ -103,13 +103,18 @@ def main():
     if snap:
         mirror = os.path.normpath(os.path.join(PKG, snap, ".."))
         if not os.path.isdir(mirror):
-            # A published copy of a package (a git clone of it) deliberately leaves the evidence out: recon/ is gigabytes and the
-            # package's own .gitignore excludes it. That is not a misplaced evidence tree, so it is reported, not failed, but ONLY for
-            # the standard location: any other declared folder that is missing (a typo, a moved tree) still fails outright.
+            # A published copy of a package (the shipped zip, or a git clone of it) deliberately leaves the evidence out:
+            # recon/ is gigabytes. Such a copy carries neither recon/ nor the package's .gitignore, so the real signal is the
+            # absence of the whole evidence root — .gitignore alone only ever resolves inside the working tree, which is the
+            # one place recon/ is present anyway, so gating on it made the shipped zip fail its own verifier. Kept as an
+            # alternative so an in-tree copy that ignores recon/ still degrades. A declared folder missing while its evidence
+            # root IS present stays a hard failure: that is a typo or a moved tree, not a deliberate omission.
             global NOT_SHIPPED
-            if os.path.normpath(snap) == os.path.normpath("recon/mirror/src") and gitignored("recon/mirror/src"):
+            standard = os.path.normpath(snap) == os.path.normpath("recon/mirror/src")
+            root_absent = not os.path.isdir(os.path.join(PKG, snap.strip("/").split("/")[0]))
+            if standard and (root_absent or gitignored("recon/mirror/src")):
                 NOT_SHIPPED = True
-                warns.append("evidence not shipped with this copy (recon/ is in .gitignore): citations and asset files are not checked here; run verify_all.py where recon/mirror/ exists to admit fully")
+                warns.append("evidence not shipped with this copy (recon/ is absent): citations and asset files are not checked here; run verify_all.py where recon/mirror/ exists to admit fully")
             else:
                 errs.append(f"measured-values.json declares sourceProject.snapshotFolder '{snap}' but {os.path.relpath(mirror, PKG)}/ does not exist")
     else:
