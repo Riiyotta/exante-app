@@ -1,19 +1,20 @@
 {
   "id": "hero.main",
-  "category": "HERO",
+  "category": "CTA",
   "label": "Main",
   "tag": "main",
-  "purpose": "Opens the page: states the offer in an h1 and gives the first call to action. Example headline: \"Contact sales\".",
-  "purposeIsInferred": true,
+  "purpose": "Conversion block of the contact pages: a heading, contact-channel links and the demo-request / support form.",
+  "purposeIsInferred": false,
   "nameSource": "data-attr",
   "evidence": {
     "level": "measured",
     "instances": 2,
     "routes": 2,
     "measuredFrom": [
-      "src/contact/sales/index.html:710-890",
-      "src/contact/support/index.html:716-851"
-    ]
+      "src/sections/Main.jsx:6-171",
+      "src/sections/Main2.jsx:6-126"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -56,7 +57,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 1173,
-      "columns": 1
+      "columns": 1,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 1229,
@@ -66,5 +68,20 @@
     "changes": []
   },
   "assetRoles": [],
-  "implementedBy": "src/pages/ContactSales.jsx"
+  "implementedBy": "src/sections/Main.jsx",
+  "semantic": {
+    "id": "hero.main",
+    "category": "CTA"
+  },
+  "source": {
+    "id": "Main",
+    "tag": "main",
+    "file": "src/sections/Main.jsx",
+    "lines": [
+      6,
+      171
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

@@ -11,8 +11,9 @@
     "instances": 1,
     "routes": 1,
     "measuredFrom": [
-      "src/index.html:883-1018"
-    ]
+      "src/sections/ProblemSection.jsx:4-144"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -54,7 +55,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 779,
-      "columns": 3
+      "columns": 3,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 897,
@@ -66,5 +68,20 @@
     ]
   },
   "assetRoles": [],
-  "implementedBy": "src/pages/HomePage.jsx"
+  "implementedBy": "src/sections/ProblemSection.jsx",
+  "semantic": {
+    "id": "content.problem-section",
+    "category": "CONTENT"
+  },
+  "source": {
+    "id": "ProblemSection",
+    "tag": "section",
+    "file": "src/sections/ProblemSection.jsx",
+    "lines": [
+      4,
+      144
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

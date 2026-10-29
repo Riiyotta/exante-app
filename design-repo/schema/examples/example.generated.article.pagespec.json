@@ -1,0 +1,163 @@
+{
+  "pageSpecVersion": "0.2.0",
+  "mode": "generation",
+  "template": "template.blog-2",
+  "route": "/journal/a-gentler-reminder-schedule",
+  "nodes": [
+    {
+      "type": "content.framer-1h4pb9v-container",
+      "content": {
+        "body": [
+          "Platform",
+          "Studio",
+          "Log in",
+          "Book a walkthrough"
+        ],
+        "ctas": [
+          {
+            "label": "Log in",
+            "href": "https://app.tallyfern.example/login"
+          },
+          {
+            "label": "Book a walkthrough",
+            "href": "/talk"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "content.container",
+      "content": {
+        "heading": "A gentler reminder schedule",
+        "body": [
+          "Guides",
+          "Written by Avery Placeholder",
+          "Four minutes"
+        ],
+        "images": [
+          {
+            "assetRole": "fictional-avatar",
+            "assetRef": "placeholder:avatar-avery",
+            "alt": "Initials avatar for a fictional author"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "features.featured-image-wrapper",
+      "content": {
+        "images": [
+          {
+            "assetRole": "generated-illustration",
+            "assetRef": "generated:article-cover",
+            "alt": "Calendar pages drifting upward"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "content.article-lead",
+      "content": {
+        "body": [
+          "Contents",
+          "Share"
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "content.article-chapter",
+      "content": {
+        "heading": "Start earlier than feels natural",
+        "body": [
+          "A friendly note a few days before a bill is due lands better than a stern one afterwards."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "content.article-chapter",
+      "content": {
+        "heading": "Keep the tone consistent",
+        "body": [
+          "Pick one voice for every message so customers recognise you instantly."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "content.other-articles-section",
+      "content": {
+        "heading": "More from the journal",
+        "body": [
+          "Keep reading"
+        ],
+        "ctas": [
+          {
+            "label": "All notes",
+            "href": "/journal"
+          }
+        ],
+        "items": [
+          {
+            "title": "Matching deposits calmly",
+            "body": "Six minutes"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "content.framer-gzkazm-container",
+      "content": {
+        "heading": "Quiet ledgers for busy finance desks.",
+        "body": [
+          "Platform",
+          "Reminders",
+          "Payment matching",
+          "Studio",
+          "Our story",
+          "Journal",
+          "Legal",
+          "Terms",
+          "Privacy"
+        ],
+        "images": [
+          {
+            "assetRole": "placeholder-brand-mark",
+            "assetRef": "placeholder:tallyfern-mark",
+            "alt": "Tallyfern placeholder mark"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    }
+  ]
+}

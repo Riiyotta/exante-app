@@ -74,7 +74,8 @@
       "evidence": {
         "level": "measured",
         "note": "every route of this template was visited and had an identical section sequence"
-      }
+      },
+      "family": "marketing"
     },
     {
       "id": "template.about",
@@ -125,7 +126,8 @@
       "evidence": {
         "level": "measured",
         "note": "every route of this template was visited and had an identical section sequence"
-      }
+      },
+      "family": "marketing"
     },
     {
       "id": "template.blog",
@@ -160,7 +162,8 @@
       "evidence": {
         "level": "measured",
         "note": "every route of this template was visited and had an identical section sequence"
-      }
+      },
+      "family": "index"
     },
     {
       "id": "template.customers",
@@ -200,7 +203,8 @@
       "evidence": {
         "level": "measured",
         "note": "every route of this template was visited and had an identical section sequence"
-      }
+      },
+      "family": "marketing"
     },
     {
       "id": "template.careers",
@@ -245,7 +249,8 @@
       "evidence": {
         "level": "measured",
         "note": "every route of this template was visited and had an identical section sequence"
-      }
+      },
+      "family": "marketing"
     },
     {
       "id": "template.contact",
@@ -285,7 +290,8 @@
       "evidence": {
         "level": "measured",
         "note": "every route of this template was visited and had an identical section sequence"
-      }
+      },
+      "family": "contact"
     },
     {
       "id": "template.contact-2",
@@ -321,7 +327,8 @@
       "evidence": {
         "level": "measured",
         "note": "every route of this template was visited and had an identical section sequence"
-      }
+      },
+      "family": "contact"
     },
     {
       "id": "template.legal",
@@ -344,9 +351,15 @@
           "repeatable": false
         },
         {
-          "section": "content.content-section",
+          "section": "content.legal-preamble",
           "required": true,
           "repeatable": false
+        },
+        {
+          "section": "content.legal-clause",
+          "required": true,
+          "repeatable": true,
+          "maxCount": 20
         },
         {
           "section": "content.framer-gzkazm-container",
@@ -356,8 +369,9 @@
       ],
       "evidence": {
         "level": "measured",
-        "note": "every route of this template was visited and had an identical section sequence"
-      }
+        "note": "every route of this template was visited and had an identical section sequence; the document body (one source component) is decomposed into a lead part plus one part per <h3>-bounded chapter/clause (R6)"
+      },
+      "family": "legal"
     },
     {
       "id": "template.blog-2",
@@ -391,9 +405,15 @@
           "repeatable": false
         },
         {
-          "section": "content.content-section",
+          "section": "content.article-lead",
           "required": true,
           "repeatable": false
+        },
+        {
+          "section": "content.article-chapter",
+          "required": true,
+          "repeatable": true,
+          "maxCount": 8
         },
         {
           "section": "content.other-articles-section",
@@ -408,8 +428,9 @@
       ],
       "evidence": {
         "level": "measured",
-        "note": "every route of this template was visited and had an identical section sequence"
-      }
+        "note": "every route of this template was visited and had an identical section sequence; the document body (one source component) is decomposed into a lead part plus one part per <h3>-bounded chapter/clause (R6)"
+      },
+      "family": "article"
     }
   ]
 }

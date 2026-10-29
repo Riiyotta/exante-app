@@ -11,9 +11,10 @@
     "instances": 2,
     "routes": 2,
     "measuredFrom": [
-      "src/contact/sales/index.html:626-709",
-      "src/contact/support/index.html:632-715"
-    ]
+      "src/sections/DesktopFilled.jsx:6-271",
+      "src/sections/DesktopFilled2.jsx:6-271"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -58,7 +59,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 72,
-      "columns": 2
+      "columns": 2,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": null,
@@ -71,5 +73,23 @@
     "logo"
   ],
   "contentPolicy": "Carries the site's own brand mark (the Exante wordmark). Generated pages must swap in the generated business's own logo; never reuse the measured mark.",
-  "implementedBy": "src/pages/ContactSales.jsx"
+  "implementedBy": "src/sections/DesktopFilled.jsx",
+  "semantic": {
+    "id": "shell.desktop-filled",
+    "category": "SHELL"
+  },
+  "source": {
+    "id": "DesktopFilled",
+    "tag": "header",
+    "file": "src/sections/DesktopFilled.jsx",
+    "lines": [
+      6,
+      271
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "placeholder-brand-mark",
+    "user-supplied-asset"
+  ]
 }

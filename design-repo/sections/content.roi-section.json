@@ -11,8 +11,9 @@
     "instances": 1,
     "routes": 1,
     "measuredFrom": [
-      "src/index.html:762-882"
-    ]
+      "src/sections/ROISection.jsx:4-126"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -62,7 +63,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 777,
-      "columns": 2
+      "columns": 2,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 1030,
@@ -77,5 +79,24 @@
   "assetRoles": [
     "content-image"
   ],
-  "implementedBy": "src/pages/HomePage.jsx"
+  "implementedBy": "src/sections/ROISection.jsx",
+  "semantic": {
+    "id": "content.roi-section",
+    "category": "CONTENT"
+  },
+  "source": {
+    "id": "ROISection",
+    "tag": "section",
+    "file": "src/sections/ROISection.jsx",
+    "lines": [
+      4,
+      126
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "placeholder-screenshot",
+    "user-supplied-asset"
+  ]
 }

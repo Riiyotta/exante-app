@@ -11,8 +11,9 @@
     "instances": 1,
     "routes": 1,
     "measuredFrom": [
-      "src/careers/index.html:1095-1146"
-    ]
+      "src/sections/OpenRolesSection.jsx:4-42"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -53,7 +54,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 525,
-      "columns": 3
+      "columns": 3,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 341,
@@ -65,5 +67,20 @@
     ]
   },
   "assetRoles": [],
-  "implementedBy": "src/pages/Careers.jsx"
+  "implementedBy": "src/sections/OpenRolesSection.jsx",
+  "semantic": {
+    "id": "content.open-roles-section",
+    "category": "CONTENT"
+  },
+  "source": {
+    "id": "OpenRolesSection",
+    "tag": "section",
+    "file": "src/sections/OpenRolesSection.jsx",
+    "lines": [
+      4,
+      42
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

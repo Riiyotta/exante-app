@@ -11,10 +11,11 @@
     "instances": 3,
     "routes": 2,
     "measuredFrom": [
-      "src/about/index.html:891-1092",
-      "src/about/index.html:1093-1195",
-      "src/careers/index.html:980-1094"
-    ]
+      "src/sections/TeamMembersSection.jsx:4-209",
+      "src/sections/TeamMembersSection2.jsx:4-103",
+      "src/sections/TeamMembersSection3.jsx:4-131"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -70,8 +71,9 @@
     },
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
-      "heightPx": 1424,
-      "columns": 8
+      "heightPx": 1489,
+      "columns": 8,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 1501,
@@ -89,5 +91,27 @@
     "icon"
   ],
   "contentPolicy": "Measured photos include real team members' headshots and real companies'/institutions' logos used as team credentials, alongside decorative imagery. Generated pages must never generate or reuse a real person's likeness for the avatar slots, or a real company's or institution's mark for the credential-logo slots; use neutral placeholders for both.",
-  "implementedBy": "src/pages/About.jsx"
+  "implementedBy": "src/sections/TeamMembersSection.jsx",
+  "semantic": {
+    "id": "content.team-members-section",
+    "category": "CONTENT"
+  },
+  "source": {
+    "id": "TeamMembersSection",
+    "tag": "section",
+    "file": "src/sections/TeamMembersSection.jsx",
+    "lines": [
+      4,
+      209
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "fictional-avatar",
+    "generated-illustration",
+    "icon",
+    "placeholder-company-logo",
+    "placeholder-screenshot",
+    "user-supplied-asset"
+  ]
 }

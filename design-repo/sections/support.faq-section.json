@@ -11,9 +11,10 @@
     "instances": 2,
     "routes": 2,
     "measuredFrom": [
-      "src/index.html:1686-1813",
-      "src/contact/index.html:800-933"
-    ]
+      "src/sections/FAQSection.jsx:4-115",
+      "src/sections/FAQSection2.jsx:4-110"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -48,7 +49,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 963,
-      "columns": 1
+      "columns": 1,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 792,
@@ -58,5 +60,20 @@
     "changes": []
   },
   "assetRoles": [],
-  "implementedBy": "src/pages/HomePage.jsx"
+  "implementedBy": "src/sections/FAQSection.jsx",
+  "semantic": {
+    "id": "support.faq-section",
+    "category": "SUPPORT"
+  },
+  "source": {
+    "id": "FAQSection",
+    "tag": "section",
+    "file": "src/sections/FAQSection.jsx",
+    "lines": [
+      4,
+      115
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

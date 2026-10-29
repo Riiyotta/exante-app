@@ -2,6 +2,8 @@
   "version": "1",
   "sections": [
     "content.approach-section",
+    "content.article-chapter",
+    "content.article-lead",
     "content.blog-section",
     "content.container",
     "content.content-section",
@@ -12,6 +14,8 @@
     "content.framer-gzkazm-container",
     "content.framer-huxi9o-container",
     "content.intro-section",
+    "content.legal-clause",
+    "content.legal-preamble",
     "content.open-roles-section",
     "content.other-articles-section",
     "content.problem-section",
@@ -228,28 +232,34 @@
     "textarea"
   ],
   "nodeProperties": [
-    "type",
     "content",
-    "motion"
+    "motion",
+    "retrievalEligible",
+    "tokens",
+    "type"
   ],
   "contentFields": {
     "content.approach-section": [
       "items"
     ],
+    "content.article-chapter": [
+      "body",
+      "heading"
+    ],
+    "content.article-lead": [
+      "body"
+    ],
     "content.blog-section": [
       "body",
-      "items",
-      "images"
+      "images",
+      "items"
     ],
     "content.container": [
-      "heading",
       "body",
+      "heading",
       "images"
     ],
     "content.content-section": [
-      "heading",
-      "subheading",
-      "body",
       "ctas",
       "items"
     ],
@@ -258,13 +268,13 @@
       "ctas"
     ],
     "content.framer-1nc9gyu-container": [
-      "heading",
       "body",
+      "heading",
       "images"
     ],
     "content.framer-39uowv-container": [
-      "heading",
       "body",
+      "heading",
       "images"
     ],
     "content.framer-guhhla-container": [
@@ -272,8 +282,8 @@
       "ctas"
     ],
     "content.framer-gzkazm-container": [
-      "heading",
       "body",
+      "heading",
       "images"
     ],
     "content.framer-huxi9o-container": [
@@ -281,104 +291,111 @@
       "ctas"
     ],
     "content.intro-section": [
-      "heading",
+      "body",
+      "heading"
+    ],
+    "content.legal-clause": [
+      "body",
+      "heading"
+    ],
+    "content.legal-preamble": [
       "body"
     ],
     "content.open-roles-section": [
+      "body",
       "heading",
-      "subheading",
-      "body"
+      "subheading"
     ],
     "content.other-articles-section": [
-      "heading",
       "body",
       "ctas",
-      "items",
-      "images"
+      "heading",
+      "images",
+      "items"
     ],
     "content.problem-section": [
-      "heading",
       "body",
+      "heading",
       "items"
     ],
     "content.roi-section": [
-      "heading",
       "body",
-      "items",
-      "images"
+      "heading",
+      "images",
+      "items"
     ],
     "content.team-members-section": [
-      "heading",
-      "subheading",
       "body",
       "ctas",
-      "images"
+      "heading",
+      "images",
+      "subheading"
     ],
     "content.white": [],
     "cta.another-cta": [
-      "heading",
       "body",
       "ctas",
+      "heading",
       "images"
     ],
     "cta.cta-section-2": [
-      "heading",
       "body",
       "ctas",
-      "items",
-      "images"
+      "heading",
+      "images",
+      "items"
     ],
     "features.benefits-section": [
-      "heading",
       "body",
+      "heading",
       "items"
     ],
     "features.featured-image-wrapper": [
       "images"
     ],
     "features.integrations-section": [
-      "heading",
       "body",
+      "heading",
       "images"
     ],
     "features.key-features-section": [
-      "heading",
       "body",
       "ctas",
-      "items",
-      "images"
+      "heading",
+      "images",
+      "items"
     ],
     "features.other-features-section": [
-      "heading",
       "body",
       "ctas",
-      "items",
-      "images"
+      "heading",
+      "images",
+      "items"
     ],
     "hero.hero-section": [
-      "heading",
       "body",
       "ctas",
+      "heading",
       "images"
     ],
     "hero.main": [
-      "heading",
       "body",
-      "ctas"
+      "ctas",
+      "heading"
     ],
     "proof.clients-section": [
-      "heading",
       "body",
+      "heading",
       "images"
     ],
     "proof.testimonials-section": [
-      "items",
-      "images"
+      "images",
+      "items"
     ],
     "shell.desktop": [
-      "heading",
       "body",
       "ctas",
+      "heading",
       "images"
     ],
     "shell.desktop-filled": [
@@ -387,8 +404,106 @@
       "images"
     ],
     "support.faq-section": [
-      "heading",
-      "body"
+      "body",
+      "heading"
+    ]
+  },
+  "retrievalIneligible": [
+    "content.white"
+  ],
+  "generatedAssetRoles": {
+    "content.blog-section": [
+      "fictional-avatar",
+      "generated-illustration",
+      "placeholder-screenshot",
+      "user-supplied-asset"
+    ],
+    "content.container": [
+      "fictional-avatar",
+      "generated-illustration",
+      "placeholder-screenshot",
+      "user-supplied-asset"
+    ],
+    "content.framer-1nc9gyu-container": [
+      "placeholder-brand-mark",
+      "user-supplied-asset"
+    ],
+    "content.framer-39uowv-container": [
+      "placeholder-brand-mark",
+      "user-supplied-asset"
+    ],
+    "content.framer-gzkazm-container": [
+      "placeholder-brand-mark",
+      "user-supplied-asset"
+    ],
+    "content.other-articles-section": [
+      "fictional-avatar",
+      "generated-illustration",
+      "placeholder-screenshot",
+      "user-supplied-asset"
+    ],
+    "content.roi-section": [
+      "generated-illustration",
+      "placeholder-screenshot",
+      "user-supplied-asset"
+    ],
+    "content.team-members-section": [
+      "fictional-avatar",
+      "generated-illustration",
+      "icon",
+      "placeholder-company-logo",
+      "placeholder-screenshot",
+      "user-supplied-asset"
+    ],
+    "cta.another-cta": [
+      "generated-illustration",
+      "placeholder-screenshot",
+      "user-supplied-asset"
+    ],
+    "cta.cta-section-2": [
+      "generated-illustration",
+      "placeholder-screenshot",
+      "user-supplied-asset"
+    ],
+    "features.featured-image-wrapper": [
+      "generated-illustration",
+      "placeholder-screenshot",
+      "user-supplied-asset"
+    ],
+    "features.integrations-section": [
+      "placeholder-company-logo"
+    ],
+    "features.key-features-section": [
+      "generated-illustration",
+      "placeholder-screenshot",
+      "user-supplied-asset"
+    ],
+    "features.other-features-section": [
+      "generated-illustration",
+      "placeholder-screenshot",
+      "user-supplied-asset"
+    ],
+    "hero.hero-section": [
+      "generated-illustration",
+      "placeholder-screenshot",
+      "user-supplied-asset"
+    ],
+    "proof.clients-section": [
+      "placeholder-company-logo"
+    ],
+    "proof.testimonials-section": [
+      "fictional-avatar",
+      "generated-illustration",
+      "placeholder-screenshot",
+      "user-supplied-asset"
+    ],
+    "shell.desktop": [
+      "placeholder-brand-mark",
+      "user-supplied-asset"
+    ],
+    "shell.desktop-filled": [
+      "placeholder-brand-mark",
+      "user-supplied-asset"
     ]
   }
 }

@@ -11,8 +11,9 @@
     "instances": 1,
     "routes": 1,
     "measuredFrom": [
-      "src/blog/index.html:738-1276"
-    ]
+      "src/sections/BlogSection.jsx:6-485"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -36,7 +37,7 @@
         "maxItems": 16,
         "assetRoles": [
           "content-image",
-          "icon"
+          "avatar"
         ]
       }
     }
@@ -58,7 +59,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 2330,
-      "columns": 3
+      "columns": 3,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 3515,
@@ -72,7 +74,27 @@
   },
   "assetRoles": [
     "content-image",
-    "icon"
+    "avatar"
   ],
-  "implementedBy": "src/pages/Blog.jsx"
+  "implementedBy": "src/sections/BlogSection.jsx",
+  "semantic": {
+    "id": "content.blog-section",
+    "category": "CONTENT"
+  },
+  "source": {
+    "id": "BlogSection",
+    "tag": "section",
+    "file": "src/sections/BlogSection.jsx",
+    "lines": [
+      6,
+      485
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "fictional-avatar",
+    "generated-illustration",
+    "placeholder-screenshot",
+    "user-supplied-asset"
+  ]
 }

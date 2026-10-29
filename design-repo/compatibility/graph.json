@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "derivedFrom": "templates/templates.json and sections/*.json constraints (recomputed by verify_all.py)",
   "rules": [
     {
@@ -16,37 +16,41 @@
       "severity": "error",
       "kind": "perPageLimits",
       "limits": {
-        "content.framer-huxi9o-container": 1,
-        "hero.hero-section": 1,
-        "content.roi-section": 1,
-        "content.problem-section": 1,
-        "features.key-features-section": 1,
-        "features.other-features-section": 1,
-        "proof.clients-section": 1,
-        "cta.cta-section-2": 1,
-        "features.integrations-section": 1,
-        "support.faq-section": 1,
-        "cta.another-cta": 1,
+        "content.approach-section": 1,
+        "content.article-chapter": 8,
+        "content.article-lead": 1,
+        "content.blog-section": 1,
+        "content.container": 1,
+        "content.content-section": 1,
+        "content.framer-1h4pb9v-container": 1,
+        "content.framer-1nc9gyu-container": 1,
         "content.framer-39uowv-container": 1,
         "content.framer-guhhla-container": 1,
-        "content.intro-section": 1,
-        "content.approach-section": 1,
-        "content.team-members-section": 2,
-        "content.framer-1nc9gyu-container": 1,
-        "content.blog-section": 1,
-        "content.framer-1h4pb9v-container": 1,
-        "proof.testimonials-section": 1,
         "content.framer-gzkazm-container": 1,
-        "features.benefits-section": 1,
+        "content.framer-huxi9o-container": 1,
+        "content.intro-section": 1,
+        "content.legal-clause": 20,
+        "content.legal-preamble": 1,
         "content.open-roles-section": 1,
-        "content.content-section": 1,
-        "shell.desktop-filled": 1,
-        "hero.main": 1,
-        "shell.desktop": 1,
+        "content.other-articles-section": 1,
+        "content.problem-section": 1,
+        "content.roi-section": 1,
+        "content.team-members-section": 2,
         "content.white": 1,
-        "content.container": 1,
+        "cta.another-cta": 1,
+        "cta.cta-section-2": 1,
+        "features.benefits-section": 1,
         "features.featured-image-wrapper": 1,
-        "content.other-articles-section": 1
+        "features.integrations-section": 1,
+        "features.key-features-section": 1,
+        "features.other-features-section": 1,
+        "hero.hero-section": 1,
+        "hero.main": 1,
+        "proof.clients-section": 1,
+        "proof.testimonials-section": 1,
+        "shell.desktop": 1,
+        "shell.desktop-filled": 1,
+        "support.faq-section": 1
       },
       "description": "No section appears more often on one page than it does in any measured template."
     },
@@ -55,6 +59,9 @@
       "severity": "error",
       "kind": "mustBeFirst",
       "sections": [
+        "content.framer-1h4pb9v-container",
+        "content.framer-guhhla-container",
+        "content.framer-huxi9o-container",
         "shell.desktop-filled"
       ],
       "description": "Sections that opened every template they appear in must be the first node."
@@ -63,7 +70,11 @@
       "id": "SHELL_MUST_BE_LAST",
       "severity": "error",
       "kind": "mustBeLast",
-      "sections": [],
+      "sections": [
+        "content.framer-1nc9gyu-container",
+        "content.framer-39uowv-container",
+        "content.framer-gzkazm-container"
+      ],
       "description": "Sections that closed every template they appear in must be the last node."
     },
     {
@@ -95,32 +106,28 @@
           "content.team-members-section"
         ],
         [
-          "content.blog-section",
-          "content.framer-1nc9gyu-container"
-        ],
-        [
           "content.team-members-section",
           "content.open-roles-section"
         ],
         [
-          "content.open-roles-section",
-          "content.framer-gzkazm-container"
+          "content.legal-preamble",
+          "content.legal-clause"
         ],
         [
-          "content.content-section",
-          "content.framer-gzkazm-container"
+          "content.container",
+          "features.featured-image-wrapper"
         ],
         [
-          "content.framer-1h4pb9v-container",
-          "content.container"
+          "features.featured-image-wrapper",
+          "content.article-lead"
         ],
         [
-          "content.content-section",
+          "content.article-lead",
+          "content.article-chapter"
+        ],
+        [
+          "content.article-chapter",
           "content.other-articles-section"
-        ],
-        [
-          "content.other-articles-section",
-          "content.framer-gzkazm-container"
         ]
       ],
       "description": "Two different sections of the same category should not sit next to each other unless that exact pair was observed (named exceptions)."

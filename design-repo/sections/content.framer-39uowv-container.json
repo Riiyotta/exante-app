@@ -1,18 +1,19 @@
 {
   "id": "content.framer-39uowv-container",
-  "category": "CONTENT",
+  "category": "SHELL",
   "label": "framer-39uowv-container",
   "tag": "div",
-  "purpose": "Carries the substantive content of the page. Example headline: \"Getting you from \"sent\" to \"paid\", your way.\".",
-  "purposeIsInferred": true,
+  "purpose": "Site footer: tagline, link columns (features, company, legal), the compliance badge and social links.",
+  "purposeIsInferred": false,
   "nameSource": "class",
   "evidence": {
     "level": "measured",
     "instances": 1,
     "routes": 1,
     "measuredFrom": [
-      "src/index.html:1867-2293"
-    ]
+      "src/sections/Framer39uowvContainer.jsx:6-164"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -33,13 +34,15 @@
         "required": false,
         "maxItems": 1,
         "assetRoles": [
-          "content-image"
+          "logo",
+          "compliance-badge"
         ]
       }
     }
   },
   "constraints": {
-    "onePerPage": true
+    "onePerPage": true,
+    "mustBeLast": true
   },
   "motion": {
     "allowedPatterns": [
@@ -55,7 +58,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 818,
-      "columns": 1
+      "columns": 1,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 1260,
@@ -67,7 +71,26 @@
     ]
   },
   "assetRoles": [
-    "content-image"
+    "logo",
+    "compliance-badge"
   ],
-  "implementedBy": "src/pages/HomePage.jsx"
+  "implementedBy": "src/sections/Framer39uowvContainer.jsx",
+  "semantic": {
+    "id": "content.framer-39uowv-container",
+    "category": "SHELL"
+  },
+  "source": {
+    "id": "Framer39uowvContainer",
+    "tag": "div",
+    "file": "src/sections/Framer39uowvContainer.jsx",
+    "lines": [
+      6,
+      164
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "placeholder-brand-mark",
+    "user-supplied-asset"
+  ]
 }

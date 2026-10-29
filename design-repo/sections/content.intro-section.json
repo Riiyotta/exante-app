@@ -11,8 +11,9 @@
     "instances": 1,
     "routes": 1,
     "measuredFrom": [
-      "src/about/index.html:741-769"
-    ]
+      "src/sections/IntroSection.jsx:4-41"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -47,7 +48,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 374,
-      "columns": 1
+      "columns": 1,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 416,
@@ -57,5 +59,20 @@
     "changes": []
   },
   "assetRoles": [],
-  "implementedBy": "src/pages/About.jsx"
+  "implementedBy": "src/sections/IntroSection.jsx",
+  "semantic": {
+    "id": "content.intro-section",
+    "category": "CONTENT"
+  },
+  "source": {
+    "id": "IntroSection",
+    "tag": "section",
+    "file": "src/sections/IntroSection.jsx",
+    "lines": [
+      4,
+      41
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

@@ -11,8 +11,9 @@
     "instances": 1,
     "routes": 1,
     "measuredFrom": [
-      "src/about/index.html:770-890"
-    ]
+      "src/sections/ApproachSection.jsx:4-120"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -43,7 +44,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 940,
-      "columns": 1
+      "columns": 1,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 1720,
@@ -55,5 +57,20 @@
     ]
   },
   "assetRoles": [],
-  "implementedBy": "src/pages/About.jsx"
+  "implementedBy": "src/sections/ApproachSection.jsx",
+  "semantic": {
+    "id": "content.approach-section",
+    "category": "CONTENT"
+  },
+  "source": {
+    "id": "ApproachSection",
+    "tag": "section",
+    "file": "src/sections/ApproachSection.jsx",
+    "lines": [
+      4,
+      120
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

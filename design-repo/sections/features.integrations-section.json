@@ -11,8 +11,9 @@
     "instances": 1,
     "routes": 1,
     "measuredFrom": [
-      "src/index.html:1556-1685"
-    ]
+      "src/sections/IntegrationsSection.jsx:4-132"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -55,7 +56,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 578,
-      "columns": 6
+      "columns": 6,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 789,
@@ -71,5 +73,22 @@
     "integration-logo"
   ],
   "contentPolicy": "Measured logos name real third-party integration partners (accounting, payments and ERP platforms the product connects to). Generated pages must never reproduce or fabricate a real company's mark; use explicit integration-logo placeholders.",
-  "implementedBy": "src/pages/HomePage.jsx"
+  "implementedBy": "src/sections/IntegrationsSection.jsx",
+  "semantic": {
+    "id": "features.integrations-section",
+    "category": "FEATURES"
+  },
+  "source": {
+    "id": "IntegrationsSection",
+    "tag": "section",
+    "file": "src/sections/IntegrationsSection.jsx",
+    "lines": [
+      4,
+      132
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "placeholder-company-logo"
+  ]
 }

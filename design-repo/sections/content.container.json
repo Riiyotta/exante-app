@@ -11,12 +11,13 @@
     "instances": 8,
     "routes": 8,
     "measuredFrom": [
-      "src/blog/agents-that-learn-how-you-work/index.html:712-815",
-      "src/blog/from-aging-reports-to-cash-control/index.html:712-809",
-      "src/blog/from-source-of-truth-to-source-of-action/index.html:712-812",
-      "src/blog/how-ai-agents-are-transforming-ar-and-collections/index.html:712-810",
-      "src/blog/how-to-choose-the-right-collections-software/index.html:712-813"
-    ]
+      "src/sections/Container.jsx:4-108",
+      "src/sections/Container2.jsx:4-107",
+      "src/sections/Container3.jsx:4-114",
+      "src/sections/Container4.jsx:4-103",
+      "src/sections/Container5.jsx:4-98"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -38,7 +39,7 @@
         "maxItems": 1,
         "assetRoles": [
           "content-image",
-          "icon"
+          "avatar"
         ]
       }
     }
@@ -60,8 +61,9 @@
     },
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
-      "heightPx": 417,
-      "columns": 3
+      "heightPx": 535,
+      "columns": 3,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 514,
@@ -72,7 +74,27 @@
   },
   "assetRoles": [
     "content-image",
-    "icon"
+    "avatar"
   ],
-  "implementedBy": "src/pages/BlogWhatWeHear.jsx"
+  "implementedBy": "src/sections/Container.jsx",
+  "semantic": {
+    "id": "content.container",
+    "category": "CONTENT"
+  },
+  "source": {
+    "id": "Container",
+    "tag": "div",
+    "file": "src/sections/Container.jsx",
+    "lines": [
+      4,
+      108
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "fictional-avatar",
+    "generated-illustration",
+    "placeholder-screenshot",
+    "user-supplied-asset"
+  ]
 }

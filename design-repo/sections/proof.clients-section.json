@@ -11,8 +11,9 @@
     "instances": 1,
     "routes": 1,
     "measuredFrom": [
-      "src/index.html:1342-1410"
-    ]
+      "src/sections/ClientsSection.jsx:4-68"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -55,7 +56,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 472,
-      "columns": 1
+      "columns": 1,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 671,
@@ -70,5 +72,22 @@
     "customer-logo"
   ],
   "contentPolicy": "Measured copy quotes real customers and companies, and the logo row shows real customers' marks (3 distinct companies, each measured twice). Generated pages must write new, clearly fictional quotes and names, and use explicit placeholders for the customer-logo slots; never reproduce or fabricate a real company's logo.",
-  "implementedBy": "src/pages/HomePage.jsx"
+  "implementedBy": "src/sections/ClientsSection.jsx",
+  "semantic": {
+    "id": "proof.clients-section",
+    "category": "PROOF"
+  },
+  "source": {
+    "id": "ClientsSection",
+    "tag": "section",
+    "file": "src/sections/ClientsSection.jsx",
+    "lines": [
+      4,
+      68
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "placeholder-company-logo"
+  ]
 }

@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """Adversarial suite: proves every rule REJECTS a bad PageSpec for the RIGHT reason, and that controls pass.
 
-Controls: the bundled example + one synthesized minimal PageSpec per template (generic loop, so a new
-template needs no new control code). Mutations are built from this repo's own contracts; each one must
+Controls: the bundled mode=clone example (real content), every mode=generation example in schema/examples/, and
+one synthesized minimal PageSpec per template in BOTH modes (generic loop, so a new template needs no new control
+code). Also covers generation-mode leakage (GENERATION_MODE_*), token policy (TOKEN_*), the retrieval pin and the
+wrapper gate (synthetic height mutations fed to extraction/wrapper_gate.gate()). Mutations are built from this repo's own contracts; each one must
 produce an error (or, for warn-severity rules, a warning) naming the specific rule it targets. A mutation
 that cannot be built for this repo is reported as SKIPPED with the reason -- never silently dropped.
 Usage: python3 adversarial_test.py"""
-import copy, importlib.util, json, os, sys
+import copy, glob, importlib.util, json, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SCHEMA = os.path.dirname(HERE)
@@ -32,8 +34,8 @@ def minimal_node(sid, motion=None):
     return {"type": sid, "content": content, "motion": dict(motion or NONE)}
 
 
-def control_for(t):
-    return {"pageSpecVersion": VERSION, "template": t["id"], "route": (t.get("routes") or ["/sample"])[0],
+def control_for(t, mode="clone"):
+    return {"pageSpecVersion": VERSION, "mode": mode, "template": t["id"], "route": (t.get("routes") or ["/sample"])[0] if mode == "clone" else "/sample",
             "nodes": [minimal_node(n["section"]) for n in t["nodes"]]}
 
 
@@ -45,7 +47,11 @@ def main():
     cases, skipped = [], []   # case: (label, spec, expect, needle) with expect in {"pass", "error", "warn"}
     cases.append(("control: bundled example", example, "pass", None))
     for t in TEMPLATES:
-        cases.append((f"control: minimal {t['id']}", control_for(t), "pass", None))
+        cases.append((f"control: minimal {t['id']} (clone)", control_for(t), "pass", None))
+        cases.append((f"control: minimal {t['id']} (generation)", control_for(t, "generation"), "pass", None))
+    gen_examples = {os.path.basename(p): json.load(open(p, encoding="utf-8")) for p in sorted(glob.glob(os.path.join(SCHEMA, "examples", "*.pagespec.json")))}
+    for name, g in gen_examples.items():
+        cases.append((f"control: generation example {name}", g, "pass", None))
 
     def mut(label, fn, needle, expect="error", why_not=None):
         if why_not:
@@ -61,11 +67,11 @@ def main():
     mut("missing reducedMotionFallback", lambda s: s["nodes"][0]["motion"].pop("reducedMotionFallback"), "reducedMotionFallback")
     mut("invented motion field", lambda s: s["nodes"][0]["motion"].__setitem__("inventedAnimation", True), "inventedAnimation")
     mut("per-instance style override on a node", lambda s: s["nodes"][0].__setitem__("style", {"color": "#ff0000"}), "'style' was unexpected")
-    mut("raw theme override at page level", lambda s: s.__setitem__("theme", {"color.text.primary": "#ff0000"}), "'theme' was unexpected")
+    mut("raw theme override at page level", lambda s: s.__setitem__("theme", {"color.text.primary": "#ff0000"}), "schema: theme")
     mut("wrong pageSpecVersion", lambda s: s.__setitem__("pageSpecVersion", "9.9.9"), "schema: pageSpecVersion")
     mut("unknown content field", lambda s: s["nodes"][0]["content"].__setitem__("inventedField", "x"), "'inventedField' was unexpected")
     cta = first_idx(lambda n: "ctas" in SECS[n["type"]]["content"]["fields"])
-    mut("link to a live external URL", lambda s: s["nodes"][cta]["content"].__setitem__("ctas", [{"label": "Go", "href": "https://evil.example/x"}]),
+    mut("link to a live external URL", lambda s: s["nodes"][cta]["content"].__setitem__("ctas", [{"label": "Go", "href": "https://www.exante.app/contact/sales"}]),
         "does not match", why_not=None if cta is not None else "no section with ctas")
     img = first_idx(lambda n: "images" in SECS[n["type"]]["content"]["fields"])
     mut("invented assetRole", lambda s: s["nodes"][img]["content"].__setitem__("images", [{"assetRole": "invented-role"}]),
@@ -165,9 +171,14 @@ def main():
     heroes = sorted(sid for sid, c in SECS.items() if c["category"] == "HERO")
     hi = first_idx(lambda n: SECS[n["type"]]["category"] == "HERO")
     extra = next((h for h in heroes if hi is None or h != types[hi]), None)
-    why = None if (hi is not None and extra) else "fewer than two HERO section types"
-    if not why and example["template"] in GRAPH["ONE_HERO_PER_PAGE"]["exceptions"]: why = "the example's template is a named exception"
-    mut("ONE_HERO_PER_PAGE: a second HERO section", lambda s: s["nodes"].insert(hi + 1, minimal_node(extra)), "ONE_HERO_PER_PAGE", why_not=why)
+    # a second HERO: another HERO type when the repo has one, else the same hero twice (still two HERO sections)
+    host = next((t for t in TEMPLATES if any(SECS[n["section"]]["category"] == "HERO" for n in t["nodes"]) and t["id"] not in GRAPH["ONE_HERO_PER_PAGE"]["exceptions"]), None)
+    if host is None:
+        skipped.append("ONE_HERO_PER_PAGE: no template with a HERO section")
+    else:
+        spec = control_for(host); k = next(i for i, n in enumerate(spec["nodes"]) if SECS[n["type"]]["category"] == "HERO")
+        spec["nodes"].insert(k + 1, minimal_node(extra or spec["nodes"][k]["type"]))
+        cases.append(("ONE_HERO_PER_PAGE: a second HERO section", spec, "error", "ONE_HERO_PER_PAGE"))
 
     # ---- runtime budgets
     wn = next(((i, k) for i, n in enumerate(example["nodes"]) for k in ("heading", "subheading") if k in n["content"]), None)
@@ -184,8 +195,19 @@ def main():
     mut("motion pattern not allowed for its section", lambda s: s["nodes"][noanim]["motion"].__setitem__("pattern", "scroll-linked"), "not allowed",
         why_not=None if noanim is not None else "every section allows animation")
 
+    generation_cases(cases, skipped, gen_examples, example)
+    token_cases(cases, gen_examples)
+    retrieval_cases(cases, skipped, gen_examples)
+
     ok = fail = 0
     for label, spec, expect, needle in cases:
+        if callable(spec):  # in-process cases that patch a cached contract and restore it
+            errors, warnings = spec()
+            good = (not errors) if expect == "pass" else any(needle in e for e in (errors if expect == "error" else warnings))
+            if good: ok += 1
+            else:
+                fail += 1; print(f"FAIL: {label}: expected {expect} containing '{needle}'; errors={errors[:3]} warnings={warnings[:3]}")
+            continue
         errors, warnings = sv.check(spec)
         if expect == "pass": good = not errors
         elif expect == "error": good = any(needle in e for e in errors)
@@ -194,10 +216,162 @@ def main():
         else:
             fail += 1
             print(f"FAIL: {label}: expected {expect}" + (f" containing '{needle}'" if needle else "") + f"; errors={errors[:3]} warnings={warnings[:3]}")
+    gok, gfail = gate_cases()
+    ok += gok; fail += gfail
     for s_ in skipped: print("SKIPPED:", s_)
     n_ctrl = sum(1 for c in cases if c[2] == "pass")
-    print(f"adversarial: {ok} passed, {fail} failed ({n_ctrl} controls, {len(cases) - n_ctrl} mutations, {len(skipped)} skipped as not applicable)")
+    print(f"adversarial: {ok} passed, {fail} failed ({n_ctrl} controls, {len(cases) - n_ctrl} PageSpec mutations, {gok + gfail} wrapper-gate cases, {len(skipped)} skipped as not applicable)")
     sys.exit(1 if fail else 0)
+
+
+# ---------------------------------------------------------------- generation-mode leakage (R1, R2, R4, R5)
+REAL_HERO = "From proactive outreach to rapid issue resolution, Exante is the extra set of hands that gets you sent → paid on time, every time."
+REAL_QUOTE = "Our collections went from reactive chasing to automated, proactive and consistent flow. In just three months, we eliminated overdue invoices."
+
+
+def _node(spec, sid):
+    return next(i for i, n in enumerate(spec["nodes"]) if n["type"] == sid)
+
+
+def generation_cases(cases, skipped, gens, clone_example):
+    g = gens.get("example.generated.marketing.pagespec.json")
+    if g is None:
+        skipped.append("generation leakage: no marketing generation example"); return
+    hero = _node(g, "hero.hero-section"); foot = len(g["nodes"]) - 1
+
+    def mut(label, fn, needle):
+        s = copy.deepcopy(g); fn(s); cases.append((label, s, "error", needle))
+    H = lambda s: s["nodes"][hero]["content"]
+    mut("mode missing", lambda s: s.pop("mode"), "'mode' is a required property")
+    mut("mode outside the closed enum", lambda s: s.__setitem__("mode", "reference"), "schema: mode")
+    mut("GENERATION_MODE_BRAND: source brand in a heading", lambda s: H(s).__setitem__("heading", "Meet Exante today"), "GENERATION_MODE_BRAND")
+    mut("GENERATION_MODE_BRAND: zero-width split brand", lambda s: H(s).__setitem__("heading", "Meet Ex​ante today"), "GENERATION_MODE_BRAND")
+    mut("GENERATION_MODE_BRAND: full-width brand (NFKC)", lambda s: H(s).__setitem__("heading", "Meet Ｅｘａｎｔｅ today"), "GENERATION_MODE_BRAND")
+    mut("GENERATION_MODE_BRAND: legacy template brand (Vectura)", lambda s: H(s).__setitem__("body", ["Built by the Vectura team."]), "GENERATION_MODE_BRAND")
+    mut("GENERATION_MODE_BRAND: source CTA 'Try Exante'", lambda s: H(s).__setitem__("ctas", [{"label": "Try Exante", "href": "/talk"}]), "GENERATION_MODE_BRAND")
+    mut("GENERATION_MODE_BRAND: real wordmark role in the footer", lambda s: s["nodes"][foot]["content"].__setitem__("images", [{"assetRole": "logo"}]), "GENERATION_MODE_BRAND")
+    mut("GENERATION_MODE_PERSON: real team member named", lambda s: H(s).__setitem__("body", ["Led by Giedrius Daubaris since day one."]), "GENERATION_MODE_PERSON")
+    mut("GENERATION_MODE_PERSON: real testimonial author", lambda s: H(s).__setitem__("body", ["Justina Ramoskaite loves it."]), "GENERATION_MODE_PERSON")
+    mut("GENERATION_MODE_PERSON: real-photo avatar role", lambda s: s["nodes"][_node(s, "proof.clients-section")]["content"].__setitem__("images", [{"assetRole": "avatar"}]), "GENERATION_MODE_PERSON")
+    mut("GENERATION_MODE_CUSTOMER: real integration partners", lambda s: H(s).__setitem__("body", ["Syncs with QuickBooks and Xero overnight."]), "GENERATION_MODE_CUSTOMER")
+    mut("GENERATION_MODE_CUSTOMER: real customer-logo role", lambda s: s["nodes"][_node(s, "proof.clients-section")]["content"].__setitem__("images", [{"assetRole": "customer-logo"}]), "GENERATION_MODE_CUSTOMER")
+    mut("GENERATION_MODE_CUSTOMER: real integration-logo role", lambda s: s["nodes"][_node(s, "features.integrations-section")]["content"].__setitem__("images", [{"assetRole": "integration-logo"}]), "GENERATION_MODE_CUSTOMER")
+    mut("GENERATION_MODE_CLAIM: source statistic reused", lambda s: H(s).__setitem__("body", ["Teams improved collection speed by 30%+ in a quarter."]), "GENERATION_MODE_CLAIM")
+    mut("GENERATION_MODE_COPY: source hero sentence", lambda s: H(s).__setitem__("body", [REAL_HERO.replace("Exante", "Tallyfern")]), "GENERATION_MODE_COPY")
+    mut("GENERATION_MODE_COPY: curly quotes / dashes do not hide copy", lambda s: H(s).__setitem__("body", ["From proactive outreach — to rapid issue resolution, it’s the extra set of hands."]), "GENERATION_MODE_COPY")
+    mut("GENERATION_MODE_COPY: real testimonial (review) text", lambda s: H(s).__setitem__("body", [REAL_QUOTE[:180]]), "GENERATION_MODE_COPY")
+    mut("GENERATION_MODE_URL: source mailbox in copy", lambda s: H(s).__setitem__("body", ["Write to team@exante.app any time."]), "GENERATION_MODE_URL")
+    mut("GENERATION_MODE_URL: non-placeholder domain", lambda s: H(s).__setitem__("body", ["Docs at https://docs.acme.com/start."]), "GENERATION_MODE_URL")
+    mut("GENERATION_MODE_URL: source asset CDN host", lambda s: H(s).__setitem__("body", ["See framerusercontent.com/images/x for the demo."]), "GENERATION_MODE_URL")
+    mut("GENERATION_MODE_EMBED: live embed endpoint", lambda s: H(s).__setitem__("body", ["Embed https://framer.com/edit here."]), "GENERATION_MODE_EMBED")
+    mut("GENERATION_MODE_ASSET: registered source file reused", lambda s: H(s).__setitem__("images", [{"assetRole": "generated-illustration", "assetRef": "_ext/framerusercontent.com/images/ecgwLxQMKk2bXTSZ21R1kisJ0__57a634cb.jpg"}]), "GENERATION_MODE_ASSET")
+    mut("GENERATION_MODE_SCREENSHOT: source hero-image role", lambda s: H(s).__setitem__("images", [{"assetRole": "hero-image"}]), "GENERATION_MODE_SCREENSHOT")
+    mut("GENERATION_MODE_ASSET: compliance badge in generation", lambda s: s["nodes"][foot]["content"].__setitem__("images", [{"assetRole": "compliance-badge"}]), "GENERATION_MODE_ASSET")
+    mut("GENERATION_MODE_COPY: source route slug", lambda s: s.__setitem__("route", "/blog/agents-that-learn-how-you-work"), "GENERATION_MODE_COPY")
+    skipped.append("store mark / store URL leakage: the source has no App Store / Play / TestFlight marks or links (grep of src/ finds none), so there is nothing source-specific to leak; non-placeholder URLs are still rejected by GENERATION_MODE_URL")
+    # a registry edit cannot loosen availability: the validator reads only its pinned table
+    reg = sv.load("assets/asset-roles.json") if os.path.isfile(os.path.join(REPO, "assets/asset-roles.json")) else None
+    def registry_loosened():
+        saved = copy.deepcopy(reg["roles"]["avatar"]); reg["roles"]["avatar"]["availability"] = "generation-safe"
+        try:
+            s = copy.deepcopy(g); s["nodes"][_node(s, "proof.clients-section")]["content"]["images"] = [{"assetRole": "avatar"}]
+            return sv.check(s)
+        finally:
+            reg["roles"]["avatar"] = saved
+    if reg: cases.append(("availability pin: registry edited to generation-safe is ignored", registry_loosened, "error", "GENERATION_MODE_PERSON"))
+    # the clone example (real content) is valid in clone mode but is rejected the moment it claims to be generation
+    flipped = copy.deepcopy(clone_example); flipped["mode"] = "generation"
+    for rule in ("GENERATION_MODE_BRAND", "GENERATION_MODE_PERSON", "GENERATION_MODE_COPY", "GENERATION_MODE_SCREENSHOT"):
+        cases.append((f"clone example relabelled generation is caught by {rule}", flipped, "error", rule))
+
+
+# ---------------------------------------------------------------- token policy (R10)
+def token_cases(cases, gens):
+    g = gens.get("example.generated.marketing.pagespec.json")
+    if g is None: return
+    hero = _node(g, "hero.hero-section")
+    def mut(label, tokens, needle, theme=None):
+        s = copy.deepcopy(g); s["nodes"][hero]["tokens"] = tokens
+        if theme: s["theme"] = theme
+        cases.append((label, s, "error", needle))
+    mut("TOKEN_RAW_VALUE: raw hex colour", {"surface": "#1e211e"}, "TOKEN_RAW_VALUE")
+    mut("TOKEN_RAW_VALUE: raw rgb() colour", {"text": "rgb(255,255,255)"}, "TOKEN_RAW_VALUE")
+    mut("TOKEN_UNKNOWN: invented token id", {"surface": "surface.brand"}, "TOKEN_UNKNOWN")
+    mut("TOKEN_ARBITRARY_SPACING: raw px gap", {"gap": "24px"}, "TOKEN_ARBITRARY_SPACING")
+    mut("TOKEN_ARBITRARY_SPACING: foundation spacing step", {"paddingTop": "space.96"}, "TOKEN_ARBITRARY_SPACING")
+    mut("TOKEN_UNSUPPORTED_FONT: font not in the catalog", {"fontFamily": "Comic Sans MS"}, "TOKEN_UNSUPPORTED_FONT")
+    mut("TOKEN_NOT_REFERENCEABLE: foundation colour", {"surface": "color.neutral.01"}, "TOKEN_NOT_REFERENCEABLE")
+    mut("TOKEN_SLOT_MISMATCH: layout token as a colour", {"surface": "layout.gutter"}, "TOKEN_SLOT_MISMATCH")
+    mut("TOKEN_THEME_MISMATCH: theme that is not schema-validated", {"surface": "surface.inverse"}, "TOKEN_THEME_MISMATCH", theme="dark")
+    mut("token slot outside the closed set", {"shadow": "elevation.default"}, "'shadow' was unexpected")
+
+
+# ---------------------------------------------------------------- retrieval eligibility (R8)
+def retrieval_cases(cases, skipped, gens):
+    c = gens.get("example.generated.contact.pagespec.json")
+    if c is None:
+        skipped.append("retrieval: no contact generation example"); return
+    w = _node(c, "content.white")
+    s = copy.deepcopy(c); s["nodes"][w]["retrievalEligible"] = True
+    cases.append(("RETRIEVAL_PIN: utility layer flipped eligible at node level", s, "error", "RETRIEVAL_PIN"))
+    s = copy.deepcopy(c); s["nodes"][_node(s, "hero.main")]["retrievalEligible"] = False
+    cases.append(("RETRIEVAL_PIN: content section marked ineligible", s, "error", "RETRIEVAL_PIN"))
+    secs = sv.contracts()
+    def contract_flip(sid, val):
+        def run():
+            saved = secs[sid].get("retrievalEligible"); secs[sid]["retrievalEligible"] = val
+            try: return sv.check(c)
+            finally: secs[sid]["retrievalEligible"] = saved
+        return run
+    cases.append(("RETRIEVAL_PIN: utility contract flipped eligible", contract_flip("content.white", True), "error", "RETRIEVAL_PIN"))
+    cases.append(("RETRIEVAL_PIN: content contract marked ineligible", contract_flip("hero.main", False), "error", "RETRIEVAL_PIN"))
+
+
+# ---------------------------------------------------------------- wrapper gate (R9)
+def gate_cases():
+    spec = importlib.util.spec_from_file_location("wrapper_gate", os.path.join(REPO, "extraction", "wrapper_gate.py"))
+    wg = importlib.util.module_from_spec(spec); spec.loader.exec_module(wg)
+    led, secs, wl = wg.load_inputs(REPO)
+    ok = fail = 0
+    def run(label, mutate, expect, needle):
+        nonlocal ok, fail
+        l2, w2 = copy.deepcopy(led), copy.deepcopy(wl)
+        mutate(l2, w2)
+        e, w = wg.gate(l2, secs, w2)
+        good = (not e) if expect == "pass" else any(needle in x for x in (e if expect == "error" else w))
+        if good: ok += 1
+        else: fail += 1; print(f"FAIL: wrapper gate: {label}: expected {expect} '{needle}'; errors={e[:2]} warnings={w[:2]}")
+    home = "/"
+    def hero(px):
+        def f(l, w):
+            s = next(x for x in l["sectionHeights"]["routes"][home]["sections"] if x["id"] == "hero.hero-section"); s["heightPx"] = px
+        return f
+    def share(frac):
+        def f(l, w):
+            r = l["sectionHeights"]["routes"][home]; s = next(x for x in r["sections"] if x["id"] == "features.key-features-section")
+            s["heightPx"] = int(r["pageHeightPx"] * frac)
+        return f
+    def wl_entry(**kw):
+        def f(l, w):
+            share(0.65)(l, w)
+            e = {"route": home, "section": "features.key-features-section", "reviewedBy": "design-repo agent (agent attestation, not a human sign-off)",
+                 "justification": "Reviewed: one long feature tour that cannot be split further.", "maxHeightPx": 9000}
+            e.update(kw); w["entries"] = [x for x in [e] if x is not None]
+        return f
+    run("control: the real measurements pass", lambda l, w: None, "pass", None)
+    run("HERO 1900px warns", hero(1900), "warn", "HERO hero.hero-section")
+    run("HERO 3100px errors", hero(3100), "error", "> 3000px")
+    run("section holding 55% of a page warns", share(0.55), "warn", "> 50%")
+    run("section holding 65% of a page errors", share(0.65), "error", "> 60%")
+    run("whitelisted 65% section passes (still warns)", wl_entry(), "warn", "> 50%")
+    run("whitelist entry without justification", wl_entry(justification="short"), "error", "justification")
+    run("whitelist agent reviewer without the attestation phrase", wl_entry(reviewedBy="design-repo agent"), "error", "agent attestation")
+    run("whitelist entry over its cap", wl_entry(maxHeightPx=100), "error", "over its cap")
+    run("stale whitelist entry", lambda l, w: w.__setitem__("entries", [{"route": home, "section": "cta.another-cta", "reviewedBy": "x (agent attestation, not a human sign-off)", "justification": "x" * 40, "maxHeightPx": 9000}]), "error", "stale")
+    run("missing measurement for a route", lambda l, w: l["sectionHeights"]["routes"].pop(home), "error", "no measured section heights")
+    run("measured at the wrong viewport", lambda l, w: l["sectionHeights"]["viewport"].__setitem__("width", 1280), "error", "must be 1440px")
+    run("no sectionHeights at all", lambda l, w: l.pop("sectionHeights"), "error", "missing measurement")
+    return ok, fail
 
 
 if __name__ == "__main__":

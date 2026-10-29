@@ -1,37 +1,115 @@
-# exante-app — Design Repo
+# exante-app — Design Repo (0.2.0)
 
-Machine-validated design system extracted from a live site, structured per the design-repo BUILD-GUIDE.
-Status: **design-review-pending** (`productionApproved: false`). The source is a real, live site: see `assets/asset-roles.json`
-for what a generator may and may not reproduce.
+Machine-validated design system extracted from a clone of a live B2B SaaS marketing site (accounts-receivable
+automation), structured per the design-repo BUILD-GUIDE and BASELINE-REQUIREMENTS (R1–R14).
+Status: **design-review-pending** (`productionApproved: false`). The source is a real, live company's site: see
+`assets/asset-roles.json` for what a generator may and may not reproduce.
 
 ## Counts
 
-- Sections: 31
+- Sections: 35
 - Templates: 9
 - Routes: 18
 - Primitives: 12
 - Components: 178
 - Assets: 244
+- Asset roles: 24
 - Foundation tokens: 113
 - Semantic tokens: 19
 - Rules: 7
+- Generation examples: 5
 
-## Layout
+(`verify_all.py` recomputes every number above from the files and fails on a mismatch.)
 
-- `tokens/00-foundation → 10-semantic → 20-component → 30-layout → themes`, and `tokens/llm/` (catalog, policy, allowlist)
-- `primitives/`, `components/`, `sections/` (one contract per section type), `templates/templates.json` (structured nodes)
-- `compatibility/graph.json` (rules with severity), `assets/asset-roles.json`, `motion/motion-contract.json`
-- `schema/` (draft-07 PageSpec schema, example, semantic validator, adversarial tests), `extraction/` (citations, admission)
+## Modes
+
+Every PageSpec carries a required `mode`:
+
+- `clone` — faithful reconstruction of the source. Real copy and real assets (by `assetRef` to a registered file)
+  are allowed as evidence. `schema/example.pagespec.json` is a clone-mode article page built from the real source text.
+- `generation` — a new page for another brand. `schema/semantic_validate.py` rejects source identity and content,
+  one named rule per category: `GENERATION_MODE_BRAND`, `_PERSON`, `_CUSTOMER`, `_CLAIM`, `_COPY`, `_URL`, `_EMBED`,
+  `_ASSET`, `_SCREENSHOT`. Patterns live in `schema/source-identity.json`, built by
+  `extraction/build_source_identity.py` from the clone's `src/`, the CLONE/ROUTES/ASSET docs and the asset registry,
+  with file:line evidence; copy is stored only as hashed 5-word shingles. Strings are normalised first
+  (`schema/textnorm.py`: NFKC, zero-width removal, curly quotes, dashes, case).
+  One generation example per template family lives in `schema/examples/` (marketing, index, article, legal, contact),
+  all for the fictional brand "Tallyfern" on `.example` domains.
+
+Honest limits: **no human reviewed the pinned patterns**; detection is string-based (it does not catch
+paraphrase, translation or cross-script homoglyphs); the phrase "ex ante" is rejected in generation mode because it
+spells the brand; short company names (SAP, BCG, Sage, Xero, ...) are matched case-sensitively and a single-letter
+mark ("X") is not matched at all.
+
+## Assets
+
+Every role has a closed `availability` (`clone-only` | `generation-safe` | `blocked-for-generation`),
+`generationSafeSubstitutes` and `generatedModeGuidance`. Availability is pinned in code (`PINNED_AVAILABILITY` in
+both `extraction/verify_all.py` and `schema/semantic_validate.py`) and cross-checked against the registry, so editing
+the registry alone cannot loosen it. The real wordmark is `clone-only`; customer, integration and credential logos,
+real people's photos, the SOC 2 badge, live embeds and real inboxes are `blocked-for-generation`. Generation-safe
+roles: placeholder brand mark, user-supplied asset, generated illustration, placeholder screenshot, fictional avatar,
+placeholder company logo, placeholder URL (`.example` / `.invalid` only), original copy (plus generic icon,
+illustration, background).
+
+## Sections, heights and the wrapper gate
+
+Sections are semantic units. Section heights were **measured from the built clone** at 1440px
+(`npx vite build --outDir <scratch>`, `npx vite preview --outDir <scratch> --port <port>`,
+`extraction/measure_sections.mjs` via Playwright, `extraction/record_heights.py`) and are stored in
+`extraction/measured-values.json` → `sectionHeights`. `extraction/wrapper_gate.py` (wired into `verify_all.py`)
+enforces HERO > 1800px warn / > 3000px error and one section > 50% warn / > 60% error of its page (pages with < 3
+in-flow non-SHELL sections skipped; fixed/sticky/absolute layers take no height). The measurements exposed two
+whole-document sections (legal bodies at 87% and 78% of their pages); they are now decomposed into a preamble plus one
+section per `<h3>`-bounded clause, and article bodies into a lead plus one section per chapter. The whitelist is empty.
+Every whitelist entry written by an agent must say "agent attestation, not a human sign-off".
+
+Each contract has `source` (provenance: the clone component and line range) separate from `semantic` (the AI-facing
+id + category), a closed `retrievalEligible` (the empty background layer `content.white` is the only ineligible
+section, pinned in both validators), and validates against `schema/section-contract.schema.json`.
+Section ids are kept stable for compatibility; several were re-categorised from heuristic class names (the six
+`content.framer-*-container` ids are the site header and footer → `SHELL`; `hero.main` is the contact form → `CTA`;
+`features.featured-image-wrapper` is editorial → `CONTENT`).
+
+## Tokens
+
+`tokens/llm/token-catalog.json` (every real token, 175, with tier, resolved value and `referenceable`) and
+`tokens/llm/token-policy.json` (slots, supported fonts, themes, rules) are generated by
+`extraction/build_token_llm.py` from the token files; `verify_all.py` regenerates and compares them. A PageSpec node
+may carry a closed `tokens` slot map; the validator rejects `TOKEN_UNKNOWN`, `TOKEN_RAW_VALUE` (hex/rgb/hsl),
+`TOKEN_ARBITRARY_SPACING`, `TOKEN_UNSUPPORTED_FONT`, `TOKEN_NOT_REFERENCEABLE`, `TOKEN_SLOT_MISMATCH` and
+`TOKEN_THEME_MISMATCH`.
+
+## Design policy binding
+
+`registry.manifest.json` → `category: "saas"`, `designPolicy` binds `n0-saas-design-constraints-common` 0.1.0
+(common IR 0.5, `hard-and-soft`) through `policy/design-policy.json`, which records the SaaS evidence from the clone
+(demo-request conversion, app sign-in/sign-up, integrations grid, SOC 2 badge, finance-team audience, a Free Plan in
+the terms; no pricing page exists in the clone). `contentHash` is computed by `extraction/policy_hash.py` over the
+policy file and its `enforcedBy` files and checked by `verify_all.py`. The binding is an agent's decision
+(agent attestation, not a human sign-off) pending architecture review.
+
+## Evidence
+
+Citations point at the runnable clone that ships in the same git repository (`../src/sections/*.jsx`, each section's
+root element carries `data-clone-section`), and asset files at `../public/`. In a git clone of the package every
+citation, usage line, asset file and inline-mark hash is checked, and the ledger and source-identity registry are
+rebuilt and compared. Copied alone, `design-repo/` admits with one warning that evidence was not checked.
 
 ## What is measured vs inferred
 
-Values (colours, sizes, spacing, radii, widths, word counts, line ranges) are measured. Semantic role **names**
-(`text.primary`, `surface.alt`…), section **categories**, asset **roles** and section **purposes** are heuristics and are labelled
-`basis` / `inferred`. Review them before production use.
+Values (colours, sizes, spacing, radii, widths, word counts, line ranges, 1440px section heights) are measured.
+Semantic token role **names**, the remaining section **categories** and **purposes** marked `purposeIsInferred` are
+heuristics. Visual parity between the clone and the live site was **not measured** in this revision.
 
 ## Admit this repo
 
 ```
-python3 extraction/verify_all.py      # files, entryPoints, counts, parity, citations, pinned policies, schema, adversarial suite
-python3 extraction/prove_drift.py     # proves each check fails on injected drift
+python3 extraction/verify_all.py                 # everything above, plus the adversarial suite
+python3 extraction/prove_drift.py --scratch DIR  # proves each check fails on injected drift
+python3 extraction/wrapper_gate.py               # the height gate on its own
 ```
+Validators need `jsonschema` (any Python with it installed).
+
+`../ir/` (the composition IR) is outside this package's checks and was left untouched by request; it is stale
+against 0.2.0 (see CHANGELOG).

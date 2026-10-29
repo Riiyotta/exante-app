@@ -1,18 +1,19 @@
 {
   "id": "content.framer-huxi9o-container",
-  "category": "CONTENT",
+  "category": "SHELL",
   "label": "framer-huxi9o-container",
   "tag": "div",
-  "purpose": "Carries the substantive content of the page.",
-  "purposeIsInferred": true,
+  "purpose": "Site header: fixed top navigation bar with the brand mark, product/company dropdown menus and the sign-in and demo-request buttons.",
+  "purposeIsInferred": false,
   "nameSource": "class",
   "evidence": {
     "level": "measured",
     "instances": 1,
     "routes": 1,
     "measuredFrom": [
-      "src/index.html:624-712"
-    ]
+      "src/sections/FramerHuxi9oContainer.jsx:6-275"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -32,7 +33,8 @@
     }
   },
   "constraints": {
-    "onePerPage": true
+    "onePerPage": true,
+    "mustBeFirst": true
   },
   "motion": {
     "allowedPatterns": [
@@ -49,7 +51,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 72,
-      "columns": 2
+      "columns": 2,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 64,
@@ -61,5 +64,20 @@
     ]
   },
   "assetRoles": [],
-  "implementedBy": "src/pages/HomePage.jsx"
+  "implementedBy": "src/sections/FramerHuxi9oContainer.jsx",
+  "semantic": {
+    "id": "content.framer-huxi9o-container",
+    "category": "SHELL"
+  },
+  "source": {
+    "id": "FramerHuxi9oContainer",
+    "tag": "div",
+    "file": "src/sections/FramerHuxi9oContainer.jsx",
+    "lines": [
+      6,
+      275
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
 }

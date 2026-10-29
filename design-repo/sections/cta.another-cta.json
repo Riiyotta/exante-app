@@ -11,10 +11,11 @@
     "instances": 3,
     "routes": 3,
     "measuredFrom": [
-      "src/index.html:1814-1866",
-      "src/about/index.html:1196-1233",
-      "src/customers/index.html:1053-1100"
-    ]
+      "src/sections/AnotherCTA.jsx:6-52",
+      "src/sections/AnotherCTA2.jsx:6-38",
+      "src/sections/AnotherCTA3.jsx:4-46"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -63,8 +64,9 @@
     },
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
-      "heightPx": 315,
-      "columns": 2
+      "heightPx": 367,
+      "columns": 2,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 338,
@@ -76,5 +78,24 @@
   "assetRoles": [
     "content-image"
   ],
-  "implementedBy": "src/pages/HomePage.jsx"
+  "implementedBy": "src/sections/AnotherCTA.jsx",
+  "semantic": {
+    "id": "cta.another-cta",
+    "category": "CTA"
+  },
+  "source": {
+    "id": "AnotherCTA",
+    "tag": "section",
+    "file": "src/sections/AnotherCTA.jsx",
+    "lines": [
+      6,
+      52
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "placeholder-screenshot",
+    "user-supplied-asset"
+  ]
 }

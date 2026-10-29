@@ -11,8 +11,9 @@
     "instances": 1,
     "routes": 1,
     "measuredFrom": [
-      "src/index.html:1019-1182"
-    ]
+      "src/sections/KeyFeaturesSection.jsx:6-162"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -68,7 +69,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 1227,
-      "columns": 2
+      "columns": 2,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 2632,
@@ -83,5 +85,24 @@
   "assetRoles": [
     "content-image"
   ],
-  "implementedBy": "src/pages/HomePage.jsx"
+  "implementedBy": "src/sections/KeyFeaturesSection.jsx",
+  "semantic": {
+    "id": "features.key-features-section",
+    "category": "FEATURES"
+  },
+  "source": {
+    "id": "KeyFeaturesSection",
+    "tag": "section",
+    "file": "src/sections/KeyFeaturesSection.jsx",
+    "lines": [
+      6,
+      162
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "placeholder-screenshot",
+    "user-supplied-asset"
+  ]
 }

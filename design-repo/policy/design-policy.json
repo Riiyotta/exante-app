@@ -1,0 +1,50 @@
+{
+  "policyId": "n0-saas-design-constraints-common",
+  "policyVersion": "0.1.0",
+  "commonIrVersion": "0.5",
+  "enforcementMode": "hard-and-soft",
+  "title": "Binding of the exante-app design repo to the N0 common SaaS design-constraint policy",
+  "classification": {
+    "productCategory": "saas",
+    "productDomain": "accounts-receivable-automation",
+    "isSaaS": true,
+    "surfaces": ["marketing-site", "auth-entry-links"],
+    "audiences": ["finance-teams", "controllers-and-cfos", "ar-and-collections-staff", "job-seekers"],
+    "decision": "B2B SaaS: a sales-led product for company finance teams with an app sign-in/sign-up, a demo-request conversion, ERP/accounting integrations, a SOC 2 badge and a Free Plan in its terms. No pricing page exists in the clone (pricing is handled through sales), so pricing-tier templates are absent rather than out of scope.",
+    "evidence": [
+      {"claim": "demo-request conversion (sales-led)", "at": "src/sections/Framer1h4pb9vContainer2.jsx:264"},
+      {"claim": "app sign-in in the header", "at": "src/sections/FramerGuhhlaContainer.jsx:254"},
+      {"claim": "self-serve sign-up CTA in the hero", "at": "src/sections/HeroSection.jsx:42"},
+      {"claim": "plans and pricing handled via sales", "at": "src/sections/Main2.jsx:24"},
+      {"claim": "sales channel to discuss pricing", "at": "src/sections/ContentSection.jsx:37"},
+      {"claim": "accounting/ERP/payments integrations grid", "at": "src/sections/IntegrationsSection.jsx:1"},
+      {"claim": "SOC 2 compliance badge in the footer", "at": "src/sections/FramerGzkazmContainer5.jsx:17"},
+      {"claim": "B2B audience: finance teams", "at": "src/sections/ContentSection7.jsx:50"},
+      {"claim": "product modules (AI agents)", "at": "src/sections/FramerGuhhlaContainer.jsx:55"},
+      {"claim": "Customer Data and Fees clauses, a Free Plan in the terms", "at": "src/sections/ContentSection2.jsx:216"}
+    ]
+  },
+  "generationRules": [
+    "Pages are composed only from the 9 templates and the section contracts in this repo; mode is required (clone | generation).",
+    "mode=generation pages carry none of the source's identity or content: GENERATION_MODE_BRAND/_PERSON/_CUSTOMER/_CLAIM/_COPY/_URL/_EMBED/_ASSET/_SCREENSHOT in schema/semantic_validate.py.",
+    "Real customer, partner and credential logos, real people's photos, the SOC 2 badge and live endpoints are blocked for generation (assets/asset-roles.json availability, pinned in code).",
+    "Styling only through approved tokens (tokens/llm/token-policy.json slots); no raw colours, arbitrary spacing or unsupported fonts.",
+    "No section may hold a whole page: extraction/wrapper_gate.py (HERO 1800/3000px, page share 50/60%)."
+  ],
+  "enforcedBy": [
+    "schema/pagespec.schema.json",
+    "schema/semantic_validate.py",
+    "schema/textnorm.py",
+    "schema/source-identity.json",
+    "assets/asset-roles.json",
+    "compatibility/graph.json",
+    "tokens/llm/token-policy.json",
+    "extraction/wrapper_gate.py"
+  ],
+  "contentHashCovers": "policy/design-policy.json plus every enforcedBy file, in sorted path order: sha256 over '<path>\\n<bytes>\\n' per file (extraction/policy_hash.py)",
+  "approval": {
+    "policyDecision": "defined-pending-architecture-review",
+    "architectureDecisionRecorded": false,
+    "note": "Category binding chosen by an agent from the evidence above (agent attestation, not a human sign-off). A human architecture owner must ratify it; no human has reviewed the pinned leakage patterns."
+  }
+}

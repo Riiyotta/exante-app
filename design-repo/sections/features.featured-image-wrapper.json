@@ -1,22 +1,23 @@
 {
   "id": "features.featured-image-wrapper",
-  "category": "FEATURES",
+  "category": "CONTENT",
   "label": "Featured Image Wrapper",
   "tag": "div",
-  "purpose": "Explains what the product does and why it matters.",
-  "purposeIsInferred": true,
+  "purpose": "The article's featured image, directly under the article header (editorial, not a feature block).",
+  "purposeIsInferred": false,
   "nameSource": "data-attr",
   "evidence": {
     "level": "measured",
     "instances": 8,
     "routes": 8,
     "measuredFrom": [
-      "src/blog/agents-that-learn-how-you-work/index.html:816-825",
-      "src/blog/from-aging-reports-to-cash-control/index.html:810-819",
-      "src/blog/from-source-of-truth-to-source-of-action/index.html:813-822",
-      "src/blog/how-ai-agents-are-transforming-ar-and-collections/index.html:811-820",
-      "src/blog/how-to-choose-the-right-collections-software/index.html:814-823"
-    ]
+      "src/sections/FeaturedImageWrapper.jsx:4-12",
+      "src/sections/FeaturedImageWrapper2.jsx:4-12",
+      "src/sections/FeaturedImageWrapper3.jsx:4-12",
+      "src/sections/FeaturedImageWrapper4.jsx:4-12",
+      "src/sections/FeaturedImageWrapper5.jsx:4-12"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -49,7 +50,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 760,
-      "columns": 1
+      "columns": 1,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 196,
@@ -61,5 +63,24 @@
   "assetRoles": [
     "content-image"
   ],
-  "implementedBy": "src/pages/BlogWhatWeHear.jsx"
+  "implementedBy": "src/sections/FeaturedImageWrapper.jsx",
+  "semantic": {
+    "id": "features.featured-image-wrapper",
+    "category": "CONTENT"
+  },
+  "source": {
+    "id": "FeaturedImageWrapper",
+    "tag": "div",
+    "file": "src/sections/FeaturedImageWrapper.jsx",
+    "lines": [
+      4,
+      12
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "placeholder-screenshot",
+    "user-supplied-asset"
+  ]
 }

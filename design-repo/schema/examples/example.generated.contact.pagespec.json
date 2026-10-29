@@ -1,0 +1,97 @@
+{
+  "pageSpecVersion": "0.2.0",
+  "mode": "generation",
+  "template": "template.contact-2",
+  "route": "/talk",
+  "nodes": [
+    {
+      "type": "shell.desktop-filled",
+      "content": {
+        "body": [
+          "Platform",
+          "Studio"
+        ],
+        "ctas": [
+          {
+            "label": "Log in",
+            "href": "https://app.tallyfern.example/login"
+          },
+          {
+            "label": "Book a walkthrough",
+            "href": "/talk"
+          }
+        ],
+        "images": [
+          {
+            "assetRole": "placeholder-brand-mark",
+            "assetRef": "placeholder:tallyfern-mark",
+            "alt": "Tallyfern placeholder mark"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "hero.main",
+      "content": {
+        "heading": "Say hello",
+        "body": [
+          "Tell us about your current reminder routine.",
+          "Your name",
+          "Work email",
+          "Company",
+          "What should we cover?"
+        ],
+        "ctas": [
+          {
+            "label": "Send message"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "shell.desktop",
+      "content": {
+        "heading": "Quiet ledgers for busy finance desks.",
+        "body": [
+          "Platform",
+          "Studio",
+          "Legal"
+        ],
+        "ctas": [
+          {
+            "label": "Terms",
+            "href": "/terms"
+          }
+        ],
+        "images": [
+          {
+            "assetRole": "placeholder-brand-mark",
+            "assetRef": "placeholder:tallyfern-mark-light",
+            "alt": "Tallyfern placeholder mark"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "content.white",
+      "content": {},
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      },
+      "retrievalEligible": false
+    }
+  ]
+}

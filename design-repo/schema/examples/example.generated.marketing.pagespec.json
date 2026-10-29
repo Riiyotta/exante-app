@@ -1,0 +1,290 @@
+{
+  "pageSpecVersion": "0.2.0",
+  "mode": "generation",
+  "template": "template.home",
+  "route": "/",
+  "theme": "light",
+  "nodes": [
+    {
+      "type": "content.framer-huxi9o-container",
+      "content": {
+        "body": [
+          "Platform",
+          "Studio",
+          "Log in",
+          "Book a walkthrough"
+        ],
+        "ctas": [
+          {
+            "label": "Log in",
+            "href": "https://app.tallyfern.example/login"
+          },
+          {
+            "label": "Book a walkthrough",
+            "href": "/talk"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "appear-on-enter",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "hero.hero-section",
+      "content": {
+        "heading": "Receivables that tidy themselves up",
+        "body": [
+          "Tallyfern drafts polite payment nudges, matches deposits to open bills and flags the accounts that need a human."
+        ],
+        "ctas": [
+          {
+            "label": "Book a walkthrough",
+            "href": "/talk"
+          },
+          {
+            "label": "Start free",
+            "href": "https://app.tallyfern.example/signup"
+          }
+        ],
+        "images": [
+          {
+            "assetRole": "generated-illustration",
+            "assetRef": "generated:hero-ledger-waves",
+            "alt": "Abstract illustration of stacked paper ledgers"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "appear-on-enter",
+        "reducedMotionFallback": "disable-animation"
+      },
+      "tokens": {
+        "surface": "surface.inverse",
+        "text": "text.inverse",
+        "typography": "typography.display",
+        "paddingTop": "layout.sectionPaddingTop.hero"
+      }
+    },
+    {
+      "type": "content.roi-section",
+      "content": {
+        "heading": "Fewer spreadsheets, calmer month end",
+        "body": [
+          "Plainly measured."
+        ],
+        "items": [
+          {
+            "title": "Shorter waits"
+          },
+          {
+            "title": "Cleaner books"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "content.problem-section",
+      "content": {
+        "heading": "Chasing payments eats the afternoon",
+        "body": [
+          "Sound familiar?"
+        ],
+        "items": [
+          {
+            "title": "Manual reminders",
+            "body": "Someone rewrites the same note every week."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "features.key-features-section",
+      "content": {
+        "heading": "Three helpers, one tidy inbox",
+        "body": [
+          "Each helper handles one chore and hands the rest to you."
+        ],
+        "ctas": [
+          {
+            "label": "See them",
+            "href": "#helpers"
+          }
+        ],
+        "items": [
+          {
+            "title": "Nudge writer",
+            "body": "Drafts friendly reminders in your tone."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      },
+      "tokens": {
+        "gap": "layout.gridGap.features",
+        "radius": "radius.surface"
+      }
+    },
+    {
+      "type": "features.other-features-section",
+      "content": {
+        "heading": "Small touches that add up",
+        "body": [
+          "Useful details for the people closing the books."
+        ],
+        "ctas": [
+          {
+            "label": "Browse all",
+            "href": "#more"
+          }
+        ],
+        "items": [
+          {
+            "title": "Smart matching",
+            "body": "Pairs bank lines with open bills."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "proof.clients-section",
+      "content": {
+        "heading": "Trusted by placeholder teams",
+        "body": [
+          "Sample logos shown for layout only."
+        ],
+        "images": [
+          {
+            "assetRole": "placeholder-company-logo",
+            "assetRef": "placeholder:company-a",
+            "alt": "Placeholder company logo"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "cta.cta-section-2",
+      "content": {
+        "heading": "Try it on last quarter's backlog",
+        "body": [
+          "No setup fees."
+        ],
+        "ctas": [
+          {
+            "label": "Book a walkthrough",
+            "href": "/talk"
+          }
+        ],
+        "items": [
+          {
+            "title": "Walkthrough",
+            "body": "A short call to map your current reminder routine."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "features.integrations-section",
+      "content": {
+        "heading": "Works with yours",
+        "body": [
+          "Connects to the bookkeeping tools you already use."
+        ],
+        "images": [
+          {
+            "assetRole": "placeholder-company-logo",
+            "assetRef": "placeholder:ledger-tool",
+            "alt": "Placeholder partner logo"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "support.faq-section",
+      "content": {
+        "heading": "Common questions",
+        "body": [
+          "Does it send anything without approval? Only if you switch that on.",
+          "Can I edit the tone? Yes, every draft is editable."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "cta.another-cta",
+      "content": {
+        "heading": "Ready when your ledger is",
+        "body": [
+          "Talk with us."
+        ],
+        "ctas": [
+          {
+            "label": "Book a walkthrough",
+            "href": "/talk"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "content.framer-39uowv-container",
+      "content": {
+        "heading": "Quiet ledgers for busy finance desks.",
+        "body": [
+          "Platform",
+          "Reminders",
+          "Payment matching",
+          "Studio",
+          "Our story",
+          "Journal",
+          "Legal",
+          "Terms",
+          "Privacy"
+        ],
+        "images": [
+          {
+            "assetRole": "placeholder-brand-mark",
+            "assetRef": "placeholder:tallyfern-mark",
+            "alt": "Tallyfern placeholder mark"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    }
+  ]
+}

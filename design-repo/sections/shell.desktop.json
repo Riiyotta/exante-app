@@ -11,9 +11,9 @@
     "instances": 2,
     "routes": 2,
     "measuredFrom": [
-      "src/contact/sales/index.html:891-1090",
-      "src/contact/support/index.html:852-1051"
-    ]
+      "src/sections/Desktop.jsx:6-160"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -41,7 +41,7 @@
         "maxItems": 2,
         "assetRoles": [
           "logo",
-          "content-image"
+          "compliance-badge"
         ]
       }
     }
@@ -63,7 +63,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 818,
-      "columns": 1
+      "columns": 1,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": null,
@@ -74,8 +75,26 @@
   },
   "assetRoles": [
     "logo",
-    "content-image"
+    "compliance-badge"
   ],
   "contentPolicy": "Carries the site's own brand mark (the Exante wordmark) alongside other footer imagery. Generated pages must swap in the generated business's own logo for the logo slot; never reuse the measured mark.",
-  "implementedBy": "src/pages/ContactSales.jsx"
+  "implementedBy": "src/sections/Desktop.jsx",
+  "semantic": {
+    "id": "shell.desktop",
+    "category": "SHELL"
+  },
+  "source": {
+    "id": "Desktop",
+    "tag": "footer",
+    "file": "src/sections/Desktop.jsx",
+    "lines": [
+      6,
+      160
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "placeholder-brand-mark",
+    "user-supplied-asset"
+  ]
 }

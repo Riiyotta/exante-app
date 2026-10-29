@@ -1,82 +1,1610 @@
 {
-  "version": "0.1.0",
-  "note": "The curated, referenceable view: semantic, component and layout tokens only. Foundation tokens are deliberately not exposed.",
+  "version": "0.2.0",
+  "generatedBy": "extraction/build_token_llm.py (derived from the token files; do not edit by hand)",
+  "note": "Full catalog of every real token. `categories` lists the referenceable view (semantic, component, layout); foundation tokens are catalogued with referenceable=false.",
   "categories": {
     "color": [
-      "surface.default",
-      "surface.alt",
-      "surface.inverse",
-      "surface.accent",
-      "text.primary",
-      "text.secondary",
-      "text.inverse",
-      "text.accent",
+      "accent.primary",
       "border.default",
-      "accent.primary"
+      "surface.accent",
+      "surface.alt",
+      "surface.default",
+      "surface.inverse",
+      "text.accent",
+      "text.inverse",
+      "text.primary",
+      "text.secondary"
     ],
-    "typography": [
-      "typography.display",
-      "typography.heading",
-      "typography.body",
-      "typography.label"
-    ],
-    "radius": [
-      "radius.control",
-      "radius.surface"
+    "component": [
+      "button.background",
+      "button.borderWidth",
+      "button.color",
+      "button.fontSize",
+      "button.fontWeight",
+      "button.paddingX",
+      "button.paddingY",
+      "button.radius",
+      "image.objectFit",
+      "image.radius",
+      "input.background",
+      "input.borderColor",
+      "input.color",
+      "input.fontSize",
+      "input.paddingX",
+      "input.paddingY",
+      "input.radius",
+      "link.color",
+      "link.fontWeight",
+      "link.textDecoration",
+      "nav.background",
+      "nav.color",
+      "nav.paddingY"
     ],
     "elevation": [
       "elevation.default"
+    ],
+    "layout": [
+      "layout.contentWidth",
+      "layout.gridGap",
+      "layout.gridGap.cta",
+      "layout.gridGap.features",
+      "layout.gridGap.hero",
+      "layout.gridGap.proof",
+      "layout.gridGap.support",
+      "layout.gutter",
+      "layout.sectionPaddingBottom",
+      "layout.sectionPaddingBottom.cta",
+      "layout.sectionPaddingBottom.features",
+      "layout.sectionPaddingBottom.proof",
+      "layout.sectionPaddingBottom.shell",
+      "layout.sectionPaddingTop",
+      "layout.sectionPaddingTop.cta",
+      "layout.sectionPaddingTop.features",
+      "layout.sectionPaddingTop.hero",
+      "layout.sectionPaddingTop.proof",
+      "layout.sectionPaddingTop.shell",
+      "layout.sectionPaddingTop.support"
     ],
     "motion": [
       "motion.duration.default",
       "motion.easing.default"
     ],
-    "component": [
-      "button.background",
-      "button.color",
-      "button.radius",
-      "button.paddingY",
-      "button.paddingX",
-      "button.fontSize",
-      "button.fontWeight",
-      "button.borderWidth",
-      "link.color",
-      "link.textDecoration",
-      "link.fontWeight",
-      "input.background",
-      "input.color",
-      "input.radius",
-      "input.borderColor",
-      "input.paddingY",
-      "input.paddingX",
-      "input.fontSize",
-      "image.radius",
-      "image.objectFit",
-      "nav.background",
-      "nav.color",
-      "nav.paddingY"
+    "radius": [
+      "radius.control",
+      "radius.surface"
     ],
-    "layout": [
-      "layout.contentWidth",
-      "layout.gutter",
-      "layout.sectionPaddingTop",
-      "layout.sectionPaddingBottom",
-      "layout.gridGap",
-      "layout.sectionPaddingTop.cta",
-      "layout.sectionPaddingBottom.cta",
-      "layout.gridGap.cta",
-      "layout.sectionPaddingTop.features",
-      "layout.sectionPaddingBottom.features",
-      "layout.gridGap.features",
-      "layout.sectionPaddingTop.hero",
-      "layout.gridGap.hero",
-      "layout.sectionPaddingTop.proof",
-      "layout.sectionPaddingBottom.proof",
-      "layout.gridGap.proof",
-      "layout.sectionPaddingTop.shell",
-      "layout.sectionPaddingBottom.shell",
-      "layout.sectionPaddingTop.support",
-      "layout.gridGap.support"
+    "typography": [
+      "typography.body",
+      "typography.display",
+      "typography.heading",
+      "typography.label"
     ]
+  },
+  "tokens": {
+    "accent.primary": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(0,0,238)",
+      "referenceable": true,
+      "ref": "color.blue.01"
+    },
+    "border.default": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(118,118,118)",
+      "referenceable": true,
+      "ref": "color.neutral.08"
+    },
+    "breakpoint.1099.98": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/breakpoint.json",
+      "category": "breakpoint",
+      "type": "dimension",
+      "value": "1099.98px",
+      "referenceable": false
+    },
+    "breakpoint.1100": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/breakpoint.json",
+      "category": "breakpoint",
+      "type": "dimension",
+      "value": "1100px",
+      "referenceable": false
+    },
+    "breakpoint.1439": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/breakpoint.json",
+      "category": "breakpoint",
+      "type": "dimension",
+      "value": "1439px",
+      "referenceable": false
+    },
+    "breakpoint.1439.98": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/breakpoint.json",
+      "category": "breakpoint",
+      "type": "dimension",
+      "value": "1439.98px",
+      "referenceable": false
+    },
+    "breakpoint.759": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/breakpoint.json",
+      "category": "breakpoint",
+      "type": "dimension",
+      "value": "759px",
+      "referenceable": false
+    },
+    "breakpoint.759.98": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/breakpoint.json",
+      "category": "breakpoint",
+      "type": "dimension",
+      "value": "759.98px",
+      "referenceable": false
+    },
+    "breakpoint.760": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/breakpoint.json",
+      "category": "breakpoint",
+      "type": "dimension",
+      "value": "760px",
+      "referenceable": false
+    },
+    "button.background": {
+      "tier": "20-component",
+      "file": "tokens/20-component/button.json",
+      "category": "component",
+      "type": null,
+      "value": "rgb(30,33,30)",
+      "referenceable": true,
+      "ref": "text.secondary"
+    },
+    "button.borderWidth": {
+      "tier": "20-component",
+      "file": "tokens/20-component/button.json",
+      "category": "component",
+      "type": null,
+      "value": "0px",
+      "referenceable": true
+    },
+    "button.color": {
+      "tier": "20-component",
+      "file": "tokens/20-component/button.json",
+      "category": "component",
+      "type": null,
+      "value": "rgb(0,0,238)",
+      "referenceable": true,
+      "ref": "accent.primary"
+    },
+    "button.fontSize": {
+      "tier": "20-component",
+      "file": "tokens/20-component/button.json",
+      "category": "component",
+      "type": null,
+      "value": "12px",
+      "referenceable": true,
+      "ref": "space.12"
+    },
+    "button.fontWeight": {
+      "tier": "20-component",
+      "file": "tokens/20-component/button.json",
+      "category": "component",
+      "type": null,
+      "value": "400",
+      "referenceable": true
+    },
+    "button.paddingX": {
+      "tier": "20-component",
+      "file": "tokens/20-component/button.json",
+      "category": "component",
+      "type": null,
+      "value": "28px",
+      "referenceable": true,
+      "ref": "space.28"
+    },
+    "button.paddingY": {
+      "tier": "20-component",
+      "file": "tokens/20-component/button.json",
+      "category": "component",
+      "type": null,
+      "value": "11px",
+      "referenceable": true,
+      "ref": "space.11"
+    },
+    "button.radius": {
+      "tier": "20-component",
+      "file": "tokens/20-component/button.json",
+      "category": "component",
+      "type": null,
+      "value": "2px",
+      "referenceable": true,
+      "ref": "radius.2"
+    },
+    "color.blue.01": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(0,0,238)",
+      "referenceable": false
+    },
+    "color.green.01": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(144,252,149)",
+      "referenceable": false
+    },
+    "color.green.02": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(33,54,34)",
+      "referenceable": false
+    },
+    "color.neutral.01": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(0,0,0)",
+      "referenceable": false
+    },
+    "color.neutral.02": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(30,33,30)",
+      "referenceable": false
+    },
+    "color.neutral.03": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(255,255,255)",
+      "referenceable": false
+    },
+    "color.neutral.04": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(34,34,34)",
+      "referenceable": false
+    },
+    "color.neutral.05": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(251,250,249)",
+      "referenceable": false
+    },
+    "color.neutral.06": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgba(30,33,30,0.6)",
+      "referenceable": false
+    },
+    "color.neutral.07": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgba(255,255,255,0.15)",
+      "referenceable": false
+    },
+    "color.neutral.08": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(118,118,118)",
+      "referenceable": false
+    },
+    "color.neutral.09": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(138,138,138)",
+      "referenceable": false
+    },
+    "color.neutral.10": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(250,250,250)",
+      "referenceable": false
+    },
+    "color.neutral.11": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgba(255,255,255,0.8)",
+      "referenceable": false
+    },
+    "color.neutral.12": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgba(30,33,30,0.8)",
+      "referenceable": false
+    },
+    "color.neutral.13": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgba(245,243,242,0.3)",
+      "referenceable": false
+    },
+    "color.neutral.14": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgba(0,0,0,0.7)",
+      "referenceable": false
+    },
+    "color.neutral.15": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgba(255,255,255,0.01)",
+      "referenceable": false
+    },
+    "color.neutral.16": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(249,250,251)",
+      "referenceable": false
+    },
+    "color.neutral.17": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgba(0,0,0,0.4)",
+      "referenceable": false
+    },
+    "color.neutral.18": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgba(30,33,30,0.3)",
+      "referenceable": false
+    },
+    "color.orange.01": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(242,236,232)",
+      "referenceable": false
+    },
+    "duration.1300ms": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/motion.json",
+      "category": "motion",
+      "type": "duration",
+      "value": "1.3s",
+      "referenceable": false
+    },
+    "duration.1500ms": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/motion.json",
+      "category": "motion",
+      "type": "duration",
+      "value": "1.5s",
+      "referenceable": false
+    },
+    "duration.250ms": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/motion.json",
+      "category": "motion",
+      "type": "duration",
+      "value": "0.25s",
+      "referenceable": false
+    },
+    "duration.400ms": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/motion.json",
+      "category": "motion",
+      "type": "duration",
+      "value": "0.4s",
+      "referenceable": false
+    },
+    "easing.01": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/motion.json",
+      "category": "motion",
+      "type": "cubicBezier",
+      "value": "cubic-bezier(0.44, 0, 0.13, 0.96)",
+      "referenceable": false
+    },
+    "easing.02": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/motion.json",
+      "category": "motion",
+      "type": "cubicBezier",
+      "value": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+      "referenceable": false
+    },
+    "easing.03": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/motion.json",
+      "category": "motion",
+      "type": "cubicBezier",
+      "value": "linear",
+      "referenceable": false
+    },
+    "elevation.01": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/elevation.json",
+      "category": "elevation",
+      "type": "shadow",
+      "value": "rgba(0, 0, 0, 0) 0px 0px 0px 1px inset",
+      "referenceable": false
+    },
+    "elevation.default": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/elevation.json",
+      "category": "elevation",
+      "type": "elevation",
+      "value": "rgba(0, 0, 0, 0) 0px 0px 0px 1px inset",
+      "referenceable": true,
+      "ref": "elevation.01"
+    },
+    "fontFamily.01": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "fontFamily",
+      "value": "Geist Variable",
+      "referenceable": false
+    },
+    "fontFamily.02": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "fontFamily",
+      "value": "Alliance No.2 Regular",
+      "referenceable": false
+    },
+    "fontFamily.03": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "fontFamily",
+      "value": "Geist Mono",
+      "referenceable": false
+    },
+    "fontFamily.04": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "fontFamily",
+      "value": "Geist",
+      "referenceable": false
+    },
+    "fontFamily.05": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "fontFamily",
+      "value": "Alliance No.2 Light",
+      "referenceable": false
+    },
+    "fontFamily.06": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "fontFamily",
+      "value": "Chivo Mono",
+      "referenceable": false
+    },
+    "fontFamily.07": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "fontFamily",
+      "value": "Inter",
+      "referenceable": false
+    },
+    "fontSize.12": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "12px",
+      "referenceable": false
+    },
+    "fontSize.14": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "14px",
+      "referenceable": false
+    },
+    "fontSize.16": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "16px",
+      "referenceable": false
+    },
+    "fontSize.17": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "17px",
+      "referenceable": false
+    },
+    "fontSize.19": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "19px",
+      "referenceable": false
+    },
+    "fontSize.21": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "21px",
+      "referenceable": false
+    },
+    "fontSize.24": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "24px",
+      "referenceable": false
+    },
+    "fontSize.28": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "28px",
+      "referenceable": false
+    },
+    "fontSize.32": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "32px",
+      "referenceable": false
+    },
+    "fontSize.40": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "40px",
+      "referenceable": false
+    },
+    "fontSize.52": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "52px",
+      "referenceable": false
+    },
+    "fontSize.58": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "58px",
+      "referenceable": false
+    },
+    "fontSize.72": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "72px",
+      "referenceable": false
+    },
+    "fontSize.80": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "80px",
+      "referenceable": false
+    },
+    "fontWeight.300": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "fontWeight",
+      "value": "300",
+      "referenceable": false
+    },
+    "fontWeight.400": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "fontWeight",
+      "value": "400",
+      "referenceable": false
+    },
+    "fontWeight.700": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "fontWeight",
+      "value": "700",
+      "referenceable": false
+    },
+    "iconSize.16": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/icon-size.json",
+      "category": "iconSize",
+      "type": "dimension",
+      "value": "16px",
+      "referenceable": false
+    },
+    "iconSize.18": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/icon-size.json",
+      "category": "iconSize",
+      "type": "dimension",
+      "value": "18px",
+      "referenceable": false
+    },
+    "iconSize.20": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/icon-size.json",
+      "category": "iconSize",
+      "type": "dimension",
+      "value": "20px",
+      "referenceable": false
+    },
+    "iconSize.30": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/icon-size.json",
+      "category": "iconSize",
+      "type": "dimension",
+      "value": "30px",
+      "referenceable": false
+    },
+    "image.objectFit": {
+      "tier": "20-component",
+      "file": "tokens/20-component/image.json",
+      "category": "component",
+      "type": null,
+      "value": "cover",
+      "referenceable": true
+    },
+    "image.radius": {
+      "tier": "20-component",
+      "file": "tokens/20-component/image.json",
+      "category": "component",
+      "type": null,
+      "value": "0px",
+      "referenceable": true
+    },
+    "input.background": {
+      "tier": "20-component",
+      "file": "tokens/20-component/input.json",
+      "category": "component",
+      "type": null,
+      "value": "rgb(255,255,255)",
+      "referenceable": true,
+      "ref": "text.inverse"
+    },
+    "input.borderColor": {
+      "tier": "20-component",
+      "file": "tokens/20-component/input.json",
+      "category": "component",
+      "type": null,
+      "value": "rgb(118,118,118)",
+      "referenceable": true,
+      "ref": "border.default"
+    },
+    "input.color": {
+      "tier": "20-component",
+      "file": "tokens/20-component/input.json",
+      "category": "component",
+      "type": null,
+      "value": "rgb(0,0,0)",
+      "referenceable": true,
+      "ref": "text.primary"
+    },
+    "input.fontSize": {
+      "tier": "20-component",
+      "file": "tokens/20-component/input.json",
+      "category": "component",
+      "type": null,
+      "value": "12px",
+      "referenceable": true,
+      "ref": "space.12"
+    },
+    "input.paddingX": {
+      "tier": "20-component",
+      "file": "tokens/20-component/input.json",
+      "category": "component",
+      "type": null,
+      "value": "2px",
+      "referenceable": true,
+      "ref": "radius.2"
+    },
+    "input.paddingY": {
+      "tier": "20-component",
+      "file": "tokens/20-component/input.json",
+      "category": "component",
+      "type": null,
+      "value": "1px",
+      "referenceable": true,
+      "ref": "radius.1"
+    },
+    "input.radius": {
+      "tier": "20-component",
+      "file": "tokens/20-component/input.json",
+      "category": "component",
+      "type": null,
+      "value": "0px",
+      "referenceable": true
+    },
+    "layout.contentWidth": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "1360px",
+      "referenceable": true
+    },
+    "layout.gridGap": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "64px",
+      "referenceable": true,
+      "ref": "radius.64"
+    },
+    "layout.gridGap.cta": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "10px",
+      "referenceable": true,
+      "ref": "radius.10"
+    },
+    "layout.gridGap.features": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "24px",
+      "referenceable": true,
+      "ref": "space.24"
+    },
+    "layout.gridGap.hero": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "10px",
+      "referenceable": true,
+      "ref": "radius.10"
+    },
+    "layout.gridGap.proof": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "50px",
+      "referenceable": true,
+      "ref": "radius.50"
+    },
+    "layout.gridGap.support": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "53px",
+      "referenceable": true
+    },
+    "layout.gutter": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "40px",
+      "referenceable": true
+    },
+    "layout.sectionPaddingBottom": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "96px",
+      "referenceable": true,
+      "ref": "space.96"
+    },
+    "layout.sectionPaddingBottom.cta": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "26px",
+      "referenceable": true
+    },
+    "layout.sectionPaddingBottom.features": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "22px",
+      "referenceable": true
+    },
+    "layout.sectionPaddingBottom.proof": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "46px",
+      "referenceable": true
+    },
+    "layout.sectionPaddingBottom.shell": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "80px",
+      "referenceable": true,
+      "ref": "space.80"
+    },
+    "layout.sectionPaddingTop": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "96px",
+      "referenceable": true,
+      "ref": "space.96"
+    },
+    "layout.sectionPaddingTop.cta": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "26px",
+      "referenceable": true
+    },
+    "layout.sectionPaddingTop.features": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "66px",
+      "referenceable": true
+    },
+    "layout.sectionPaddingTop.hero": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "200px",
+      "referenceable": true
+    },
+    "layout.sectionPaddingTop.proof": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "85px",
+      "referenceable": true
+    },
+    "layout.sectionPaddingTop.shell": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "80px",
+      "referenceable": true,
+      "ref": "space.80"
+    },
+    "layout.sectionPaddingTop.support": {
+      "tier": "30-layout",
+      "file": "tokens/30-layout/layout.json",
+      "category": "layout",
+      "type": null,
+      "value": "212px",
+      "referenceable": true
+    },
+    "lineHeight.12": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "12px",
+      "referenceable": false
+    },
+    "lineHeight.14_4": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "14.4px",
+      "referenceable": false
+    },
+    "lineHeight.19_2": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "19.2px",
+      "referenceable": false
+    },
+    "lineHeight.19_6": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "19.6px",
+      "referenceable": false
+    },
+    "lineHeight.22_4": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "22.4px",
+      "referenceable": false
+    },
+    "lineHeight.22_8": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "22.8px",
+      "referenceable": false
+    },
+    "lineHeight.23_8": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "23.8px",
+      "referenceable": false
+    },
+    "lineHeight.26_6": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "26.6px",
+      "referenceable": false
+    },
+    "lineHeight.28_8": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "28.8px",
+      "referenceable": false
+    },
+    "lineHeight.29_4": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "29.4px",
+      "referenceable": false
+    },
+    "lineHeight.31_5": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "31.5px",
+      "referenceable": false
+    },
+    "lineHeight.33_6": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "33.6px",
+      "referenceable": false
+    },
+    "lineHeight.38_4": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "38.4px",
+      "referenceable": false
+    },
+    "lineHeight.62_4": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "62.4px",
+      "referenceable": false
+    },
+    "lineHeight.69_6": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "69.6px",
+      "referenceable": false
+    },
+    "lineHeight.88": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/typography.json",
+      "category": "typography",
+      "type": "dimension",
+      "value": "88px",
+      "referenceable": false
+    },
+    "link.color": {
+      "tier": "20-component",
+      "file": "tokens/20-component/link.json",
+      "category": "component",
+      "type": null,
+      "value": "rgb(255,255,255)",
+      "referenceable": true,
+      "ref": "text.inverse"
+    },
+    "link.fontWeight": {
+      "tier": "20-component",
+      "file": "tokens/20-component/link.json",
+      "category": "component",
+      "type": null,
+      "value": "400",
+      "referenceable": true
+    },
+    "link.textDecoration": {
+      "tier": "20-component",
+      "file": "tokens/20-component/link.json",
+      "category": "component",
+      "type": null,
+      "value": "none",
+      "referenceable": true
+    },
+    "motion.duration.default": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/motion.json",
+      "category": "motion",
+      "type": "motion",
+      "value": "1.3s",
+      "referenceable": true,
+      "ref": "duration.1300ms"
+    },
+    "motion.easing.default": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/motion.json",
+      "category": "motion",
+      "type": "motion",
+      "value": "cubic-bezier(0.44, 0, 0.13, 0.96)",
+      "referenceable": true,
+      "ref": "easing.01"
+    },
+    "nav.background": {
+      "tier": "20-component",
+      "file": "tokens/20-component/nav.json",
+      "category": "component",
+      "type": null,
+      "value": "transparent",
+      "referenceable": true
+    },
+    "nav.color": {
+      "tier": "20-component",
+      "file": "tokens/20-component/nav.json",
+      "category": "component",
+      "type": null,
+      "value": "rgb(0,0,0)",
+      "referenceable": true,
+      "ref": "text.primary"
+    },
+    "nav.paddingY": {
+      "tier": "20-component",
+      "file": "tokens/20-component/nav.json",
+      "category": "component",
+      "type": null,
+      "value": "0px",
+      "referenceable": true
+    },
+    "radius.1": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/radius.json",
+      "category": "radius",
+      "type": "dimension",
+      "value": "1px",
+      "referenceable": false
+    },
+    "radius.10": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/radius.json",
+      "category": "radius",
+      "type": "dimension",
+      "value": "10px",
+      "referenceable": false
+    },
+    "radius.16": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/radius.json",
+      "category": "radius",
+      "type": "dimension",
+      "value": "16px",
+      "referenceable": false
+    },
+    "radius.2": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/radius.json",
+      "category": "radius",
+      "type": "dimension",
+      "value": "2px",
+      "referenceable": false
+    },
+    "radius.4": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/radius.json",
+      "category": "radius",
+      "type": "dimension",
+      "value": "4px",
+      "referenceable": false
+    },
+    "radius.50": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/radius.json",
+      "category": "radius",
+      "type": "dimension",
+      "value": "50px",
+      "referenceable": false
+    },
+    "radius.64": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/radius.json",
+      "category": "radius",
+      "type": "dimension",
+      "value": "64px",
+      "referenceable": false
+    },
+    "radius.8": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/radius.json",
+      "category": "radius",
+      "type": "dimension",
+      "value": "8px",
+      "referenceable": false
+    },
+    "radius.control": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/radius.json",
+      "category": "radius",
+      "type": "radius",
+      "value": "2px",
+      "referenceable": true,
+      "ref": "radius.2"
+    },
+    "radius.surface": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/radius.json",
+      "category": "radius",
+      "type": "radius",
+      "value": "4px",
+      "referenceable": true,
+      "ref": "radius.4"
+    },
+    "space.1": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "1px",
+      "referenceable": false
+    },
+    "space.10": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "10px",
+      "referenceable": false
+    },
+    "space.11": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "11px",
+      "referenceable": false
+    },
+    "space.12": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "12px",
+      "referenceable": false
+    },
+    "space.13": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "13px",
+      "referenceable": false
+    },
+    "space.14": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "14px",
+      "referenceable": false
+    },
+    "space.16": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "16px",
+      "referenceable": false
+    },
+    "space.160": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "160px",
+      "referenceable": false
+    },
+    "space.2": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "2px",
+      "referenceable": false
+    },
+    "space.20": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "20px",
+      "referenceable": false
+    },
+    "space.24": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "24px",
+      "referenceable": false
+    },
+    "space.24_9723": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "24.9723px",
+      "referenceable": false
+    },
+    "space.28": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "28px",
+      "referenceable": false
+    },
+    "space.3": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "3px",
+      "referenceable": false
+    },
+    "space.32": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "32px",
+      "referenceable": false
+    },
+    "space.34": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "34px",
+      "referenceable": false
+    },
+    "space.36": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "36px",
+      "referenceable": false
+    },
+    "space.4": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "4px",
+      "referenceable": false
+    },
+    "space.40": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "40px",
+      "referenceable": false
+    },
+    "space.48": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "48px",
+      "referenceable": false
+    },
+    "space.64": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "64px",
+      "referenceable": false
+    },
+    "space.8": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "8px",
+      "referenceable": false
+    },
+    "space.80": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "80px",
+      "referenceable": false
+    },
+    "space.96": {
+      "tier": "00-foundation",
+      "file": "tokens/00-foundation/spacing.json",
+      "category": "spacing",
+      "type": "dimension",
+      "value": "96px",
+      "referenceable": false
+    },
+    "surface.accent": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(144,252,149)",
+      "referenceable": true,
+      "ref": "color.green.01"
+    },
+    "surface.alt": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(30,33,30)",
+      "referenceable": true,
+      "ref": "color.neutral.02"
+    },
+    "surface.default": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(255,255,255)",
+      "referenceable": true,
+      "ref": "color.neutral.03"
+    },
+    "surface.inverse": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(30,33,30)",
+      "referenceable": true,
+      "ref": "color.neutral.02"
+    },
+    "text.accent": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(0,0,238)",
+      "referenceable": true,
+      "ref": "color.blue.01"
+    },
+    "text.inverse": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(255,255,255)",
+      "referenceable": true,
+      "ref": "color.neutral.03"
+    },
+    "text.primary": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(0,0,0)",
+      "referenceable": true,
+      "ref": "color.neutral.01"
+    },
+    "text.secondary": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/color.json",
+      "category": "color",
+      "type": "color",
+      "value": "rgb(30,33,30)",
+      "referenceable": true,
+      "ref": "color.neutral.02"
+    },
+    "typography.body": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/typography.json",
+      "category": "typography",
+      "type": "typography",
+      "value": {
+        "fontFamily": "Geist Variable",
+        "fontSize": "19px",
+        "fontWeight": "400",
+        "lineHeight": "26.6px"
+      },
+      "referenceable": true
+    },
+    "typography.display": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/typography.json",
+      "category": "typography",
+      "type": "typography",
+      "value": {
+        "fontFamily": "Inter",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "19.2px"
+      },
+      "referenceable": true
+    },
+    "typography.heading": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/typography.json",
+      "category": "typography",
+      "type": "typography",
+      "value": {
+        "fontFamily": "Geist Mono",
+        "fontSize": "32px",
+        "fontWeight": "400",
+        "lineHeight": "38.4px"
+      },
+      "referenceable": true
+    },
+    "typography.label": {
+      "tier": "10-semantic",
+      "file": "tokens/10-semantic/typography.json",
+      "category": "typography",
+      "type": "typography",
+      "value": {
+        "fontFamily": "Geist Variable",
+        "fontSize": "19px",
+        "fontWeight": "400",
+        "lineHeight": "26.6px"
+      },
+      "referenceable": true
+    }
+  },
+  "fontFamilies": [
+    "Alliance No.2 Light",
+    "Alliance No.2 Regular",
+    "Chivo Mono",
+    "Geist",
+    "Geist Mono",
+    "Geist Variable",
+    "Inter"
+  ],
+  "spacingTokens": [
+    "layout.gridGap",
+    "layout.gridGap.cta",
+    "layout.gridGap.features",
+    "layout.gridGap.hero",
+    "layout.gridGap.proof",
+    "layout.gridGap.support",
+    "layout.gutter",
+    "layout.sectionPaddingBottom",
+    "layout.sectionPaddingBottom.cta",
+    "layout.sectionPaddingBottom.features",
+    "layout.sectionPaddingBottom.proof",
+    "layout.sectionPaddingBottom.shell",
+    "layout.sectionPaddingTop",
+    "layout.sectionPaddingTop.cta",
+    "layout.sectionPaddingTop.features",
+    "layout.sectionPaddingTop.hero",
+    "layout.sectionPaddingTop.proof",
+    "layout.sectionPaddingTop.shell",
+    "layout.sectionPaddingTop.support"
+  ],
+  "themes": {
+    "light": {
+      "file": "tokens/themes/light.json",
+      "mode": "light",
+      "resolves": [
+        "accent.primary",
+        "border.default",
+        "elevation.default",
+        "motion.duration.default",
+        "motion.easing.default",
+        "radius.control",
+        "radius.surface",
+        "surface.accent",
+        "surface.alt",
+        "surface.default",
+        "surface.inverse",
+        "text.accent",
+        "text.inverse",
+        "text.primary",
+        "text.secondary",
+        "typography.body",
+        "typography.display",
+        "typography.heading",
+        "typography.label"
+      ]
+    }
+  },
+  "counts": {
+    "tokens": 175,
+    "referenceable": 62,
+    "byTier": {
+      "00-foundation": 113,
+      "10-semantic": 19,
+      "20-component": 23,
+      "30-layout": 20
+    }
   }
 }

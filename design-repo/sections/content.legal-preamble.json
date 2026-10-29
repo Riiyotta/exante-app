@@ -1,0 +1,76 @@
+{
+  "id": "content.legal-preamble",
+  "category": "CONTENT",
+  "label": "Legal Preamble",
+  "tag": "section",
+  "purpose": "Opens a legal document: the last-updated date and the introductory paragraphs that name the parties and scope, before the first numbered clause.",
+  "purposeIsInferred": false,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 2,
+    "routes": 2,
+    "measuredFrom": [
+      "src/sections/ContentSection2.jsx:4-32",
+      "src/sections/ContentSection3.jsx:6-39"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "body": {
+        "type": "string[]",
+        "required": true,
+        "maxItems": 5,
+        "maxWords": 51
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 413,
+      "columns": 1,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
+    },
+    "mobile": {
+      "heightPx": 5145,
+      "columns": 1,
+      "hiddenShare": 0
+    },
+    "changes": [
+      "grows taller on mobile (content stacks)"
+    ]
+  },
+  "assetRoles": [],
+  "implementedBy": "src/sections/ContentSection2.jsx",
+  "semantic": {
+    "id": "content.legal-preamble",
+    "category": "CONTENT"
+  },
+  "source": {
+    "id": "ContentSection2",
+    "tag": "section",
+    "file": "src/sections/ContentSection2.jsx",
+    "lines": [
+      4,
+      32
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
+}

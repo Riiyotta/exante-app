@@ -1,20 +1,152 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "generatedBy": "extraction/build_token_llm.py (derived from the token catalog; do not edit by hand)",
   "rawValuesAllowed": false,
   "rawValueRestrictions": {
     "color": "forbidden",
-    "typography": "forbidden",
-    "radius": "forbidden",
-    "elevation": "forbidden",
-    "motion": "forbidden",
     "component": "forbidden",
-    "layout": "forbidden"
+    "elevation": "forbidden",
+    "layout": "forbidden",
+    "motion": "forbidden",
+    "radius": "forbidden",
+    "typography": "forbidden"
   },
   "overrides": {
-    "perInstance": "none",
-    "note": "PageSpec has no per-instance style or token-override field; styling is owned entirely by section and component contracts. Nothing to validate or mutate at the PageSpec layer; drift is tested at the catalog/policy layer instead."
+    "perInstance": "node.tokens only",
+    "note": "A PageSpec node may carry an optional closed `tokens` object whose keys are the slots below and whose values are approved token ids (or, for fontFamily, a supported family name). Page-level `theme` must be a schema-validated theme. There is no free-form style field."
+  },
+  "slots": {
+    "surface": {
+      "categories": [
+        "color"
+      ],
+      "allowed": [
+        "surface.accent",
+        "surface.alt",
+        "surface.default",
+        "surface.inverse"
+      ]
+    },
+    "text": {
+      "categories": [
+        "color"
+      ],
+      "allowed": [
+        "text.accent",
+        "text.inverse",
+        "text.primary",
+        "text.secondary"
+      ]
+    },
+    "accent": {
+      "categories": [
+        "color"
+      ],
+      "allowed": [
+        "accent.primary"
+      ]
+    },
+    "border": {
+      "categories": [
+        "color"
+      ],
+      "allowed": [
+        "border.default"
+      ]
+    },
+    "typography": {
+      "categories": [
+        "typography"
+      ],
+      "allowed": [
+        "typography.body",
+        "typography.display",
+        "typography.heading",
+        "typography.label"
+      ]
+    },
+    "radius": {
+      "categories": [
+        "radius"
+      ],
+      "allowed": [
+        "radius.control",
+        "radius.surface"
+      ]
+    },
+    "paddingTop": {
+      "categories": [
+        "layout"
+      ],
+      "allowed": [
+        "layout.sectionPaddingTop",
+        "layout.sectionPaddingTop.cta",
+        "layout.sectionPaddingTop.features",
+        "layout.sectionPaddingTop.hero",
+        "layout.sectionPaddingTop.proof",
+        "layout.sectionPaddingTop.shell",
+        "layout.sectionPaddingTop.support"
+      ]
+    },
+    "paddingBottom": {
+      "categories": [
+        "layout"
+      ],
+      "allowed": [
+        "layout.sectionPaddingBottom",
+        "layout.sectionPaddingBottom.cta",
+        "layout.sectionPaddingBottom.features",
+        "layout.sectionPaddingBottom.proof",
+        "layout.sectionPaddingBottom.shell"
+      ]
+    },
+    "gap": {
+      "categories": [
+        "layout"
+      ],
+      "allowed": [
+        "layout.gridGap",
+        "layout.gridGap.cta",
+        "layout.gridGap.features",
+        "layout.gridGap.hero",
+        "layout.gridGap.proof",
+        "layout.gridGap.support",
+        "layout.gutter"
+      ]
+    },
+    "fontFamily": {
+      "categories": [
+        "fontFamily"
+      ],
+      "allowed": [
+        "Alliance No.2 Light",
+        "Alliance No.2 Regular",
+        "Chivo Mono",
+        "Geist",
+        "Geist Mono",
+        "Geist Variable",
+        "Inter"
+      ],
+      "note": "a family name from the catalog, not a token id"
+    }
+  },
+  "themes": {
+    "light": {
+      "file": "tokens/themes/light.json",
+      "mode": "light"
+    }
+  },
+  "rules": {
+    "TOKEN_UNKNOWN": "a slot value that is not a token id in the catalog",
+    "TOKEN_RAW_VALUE": "a raw colour (#hex, rgb(), rgba(), hsl(), hsla()) or other literal CSS value instead of a token id",
+    "TOKEN_ARBITRARY_SPACING": "a spacing slot given a raw length (px/rem/em/%/vw/vh) or a foundation space.* token instead of an approved layout token",
+    "TOKEN_UNSUPPORTED_FONT": "a fontFamily slot naming a family the catalog does not list",
+    "TOKEN_NOT_REFERENCEABLE": "a foundation token id (catalogued but referenceable=false)",
+    "TOKEN_SLOT_MISMATCH": "a real token used in a slot of the wrong category (e.g. a layout token as a surface colour)",
+    "TOKEN_THEME_MISMATCH": "the page's theme is not schema-validated, or a colour/typography token is not resolved by that theme"
   },
   "enforcement": {
-    "catalogPolicyParity": "machine-checked by extraction/verify_all.py"
+    "pageSpec": "schema/semantic_validate.py (rules above)",
+    "catalogPolicyParity": "machine-checked by extraction/verify_all.py (rebuilds both files)"
   }
 }

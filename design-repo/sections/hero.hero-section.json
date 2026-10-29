@@ -11,12 +11,13 @@
     "instances": 8,
     "routes": 8,
     "measuredFrom": [
-      "src/index.html:713-761",
-      "src/about/index.html:713-740",
-      "src/blog/index.html:713-737",
-      "src/careers/index.html:711-742",
-      "src/contact/index.html:711-728"
-    ]
+      "src/sections/HeroSection.jsx:6-50",
+      "src/sections/HeroSection2.jsx:4-29",
+      "src/sections/HeroSection3.jsx:4-26",
+      "src/sections/HeroSection4.jsx:4-69",
+      "src/sections/HeroSection5.jsx:4-41"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -66,8 +67,9 @@
     },
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
-      "heightPx": 822,
-      "columns": 1
+      "heightPx": 900,
+      "columns": 1,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 844,
@@ -79,5 +81,24 @@
   "assetRoles": [
     "hero-image"
   ],
-  "implementedBy": "src/pages/HomePage.jsx"
+  "implementedBy": "src/sections/HeroSection.jsx",
+  "semantic": {
+    "id": "hero.hero-section",
+    "category": "HERO"
+  },
+  "source": {
+    "id": "HeroSection",
+    "tag": "section",
+    "file": "src/sections/HeroSection.jsx",
+    "lines": [
+      6,
+      50
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "generated-illustration",
+    "placeholder-screenshot",
+    "user-supplied-asset"
+  ]
 }

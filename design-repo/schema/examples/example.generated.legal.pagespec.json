@@ -1,0 +1,127 @@
+{
+  "pageSpecVersion": "0.2.0",
+  "mode": "generation",
+  "template": "template.legal",
+  "route": "/terms",
+  "nodes": [
+    {
+      "type": "content.framer-1h4pb9v-container",
+      "content": {
+        "body": [
+          "Platform",
+          "Studio",
+          "Log in",
+          "Book a walkthrough"
+        ],
+        "ctas": [
+          {
+            "label": "Log in",
+            "href": "https://app.tallyfern.example/login"
+          },
+          {
+            "label": "Book a walkthrough",
+            "href": "/talk"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "hero.hero-section",
+      "content": {
+        "heading": "Terms of use",
+        "body": [
+          "Placeholder legal text for layout; replace with counsel-approved terms."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "content.legal-preamble",
+      "content": {
+        "body": [
+          "Last revised",
+          "January 1, 2030",
+          "These sample terms describe how a fictional company provides its placeholder service at tallyfern.example."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "content.legal-clause",
+      "content": {
+        "heading": "1. Using the service",
+        "body": [
+          "You may use the placeholder service only as these sample terms allow."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "content.legal-clause",
+      "content": {
+        "heading": "2. Your account",
+        "body": [
+          "Keep your sign-in details private and tell us if they leak."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "content.legal-clause",
+      "content": {
+        "heading": "3. Contact",
+        "body": [
+          "Write to legal@tallyfern.example with any question about these terms."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    },
+    {
+      "type": "content.framer-gzkazm-container",
+      "content": {
+        "heading": "Quiet ledgers for busy finance desks.",
+        "body": [
+          "Platform",
+          "Reminders",
+          "Payment matching",
+          "Studio",
+          "Our story",
+          "Journal",
+          "Legal",
+          "Terms",
+          "Privacy"
+        ],
+        "images": [
+          {
+            "assetRole": "placeholder-brand-mark",
+            "assetRef": "placeholder:tallyfern-mark",
+            "alt": "Tallyfern placeholder mark"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "disable-animation"
+      }
+    }
+  ]
+}

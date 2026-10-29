@@ -3,10 +3,10 @@
   "site": "exante-app",
   "status": "design-review-pending",
   "productionApproved": false,
-  "repositoryVersion": "0.1.0",
-  "pageSpecVersion": "0.1.0",
+  "repositoryVersion": "0.2.0",
+  "pageSpecVersion": "0.2.0",
   "allowlistVersion": "1",
-  "versionFieldNote": "allowlistVersion is machine-checked (verify_all.py fails if it differs from tokens/llm/component-allowlist.json). repositoryVersion and pageSpecVersion are documentation-only markers; pageSpecVersion is additionally pinned as a const in the schema.",
+  "versionFieldNote": "allowlistVersion is machine-checked (verify_all.py fails if it differs from tokens/llm/component-allowlist.json). pageSpecVersion is machine-checked against the schema's const. repositoryVersion is a documentation-only marker. designPolicy.contentHash is machine-checked (extraction/policy_hash.py).",
   "defaultTheme": "light",
   "schemaValidatedThemes": [
     "light"
@@ -22,7 +22,7 @@
   },
   "generatedBy": "website-builder (heuristic extraction; see README)",
   "counts": {
-    "sections": 31,
+    "sections": 35,
     "templates": 9,
     "routes": 18,
     "primitives": 12,
@@ -52,6 +52,38 @@
     "admission": "extraction/verify_all.py",
     "driftProof": "extraction/prove_drift.py",
     "measuredValues": "extraction/measured-values.json",
-    "defaultTheme": "tokens/themes/light.json"
+    "defaultTheme": "tokens/themes/light.json",
+    "sectionContractSchema": "schema/section-contract.schema.json",
+    "sourceIdentity": "schema/source-identity.json",
+    "textNormalisation": "schema/textnorm.py",
+    "wrapperGate": "extraction/wrapper_gate.py",
+    "wrapperWhitelist": "extraction/wrapper-whitelist.json",
+    "measureSections": "extraction/measure_sections.mjs",
+    "recordHeights": "extraction/record_heights.py",
+    "buildLedger": "extraction/build_ledger.py",
+    "buildContracts": "extraction/build_contracts.py",
+    "buildTokenLlm": "extraction/build_token_llm.py",
+    "buildSourceIdentity": "extraction/build_source_identity.py",
+    "policyHash": "extraction/policy_hash.py",
+    "designPolicy": "policy/design-policy.json",
+    "generationExampleMarketing": "schema/examples/example.generated.marketing.pagespec.json",
+    "generationExampleIndex": "schema/examples/example.generated.index.pagespec.json",
+    "generationExampleArticle": "schema/examples/example.generated.article.pagespec.json",
+    "generationExampleLegal": "schema/examples/example.generated.legal.pagespec.json",
+    "generationExampleContact": "schema/examples/example.generated.contact.pagespec.json"
+  },
+  "category": "saas",
+  "designPolicy": {
+    "ref": "policy/design-policy.json",
+    "policyId": "n0-saas-design-constraints-common",
+    "policyVersion": "0.1.0",
+    "commonIrVersion": "0.5",
+    "enforcementMode": "hard-and-soft",
+    "contentHash": "sha256:ef9a70ca3b5980ca68ddec7fc52cd06af51ae65683e0398848f9bed479de6e7b"
+  },
+  "sourceStack": "React 18 + Vite + Tailwind clone of a Framer-built site (documentation only; not used by any contract)",
+  "ir": {
+    "status": "left untouched by request",
+    "note": "ir/ (exante-app.ir.json and its schemas) is outside design-repo/ and was not edited, regenerated or validated-and-rewritten in 0.2.0. Its pinned versions, template node lists and pageSpecs are stale against this release; see CHANGELOG 'IR left untouched by request'. No check in extraction/ reads ir/."
   }
 }

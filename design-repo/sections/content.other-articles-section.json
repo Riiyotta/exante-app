@@ -11,12 +11,13 @@
     "instances": 8,
     "routes": 8,
     "measuredFrom": [
-      "src/blog/agents-that-learn-how-you-work/index.html:930-1164",
-      "src/blog/from-aging-reports-to-cash-control/index.html:898-1132",
-      "src/blog/from-source-of-truth-to-source-of-action/index.html:916-1150",
-      "src/blog/how-ai-agents-are-transforming-ar-and-collections/index.html:913-1147",
-      "src/blog/how-to-choose-the-right-collections-software/index.html:915-1149"
-    ]
+      "src/sections/OtherArticlesSection.jsx:6-214",
+      "src/sections/OtherArticlesSection2.jsx:6-214",
+      "src/sections/OtherArticlesSection3.jsx:6-214",
+      "src/sections/OtherArticlesSection4.jsx:6-214",
+      "src/sections/OtherArticlesSection5.jsx:6-214"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
   },
   "content": {
     "additionalProperties": false,
@@ -51,7 +52,7 @@
         "maxItems": 6,
         "assetRoles": [
           "content-image",
-          "icon"
+          "avatar"
         ]
       }
     }
@@ -73,7 +74,8 @@
     "breakpoints": "tokens/00-foundation/breakpoint.json",
     "desktop": {
       "heightPx": 1205,
-      "columns": 3
+      "columns": 3,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
     },
     "mobile": {
       "heightPx": 1911,
@@ -86,7 +88,27 @@
   },
   "assetRoles": [
     "content-image",
-    "icon"
+    "avatar"
   ],
-  "implementedBy": "src/pages/BlogWhatWeHear.jsx"
+  "implementedBy": "src/sections/OtherArticlesSection.jsx",
+  "semantic": {
+    "id": "content.other-articles-section",
+    "category": "CONTENT"
+  },
+  "source": {
+    "id": "OtherArticlesSection",
+    "tag": "section",
+    "file": "src/sections/OtherArticlesSection.jsx",
+    "lines": [
+      6,
+      214
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": [
+    "fictional-avatar",
+    "generated-illustration",
+    "placeholder-screenshot",
+    "user-supplied-asset"
+  ]
 }

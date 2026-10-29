@@ -1,0 +1,79 @@
+{
+  "id": "content.article-lead",
+  "category": "CONTENT",
+  "label": "Article Lead",
+  "tag": "section",
+  "purpose": "Opens an article body: the table-of-contents and share column plus any lead paragraphs before the first chapter heading.",
+  "purposeIsInferred": false,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 8,
+    "routes": 8,
+    "measuredFrom": [
+      "src/sections/ContentSection4.jsx:4-38",
+      "src/sections/ContentSection5.jsx:4-42",
+      "src/sections/ContentSection6.jsx:4-38",
+      "src/sections/ContentSection7.jsx:4-38",
+      "src/sections/ContentSection8.jsx:4-41"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "body": {
+        "type": "string[]",
+        "required": false,
+        "maxItems": 6,
+        "maxWords": 46
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 489,
+      "columns": 1,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
+    },
+    "mobile": {
+      "heightPx": 5145,
+      "columns": 1,
+      "hiddenShare": 0
+    },
+    "changes": [
+      "grows taller on mobile (content stacks)"
+    ]
+  },
+  "assetRoles": [],
+  "implementedBy": "src/sections/ContentSection4.jsx",
+  "semantic": {
+    "id": "content.article-lead",
+    "category": "CONTENT"
+  },
+  "source": {
+    "id": "ContentSection4",
+    "tag": "section",
+    "file": "src/sections/ContentSection4.jsx",
+    "lines": [
+      4,
+      38
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
+}

@@ -1,0 +1,84 @@
+{
+  "id": "content.article-chapter",
+  "category": "CONTENT",
+  "label": "Article Chapter",
+  "tag": "h3",
+  "purpose": "One heading-bounded chapter of a blog article (an <h3> heading and the paragraphs, quotes and lists under it, up to the next chapter).",
+  "purposeIsInferred": false,
+  "nameSource": "data-attr",
+  "evidence": {
+    "level": "measured",
+    "instances": 48,
+    "routes": 8,
+    "measuredFrom": [
+      "src/sections/ContentSection4.jsx:39-42",
+      "src/sections/ContentSection4.jsx:43-48",
+      "src/sections/ContentSection4.jsx:49-54",
+      "src/sections/ContentSection4.jsx:55-60",
+      "src/sections/ContentSection4.jsx:61-66"
+    ],
+    "measuredIn": "the runnable clone's own source (src/sections/*.jsx); see extraction/measured-values.json"
+  },
+  "content": {
+    "additionalProperties": false,
+    "fields": {
+      "heading": {
+        "type": "string",
+        "required": true,
+        "maxWords": 12
+      },
+      "body": {
+        "type": "string[]",
+        "required": true,
+        "maxItems": 15,
+        "maxWords": 77
+      }
+    }
+  },
+  "constraints": {
+    "maxPerPage": 8
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "disable-animation"
+  },
+  "responsive": {
+    "measuredAt": {
+      "desktop": "1440px",
+      "mobile": "390px"
+    },
+    "breakpoints": "tokens/00-foundation/breakpoint.json",
+    "desktop": {
+      "heightPx": 937,
+      "columns": 1,
+      "heightSource": "max over routes of extraction/measured-values.json sectionHeights (1440px, built clone)"
+    },
+    "mobile": {
+      "heightPx": 5145,
+      "columns": 1,
+      "hiddenShare": 0
+    },
+    "changes": [
+      "grows taller on mobile (content stacks)"
+    ]
+  },
+  "assetRoles": [],
+  "implementedBy": "src/sections/ContentSection4.jsx",
+  "semantic": {
+    "id": "content.article-chapter",
+    "category": "CONTENT"
+  },
+  "source": {
+    "id": "ContentSection4",
+    "tag": "h3",
+    "file": "src/sections/ContentSection4.jsx",
+    "lines": [
+      39,
+      42
+    ]
+  },
+  "retrievalEligible": true,
+  "generatedAssetRoles": []
+}
